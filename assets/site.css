@@ -50,6 +50,9 @@
 .topic-hero .hero-lead{max-width:900px;margin-top:18px;color:#d8e3e6;font-size:1.08rem;line-height:1.55}
 .topic-hero + .section{padding-top:52px}
 
+/* Operational Trust: keep comparison cards visually equal */
+.operational-trust-page .ot-contrast article:last-child{border-top:1px solid var(--line)!important}
+
 /* Reading & Influence: quiet editorial structure */
 .influence-quote-section .wrap{max-width:900px}
 .influence-quote-section .big-quote{font-size:clamp(2rem,3.4vw,3.2rem);line-height:1.12}
