@@ -77,6 +77,20 @@
 .thought-pieces-cards .career-idea-card{transition:box-shadow .22s ease,transform .22s ease}
 .thought-pieces-cards .career-idea-card:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(7,20,27,.08)}
 
+/* Career in Motion: approved Operational Trust field line */
+.career-memory-intro::after{
+  content:"Operational trust isn’t built in a boardroom. It’s built on a right-of-way, listening to field technicians, and understanding where data meets execution.";
+  display:block;
+  max-width:900px;
+  margin-top:22px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  color:#263f47;
+  font-size:1.08rem;
+  font-weight:650;
+  line-height:1.55;
+}
+
 /* Experience: cleaner scan hierarchy */
 .experience-timeline>div{padding:24px 0}
 .experience-timeline>div>p{max-width:920px}
@@ -94,4 +108,5 @@
   #markets h2{font-size:clamp(2rem,9vw,2.55rem);white-space:normal;}
   .topic-hero{padding-bottom:38px!important}
   .topic-hero + .section{padding-top:42px}
+  .career-memory-intro::after{font-size:1rem}
 }
