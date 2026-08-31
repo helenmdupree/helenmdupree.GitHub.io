@@ -9,13 +9,29 @@
   }
 
   const path=location.pathname.replace(/\/+$/,'/') || '/';
+  const resourceLinks=[
+    ['/resources/','Resources Overview'],
+    ['/downloads/SOUBEL_Pipeline_Integrity_Metallurgy_PHMSA_Executive_Technical_Fluency_Guide.pdf','Pipeline Integrity, Metallurgy & PHMSA'],
+    ['/downloads/SOUBEL_Reliability_Maintenance_Decision_Workbook.pdf','Reliability & Maintenance Workbook'],
+    ['/downloads/SOUBEL_When_Asset_Condition_Changes_Practical_Guide.pdf','When Asset Condition Changes'],
+    ['/downloads/SOUBEL_Lifecycle_Decision_Comparison.pdf','Lifecycle Decision Comparison']
+  ];
 
-  /* V1.75: Resources is a top-level destination across the site. */
+  /* V1.75 live audit: Resources is a top-level dropdown with direct access to current publications. */
   document.querySelectorAll('.desktop-nav').forEach(nav=>{
-    if(!nav.querySelector('a[href="/resources/"]')){
-      const a=document.createElement('a'); a.href='/resources/'; a.textContent='Resources';
-      const about=[...nav.children].find(el=>el.classList && el.classList.contains('dropdown') && el.querySelector('.dropbtn')?.textContent.trim()==='About');
-      if(about) nav.insertBefore(a,about); else nav.appendChild(a);
+    let resources=[...nav.children].find(el=>el.classList?.contains('dropdown') && el.querySelector('.dropbtn')?.textContent.trim()==='Resources');
+    if(!resources){
+      const direct=[...nav.children].find(el=>el.tagName==='A' && el.getAttribute('href')==='/resources/');
+      resources=document.createElement('div'); resources.className='dropdown resources-dropdown';
+      const button=document.createElement('button'); button.className='dropbtn'; button.textContent='Resources';
+      const panel=document.createElement('div'); panel.className='dropdown-panel';
+      resourceLinks.forEach(([href,text])=>{ const a=document.createElement('a'); a.href=href; a.textContent=text; panel.appendChild(a); });
+      resources.append(button,panel);
+      if(direct) direct.replaceWith(resources);
+      else {
+        const about=[...nav.children].find(el=>el.classList?.contains('dropdown') && el.querySelector('.dropbtn')?.textContent.trim()==='About');
+        if(about) nav.insertBefore(resources,about); else nav.appendChild(resources);
+      }
     }
     const about=[...nav.children].find(el=>el.classList && el.classList.contains('dropdown') && el.querySelector('.dropbtn')?.textContent.trim()==='About');
     const panel=about?.querySelector('.dropdown-panel');
@@ -26,11 +42,15 @@
     }
   });
   document.querySelectorAll('.mobile-menu').forEach(menu=>{
-    if(!menu.querySelector('a[href="/resources/"]')){
-      const groups=menu.querySelectorAll('.group');
-      const intelligence=[...groups].find(g=>g.querySelector('.group-title')?.textContent.trim()==='Intelligence');
-      if(intelligence){ const a=document.createElement('a'); a.href='/resources/'; a.textContent='Resources'; intelligence.appendChild(a); }
+    [...menu.querySelectorAll('a[href="/resources/"]')].forEach(a=>{ if(!a.closest('.resources-group')) a.remove(); });
+    let resources=[...menu.querySelectorAll('.group')].find(g=>g.querySelector('.group-title')?.textContent.trim()==='Resources');
+    if(!resources){
+      resources=document.createElement('div'); resources.className='group resources-group';
+      const title=document.createElement('div'); title.className='group-title'; title.textContent='Resources'; resources.appendChild(title);
+      const about=[...menu.querySelectorAll('.group')].find(g=>g.querySelector('.group-title')?.textContent.trim()==='About');
+      if(about) menu.insertBefore(resources,about); else menu.appendChild(resources);
     }
+    if(!resources.querySelector('a')) resourceLinks.forEach(([href,text])=>{ const a=document.createElement('a'); a.href=href; a.textContent=text; a.className='sub'; resources.appendChild(a); });
     const about=[...menu.querySelectorAll('.group')].find(g=>g.querySelector('.group-title')?.textContent.trim()==='About');
     if(about && !about.querySelector('a[href="/about/career-in-motion/"]')){
       const a=document.createElement('a'); a.href='/about/career-in-motion/'; a.textContent='A Career in Motion'; a.className='sub';
@@ -112,7 +132,7 @@
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function(){ dataLayer.push(arguments); };
   if(GA4_MEASUREMENT_ID){ const sc=document.createElement('script'); sc.async=true; sc.src='https://www.googletagmanager.com/gtag/js?id='+encodeURIComponent(GA4_MEASUREMENT_ID); document.head.appendChild(sc); gtag('js', new Date()); gtag('config', GA4_MEASUREMENT_ID, {send_page_view:true}); }
-  document.addEventListener('click', function(e){ const a=e.target.closest('a'); if(!a) return; const href=a.getAttribute('href')||''; let eventName='navigation_click'; if(/^https?:\/\//i.test(href) && !href.includes('soubel.com')) eventName='outbound_click'; if(/linkedin\.com|instagram\.com/i.test(href)) eventName='social_click'; if(href.startsWith('/knowledge-library')) eventName='knowledge_library_click'; if(href.startsWith('/industry-intelligence')) eventName='industry_intelligence_click'; if(href.startsWith('/resources')) eventName='resource_click'; if(/^mailto:|\/contact\//i.test(href)) eventName='contact_intent'; if(GA4_MEASUREMENT_ID) gtag('event', eventName, {link_url:href, link_text:(a.textContent||'').trim().slice(0,100)}); });
+  document.addEventListener('click', function(e){ const a=e.target.closest('a'); if(!a) return; const href=a.getAttribute('href')||''; let eventName='navigation_click'; if(/^https?:\/\//i.test(href) && !href.includes('soubel.com')) eventName='outbound_click'; if(/linkedin\.com|instagram\.com/i.test(href)) eventName='social_click'; if(href.startsWith('/knowledge-library')) eventName='knowledge_library_click'; if(href.startsWith('/industry-intelligence')) eventName='industry_intelligence_click'; if(href.startsWith('/resources')) eventName='resource_click'; if(href.startsWith('/downloads/')) eventName='resource_download'; if(/^mailto:|\/contact\//i.test(href)) eventName='contact_intent'; if(GA4_MEASUREMENT_ID) gtag('event', eventName, {link_url:href, link_text:(a.textContent||'').trim().slice(0,100)}); });
   const counter=document.querySelector('[data-audience-counter]'), COUNTER_ENDPOINT='';
   if(counter && COUNTER_ENDPOINT){ fetch(COUNTER_ENDPOINT,{credentials:'same-origin'}).then(r=>r.json()).then(data=>{ const count=Number(data.visitors||0), threshold=Number(counter.dataset.threshold||1000); if(Number.isFinite(count) && count>=threshold){ counter.querySelector('[data-audience-count]').textContent=count.toLocaleString(); counter.hidden=false; counter.setAttribute('aria-hidden','false'); } }).catch(()=>{}); }
 })();
