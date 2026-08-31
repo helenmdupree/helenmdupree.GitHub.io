@@ -7,10 +7,13 @@
 }
 .hero h1{
   max-width:900px;
+  font-family:Georgia,"Times New Roman",serif;
   font-size:clamp(2.9rem,5.35vw,5.45rem);
-  line-height:.99;
-  letter-spacing:-.04em;
+  font-weight:700;
+  line-height:.98;
+  letter-spacing:-.028em;
 }
+.hero h1 .accent{font-weight:700;}
 .hero-lead{
   max-width:900px;
   margin:26px 0 0;
@@ -30,6 +33,6 @@
 }
 @media(max-width:620px){
   .hero-inner{padding:60px 0 56px}
-  .hero h1{font-size:clamp(2.55rem,11.2vw,3.85rem);line-height:1.01}
+  .hero h1{font-size:clamp(2.55rem,11.2vw,3.85rem);line-height:1}
   .hero-lead::before{font-size:1.08rem;line-height:1.5}
 }
