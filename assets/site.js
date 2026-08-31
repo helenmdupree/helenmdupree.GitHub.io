@@ -5,10 +5,10 @@
 
   const resourceLinks=[
     ['/resources/','Resources Overview'],
-    ['/downloads/SOUBEL_Pipeline_Integrity_Metallurgy_PHMSA_Executive_Technical_Fluency_Guide.pdf','Pipeline Integrity, Metallurgy & PHMSA'],
-    ['/downloads/SOUBEL_Reliability_Maintenance_Decision_Workbook.pdf','Reliability & Maintenance Workbook'],
-    ['/downloads/SOUBEL_When_Asset_Condition_Changes_Practical_Guide.pdf','When Asset Condition Changes'],
-    ['/downloads/SOUBEL_Lifecycle_Decision_Comparison.pdf','Lifecycle Decision Comparison']
+    ['/resources/pipeline-integrity-metallurgy-phmsa/','Pipeline Integrity, Metallurgy & PHMSA'],
+    ['/resources/when-asset-condition-changes/','When Asset Condition Changes'],
+    ['/resources/lifecycle-decision-comparison/','Lifecycle Decision Comparison'],
+    ['/resources/reliability-maintenance-decision-workbook/','Reliability & Maintenance Decision Workbook']
   ];
 
   if(!document.querySelector('#resources-nav-foundation-style')){
@@ -16,6 +16,12 @@
     style.id='resources-nav-foundation-style';
     style.textContent='.desktop-nav .resources-dropdown .dropdown-panel{left:auto!important;right:0!important;max-width:min(390px,calc(100vw - 28px))!important}.desktop-nav .resources-dropdown .dropdown-panel a{white-space:normal!important}';
     document.head.appendChild(style);
+  }
+
+  function populateResourcePanel(panel){
+    if(!panel) return;
+    panel.innerHTML='';
+    resourceLinks.forEach(([href,text])=>{const a=document.createElement('a');a.href=href;a.textContent=text;panel.appendChild(a);});
   }
 
   function ensureDesktopNav(){
@@ -32,7 +38,6 @@
         resources=document.createElement('div'); resources.className='dropdown resources-dropdown';
         const button=document.createElement('button'); button.className='dropbtn'; button.textContent='Resources';
         const panel=document.createElement('div'); panel.className='dropdown-panel';
-        resourceLinks.forEach(([href,text])=>{const a=document.createElement('a');a.href=href;a.textContent=text;panel.appendChild(a);});
         resources.append(button,panel);
         if(direct) direct.replaceWith(resources);
         else {
@@ -41,6 +46,7 @@
         }
       }
       resources.classList.add('resources-dropdown');
+      populateResourcePanel(resources.querySelector('.dropdown-panel'));
 
       const about=[...nav.children].find(el=>el.classList?.contains('dropdown') && el.querySelector('.dropbtn')?.textContent.trim()==='About');
       const panel=about?.querySelector('.dropdown-panel');
@@ -85,10 +91,11 @@
       if(!resources){
         resources=document.createElement('div');resources.className='group resources-group';
         const title=document.createElement('div');title.className='group-title';title.textContent='Resources';resources.appendChild(title);
-        resourceLinks.forEach(([href,text])=>{const a=document.createElement('a');a.href=href;a.textContent=text;a.className='sub';resources.appendChild(a);});
         const about=[...menu.querySelectorAll('.group')].find(g=>g.querySelector('.group-title')?.textContent.trim()==='About');
         if(about) menu.insertBefore(resources,about); else menu.appendChild(resources);
       }
+      resources.querySelectorAll('a').forEach(a=>a.remove());
+      resourceLinks.forEach(([href,text])=>{const a=document.createElement('a');a.href=href;a.textContent=text;a.className='sub';resources.appendChild(a);});
       const about=[...menu.querySelectorAll('.group')].find(g=>g.querySelector('.group-title')?.textContent.trim()==='About');
       if(about && !about.querySelector('a[href="/about/career-in-motion/"]')){
         const a=document.createElement('a');a.href='/about/career-in-motion/';a.textContent='A Career in Motion';a.className='sub';
