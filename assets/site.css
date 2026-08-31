@@ -72,6 +72,8 @@
 .archive-article-body p{font-size:1.04rem;line-height:1.78}
 .archive-feature-image{margin-bottom:34px}
 .archive-article-body .pullquote{margin:34px 0;padding:22px 24px;border-left:3px solid var(--teal);background:#f5f8f8;font-size:clamp(1.35rem,2.5vw,2rem);line-height:1.35}
+.archive-article-body .source-box{margin:38px 0 28px}
+.archive-article-body .bike-closing{margin:54px 0 48px;text-align:center;font-size:clamp(1.55rem,3vw,2.2rem);line-height:1.25}
 .thought-pieces-cards .career-idea-card{transition:box-shadow .22s ease,transform .22s ease}
 .thought-pieces-cards .career-idea-card:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(7,20,27,.08)}
 
