@@ -54,6 +54,29 @@
   /* Experience page: keep the opening concise, remove repeated framing, and make the hierarchy quieter. */
   if(path==='/about/experience/'){
     document.body.classList.add('experience-page-audit');
+    if(!document.querySelector('#experience-page-audit-style')){
+      const style=document.createElement('style');
+      style.id='experience-page-audit-style';
+      style.textContent=`
+        .experience-page-audit .experience-hero{padding:42px 0 38px}
+        .experience-page-audit .experience-hero h1{max-width:900px;font-size:clamp(2.15rem,3.5vw,3.25rem);line-height:1.03;letter-spacing:-.035em;font-weight:720}
+        .experience-page-audit .experience-hero p{max-width:830px;font-size:1rem;line-height:1.55;margin-top:14px}
+        .experience-page-audit #career-context{padding-top:38px;padding-bottom:42px}
+        .experience-page-audit #career-context h2,.experience-page-audit #selected-experience h2{font-size:clamp(1.55rem,2.4vw,2.2rem);line-height:1.1;letter-spacing:-.025em}
+        .experience-page-audit #experience-patterns{padding:42px 0}
+        .experience-page-audit #experience-patterns .experience-pattern-title{font-size:clamp(1.65rem,2.55vw,2.35rem);line-height:1.08;max-width:930px}
+        .experience-page-audit .experience-core-thesis{margin-top:22px}
+        .experience-page-audit .experience-motion-row{margin-top:18px}
+        .experience-page-audit .experience-motion-link{display:inline-flex;color:var(--teal);font-size:.92rem;font-weight:800;text-decoration:none;border-bottom:1px solid rgba(17,133,139,.35);padding-bottom:2px}
+        .experience-page-audit .experience-motion-link:hover{border-bottom-color:var(--teal)}
+        .experience-page-audit .experience-leadership-section{padding:46px 0}
+        .experience-page-audit .experience-leadership-section h2{font-size:clamp(1.55rem,2.25vw,2.15rem);line-height:1.08;letter-spacing:-.025em;margin-bottom:20px;max-width:none}
+        .experience-page-audit .experience-leadership{margin-top:20px}
+        @media(min-width:960px){.experience-page-audit .experience-leadership-section h2{white-space:nowrap}}
+        @media(max-width:620px){.experience-page-audit .experience-hero{padding:34px 0 30px}.experience-page-audit .experience-leadership-section{padding:38px 0}}
+      `;
+      document.head.appendChild(style);
+    }
 
     const hero=document.querySelector('.experience-hero');
     if(hero){
