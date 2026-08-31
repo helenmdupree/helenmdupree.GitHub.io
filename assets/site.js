@@ -51,32 +51,55 @@
     }
   }
 
-  /* Strengthen the Experience page and remove repetitive language. */
+  /* Experience page: keep the opening concise, remove repeated framing, and make the hierarchy quieter. */
   if(path==='/about/experience/'){
+    document.body.classList.add('experience-page-audit');
+
     const hero=document.querySelector('.experience-hero');
     if(hero){
       const crumb=hero.querySelector('.crumb');
       const kicker=hero.querySelector('.kicker');
       const h1=hero.querySelector('h1');
       const copy=hero.querySelector('h1 + p');
-      const primary=hero.querySelector('.btn.primary');
+      const actions=hero.querySelector('.actions');
       if(crumb) crumb.textContent='About';
       if(kicker) kicker.textContent='THE WORK BEHIND SOUBEL';
-      if(h1) h1.textContent='A career built across industry, field operations, and commercial growth.';
-      if(copy) copy.textContent='Helen M. Dupree’s career spans commercial growth, strategic accounts, pipeline and asset integrity, corrosion and cathodic protection, asset performance, and digital transformation. That background was built through customers, field environments, industry relationships, and the practical work of turning technical capability into commercial and operational value.';
-      if(primary){ primary.textContent='View career highlights'; primary.setAttribute('href','#career-context'); }
+      if(h1) h1.textContent='From field execution to market creation.';
+      if(copy) copy.textContent='Across industrial products, field services, enterprise software, and complex customer environments, the work behind SOUBEL has consistently connected technical capability, commercial judgment, and execution.';
+      if(actions) actions.remove();
     }
+
     const context=document.querySelector('#career-context');
     if(context){
       const kicker=context.querySelector('.kicker');
       const h2=context.querySelector('h2');
       if(kicker) kicker.textContent='CAREER HISTORY';
-      if(h2) h2.textContent='Across industrial products, services, software, and field organizations.';
+      if(h2) h2.textContent='Industrial products, services, software, and field organizations.';
     }
 
     const patterns=document.querySelector('#experience-patterns');
     if(patterns){
-      patterns.innerHTML='<div class="wrap"><p class="kicker">STRATEGIC, COMMERCIAL &amp; FINANCIAL DEPTH</p><h2 class="experience-pattern-title">The résumé shows the roles.<br/>The work behind them shows the strategic, commercial, and financial depth.</h2><p class="experience-pattern-lead">A recurring pattern of building the commercial architecture around complex technical offerings, then helping turn that architecture into revenue.</p><div class="experience-progression"><article><h3>Commercial Architect</h3><ul><li>Growth models</li><li>GTM architecture</li><li>Pricing &amp; margin</li><li>Operating economics</li><li>Resource priorities</li></ul></article><article><h3>Market Builder</h3><ul><li>Market diagnosis</li><li>Segmentation</li><li>Competitive position</li><li>Advocacy ecosystems</li><li>Whitespace</li></ul></article><article><h3>Product Strategist</h3><ul><li>Voice of customer</li><li>R&amp;D collaboration</li><li>Use-case design</li><li>Product-market fit</li><li>Commercialization</li></ul></article><article><h3>Enterprise Seller</h3><ul><li>Complex pursuits</li><li>Business cases</li><li>MSAs / contracts</li><li>Pilots</li><li>Revenue delivery</li></ul></article></div><div class="experience-core-thesis"><span>CORE THESIS</span><strong>Commercial growth is created when market truth is translated into an executable system.</strong><p>Across companies, technologies, and market conditions, the pattern is consistent: understand what is true in the market, identify where growth is being lost or overlooked, translate customer evidence into commercial and product action, quantify the economics, align the organization, and execute.</p></div><div class="actions"><a class="btn secondary" href="/about/career-in-motion/">View A Career in Motion</a></div></div>';
+      patterns.innerHTML='<div class="wrap"><p class="kicker">STRATEGIC, COMMERCIAL &amp; FINANCIAL DEPTH</p><h2 class="experience-pattern-title">The résumé shows the roles.<br/>The work behind them shows the strategic, commercial, and financial depth.</h2><p class="experience-pattern-lead">A recurring pattern of building the commercial architecture around complex technical offerings, then helping turn that architecture into revenue.</p><div class="experience-progression"><article><h3>Commercial Architect</h3><ul><li>Growth models</li><li>GTM architecture</li><li>Pricing &amp; margin</li><li>Operating economics</li><li>Resource priorities</li></ul></article><article><h3>Market Builder</h3><ul><li>Market diagnosis</li><li>Segmentation</li><li>Competitive position</li><li>Advocacy ecosystems</li><li>Whitespace</li></ul></article><article><h3>Product Strategist</h3><ul><li>Voice of customer</li><li>R&amp;D collaboration</li><li>Use-case design</li><li>Product-market fit</li><li>Commercialization</li></ul></article><article><h3>Enterprise Seller</h3><ul><li>Complex pursuits</li><li>Business cases</li><li>MSAs / contracts</li><li>Pilots</li><li>Revenue delivery</li></ul></article></div><div class="experience-core-thesis"><span>CORE THESIS</span><strong>Commercial growth is created when market truth is translated into an executable system.</strong></div><div class="experience-motion-row"><a class="experience-motion-link" href="/about/career-in-motion/">View A Career in Motion →</a></div></div>';
+    }
+
+    const selected=document.querySelector('#selected-experience');
+    if(selected){
+      const digital=[...selected.querySelectorAll('.experience-grid article')].find(article=>article.querySelector('span')?.textContent.trim()==='ASSET PERFORMANCE & DIGITAL');
+      if(digital){
+        const h3=digital.querySelector('h3');
+        const p=digital.querySelector('h3 + p');
+        const contribution=digital.querySelector('.experience-contribution');
+        if(h3) h3.textContent='Translating digital capability into operating value.';
+        if(p) p.textContent='Work around asset-performance platforms, digital twins, analytics, AI, and industrial software reinforced a recurring lesson: technology creates value when it improves context, decision quality, execution, adoption, or measurable operating outcomes.';
+        if(contribution) contribution.innerHTML='<strong>What it contributes to SOUBEL:</strong> Digital transformation is evaluated by operational usefulness and measurable value.';
+      }
+    }
+
+    const leadership=[...document.querySelectorAll('main > section')].find(section=>section.querySelector('.kicker')?.textContent.trim()==='INDUSTRY LEADERSHIP');
+    if(leadership){
+      leadership.classList.add('experience-leadership-section');
+      const h2=leadership.querySelector('h2');
+      if(h2) h2.textContent='Helping shape the industry conversation.';
     }
   }
 })();
