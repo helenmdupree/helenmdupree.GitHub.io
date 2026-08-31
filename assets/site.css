@@ -1,40 +1,16 @@
 @import url("/assets/site-v177.css");
 
 /* V1.78 — homepage first-view refinement */
-.hero-inner{
-  padding:78px 0 72px;
-  max-width:1040px;
-}
-.hero h1{
-  max-width:900px;
-  font-family:"Segoe UI",Helvetica,Arial,sans-serif;
-  font-size:clamp(2.85rem,5.15vw,5.2rem);
-  font-weight:700;
-  line-height:1.01;
-  letter-spacing:-.035em;
-}
-.hero h1 .accent{font-weight:700;}
-.hero .hero-lead{
-  max-width:900px;
-  margin:28px 0 0;
-  font-size:0;
-  line-height:1.5;
-}
-.hero .hero-lead::before{
-  content:"Connecting technical capability to operating reality, commercial value, and execution.";
-  display:block;
-  color:#c7d5d9;
-  font-family:"Segoe UI",Helvetica,Arial,sans-serif;
-  font-size:1.13rem;
-  font-weight:450;
-  line-height:1.5;
-  letter-spacing:.002em;
-}
-.hero .actions{display:none;}
+.hero-inner{padding:78px 0 72px;max-width:1040px}
+.hero h1{max-width:900px;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:clamp(2.85rem,5.15vw,5.2rem);font-weight:700;line-height:1.01;letter-spacing:-.035em}
+.hero h1 .accent{font-weight:700}
+.hero .hero-lead{max-width:900px;margin:28px 0 0;font-size:0;line-height:1.5}
+.hero .hero-lead::before{content:"Connecting technical capability to operating reality, commercial value, and execution.";display:block;color:#c7d5d9;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:1.13rem;font-weight:450;line-height:1.5;letter-spacing:.002em}
+.hero .actions{display:none}
 
 /* Homepage Markets headline */
 #markets h2{font-size:clamp(2rem,2.65vw,2.6rem);line-height:1.08;letter-spacing:-.025em;max-width:none}
-@media(min-width:1100px){#markets h2{white-space:nowrap;}}
+@media(min-width:1100px){#markets h2{white-space:nowrap}}
 
 /* Industry Intelligence */
 .topic-hero{padding-bottom:48px!important}
@@ -47,10 +23,10 @@
 .operational-trust-page .ot-hero .kicker{display:block;margin:0 0 24px;font-size:clamp(1.35rem,2.2vw,2rem);line-height:1;letter-spacing:.13em;font-weight:900;color:#6fd9dc}
 .operational-trust-page .ot-hero h1{margin-top:0!important}
 
-/* Editorial article system: importance through composition, not enormity */
-.article-shell{max-width:980px!important}
-.article-hero{padding:48px 0 42px!important}
-.article-hero .article-category{margin-bottom:14px!important;font-size:.72rem!important;letter-spacing:.13em!important}
+/* Editorial article system: compact, readable, consistent */
+.article-shell{max-width:900px!important}
+.article-hero{padding:38px 0 34px!important}
+.article-hero .article-category{margin:0 0 12px!important;font-size:.7rem!important;letter-spacing:.13em!important}
 .article-hero h1,
 .article-hero .visually-hidden{
   position:static!important;
@@ -61,25 +37,24 @@
   clip-path:none!important;
   white-space:normal!important;
   display:block!important;
-  max-width:930px!important;
-  margin:0 0 16px!important;
+  max-width:860px!important;
+  margin:0 0 14px!important;
   font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;
-  font-size:clamp(2.35rem,4.4vw,4.05rem)!important;
-  font-weight:720!important;
-  line-height:1.02!important;
-  letter-spacing:-.035em!important;
+  font-size:clamp(2.05rem,3.45vw,3.2rem)!important;
+  font-weight:700!important;
+  line-height:1.04!important;
+  letter-spacing:-.03em!important;
   color:#f7f5ef!important;
 }
-.article-hero .article-deck{max-width:820px!important;margin:0 0 20px!important;font-size:clamp(1.02rem,1.45vw,1.18rem)!important;line-height:1.55!important;color:#d6e1e4!important}
-.article-hero .article-byline{font-size:.95rem!important;margin-top:0!important}
-.article-figure{max-width:980px!important;margin:30px auto 0!important;border-radius:16px!important;overflow:hidden!important;background:#07141b!important;box-shadow:0 14px 34px rgba(7,20,27,.08)!important}
-.article-figure img{display:block!important;width:100%!important;max-height:520px!important;object-fit:contain!important;background:#07141b!important}
-.revenue-article-figure{max-width:980px!important}
-.article-content-section{padding:42px 0 68px!important}
-.article-body{max-width:790px!important;margin:0 auto!important}
-.article-body p{font-size:1.04rem!important;line-height:1.72!important}
+.article-hero .article-deck{max-width:780px!important;margin:0 0 16px!important;font-size:1.04rem!important;line-height:1.5!important;color:#d6e1e4!important}
+.article-hero .article-byline{font-size:.9rem!important;margin-top:0!important}
+.article-figure,.revenue-article-figure{width:min(760px,calc(100% - 40px))!important;max-width:760px!important;margin:24px auto 0!important;border-radius:12px!important;overflow:hidden!important;background:#07141b!important;box-shadow:0 10px 24px rgba(7,20,27,.07)!important}
+.article-figure img{display:block!important;width:100%!important;height:auto!important;max-height:400px!important;object-fit:contain!important;background:#07141b!important}
+.article-content-section{padding:32px 0 60px!important}
+.article-body{max-width:760px!important;margin:0 auto!important}
+.article-body p{font-size:1.02rem!important;line-height:1.72!important}
 .article-body>p:first-child{margin-top:0!important}
-.migration-note{margin-top:34px!important}
+.migration-note{margin-top:30px!important}
 
 /* Reading & Influence */
 .influence-quote-section .wrap{max-width:900px}
@@ -111,18 +86,20 @@
 /* Career in Motion */
 .career-memory-intro::after{content:"Operational trust isn’t built in a boardroom. It’s built on a right-of-way, listening to field technicians, and understanding where data meets execution.";display:block;max-width:900px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line);color:#263f47;font-size:1.08rem;font-weight:650;line-height:1.55}
 
-/* Experience */
-.experience-timeline>div{padding:24px 0}
-.experience-timeline>div>p{max-width:920px}
+/* Experience: deliberately stacked to preserve readable company narratives */
+.experience-page .experience-timeline>div{display:block!important;padding:28px 0!important}
+.experience-page .experience-timeline strong{display:block!important;font-size:1.42rem!important;line-height:1.2!important;margin:0 0 6px!important}
+.experience-page .experience-timeline span{display:block!important;max-width:900px!important;margin:0 0 10px!important;line-height:1.55!important;white-space:normal!important}
+.experience-page .experience-timeline p{display:block!important;max-width:980px!important;margin:0!important;line-height:1.65!important}
 
 @media(max-width:760px){
   .influence-category-grid{grid-template-columns:1fr}
   .book-reflection{grid-template-columns:1fr;padding:22px}
   .book-cover-placeholder{min-height:180px}
-  .article-hero{padding:38px 0 34px!important}
-  .article-figure{margin-top:22px!important;border-radius:12px!important}
-  .article-figure img{max-height:420px!important}
-  .article-content-section{padding:34px 0 54px!important}
+  .article-hero{padding:32px 0 28px!important}
+  .article-figure{width:calc(100% - 32px)!important;margin-top:18px!important;border-radius:10px!important}
+  .article-figure img{max-height:340px!important}
+  .article-content-section{padding:28px 0 48px!important}
 }
 
 @media(max-width:620px){
@@ -134,7 +111,6 @@
   .topic-hero + .section{padding-top:42px}
   .career-memory-intro::after{font-size:1rem}
   .operational-trust-page .ot-hero .kicker{font-size:1.2rem;margin-bottom:20px}
-  .article-hero h1,.article-hero .visually-hidden{font-size:clamp(2.05rem,10vw,2.85rem)!important;line-height:1.04!important}
-  .article-hero .article-deck{font-size:1rem!important}
-  .article-figure{margin-left:14px!important;margin-right:14px!important}
+  .article-hero h1,.article-hero .visually-hidden{font-size:clamp(1.9rem,9vw,2.55rem)!important;line-height:1.05!important}
+  .article-hero .article-deck{font-size:.98rem!important}
 }
