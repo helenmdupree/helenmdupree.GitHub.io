@@ -61,6 +61,51 @@
     }
   }
 
+  /* Corrosion knowledge: clearer technical language and accessible contrast. */
+  if(path==='/knowledge-library/corrosion-cathodic-protection/'){
+    const fundamentals=document.querySelector('#fundamentals');
+    if(fundamentals){
+      const h2=fundamentals.querySelector(':scope > .wrap > h2');
+      const intro=fundamentals.querySelector(':scope > .wrap > .section-intro');
+      const proseH2=fundamentals.querySelector('.prose h2');
+      if(h2) h2.textContent='A CP reading only matters in context.';
+      if(intro) intro.textContent='Cathodic protection is evaluated through measurements, but a number by itself does not establish protection. The reading has to be understood alongside the reference electrode, location, operating condition, current distribution, coating condition, interruption method, continuity, and interference.';
+      if(proseH2) proseH2.textContent='The conditions behind the number.';
+    }
+
+    const source=[...document.querySelectorAll('main > section.dark')].find(section=>section.querySelector('.kicker')?.textContent.trim()==='SOURCE DISCIPLINE');
+    if(source){
+      const h2=source.querySelector('h2');
+      const p=source.querySelector('.section-intro');
+      if(h2) h2.textContent='Use the right source for the right decision.';
+      if(p) p.textContent='SOUBEL provides practical context and connects evidence across corrosion-control and integrity work. Standards, regulations, company procedures, original technical literature, and qualified engineering judgment govern asset-specific criteria, calculations, and technical decisions.';
+      const resource=source.querySelector('a[href="/resources/"]');
+      if(resource) resource.remove();
+    }
+
+    if(!document.querySelector('#cp-knowledge-contrast-style')){
+      const style=document.createElement('style');
+      style.id='cp-knowledge-contrast-style';
+      style.textContent=`
+        .cp-knowledge-page #fundamentals{padding:38px 0}
+        .cp-knowledge-page #fundamentals>.wrap>h2{font-size:clamp(1.65rem,2.45vw,2.3rem);line-height:1.08;letter-spacing:-.025em;max-width:800px}
+        .cp-knowledge-page #fundamentals>.wrap>.section-intro{max-width:930px;color:#425960!important;font-size:.98rem;line-height:1.58}
+        .cp-knowledge-page #fundamentals .content-grid{gap:32px;margin-top:18px}
+        .cp-knowledge-page #fundamentals .prose h2{font-size:1.28rem;line-height:1.2;margin:.25rem 0 .6rem;color:#20363c}
+        .cp-knowledge-page #fundamentals .prose p{font-size:.94rem;line-height:1.58;color:#465d65}
+        .cp-knowledge-page #field .trust-note{margin-top:20px;padding:13px 16px;background:#edf4f4;color:#24474f!important;border-left:3px solid var(--teal);border-radius:0 8px 8px 0}
+        .cp-knowledge-page #field .trust-note strong{color:#18363d!important}
+        .cp-knowledge-page .section.dark .kicker{color:#79d0d2!important}
+        .cp-knowledge-page .section.dark h2{color:#f4f7f7!important}
+        .cp-knowledge-page .section.dark .section-intro,.cp-knowledge-page .section.dark p{color:#dce6e8!important}
+        .cp-knowledge-page .section.dark .btn.secondary{color:#f4f7f7!important;border-color:#9cb4ba!important}
+        .cp-knowledge-page .section.dark .actions{margin-top:20px}
+        @media(max-width:760px){.cp-knowledge-page #fundamentals{padding:34px 0}.cp-knowledge-page #fundamentals .content-grid{gap:20px}}
+      `;
+      document.head.appendChild(style);
+    }
+  }
+
   /* Integrity Shift articles: editorial scale, not billboard scale. */
   if(path.startsWith('/insights/integrity-shift/') && path!=='/insights/integrity-shift/' && document.querySelector('.article-hero')){
     document.body.classList.add('integrity-shift-article-audit');
