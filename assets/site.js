@@ -17,6 +17,38 @@
 
   const path = location.pathname.replace(/\/+$/,'/') || '/';
 
+  /* V1.75 live audit: compact Operational Trust so the framework reads as one connected system. */
+  if(path==='/operational-trust/'){
+    const style=document.createElement('style');
+    style.id='operational-trust-audit-layout';
+    style.textContent=`
+      .operational-trust-page #framework{padding:44px 0}
+      .operational-trust-page #framework h2{font-size:1.35rem;line-height:1.15;letter-spacing:-.02em;margin:.1rem 0 .65rem}
+      .operational-trust-page .ot-chain{display:grid;grid-template-columns:repeat(5,minmax(0,1fr) auto) minmax(0,1fr);gap:7px;align-items:stretch;margin:22px 0 16px;flex-wrap:nowrap}
+      .operational-trust-page .ot-chain>div{min-width:0;padding:14px 12px;border-radius:12px}
+      .operational-trust-page .ot-chain strong{font-size:.92rem;margin-bottom:5px;line-height:1.2}
+      .operational-trust-page .ot-chain span{font-size:.78rem;line-height:1.35}
+      .operational-trust-page .ot-chain i{font-size:.82rem;align-self:center}
+      .operational-trust-page .ot-chain-note{font-size:.92rem;margin-top:8px}
+      .operational-trust-page .ot-conditions{padding:44px 0}
+      .operational-trust-page .ot-conditions h2{font-size:clamp(1.65rem,2.5vw,2.35rem);line-height:1.08;letter-spacing:-.03em;margin:.15rem 0 .55rem}
+      .operational-trust-page .ot-card-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:22px}
+      .operational-trust-page .ot-card-grid article{padding:18px 16px;border-radius:14px}
+      .operational-trust-page .ot-card-grid article>span{font-size:.64rem}
+      .operational-trust-page .ot-card-grid h3{font-size:1.05rem;line-height:1.18;margin:7px 0 6px}
+      .operational-trust-page .ot-card-grid p{font-size:.86rem;line-height:1.46}
+      @media(max-width:980px){
+        .operational-trust-page .ot-chain{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+        .operational-trust-page .ot-chain i{display:none}
+        .operational-trust-page .ot-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      }
+      @media(max-width:620px){
+        .operational-trust-page .ot-chain,.operational-trust-page .ot-card-grid{grid-template-columns:1fr}
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
   /* V1.75 live audit: strengthen the Experience page and remove repetitive language. */
   if(path==='/about/experience/'){
     const hero=document.querySelector('.experience-hero');
