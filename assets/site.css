@@ -73,6 +73,16 @@
 .what-stayed{margin-top:18px!important;padding:16px 18px;border-left:3px solid var(--teal);background:#f3f7f7;color:#334a52!important}
 .what-stayed strong{color:#18353c}
 
+/* Books That Stayed: restrained editorial hierarchy. Keep this page isolated from global display-heading scale. */
+body:has(.influence-sequence) .influence-hero{padding:38px 0 32px!important}
+body:has(.influence-sequence) .influence-hero h1{max-width:760px!important;margin:.15rem 0 .65rem!important;font-size:clamp(2.15rem,3.6vw,3.35rem)!important;line-height:1.03!important;letter-spacing:-.035em!important}
+body:has(.influence-sequence) .influence-hero> .wrap > p:last-child{max-width:760px!important;font-size:1rem!important;line-height:1.55!important;color:#d7e2e5!important}
+body:has(.influence-sequence) .influence-hero + .section{padding:38px 0 46px!important}
+body:has(.influence-sequence) .influence-sequence{max-width:940px!important;margin:.25rem 0 16px!important;font-size:clamp(1.7rem,2.65vw,2.55rem)!important;line-height:1.12!important;letter-spacing:-.025em!important;font-weight:700!important}
+body:has(.influence-sequence) .influence-sequence span{color:var(--teal)!important}
+body:has(.influence-sequence) .influence-sequence + .section-intro{max-width:760px!important;margin-bottom:26px!important;font-size:1rem!important;line-height:1.55!important;color:#50666e!important}
+body:has(.influence-sequence) .hub-return-kicker{font-size:.72rem!important;letter-spacing:.14em!important}
+
 /* Thought Pieces */
 .archive-article-body{max-width:780px;margin:0 auto}
 .archive-article-body p{font-size:1.04rem;line-height:1.78}
@@ -108,6 +118,7 @@
   .article-figure{width:calc(100% - 32px)!important;margin-top:18px!important;border-radius:10px!important}
   .article-figure img{max-height:340px!important}
   .article-content-section{padding:28px 0 48px!important}
+  body:has(.influence-sequence) .influence-sequence{font-size:clamp(1.55rem,6.4vw,2.05rem)!important}
 }
 
 @media(max-width:620px){
@@ -121,4 +132,6 @@
   .operational-trust-page .ot-hero .kicker{font-size:1.2rem;margin-bottom:20px}
   .article-hero h1,.article-hero .visually-hidden{font-size:clamp(1.9rem,9vw,2.55rem)!important;line-height:1.05!important}
   .article-hero .article-deck{font-size:.98rem!important}
+  body:has(.influence-sequence) .influence-hero{padding:30px 0 26px!important}
+  body:has(.influence-sequence) .influence-hero h1{font-size:clamp(2rem,9vw,2.55rem)!important}
 }
