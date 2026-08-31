@@ -14,13 +14,13 @@
   letter-spacing:-.035em;
 }
 .hero h1 .accent{font-weight:700;}
-.hero-lead{
+.hero .hero-lead{
   max-width:900px;
   margin:28px 0 0;
   font-size:0;
   line-height:1.5;
 }
-.hero-lead::before{
+.hero .hero-lead::before{
   content:"Connecting technical capability to operating reality, commercial value, and execution.";
   display:block;
   color:#c7d5d9;
@@ -48,6 +48,6 @@
 @media(max-width:620px){
   .hero-inner{padding:60px 0 56px}
   .hero h1{font-size:clamp(2.45rem,10.8vw,3.7rem);line-height:1.02;letter-spacing:-.03em}
-  .hero-lead::before{font-size:1.02rem;line-height:1.5}
+  .hero .hero-lead::before{font-size:1.02rem;line-height:1.5}
   #markets h2{font-size:clamp(2rem,9vw,2.55rem);white-space:normal;}
 }
