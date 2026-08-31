@@ -5,75 +5,61 @@
   const status=document.getElementById('library-search-status');
   if(!form||!input||!results||!status||!Array.isArray(window.SOUBEL_SEARCH_INDEX)) return;
 
-  const index=window.SOUBEL_SEARCH_INDEX;
+  const additions=[
+    {url:'/about/experience/',title:'Experience | SOUBEL',description:'Selected industrial commercial, corrosion, integrity, asset performance, and digital transformation experience that informs SOUBEL’s work.',h1:'Experience that informs the work.',headings:'Career context SLB De Nora Integrated Corrosion Companies MATCOR Industry Leadership',text:'Helen M. Dupree experience across SLB asset performance and strategic accounts, North America and European account leadership, De Nora commercial growth and cathodic protection, Integrated Corrosion Companies commercial and operational leadership, MATCOR and earlier industrial roles.',type:'Experience'},
+    {url:'/insights/transform-revenue-yesterdays-job/',title:'You Don’t Transform Revenue by Hiring for Yesterday’s Job | SOUBEL',description:'Commercial transformation requires roles, resources, expectations, and measures of success built for the future revenue model.',h1:'You Don’t Transform Revenue by Hiring for Yesterday’s Job',headings:'Commercial Growth Organizational Transformation Revenue Strategy',text:'Tomorrow’s revenue cannot be created inside yesterday’s job description. Commercial roles should be designed around the future revenue model.',type:'Analysis & Perspectives'},
+    {url:'/insights/dont-confuse-altitude-with-influence/',title:'Don’t Confuse Altitude with Influence | SOUBEL',description:'Commercial strategy depends on understanding where the buying event begins and translating between operational reality and enterprise consequence.',h1:'Don’t Confuse Altitude with Influence',headings:'Commercial Growth Strategic Accounts Operational Trust Influence',text:'A Rolodex can open a door. It cannot replace a go-to-market strategy. Commercial strategy is created in the translation between the field and the C-suite.',type:'Analysis & Perspectives'},
+    {url:'/insights/phmsa-april-2026-operational-trust-next-standard/',title:'PHMSA’s April 2026 — Operational Trust Is the Next Standard | SOUBEL',description:'PHMSA’s April 2026 pipeline safety rulemakings point toward remote sensing, monitoring, integrity-management-based compliance, traceability, and operational trust.',h1:'Operational Trust Is the Next Standard',headings:'PHMSA Pipeline Regulation Operational Trust Digital Transformation',text:'Remote sensing technologies, remote monitoring capabilities, integrity-management-based compliance pathways, operational traceability, defensible operational intelligence.',type:'Analysis & Perspectives'},
+    {url:'/insights/industrial-operations-operational-understanding/',title:'There’s Something Interesting Happening Across Industrial Operations Right Now | SOUBEL',description:'Industrial transformation is shifting from technology novelty toward operational understanding, trusted information, better decisions, and practical field use.',h1:'There’s Something Interesting Happening Across Industrial Operations Right Now',headings:'Industrial Operations Digital Transformation Operational Trust',text:'Technology alone is not the differentiator anymore. Operational understanding is. Connect engineering reality, operational context, and digital capability.',type:'Analysis & Perspectives'},
+    {url:'/knowledge-library/digital-transformation-ai/',title:'Digital Transformation & AI | Knowledge Library | SOUBEL',description:'SOUBEL technical and practical reference material on industrial data, AI, digital twins, provenance, uncertainty, and decision support.',h1:'Digital Transformation & AI',headings:'Data Provenance Data to Decision Sampling Bias Trustworthy Digital Twins Uncertainty Model Confidence',text:'Industrial digital transformation, AI readiness, trusted data, operational context, decision support, model confidence, digital twins, provenance.',type:'Knowledge Library'},
+    {url:'/knowledge-library/digital-transformation-ai/data-provenance/',title:'Data Provenance | Knowledge Library | SOUBEL',description:'Why industrial data needs traceable origin, context, transformation history, and ownership to support trusted decisions.',h1:'Data Provenance',headings:'Source Context Traceability Evidence',text:'Data provenance, lineage, source systems, transformations, ownership, field evidence, operational trust.',type:'Knowledge Library'},
+    {url:'/knowledge-library/digital-transformation-ai/data-to-decision/',title:'From Data to Decision | Knowledge Library | SOUBEL',description:'How industrial data becomes useful when it is translated into context, judgment, action, and verification.',h1:'From Data to Decision',headings:'Data Context Decision Action Verification',text:'Operational intelligence, decision quality, field execution, trusted data, workflow, action, verification.',type:'Knowledge Library'},
+    {url:'/knowledge-library/digital-transformation-ai/sampling-bias/',title:'Sampling Bias | Knowledge Library | SOUBEL',description:'How uneven inspection, monitoring, and observation patterns can distort what industrial datasets appear to show.',h1:'Sampling Bias',headings:'Inspection Density Observation Bias AI Training Data',text:'Sampling bias, inspection data, ILI, CIS, field observations, investigation density, AI interpretation, dataset quality.',type:'Knowledge Library'},
+    {url:'/knowledge-library/digital-transformation-ai/trustworthy-digital-twins/',title:'Trustworthy Digital Twins | Knowledge Library | SOUBEL',description:'Digital twins become useful when model assumptions, source data, operating context, and validation remain visible and defensible.',h1:'Trustworthy Digital Twins',headings:'Digital Twins Validation Context Models Operational Trust',text:'Digital twins, model validation, source data, assumptions, operational context, asset performance.',type:'Knowledge Library'},
+    {url:'/knowledge-library/digital-transformation-ai/uncertainty-model-confidence/',title:'Uncertainty & Model Confidence | Knowledge Library | SOUBEL',description:'A practical view of uncertainty, confidence, evidence quality, and the limits of predictive industrial models.',h1:'Uncertainty & Model Confidence',headings:'Uncertainty Confidence Predictive Models Evidence',text:'Predictive models, confidence, uncertainty, evidence quality, validation, risk, industrial AI.',type:'Knowledge Library'}
+  ];
+
+  const byUrl=new Map(window.SOUBEL_SEARCH_INDEX.map(item=>[item.url,item]));
+  additions.forEach(item=>byUrl.set(item.url,item));
+  const index=[...byUrl.values()];
+
   const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const norm=s=>String(s||'').toLowerCase().replace(/[^a-z0-9&+\-\s]/g,' ').replace(/\s+/g,' ').trim();
   const tokens=q=>norm(q).split(' ').filter(Boolean);
 
-  function score(item, words, phrase){
-    const title=norm(item.title), h1=norm(item.h1), heads=norm(item.headings), desc=norm(item.description), body=norm(item.text);
-    let n=0, matched=0;
-    words.forEach(w=>{
-      let hit=false;
-      if(title.includes(w)){n+=24;hit=true;}
-      if(h1.includes(w)){n+=20;hit=true;}
-      if(heads.includes(w)){n+=12;hit=true;}
-      if(desc.includes(w)){n+=8;hit=true;}
-      if(body.includes(w)){n+=2;hit=true;}
-      if(hit) matched++;
-    });
-    if(words.length>1 && matched===words.length) n+=16;
-    if(phrase && title.includes(phrase)) n+=32;
-    else if(phrase && (h1.includes(phrase)||heads.includes(phrase))) n+=18;
-    else if(phrase && desc.includes(phrase)) n+=10;
-    if(item.type==='Knowledge Library') n+=5;
+  function score(item,words,phrase){
+    const title=norm(item.title),h1=norm(item.h1),heads=norm(item.headings),desc=norm(item.description),body=norm(item.text);
+    let n=0,matched=0;
+    words.forEach(w=>{let hit=false;if(title.includes(w)){n+=24;hit=true;}if(h1.includes(w)){n+=20;hit=true;}if(heads.includes(w)){n+=12;hit=true;}if(desc.includes(w)){n+=8;hit=true;}if(body.includes(w)){n+=2;hit=true;}if(hit)matched++;});
+    if(words.length>1&&matched===words.length)n+=16;
+    if(phrase&&title.includes(phrase))n+=32;else if(phrase&&(h1.includes(phrase)||heads.includes(phrase)))n+=18;else if(phrase&&desc.includes(phrase))n+=10;
+    if(item.type==='Knowledge Library')n+=5;
     return {score:n,matched};
   }
 
-  function snippet(item, words){
-    const source=item.description || item.text || '';
-    if(item.description) return item.description;
-    const low=source.toLowerCase();
-    let pos=-1;
-    for(const w of words){ const p=low.indexOf(w); if(p>=0 && (pos<0||p<pos)) pos=p; }
-    if(pos<0) return source.slice(0,190)+(source.length>190?'…':'');
-    const start=Math.max(0,pos-70), end=Math.min(source.length,start+210);
+  function snippet(item,words){
+    const source=item.description||item.text||'';
+    if(item.description)return item.description;
+    const low=source.toLowerCase();let pos=-1;
+    for(const w of words){const p=low.indexOf(w);if(p>=0&&(pos<0||p<pos))pos=p;}
+    if(pos<0)return source.slice(0,190)+(source.length>190?'…':'');
+    const start=Math.max(0,pos-70),end=Math.min(source.length,start+210);
     return (start?'…':'')+source.slice(start,end).trim()+(end<source.length?'…':'');
   }
 
   function render(q){
-    const phrase=norm(q), words=tokens(q);
-    results.innerHTML='';
-    if(!phrase){ results.hidden=true; status.textContent=''; return; }
-    if(phrase.length<2){ results.hidden=false; status.textContent='Type at least two characters.'; return; }
-
-    const ranked=index.map(item=>({item,...score(item,words,phrase)}))
-      .filter(x=>x.matched>0)
-      .sort((a,b)=>b.score-a.score || a.item.title.localeCompare(b.item.title))
-      .slice(0,10);
-
+    const phrase=norm(q),words=tokens(q);results.innerHTML='';
+    if(!phrase){results.hidden=true;status.textContent='';return;}
+    if(phrase.length<2){results.hidden=false;status.textContent='Type at least two characters.';return;}
+    const ranked=index.map(item=>({item,...score(item,words,phrase)})).filter(x=>x.matched>0).sort((a,b)=>b.score-a.score||a.item.title.localeCompare(b.item.title)).slice(0,10);
     results.hidden=false;
-    if(!ranked.length){
-      status.textContent='No matches found.';
-      results.innerHTML='<div class="library-search-empty"><strong>No results for “'+esc(q)+'”.</strong><p>Try a broader term such as corrosion, PHMSA, asset performance, AI, reliability, risk, or revenue strategy.</p></div>';
-      return;
-    }
-
+    if(!ranked.length){status.textContent='No matches found.';results.innerHTML='<div class="library-search-empty"><strong>No results for “'+esc(q)+'”.</strong><p>Try a broader term such as corrosion, PHMSA, asset performance, AI, reliability, risk, or revenue strategy.</p></div>';return;}
     status.textContent=ranked.length+(ranked.length===1?' result':' results')+' shown for “'+q+'”.';
-    results.innerHTML=ranked.map(({item})=>
-      '<a class="library-search-result" href="'+esc(item.url)+'">'+
-        '<span class="library-search-type">'+esc(item.type)+'</span>'+ 
-        '<strong>'+esc(item.title.replace(/\s*\|\s*SOUBEL.*$/i,''))+'</strong>'+ 
-        '<p>'+esc(snippet(item,words))+'</p>'+ 
-        '<span class="library-search-path">'+esc(item.url)+'</span>'+ 
-      '</a>'
-    ).join('');
+    results.innerHTML=ranked.map(({item})=>'<a class="library-search-result" href="'+esc(item.url)+'"><span class="library-search-type">'+esc(item.type)+'</span><strong>'+esc(item.title.replace(/\s*\|\s*SOUBEL.*$/i,''))+'</strong><p>'+esc(snippet(item,words))+'</p><span class="library-search-path">'+esc(item.url)+'</span></a>').join('');
   }
 
   let timer;
-  input.addEventListener('input',()=>{ clearTimeout(timer); timer=setTimeout(()=>render(input.value),120); });
-  form.addEventListener('submit',e=>{ e.preventDefault(); clearTimeout(timer); render(input.value); });
-  input.addEventListener('keydown',e=>{
-    if(e.key==='Escape'){input.value='';render('');input.focus();}
-  });
+  input.addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(()=>render(input.value),120);});
+  form.addEventListener('submit',e=>{e.preventDefault();clearTimeout(timer);render(input.value);});
+  input.addEventListener('keydown',e=>{if(e.key==='Escape'){input.value='';render('');input.focus();}});
 })();
