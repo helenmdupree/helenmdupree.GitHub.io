@@ -86,6 +86,14 @@
 /* Career in Motion */
 .career-memory-intro::after{content:"Operational trust isn’t built in a boardroom. It’s built on a right-of-way, listening to field technicians, and understanding where data meets execution.";display:block;max-width:900px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line);color:#263f47;font-size:1.08rem;font-weight:650;line-height:1.55}
 
+/* Career in Motion: the hero already carries the page title and visual-record deck.
+   The gallery section should not repeat them. Keep only the approved bridge line. */
+.career-memory-section{padding-top:34px!important}
+.career-memory-section>.wrap>.kicker,
+.career-memory-section .career-memory-title{display:none!important}
+.career-memory-section .career-memory-intro{font-size:0!important;line-height:0!important;margin:0 0 26px!important;max-width:none!important}
+.career-memory-section .career-memory-intro::after{display:block!important;max-width:900px!important;margin:0!important;padding:0 0 20px!important;border-top:0!important;border-bottom:1px solid var(--line)!important;color:#263f47!important;font-size:1.08rem!important;font-weight:650!important;line-height:1.55!important}
+
 /* Experience: deliberately stacked to preserve readable company narratives */
 .experience-page .experience-timeline>div{display:block!important;padding:28px 0!important}
 .experience-page .experience-timeline strong{display:block!important;font-size:1.42rem!important;line-height:1.2!important;margin:0 0 6px!important}
