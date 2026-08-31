@@ -7,26 +7,28 @@
 }
 .hero h1{
   max-width:900px;
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(2.9rem,5.35vw,5.45rem);
+  font-family:"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(2.85rem,5.15vw,5.2rem);
   font-weight:700;
-  line-height:.98;
-  letter-spacing:-.028em;
+  line-height:1.01;
+  letter-spacing:-.035em;
 }
 .hero h1 .accent{font-weight:700;}
 .hero-lead{
   max-width:900px;
-  margin:26px 0 0;
+  margin:28px 0 0;
   font-size:0;
-  line-height:1.48;
+  line-height:1.5;
 }
 .hero-lead::before{
   content:"Connecting technical capability to operating reality, commercial value, and execution.";
   display:block;
-  color:#d8e4e6;
-  font-size:1.24rem;
-  font-weight:650;
-  letter-spacing:-.012em;
+  color:#c7d5d9;
+  font-family:"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:1.13rem;
+  font-weight:450;
+  line-height:1.5;
+  letter-spacing:.002em;
 }
 .hero .actions{
   display:none;
@@ -45,7 +47,7 @@
 
 @media(max-width:620px){
   .hero-inner{padding:60px 0 56px}
-  .hero h1{font-size:clamp(2.55rem,11.2vw,3.85rem);line-height:1}
-  .hero-lead::before{font-size:1.08rem;line-height:1.5}
+  .hero h1{font-size:clamp(2.45rem,10.8vw,3.7rem);line-height:1.02;letter-spacing:-.03em}
+  .hero-lead::before{font-size:1.02rem;line-height:1.5}
   #markets h2{font-size:clamp(2rem,9vw,2.55rem);white-space:normal;}
 }
