@@ -110,6 +110,15 @@ body:has(.influence-sequence) .hub-return-kicker{font-size:.72rem!important;lett
 .experience-page .experience-timeline span{display:block!important;max-width:900px!important;margin:0 0 10px!important;line-height:1.55!important;white-space:normal!important}
 .experience-page .experience-timeline p{display:block!important;max-width:980px!important;margin:0!important;line-height:1.65!important}
 
+/* Commercial Growth: keep row labels out of the copy column. */
+.commercial-growth-page .commercial-row{grid-template-columns:minmax(128px,150px) minmax(0,1fr)!important;column-gap:28px!important;align-items:start!important}
+.commercial-growth-page .commercial-row .num{display:block!important;max-width:140px!important;line-height:1.45!important;white-space:normal!important;padding-top:1px!important}
+.commercial-growth-page .commercial-row h3{margin-top:0!important}
+@media(max-width:700px){
+  .commercial-growth-page .commercial-row{grid-template-columns:1fr!important;gap:8px!important}
+  .commercial-growth-page .commercial-row .num{max-width:none!important}
+}
+
 @media(max-width:760px){
   .influence-category-grid{grid-template-columns:1fr}
   .book-reflection{grid-template-columns:1fr;padding:22px}
