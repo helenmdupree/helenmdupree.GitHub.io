@@ -17,12 +17,25 @@
       const about=[...nav.children].find(el=>el.classList && el.classList.contains('dropdown') && el.querySelector('.dropbtn')?.textContent.trim()==='About');
       if(about) nav.insertBefore(a,about); else nav.appendChild(a);
     }
+    const about=[...nav.children].find(el=>el.classList && el.classList.contains('dropdown') && el.querySelector('.dropbtn')?.textContent.trim()==='About');
+    const panel=about?.querySelector('.dropdown-panel');
+    if(panel && !panel.querySelector('a[href="/about/career-in-motion/"]')){
+      const a=document.createElement('a'); a.href='/about/career-in-motion/'; a.textContent='A Career in Motion';
+      const experience=panel.querySelector('a[href="/about/experience/"]');
+      if(experience) experience.insertAdjacentElement('afterend',a); else panel.appendChild(a);
+    }
   });
   document.querySelectorAll('.mobile-menu').forEach(menu=>{
     if(!menu.querySelector('a[href="/resources/"]')){
       const groups=menu.querySelectorAll('.group');
       const intelligence=[...groups].find(g=>g.querySelector('.group-title')?.textContent.trim()==='Intelligence');
       if(intelligence){ const a=document.createElement('a'); a.href='/resources/'; a.textContent='Resources'; intelligence.appendChild(a); }
+    }
+    const about=[...menu.querySelectorAll('.group')].find(g=>g.querySelector('.group-title')?.textContent.trim()==='About');
+    if(about && !about.querySelector('a[href="/about/career-in-motion/"]')){
+      const a=document.createElement('a'); a.href='/about/career-in-motion/'; a.textContent='A Career in Motion'; a.className='sub';
+      const experience=about.querySelector('a[href="/about/experience/"]');
+      if(experience) experience.insertAdjacentElement('afterend',a); else about.appendChild(a);
     }
   });
 
@@ -84,9 +97,13 @@
     const gallery=document.querySelector('#career-gallery');
     if(gallery){
       const s=document.createElement('section'); s.className='section alt'; s.id='experience-patterns';
-      s.innerHTML='<div class="wrap"><p class="kicker">PATTERNS OF PRACTICE</p><h2>The résumé shows roles. The pattern behind the work is broader.</h2><p class="section-intro">Across industrial products, field services, corrosion and integrity, infrastructure, enterprise software, and digital programs, the recurring work has been to understand what is true in the market, identify where value is being lost or overlooked, connect technical capability to customer and operating reality, quantify the economics, align the organization, and carry the strategy into execution.</p><div class="grid-2"><article class="card"><span class="label">MARKET DEVELOPMENT</span><h3>Build markets, not only territories.</h3><p>Customer evidence, segmentation, channels, advocacy, competitive position, technical communities, and market education can all shape how a complex capability earns attention and adoption.</p></article><article class="card"><span class="label">TECHNICAL-COMMERCIAL TRANSLATION</span><h3>Translate in both directions.</h3><p>Technical capability has to become customer relevance, and field/customer reality has to travel back into product, engineering, R&amp;D, workflow, and commercialization decisions.</p></article><article class="card"><span class="label">VALUE ENGINEERING</span><h3>Connect the technical outcome to economic consequence.</h3><p>Labor, field effort, risk, operating cost, margin, capital, recurring potential, and decision quality can turn a technical conversation into a decision-ready business case.</p></article><article class="card"><span class="label">INDUSTRY LEADERSHIP</span><h3>Technical communities are also market-intelligence systems.</h3><p>Long-term participation in professional communities can strengthen technical fluency, customer insight, standards awareness, market development, and the ability to recognize emerging priorities before they become obvious.</p></article></div></div>';
+      s.innerHTML='<div class="wrap"><p class="kicker">PATTERNS OF PRACTICE</p><h2>The résumé shows roles. The pattern behind the work is broader.</h2><p class="section-intro">Across industrial products, field services, corrosion and integrity, infrastructure, enterprise software, and digital programs, the recurring work has been to understand what is true in the market, identify where value is being lost or overlooked, connect technical capability to customer and operating reality, quantify the economics, align the organization, and carry the strategy into execution.</p><div class="grid-2"><article class="card"><span class="label">MARKET DEVELOPMENT</span><h3>Build markets, not only territories.</h3><p>Customer evidence, segmentation, channels, advocacy, competitive position, technical communities, and market education can all shape how a complex capability earns attention and adoption.</p></article><article class="card"><span class="label">TECHNICAL-COMMERCIAL TRANSLATION</span><h3>Translate in both directions.</h3><p>Technical capability has to become customer relevance, and field/customer reality has to travel back into product, engineering, R&amp;D, workflow, and commercialization decisions.</p></article><article class="card"><span class="label">VALUE ENGINEERING</span><h3>Connect the technical outcome to economic consequence.</h3><p>Labor, field effort, risk, operating cost, margin, capital, recurring potential, and decision quality can turn a technical conversation into a decision-ready business case.</p></article><article class="card"><span class="label">INDUSTRY LEADERSHIP</span><h3>Technical communities are also market-intelligence systems.</h3><p>Long-term participation in professional communities can strengthen technical fluency, customer insight, standards awareness, market development, and the ability to recognize emerging priorities before they become obvious.</p></article></div><div class="actions"><a class="btn secondary" href="/about/career-in-motion/">View A Career in Motion</a></div></div>';
       gallery.parentNode.insertBefore(s,gallery);
+      gallery.hidden=true;
+      gallery.setAttribute('aria-hidden','true');
     }
+  } else if(path==='/about/experience/'){
+    const gallery=document.querySelector('#career-gallery'); if(gallery){ gallery.hidden=true; gallery.setAttribute('aria-hidden','true'); }
   }
 
   const params = new URLSearchParams(location.search), utm = {};
