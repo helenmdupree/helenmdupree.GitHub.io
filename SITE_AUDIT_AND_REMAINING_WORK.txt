@@ -1,0 +1,54 @@
+SOUBEL SITE AUDIT — V1.62
+Generated: August 30, 2026
+
+AUDIT RESULT
+V1.62 is structurally clean for local deployment. The automated audit found no broken internal links or missing local assets across the substantive site pages.
+
+SITE METRICS
+- html_pages: 44
+- substantive_pages: 43
+- experience_photos: 64
+- missing_local_refs: 0
+- missing_titles: 0
+- missing_meta_descriptions_substantive: 0
+- missing_canonicals_substantive: 0
+- h1_issues_substantive: 0
+- images_missing_alt: 0
+- sitemap_urls: 43
+- desktop_nav_signatures: 1
+- duplicate_titles_substantive: 0
+- duplicate_canonicals_substantive: 0
+- LNG_pages: 0
+- intersection_positioning_pages: 0
+- essay_term_pages: 0
+
+STRUCTURAL ISSUES
+- None found.
+
+INTENTIONAL EXCEPTION
+- /evidence/ remains a noindex redirect to /about/experience/. It intentionally has no content H1 or standalone meta description and is excluded from the substantive-page checks.
+
+REMAINING WORK / LAUNCH CHECKLIST
+- Books That Stayed still uses designed placeholder book covers rather than final cover artwork.
+- Knowledge Library search: COMPLETE in V1.63. Static client-side search indexes 43 substantive SOUBEL pages and returns ranked results across knowledge, analysis, expertise, markets and reference material.
+- GA4 Measurement ID is intentionally blank; analytics is not live yet.
+- Optional public audience counter endpoint is blank; counter remains inactive.
+- Perform final live visual QA on desktop, iPad/tablet, and phone after deployment.
+- Connect Google Search Console and submit sitemap after the live domain is deployed.
+- Verify external/public-reference links in the live environment; automated audit confirmed local links only.
+- Run final accessibility/performance checks in hosting (keyboard navigation, contrast, Core Web Vitals).
+- Decide/verify final contact and conversion CTA workflow before public launch.
+- Add additional Experience photographs later if desired; the current static layout intentionally leaves expansion room.
+- Apply final SOUBEL artwork/logo treatment to the Reliability & Maintenance Decision Workbook when publishing it formally.
+- Validate Open Graph/social-sharing previews after deployment.
+- After launch/indexing, execute the planned LinkedIn article/backlink campaign and connect SOUBEL social channels.
+- Favorite Readings / Authors expansion remains a parked future enhancement, not a launch blocker.
+
+V1.62 CHANGES
+- Installed the approved Experience photo gallery into the master site.
+- Gallery is static and uses natural image aspect ratios; no scroll animation or forced cropping.
+- 64 career photographs are included as optimized external assets rather than embedded base64 data.
+- Removed verified unused legacy image assets.
+- Converted three large photographic PNG assets to optimized JPEG and updated references.
+- Preserved the approved site navigation and substantive information architecture.
+- Package optimized to remain comfortably below 20 MB.
