@@ -17,6 +17,17 @@
     ['/downloads/SOUBEL_Lifecycle_Decision_Comparison.pdf','Lifecycle Decision Comparison']
   ];
 
+  /* Resources: keep the right-edge dropdown inside the viewport and keep SOUBEL open when PDFs are viewed. */
+  if(!document.querySelector('#resources-nav-audit-style')){
+    const style=document.createElement('style');
+    style.id='resources-nav-audit-style';
+    style.textContent=`
+      .desktop-nav .resources-dropdown .dropdown-panel{left:auto!important;right:0!important;max-width:min(390px,calc(100vw - 28px))!important}
+      .desktop-nav .resources-dropdown .dropdown-panel a{white-space:normal!important}
+    `;
+    document.head.appendChild(style);
+  }
+
   /* V1.75 live audit: Resources is a top-level dropdown with direct access to current publications. */
   document.querySelectorAll('.desktop-nav').forEach(nav=>{
     let resources=[...nav.children].find(el=>el.classList?.contains('dropdown') && el.querySelector('.dropbtn')?.textContent.trim()==='Resources');
@@ -33,6 +44,7 @@
         if(about) nav.insertBefore(resources,about); else nav.appendChild(resources);
       }
     }
+    resources.classList.add('resources-dropdown');
     const about=[...nav.children].find(el=>el.classList && el.classList.contains('dropdown') && el.querySelector('.dropbtn')?.textContent.trim()==='About');
     const panel=about?.querySelector('.dropdown-panel');
     if(panel && !panel.querySelector('a[href="/about/career-in-motion/"]')){
@@ -57,6 +69,12 @@
       const experience=about.querySelector('a[href="/about/experience/"]');
       if(experience) experience.insertAdjacentElement('afterend',a); else about.appendChild(a);
     }
+  });
+
+  /* All SOUBEL PDF publications open separately so the website remains available underneath. */
+  document.querySelectorAll('a[href^="/downloads/"][href$=".pdf"]').forEach(a=>{
+    a.target='_blank';
+    a.rel='noopener';
   });
 
   const linkify=(container,map)=>{
