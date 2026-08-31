@@ -30,41 +30,58 @@
   line-height:1.5;
   letter-spacing:.002em;
 }
-.hero .actions{
-  display:none;
-}
+.hero .actions{display:none;}
 
-/* Homepage Markets headline: executive scale, single line on wide desktop */
-#markets h2{
-  font-size:clamp(2rem,2.65vw,2.6rem);
-  line-height:1.08;
-  letter-spacing:-.025em;
-  max-width:none;
-}
-@media(min-width:1100px){
-  #markets h2{white-space:nowrap;}
-}
+/* Homepage Markets headline */
+#markets h2{font-size:clamp(2rem,2.65vw,2.6rem);line-height:1.08;letter-spacing:-.025em;max-width:none}
+@media(min-width:1100px){#markets h2{white-space:nowrap;}}
 
-/* Industry Intelligence: remove wasted vertical space and improve hierarchy */
+/* Industry Intelligence */
 .topic-hero{padding-bottom:48px!important}
 .topic-hero .hero-lead{max-width:900px;margin-top:18px;color:#d8e3e6;font-size:1.08rem;line-height:1.55}
 .topic-hero + .section{padding-top:52px}
 
-/* Operational Trust: make the concept name unmistakable */
+/* Operational Trust */
 .operational-trust-page .ot-contrast article:last-child{border-top:1px solid var(--line)!important}
 .operational-trust-page .ot-hero .crumb{display:none}
-.operational-trust-page .ot-hero .kicker{
-  display:block;
-  margin:0 0 24px;
-  font-size:clamp(1.35rem,2.2vw,2rem);
-  line-height:1;
-  letter-spacing:.13em;
-  font-weight:900;
-  color:#6fd9dc;
-}
+.operational-trust-page .ot-hero .kicker{display:block;margin:0 0 24px;font-size:clamp(1.35rem,2.2vw,2rem);line-height:1;letter-spacing:.13em;font-weight:900;color:#6fd9dc}
 .operational-trust-page .ot-hero h1{margin-top:0!important}
 
-/* Reading & Influence: quiet editorial structure */
+/* Editorial article system: importance through composition, not enormity */
+.article-shell{max-width:980px!important}
+.article-hero{padding:48px 0 42px!important}
+.article-hero .article-category{margin-bottom:14px!important;font-size:.72rem!important;letter-spacing:.13em!important}
+.article-hero h1,
+.article-hero .visually-hidden{
+  position:static!important;
+  width:auto!important;
+  height:auto!important;
+  overflow:visible!important;
+  clip:auto!important;
+  clip-path:none!important;
+  white-space:normal!important;
+  display:block!important;
+  max-width:930px!important;
+  margin:0 0 16px!important;
+  font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;
+  font-size:clamp(2.35rem,4.4vw,4.05rem)!important;
+  font-weight:720!important;
+  line-height:1.02!important;
+  letter-spacing:-.035em!important;
+  color:#f7f5ef!important;
+}
+.article-hero .article-deck{max-width:820px!important;margin:0 0 20px!important;font-size:clamp(1.02rem,1.45vw,1.18rem)!important;line-height:1.55!important;color:#d6e1e4!important}
+.article-hero .article-byline{font-size:.95rem!important;margin-top:0!important}
+.article-figure{max-width:980px!important;margin:30px auto 0!important;border-radius:16px!important;overflow:hidden!important;background:#07141b!important;box-shadow:0 14px 34px rgba(7,20,27,.08)!important}
+.article-figure img{display:block!important;width:100%!important;max-height:520px!important;object-fit:contain!important;background:#07141b!important}
+.revenue-article-figure{max-width:980px!important}
+.article-content-section{padding:42px 0 68px!important}
+.article-body{max-width:790px!important;margin:0 auto!important}
+.article-body p{font-size:1.04rem!important;line-height:1.72!important}
+.article-body>p:first-child{margin-top:0!important}
+.migration-note{margin-top:34px!important}
+
+/* Reading & Influence */
 .influence-quote-section .wrap{max-width:900px}
 .influence-quote-section .big-quote{font-size:clamp(2rem,3.4vw,3.2rem);line-height:1.12}
 .influence-quote-note{max-width:800px}
@@ -73,7 +90,7 @@
 .influence-category-card:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(7,20,27,.08)}
 .people-ideas-section{padding-top:8px}
 
-/* Books That Stayed: make each reflection easier to scan */
+/* Books That Stayed */
 .book-reflection{display:grid;grid-template-columns:minmax(180px,.34fr) minmax(0,1fr);gap:34px;align-items:start;padding:30px;border:1px solid var(--line);border-radius:18px;background:#fff;transition:box-shadow .22s ease,transform .22s ease}
 .book-reflection + .book-reflection{margin-top:22px}
 .book-reflection:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(7,20,27,.08)}
@@ -81,7 +98,7 @@
 .what-stayed{margin-top:18px!important;padding:16px 18px;border-left:3px solid var(--teal);background:#f3f7f7;color:#334a52!important}
 .what-stayed strong{color:#18353c}
 
-/* Thought Pieces: comfortable long-form reading */
+/* Thought Pieces */
 .archive-article-body{max-width:780px;margin:0 auto}
 .archive-article-body p{font-size:1.04rem;line-height:1.78}
 .archive-feature-image{margin-bottom:34px}
@@ -91,21 +108,10 @@
 .thought-pieces-cards .career-idea-card{transition:box-shadow .22s ease,transform .22s ease}
 .thought-pieces-cards .career-idea-card:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(7,20,27,.08)}
 
-/* Career in Motion: approved Operational Trust field line */
-.career-memory-intro::after{
-  content:"Operational trust isn’t built in a boardroom. It’s built on a right-of-way, listening to field technicians, and understanding where data meets execution.";
-  display:block;
-  max-width:900px;
-  margin-top:22px;
-  padding-top:18px;
-  border-top:1px solid var(--line);
-  color:#263f47;
-  font-size:1.08rem;
-  font-weight:650;
-  line-height:1.55;
-}
+/* Career in Motion */
+.career-memory-intro::after{content:"Operational trust isn’t built in a boardroom. It’s built on a right-of-way, listening to field technicians, and understanding where data meets execution.";display:block;max-width:900px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line);color:#263f47;font-size:1.08rem;font-weight:650;line-height:1.55}
 
-/* Experience: cleaner scan hierarchy */
+/* Experience */
 .experience-timeline>div{padding:24px 0}
 .experience-timeline>div>p{max-width:920px}
 
@@ -113,15 +119,22 @@
   .influence-category-grid{grid-template-columns:1fr}
   .book-reflection{grid-template-columns:1fr;padding:22px}
   .book-cover-placeholder{min-height:180px}
+  .article-hero{padding:38px 0 34px!important}
+  .article-figure{margin-top:22px!important;border-radius:12px!important}
+  .article-figure img{max-height:420px!important}
+  .article-content-section{padding:34px 0 54px!important}
 }
 
 @media(max-width:620px){
   .hero-inner{padding:60px 0 56px}
   .hero h1{font-size:clamp(2.45rem,10.8vw,3.7rem);line-height:1.02;letter-spacing:-.03em}
   .hero .hero-lead::before{font-size:1.02rem;line-height:1.5}
-  #markets h2{font-size:clamp(2rem,9vw,2.55rem);white-space:normal;}
+  #markets h2{font-size:clamp(2rem,9vw,2.55rem);white-space:normal}
   .topic-hero{padding-bottom:38px!important}
   .topic-hero + .section{padding-top:42px}
   .career-memory-intro::after{font-size:1rem}
   .operational-trust-page .ot-hero .kicker{font-size:1.2rem;margin-bottom:20px}
+  .article-hero h1,.article-hero .visually-hidden{font-size:clamp(2.05rem,10vw,2.85rem)!important;line-height:1.04!important}
+  .article-hero .article-deck{font-size:1rem!important}
+  .article-figure{margin-left:14px!important;margin-right:14px!important}
 }
