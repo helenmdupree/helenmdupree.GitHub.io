@@ -45,9 +45,51 @@
   #markets h2{white-space:nowrap;}
 }
 
+/* Industry Intelligence: remove wasted vertical space and improve hierarchy */
+.topic-hero{padding-bottom:48px!important}
+.topic-hero .hero-lead{max-width:900px;margin-top:18px;color:#d8e3e6;font-size:1.08rem;line-height:1.55}
+.topic-hero + .section{padding-top:52px}
+
+/* Reading & Influence: quiet editorial structure */
+.influence-quote-section .wrap{max-width:900px}
+.influence-quote-section .big-quote{font-size:clamp(2rem,3.4vw,3.2rem);line-height:1.12}
+.influence-quote-note{max-width:800px}
+.influence-category-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:30px}
+.influence-category-card{min-height:100%;transition:box-shadow .22s ease,transform .22s ease}
+.influence-category-card:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(7,20,27,.08)}
+.people-ideas-section{padding-top:8px}
+
+/* Books That Stayed: make each reflection easier to scan */
+.book-reflection{display:grid;grid-template-columns:minmax(180px,.34fr) minmax(0,1fr);gap:34px;align-items:start;padding:30px;border:1px solid var(--line);border-radius:18px;background:#fff;transition:box-shadow .22s ease,transform .22s ease}
+.book-reflection + .book-reflection{margin-top:22px}
+.book-reflection:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(7,20,27,.08)}
+.book-cover-placeholder{min-height:220px}
+.what-stayed{margin-top:18px!important;padding:16px 18px;border-left:3px solid var(--teal);background:#f3f7f7;color:#334a52!important}
+.what-stayed strong{color:#18353c}
+
+/* Thought Pieces: comfortable long-form reading */
+.archive-article-body{max-width:780px;margin:0 auto}
+.archive-article-body p{font-size:1.04rem;line-height:1.78}
+.archive-feature-image{margin-bottom:34px}
+.archive-article-body .pullquote{margin:34px 0;padding:22px 24px;border-left:3px solid var(--teal);background:#f5f8f8;font-size:clamp(1.35rem,2.5vw,2rem);line-height:1.35}
+.thought-pieces-cards .career-idea-card{transition:box-shadow .22s ease,transform .22s ease}
+.thought-pieces-cards .career-idea-card:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(7,20,27,.08)}
+
+/* Experience: cleaner scan hierarchy */
+.experience-timeline>div{padding:24px 0}
+.experience-timeline>div>p{max-width:920px}
+
+@media(max-width:760px){
+  .influence-category-grid{grid-template-columns:1fr}
+  .book-reflection{grid-template-columns:1fr;padding:22px}
+  .book-cover-placeholder{min-height:180px}
+}
+
 @media(max-width:620px){
   .hero-inner{padding:60px 0 56px}
   .hero h1{font-size:clamp(2.45rem,10.8vw,3.7rem);line-height:1.02;letter-spacing:-.03em}
   .hero .hero-lead::before{font-size:1.02rem;line-height:1.5}
   #markets h2{font-size:clamp(2rem,9vw,2.55rem);white-space:normal;}
+  .topic-hero{padding-bottom:38px!important}
+  .topic-hero + .section{padding-top:42px}
 }
