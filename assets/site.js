@@ -39,6 +39,32 @@
     }));
   }
 
+  /* Integrity Shift articles: editorial scale, not billboard scale. */
+  if(path.startsWith('/insights/integrity-shift/') && path!=='/insights/integrity-shift/' && document.querySelector('.article-hero')){
+    document.body.classList.add('integrity-shift-article-audit');
+    if(!document.querySelector('#integrity-shift-article-audit-style')){
+      const style=document.createElement('style');
+      style.id='integrity-shift-article-audit-style';
+      style.textContent=`
+        .integrity-shift-article-audit .article-hero{padding:44px 0 38px}
+        .integrity-shift-article-audit .article-hero .article-shell{max-width:900px}
+        .integrity-shift-article-audit .article-hero h1{max-width:880px;font-size:clamp(2.15rem,4vw,3.75rem);line-height:1.03;letter-spacing:-.038em;margin:10px 0 13px}
+        .integrity-shift-article-audit .article-deck{max-width:760px;font-size:1rem;line-height:1.5;margin-top:0}
+        .integrity-shift-article-audit .article-byline{font-size:.88rem;margin-top:18px}
+        .integrity-shift-article-audit .article-figure{max-width:820px;margin:24px auto 30px;border-radius:14px;background:#07141b;aspect-ratio:16/8.5;display:flex;align-items:center;justify-content:center}
+        .integrity-shift-article-audit .article-figure img{width:100%;height:100%;max-height:none;object-fit:contain;object-position:center;background:#07141b}
+        .integrity-shift-article-audit .article-content-section{padding-top:8px}
+        .integrity-shift-article-audit .article-body{max-width:760px;margin-left:auto;margin-right:auto}
+        @media(max-width:760px){
+          .integrity-shift-article-audit .article-hero{padding:36px 0 32px}
+          .integrity-shift-article-audit .article-hero h1{font-size:clamp(2rem,8.5vw,3rem)}
+          .integrity-shift-article-audit .article-figure{max-width:calc(100% - 32px);margin:18px auto 24px;aspect-ratio:16/9}
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  }
+
   /* Connect the Operational Trust flagship page to the signature editorial series. */
   if(path==='/operational-trust/' && !document.querySelector('#integrity-shift-connection')){
     const close=document.querySelector('.ot-close-v2');
