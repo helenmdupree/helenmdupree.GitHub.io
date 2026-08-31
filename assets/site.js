@@ -39,6 +39,28 @@
     }));
   }
 
+  /* Homepage: Operational Trust gets one concise invitation, not a duplicated two-column definition. */
+  if(path==='/'){
+    const ot=[...document.querySelectorAll('main > section.dark')].find(section=>section.querySelector('.eyebrow')?.textContent.trim()==='OPERATIONAL TRUST');
+    if(ot){
+      ot.classList.add('home-ot-compact');
+      ot.innerHTML='<div class="wrap home-ot-row"><div><p class="eyebrow">OPERATIONAL TRUST</p><h2>Trust has to survive the handoff.</h2><p class="section-intro">Evidence, judgment, decisions, and field execution stay connected to the outcome.</p></div><a class="home-ot-link" href="/operational-trust/">Explore Operational Trust →</a></div>';
+      if(!document.querySelector('#home-ot-compact-style')){
+        const style=document.createElement('style');
+        style.id='home-ot-compact-style';
+        style.textContent=`
+          .home-ot-compact{padding:34px 0!important}
+          .home-ot-row{display:flex;align-items:flex-end;justify-content:space-between;gap:36px}
+          .home-ot-row h2{font-size:clamp(1.65rem,2.5vw,2.35rem);line-height:1.08;letter-spacing:-.025em;margin:.12rem 0 .45rem;max-width:650px}
+          .home-ot-row .section-intro{font-size:.96rem;line-height:1.5;max-width:690px}
+          .home-ot-link{color:#79d0d2;text-decoration:none;font-weight:850;white-space:nowrap;padding-bottom:4px}
+          @media(max-width:760px){.home-ot-row{display:block}.home-ot-link{display:inline-block;margin-top:16px;white-space:normal}}
+        `;
+        document.head.appendChild(style);
+      }
+    }
+  }
+
   /* Integrity Shift articles: editorial scale, not billboard scale. */
   if(path.startsWith('/insights/integrity-shift/') && path!=='/insights/integrity-shift/' && document.querySelector('.article-hero')){
     document.body.classList.add('integrity-shift-article-audit');
