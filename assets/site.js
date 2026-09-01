@@ -137,9 +137,52 @@
     });
   }
 
+  function connectTerminalIntegrity(){
+    const terminalUrl='/knowledge-library/tank-terminal-integrity/';
+
+    if(path==='/expertise/asset-integrity-management/'){
+      const deeper=[...document.querySelectorAll('main > section')].find(section=>section.querySelector('.kicker')?.textContent.trim()==='EXPLORE DEEPER');
+      const grid=deeper?.querySelector('.grid-3');
+      if(grid && !grid.querySelector('a[href="'+terminalUrl+'"]')){
+        const a=document.createElement('a');a.className='knowledge-card';a.href=terminalUrl;
+        a.innerHTML='<span>TANK &amp; TERMINAL INTEGRITY</span><h3>Storage, transfer, corrosion, controls, and containment</h3><p>Follow integrity across tanks, terminal piping, transfer equipment, corrosion-control systems, overfill prevention, containment, inspection, and lifecycle decisions.</p>';
+        const pipeline=grid.querySelector('a[href="/knowledge-library/pipeline-asset-integrity/"]');
+        if(pipeline) grid.insertBefore(a,pipeline); else grid.appendChild(a);
+      }
+    }
+
+    if(path==='/expertise/asset-integrity-management/application-domains/'){
+      const terminal=[...document.querySelectorAll('main > section')].find(section=>section.querySelector('.kicker')?.textContent.trim()==='TERMINALS, TANK FARMS & STORAGE');
+      const wrap=terminal?.querySelector('.wrap');
+      if(wrap && !wrap.querySelector('a[href="'+terminalUrl+'"]')){
+        const actions=document.createElement('div');actions.className='actions';actions.innerHTML='<a class="btn primary" href="'+terminalUrl+'">Explore Tank &amp; Terminal Integrity</a><a class="btn secondary" href="/knowledge-library/corrosion-cathodic-protection/">Corrosion &amp; CP Knowledge</a>';
+        wrap.appendChild(actions);
+      }
+    }
+
+    if(path==='/expertise/corrosion-cathodic-protection/'){
+      const connected=[...document.querySelectorAll('main > section')].find(section=>section.querySelector('.kicker')?.textContent.trim()==='CONNECTED KNOWLEDGE');
+      if(connected && !document.querySelector('#cp-application-environments')){
+        const section=document.createElement('section');section.className='section';section.id='cp-application-environments';
+        section.innerHTML='<div class="wrap"><p class="kicker">APPLICATION ENVIRONMENTS</p><h2>Corrosion-control decisions span multiple asset environments.</h2><p class="section-intro">Materials, exposure, protection methods, inspection evidence, operating conditions, and consequences change with the asset and its environment. SOUBEL carries the corrosion-control perspective across the systems where those decisions have to work.</p><div class="grid-2"><article class="card"><span class="label">PIPELINES &amp; TRANSMISSION</span><h3>Buried and aboveground linear assets</h3><p>Coatings, cathodic protection, interference, field surveys, monitoring, excavation evidence, and integrity assessment.</p></article><a class="knowledge-card" href="'+terminalUrl+'"><span>TERMINALS, TANK FARMS &amp; STORAGE</span><h3>Tanks, transfer systems, and facility corrosion</h3><p>Tank bottoms, shells and roofs, foundations, linings, cathodic protection, transfer piping, buried and aboveground assets, water and product exposure, and corrosion evidence across the terminal.</p></a><article class="card"><span class="label">PROCESS FACILITIES &amp; FIXED EQUIPMENT</span><h3>Materials and process environment together</h3><p>Process chemistry, temperature, pressure, external exposure, coatings, insulation, materials, inspection, and maintenance history shape the corrosion question.</p></article><article class="card"><span class="label">INDUSTRIAL &amp; ENERGY INFRASTRUCTURE</span><h3>Protection across connected facility systems</h3><p>Buried infrastructure, structures, grounding and electrical interfaces, utility systems, atmospheric exposure, coatings, and monitoring.</p></article></div></div>';
+        connected.parentNode.insertBefore(section,connected);
+      }
+    }
+
+    if(path==='/knowledge-library/corrosion-cathodic-protection/'){
+      const data=document.querySelector('#data');
+      if(data && !document.querySelector('#tanks-terminals')){
+        const section=document.createElement('section');section.className='section';section.id='tanks-terminals';
+        section.innerHTML='<div class="wrap"><p class="kicker">TANKS, TERMINALS &amp; STORAGE</p><h2>Corrosion control changes with the exposure.</h2><p class="section-intro">Terminal facilities can place steel against soil, atmosphere, product, water, coatings, linings, insulation, concrete, and electrical systems within one operating environment. The corrosion mechanism, protection method, evidence, and consequence can change as the product moves through the facility.</p><div class="grid-3"><article class="card"><span class="label">STORAGE TANKS</span><h3>Bottom, shell, roof, and foundation each add evidence.</h3><p>Soil-side and internal bottom corrosion, water accumulation, coatings and linings, cathodic protection, atmospheric exposure, drainage, settlement, and inspection history contribute to the condition picture.</p></article><article class="card"><span class="label">TRANSFER SYSTEMS</span><h3>Corrosion continues through piping and equipment.</h3><p>Buried and aboveground piping, dead legs, low points, supports, coatings, CP where applicable, atmospheric exposure, insulation, process conditions, and service changes shape the threat.</p></article><article class="card"><span class="label">FACILITY CONTEXT</span><h3>Environment and operating history remain attached to the evidence.</h3><p>Soil and groundwater, drainage, containment, electrical interference, product and water chemistry, previous repairs, operating changes, and monitoring can alter what a corrosion finding means.</p></article></div><div class="actions"><a class="btn primary" href="'+terminalUrl+'">Explore Tank &amp; Terminal Integrity</a></div></div>';
+        data.parentNode.insertBefore(section,data);
+      }
+    }
+  }
+
   ensureDesktopNav();
   normalizeMobileMenu();
   normalizeLegacyAimLinks(document);
+  connectTerminalIntegrity();
 
   const btn=document.querySelector('.menu-toggle');
   const menu=document.querySelector('.mobile-menu');
