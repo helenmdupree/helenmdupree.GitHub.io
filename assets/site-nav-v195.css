@@ -1,0 +1,12 @@
+/* V1.95 — desktop dropdown alignment.
+   Resources and About were intentionally pulled left when the nav sat farther right.
+   With the centered navigation there is now enough room for both panels to open
+   directly beneath their triggers, matching Markets, Expertise, and Intelligence. */
+@media(min-width:901px){
+  .desktop-nav .dropdown.resources-dropdown .dropdown-panel,
+  .desktop-nav .dropdown:has(.dropdown-panel a[href="/about/"]) .dropdown-panel{
+    left:-18px!important;
+    right:auto!important;
+    transform:none!important;
+  }
+}
