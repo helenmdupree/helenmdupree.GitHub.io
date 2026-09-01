@@ -1,0 +1,28 @@
+@import url("/assets/site-v189.css");
+
+/* V1.90 — fix mobile menu top-position override.
+   V1.89 set top correctly, then accidentally reset it with the inset shorthand.
+   Keep the menu pinned directly beneath the masthead + hamburger row. */
+@media(max-width:900px){
+  .mobile-menu.open{
+    position:fixed!important;
+    top:calc(15.625vw + 46px)!important;
+    right:0!important;
+    bottom:0!important;
+    left:0!important;
+    width:100%!important;
+    max-height:none!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    margin:0!important;
+    padding:0 0 20px!important;
+    background:#08161d!important;
+    z-index:1001!important;
+  }
+}
+
+@media(max-width:420px){
+  .mobile-menu.open{
+    top:calc(15.625vw + 44px)!important;
+  }
+}
