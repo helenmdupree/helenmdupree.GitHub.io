@@ -1,0 +1,38 @@
+@import url("/assets/site-v185.css");
+
+/* V1.86 — surgical mobile first-view refinement.
+   Desktop remains unchanged. Tighten the mobile navigation row and reduce
+   the homepage hero headline scale so the three-part message breathes. */
+@media(max-width:900px){
+  .header-inner{
+    min-height:46px!important;
+  }
+  .menu-toggle{
+    width:38px!important;
+    height:38px!important;
+  }
+  .mobile-menu.open{
+    max-height:calc(100dvh - 46px - 15.625vw)!important;
+  }
+}
+
+@media(max-width:620px){
+  .hero h1{
+    font-size:clamp(2.15rem,9.5vw,3.25rem);
+    line-height:1.02;
+    letter-spacing:-.03em;
+  }
+}
+
+@media(max-width:420px){
+  .header-inner{
+    min-height:44px!important;
+  }
+  .menu-toggle{
+    width:36px!important;
+    height:36px!important;
+  }
+  .mobile-menu.open{
+    max-height:calc(100dvh - 44px - 15.625vw)!important;
+  }
+}
