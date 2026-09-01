@@ -1,146 +1,68 @@
-@import url("/assets/site-v177.css");
+@import url("/assets/site-v178-base.css");
 
-/* V1.78 — homepage first-view refinement */
-.hero-inner{padding:78px 0 72px;max-width:1040px}
-.hero h1{max-width:900px;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:clamp(2.85rem,5.15vw,5.2rem);font-weight:700;line-height:1.01;letter-spacing:-.035em}
-.hero h1 .accent{font-weight:700}
-.hero .hero-lead{max-width:900px;margin:28px 0 0;font-size:0;line-height:1.5}
-.hero .hero-lead::before{content:"Connecting technical capability to operating reality, commercial value, and execution.";display:block;color:#c7d5d9;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:1.13rem;font-weight:450;line-height:1.5;letter-spacing:.002em}
-.hero .actions{display:none}
-
-/* Homepage Markets headline */
-#markets h2{font-size:clamp(2rem,2.65vw,2.6rem);line-height:1.08;letter-spacing:-.025em;max-width:none}
-@media(min-width:1100px){#markets h2{white-space:nowrap}}
-
-/* Industry Intelligence */
-.topic-hero{padding-bottom:48px!important}
-.topic-hero .hero-lead{max-width:900px;margin-top:18px;color:#d8e3e6;font-size:1.08rem;line-height:1.55}
-.topic-hero + .section{padding-top:52px}
-
-/* Operational Trust */
-.operational-trust-page .ot-contrast article:last-child{border-top:1px solid var(--line)!important}
-.operational-trust-page .ot-hero .crumb{display:none}
-.operational-trust-page .ot-hero .kicker{display:block;margin:0 0 24px;font-size:clamp(1.35rem,2.2vw,2rem);line-height:1;letter-spacing:.13em;font-weight:900;color:#6fd9dc}
-.operational-trust-page .ot-hero h1{margin-top:0!important}
-
-/* Editorial article system: compact, readable, consistent */
-.article-shell{max-width:900px!important}
-.article-hero{padding:38px 0 34px!important}
-.article-hero .article-category{margin:0 0 12px!important;font-size:.7rem!important;letter-spacing:.13em!important}
-.article-hero h1,
-.article-hero .visually-hidden{
-  position:static!important;
-  width:auto!important;
-  height:auto!important;
-  overflow:visible!important;
-  clip:auto!important;
-  clip-path:none!important;
-  white-space:normal!important;
-  display:block!important;
-  max-width:860px!important;
-  margin:0 0 14px!important;
-  font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;
-  font-size:clamp(2.05rem,3.45vw,3.2rem)!important;
-  font-weight:700!important;
-  line-height:1.04!important;
-  letter-spacing:-.03em!important;
-  color:#f7f5ef!important;
+/* V1.79 — SOUBEL header reset
+   One verified standalone emblem + browser-rendered brand text.
+   The old horizontal raster lockup is intentionally hidden. */
+.brand-logo{
+  position:relative;
+  display:grid!important;
+  grid-template-columns:54px auto;
+  grid-template-rows:auto auto;
+  column-gap:14px;
+  align-items:center;
+  min-width:252px;
+  height:64px;
+  flex:0 0 auto;
+  text-decoration:none;
+  background:url("/assets/soubel-emblem-header.webp?v=179") left center/54px auto no-repeat;
 }
-.article-hero .article-deck{max-width:780px!important;margin:0 0 16px!important;font-size:1.04rem!important;line-height:1.5!important;color:#d6e1e4!important}
-.article-hero .article-byline{font-size:.9rem!important;margin-top:0!important}
-.article-figure,.revenue-article-figure{width:min(760px,calc(100% - 40px))!important;max-width:760px!important;margin:24px auto 0!important;border-radius:12px!important;overflow:hidden!important;background:#07141b!important;box-shadow:0 10px 24px rgba(7,20,27,.07)!important}
-.article-figure img{display:block!important;width:100%!important;height:auto!important;max-height:400px!important;object-fit:contain!important;background:#07141b!important}
-.article-content-section{padding:32px 0 60px!important}
-.article-body{max-width:760px!important;margin:0 auto!important}
-.article-body p{font-size:1.02rem!important;line-height:1.72!important}
-.article-body>p:first-child{margin-top:0!important}
-.migration-note{margin-top:30px!important}
-
-/* Reading & Influence */
-.influence-quote-section .wrap{max-width:900px}
-.influence-quote-section .big-quote{font-size:clamp(2rem,3.4vw,3.2rem);line-height:1.12}
-.influence-quote-note{max-width:800px}
-.influence-category-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:30px}
-.influence-category-card{min-height:100%;transition:box-shadow .22s ease,transform .22s ease}
-.influence-category-card:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(7,20,27,.08)}
-.people-ideas-section{padding-top:8px}
-
-/* Books That Stayed */
-.book-reflection{display:grid;grid-template-columns:minmax(180px,.34fr) minmax(0,1fr);gap:34px;align-items:start;padding:30px;border:1px solid var(--line);border-radius:18px;background:#fff;transition:box-shadow .22s ease,transform .22s ease}
-.book-reflection + .book-reflection{margin-top:22px}
-.book-reflection:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(7,20,27,.08)}
-.book-cover-placeholder{min-height:220px}
-.what-stayed{margin-top:18px!important;padding:16px 18px;border-left:3px solid var(--teal);background:#f3f7f7;color:#334a52!important}
-.what-stayed strong{color:#18353c}
-
-/* Books That Stayed: restrained editorial hierarchy. Keep this page isolated from global display-heading scale. */
-body:has(.influence-sequence) .influence-hero{padding:38px 0 32px!important}
-body:has(.influence-sequence) .influence-hero h1{max-width:760px!important;margin:.15rem 0 .65rem!important;font-size:clamp(2.15rem,3.6vw,3.35rem)!important;line-height:1.03!important;letter-spacing:-.035em!important}
-body:has(.influence-sequence) .influence-hero> .wrap > p:last-child{max-width:760px!important;font-size:1rem!important;line-height:1.55!important;color:#d7e2e5!important}
-body:has(.influence-sequence) .influence-hero + .section{padding:38px 0 46px!important}
-body:has(.influence-sequence) .influence-sequence{max-width:940px!important;margin:.25rem 0 16px!important;font-size:clamp(1.7rem,2.65vw,2.55rem)!important;line-height:1.12!important;letter-spacing:-.025em!important;font-weight:700!important}
-body:has(.influence-sequence) .influence-sequence span{color:var(--teal)!important}
-body:has(.influence-sequence) .influence-sequence + .section-intro{max-width:760px!important;margin-bottom:26px!important;font-size:1rem!important;line-height:1.55!important;color:#50666e!important}
-body:has(.influence-sequence) .hub-return-kicker{font-size:.72rem!important;letter-spacing:.14em!important}
-
-/* Thought Pieces */
-.archive-article-body{max-width:780px;margin:0 auto}
-.archive-article-body p{font-size:1.04rem;line-height:1.78}
-.archive-feature-image{margin-bottom:34px}
-.archive-article-body .pullquote{margin:34px 0;padding:22px 24px;border-left:3px solid var(--teal);background:#f5f8f8;font-size:clamp(1.35rem,2.5vw,2rem);line-height:1.35}
-.archive-article-body .source-box{margin:38px 0 28px}
-.archive-article-body .bike-closing{margin:54px 0 48px;text-align:center;font-size:clamp(1.55rem,3vw,2.2rem);line-height:1.25}
-.thought-pieces-cards .career-idea-card{transition:box-shadow .22s ease,transform .22s ease}
-.thought-pieces-cards .career-idea-card:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(7,20,27,.08)}
-
-/* Career in Motion */
-.career-memory-intro::after{content:"Operational trust isn’t built in a boardroom. It’s built on a right-of-way, listening to field technicians, and understanding where data meets execution.";display:block;max-width:900px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line);color:#263f47;font-size:1.08rem;font-weight:650;line-height:1.55}
-
-/* Career in Motion: the hero already carries the page title and visual-record deck.
-   The gallery section should not repeat them. Keep only the approved bridge line. */
-.career-memory-section{padding-top:34px!important}
-.career-memory-section>.wrap>.kicker,
-.career-memory-section .career-memory-title{display:none!important}
-.career-memory-section .career-memory-intro{font-size:0!important;line-height:0!important;margin:0 0 26px!important;max-width:none!important}
-.career-memory-section .career-memory-intro::after{display:block!important;max-width:900px!important;margin:0!important;padding:0 0 20px!important;border-top:0!important;border-bottom:1px solid var(--line)!important;color:#263f47!important;font-size:1.08rem!important;font-weight:650!important;line-height:1.55!important}
-
-/* Experience: deliberately stacked to preserve readable company narratives */
-.experience-page .experience-timeline>div{display:block!important;padding:28px 0!important}
-.experience-page .experience-timeline strong{display:block!important;font-size:1.42rem!important;line-height:1.2!important;margin:0 0 6px!important}
-.experience-page .experience-timeline span{display:block!important;max-width:900px!important;margin:0 0 10px!important;line-height:1.55!important;white-space:normal!important}
-.experience-page .experience-timeline p{display:block!important;max-width:980px!important;margin:0!important;line-height:1.65!important}
-
-/* Commercial Growth: keep row labels out of the copy column. */
-.commercial-growth-page .commercial-row{grid-template-columns:minmax(128px,150px) minmax(0,1fr)!important;column-gap:28px!important;align-items:start!important}
-.commercial-growth-page .commercial-row .num{display:block!important;max-width:140px!important;line-height:1.45!important;white-space:normal!important;padding-top:1px!important}
-.commercial-growth-page .commercial-row h3{margin-top:0!important}
-@media(max-width:700px){
-  .commercial-growth-page .commercial-row{grid-template-columns:1fr!important;gap:8px!important}
-  .commercial-growth-page .commercial-row .num{max-width:none!important}
+.brand-logo img{display:none!important}
+.brand-logo::before{
+  content:"SOUBEL";
+  grid-column:2;
+  grid-row:1;
+  align-self:end;
+  color:#e3e7e9;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:1.72rem;
+  font-weight:500;
+  line-height:.88;
+  letter-spacing:.18em;
+  white-space:nowrap;
 }
-
+.brand-logo::after{
+  content:"OPERATIONAL TRUST";
+  grid-column:2;
+  grid-row:2;
+  align-self:start;
+  margin-top:7px;
+  color:#bcc7ca;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:.56rem;
+  font-weight:700;
+  line-height:1;
+  letter-spacing:.26em;
+  white-space:nowrap;
+}
+@media(max-width:1150px){
+  .brand-logo{grid-template-columns:48px auto;column-gap:12px;min-width:222px;background-size:48px auto}
+  .brand-logo::before{font-size:1.46rem;letter-spacing:.16em}
+  .brand-logo::after{font-size:.50rem;letter-spacing:.22em;margin-top:6px}
+}
+@media(max-width:900px){
+  .brand-logo{grid-template-columns:44px auto;column-gap:10px;min-width:202px;background-size:44px auto}
+  .brand-logo::before{font-size:1.32rem}
+  .brand-logo::after{font-size:.47rem;letter-spacing:.19em}
+}
 @media(max-width:760px){
-  .influence-category-grid{grid-template-columns:1fr}
-  .book-reflection{grid-template-columns:1fr;padding:22px}
-  .book-cover-placeholder{min-height:180px}
-  .article-hero{padding:32px 0 28px!important}
-  .article-figure{width:calc(100% - 32px)!important;margin-top:18px!important;border-radius:10px!important}
-  .article-figure img{max-height:340px!important}
-  .article-content-section{padding:28px 0 48px!important}
-  body:has(.influence-sequence) .influence-sequence{font-size:clamp(1.55rem,6.4vw,2.05rem)!important}
+  .header-inner{min-height:68px!important}
+  .brand-logo{grid-template-columns:42px auto;column-gap:10px;min-width:0;height:52px;background-size:42px auto}
+  .brand-logo::before{font-size:1.28rem;letter-spacing:.15em}
+  .brand-logo::after{font-size:.46rem;letter-spacing:.18em;margin-top:5px}
+  .mobile-menu{inset:68px 0 0 0!important}
 }
-
-@media(max-width:620px){
-  .hero-inner{padding:60px 0 56px}
-  .hero h1{font-size:clamp(2.45rem,10.8vw,3.7rem);line-height:1.02;letter-spacing:-.03em}
-  .hero .hero-lead::before{font-size:1.02rem;line-height:1.5}
-  #markets h2{font-size:clamp(2rem,9vw,2.55rem);white-space:normal}
-  .topic-hero{padding-bottom:38px!important}
-  .topic-hero + .section{padding-top:42px}
-  .career-memory-intro::after{font-size:1rem}
-  .operational-trust-page .ot-hero .kicker{font-size:1.2rem;margin-bottom:20px}
-  .article-hero h1,.article-hero .visually-hidden{font-size:clamp(1.9rem,9vw,2.55rem)!important;line-height:1.05!important}
-  .article-hero .article-deck{font-size:.98rem!important}
-  body:has(.influence-sequence) .influence-hero{padding:30px 0 26px!important}
-  body:has(.influence-sequence) .influence-hero h1{font-size:clamp(2rem,9vw,2.55rem)!important}
+@media(max-width:390px){
+  .brand-logo{grid-template-columns:40px auto;column-gap:8px;background-size:40px auto}
+  .brand-logo::before{font-size:1.17rem;letter-spacing:.13em}
+  .brand-logo::after{font-size:.42rem;letter-spacing:.14em}
 }
