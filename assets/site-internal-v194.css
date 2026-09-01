@@ -1,0 +1,113 @@
+@import url("/assets/site-internal-v193.css");
+
+/* V1.94 — Intelligence Platform hero + readability refinement.
+   Industry Intelligence and Knowledge Library should feel like flagship SOUBEL
+   assets, not pale utility screens.  Restore brand authority, readable contrast,
+   and restrained secondary-heading scale. */
+
+body:has(.intelligence-toolbar) .topic-hero,
+body:has(.library-search) .topic-hero{
+  padding:50px 0 44px!important;
+  color:#fff!important;
+  background:
+    radial-gradient(circle at 82% 18%,rgba(17,133,139,.24),transparent 30rem),
+    linear-gradient(135deg,#061119,#0a222b)!important;
+  border-bottom:1px solid rgba(255,255,255,.08)!important;
+}
+
+body:has(.intelligence-toolbar) .topic-hero .eyebrow,
+body:has(.library-search) .topic-hero .eyebrow{
+  margin:0 0 10px!important;
+  color:#7cd0d2!important;
+  font-size:.74rem!important;
+  line-height:1.2!important;
+  letter-spacing:.17em!important;
+}
+
+body:has(.intelligence-toolbar) .topic-hero h1,
+body:has(.library-search) .topic-hero h1{
+  max-width:900px!important;
+  margin:0!important;
+  color:#fff!important;
+  font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;
+  font-size:clamp(2.25rem,3.6vw,3.25rem)!important;
+  font-weight:700!important;
+  line-height:1.04!important;
+  letter-spacing:-.03em!important;
+}
+
+/* The former pale gray copy was effectively disappearing against the white hero. */
+body:has(.intelligence-toolbar) .topic-hero .hero-lead,
+body:has(.library-search) .topic-hero .hero-lead{
+  max-width:880px!important;
+  margin:16px 0 0!important;
+  color:#d7e2e5!important;
+  font-size:1.02rem!important;
+  line-height:1.55!important;
+  opacity:1!important;
+}
+
+/* Knowledge Library search remains a prominent tool inside the branded hero. */
+body:has(.library-search) .library-search{
+  max-width:880px!important;
+  margin-top:24px!important;
+}
+body:has(.library-search) .library-search input{
+  color:#13272e!important;
+  background:#fff!important;
+  border-color:#c9d7da!important;
+}
+body:has(.library-search) .library-search input::placeholder{
+  color:#5d7077!important;
+  opacity:1!important;
+}
+body:has(.library-search) .library-search-help,
+body:has(.library-search) .library-search-status{
+  color:#c8d6da!important;
+  opacity:1!important;
+}
+
+/* Remove public-facing development scaffolding from Industry Intelligence. */
+body:has(.intelligence-toolbar) .status-card{
+  display:none!important;
+}
+body:has(.intelligence-toolbar) .intelligence-toolbar{
+  display:block!important;
+  max-width:900px!important;
+}
+
+/* Keep the first content headings subordinate to the page hero. */
+body:has(.intelligence-toolbar) .section h2,
+body:has(.library-search) .section h2{
+  font-size:clamp(1.9rem,2.8vw,2.7rem)!important;
+  line-height:1.08!important;
+  letter-spacing:-.025em!important;
+}
+body:has(.intelligence-toolbar) .section-intro,
+body:has(.library-search) .section-intro{
+  color:#4f656d!important;
+  opacity:1!important;
+}
+
+@media(max-width:620px){
+  body:has(.intelligence-toolbar) .topic-hero,
+  body:has(.library-search) .topic-hero{
+    padding:40px 0 36px!important;
+  }
+
+  body:has(.intelligence-toolbar) .topic-hero h1,
+  body:has(.library-search) .topic-hero h1{
+    font-size:clamp(1.95rem,8.5vw,2.55rem)!important;
+  }
+
+  body:has(.intelligence-toolbar) .topic-hero .hero-lead,
+  body:has(.library-search) .topic-hero .hero-lead{
+    font-size:.97rem!important;
+    line-height:1.5!important;
+  }
+
+  body:has(.intelligence-toolbar) .section h2,
+  body:has(.library-search) .section h2{
+    font-size:clamp(1.65rem,7.2vw,2.05rem)!important;
+  }
+}
