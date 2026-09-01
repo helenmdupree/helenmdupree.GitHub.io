@@ -1,0 +1,18 @@
+@import url("/assets/site-v190.css");
+
+/* V1.91 — homepage Markets mobile hierarchy.
+   Keep desktop unchanged. Reduce the mobile Markets headline so it reads as
+   a secondary section heading beneath the hero, and tighten kicker spacing. */
+@media(max-width:620px){
+  #markets .kicker{
+    margin-bottom:8px!important;
+  }
+
+  #markets h2{
+    font-size:clamp(1.72rem,7.2vw,2.1rem)!important;
+    line-height:1.08!important;
+    letter-spacing:-.025em!important;
+    max-width:100%!important;
+    white-space:normal!important;
+  }
+}
