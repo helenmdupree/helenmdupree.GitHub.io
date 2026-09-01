@@ -1,0 +1,16 @@
+@import url("/assets/site-v186.css");
+
+/* V1.87 — masthead home-link refinement.
+   Keep the visible SOUBEL brand area as the home link without making the
+   decorative right side of the masthead an invisible click target. */
+.brand-logo{
+  width:55vw!important;
+  max-width:760px!important;
+}
+
+@media(max-width:900px){
+  .brand-logo{
+    width:48vw!important;
+    max-width:none!important;
+  }
+}
