@@ -1,0 +1,47 @@
+@import url("/assets/site-v185.css");
+
+/* V1.92 — internal-page hero hierarchy.
+   Reduce the oversized standard page-hero treatment across Markets and Expertise
+   while preserving a clear executive headline hierarchy on desktop and mobile. */
+.page-hero{
+  padding:56px 0 50px!important;
+}
+
+.page-hero h1{
+  max-width:980px!important;
+  margin:0!important;
+  font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;
+  font-size:clamp(2.35rem,4vw,3.6rem)!important;
+  font-weight:700!important;
+  line-height:1.03!important;
+  letter-spacing:-.035em!important;
+}
+
+.page-hero p{
+  max-width:850px!important;
+  margin-top:18px!important;
+  font-size:1.05rem!important;
+  line-height:1.55!important;
+}
+
+.page-hero .kicker{
+  margin-bottom:10px!important;
+}
+
+@media(max-width:620px){
+  .page-hero{
+    padding:42px 0 38px!important;
+  }
+
+  .page-hero h1{
+    font-size:clamp(2rem,9vw,2.7rem)!important;
+    line-height:1.04!important;
+    letter-spacing:-.03em!important;
+  }
+
+  .page-hero p{
+    margin-top:15px!important;
+    font-size:.98rem!important;
+    line-height:1.5!important;
+  }
+}
