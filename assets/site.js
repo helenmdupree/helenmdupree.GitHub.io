@@ -33,6 +33,16 @@
     }
   }
 
+  function normalizeLegacyAimLinks(root){
+    if(!root) return;
+    root.querySelectorAll('a[href="/expertise/pipeline-asset-integrity/"]').forEach(link=>{
+      link.href='/expertise/asset-integrity-management/';
+      if((link.textContent||'').includes('Pipeline & Asset Integrity')){
+        link.textContent=link.textContent.replace('Pipeline & Asset Integrity','Asset Integrity Management');
+      }
+    });
+  }
+
   function ensureDesktopNav(){
     document.querySelectorAll('.desktop-nav').forEach(nav=>{
       const expertise=[...nav.children].find(el=>el.classList?.contains('dropdown') && el.querySelector('.dropbtn')?.textContent.trim()==='Expertise');
@@ -129,6 +139,7 @@
 
   ensureDesktopNav();
   normalizeMobileMenu();
+  normalizeLegacyAimLinks(document);
 
   const btn=document.querySelector('.menu-toggle');
   const menu=document.querySelector('.mobile-menu');
