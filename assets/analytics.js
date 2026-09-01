@@ -59,17 +59,17 @@
   }
 })();
 
-/* SOUBEL header asset v3 — clean RGBA file with cache-safe filename */
+/* SOUBEL header asset v4 — validated cache-safe header */
 (function(){
   const img=document.querySelector('.brand-logo img');
   if(img){
-    img.src='/assets/soubel-header-v3-rgba.png';
+    img.src='/assets/soubel-header-v4.png';
     img.removeAttribute('srcset');
   }
-  if(!document.querySelector('#soubel-header-v3-style')){
+  if(!document.querySelector('#soubel-header-v4-style')){
     const style=document.createElement('style');
-    style.id='soubel-header-v3-style';
-    style.textContent='@media(max-width:620px){.brand-logo img{width:min(270px,calc(100vw - 100px))!important;height:auto!important;max-width:none!important}}';
+    style.id='soubel-header-v4-style';
+    style.textContent='.brand-logo img{width:320px!important;height:auto!important;max-width:none!important;object-fit:contain!important}@media(max-width:1100px){.brand-logo img{width:280px!important}}@media(max-width:620px){.brand-logo img{width:min(250px,calc(100vw - 100px))!important}}';
     document.head.appendChild(style);
   }
 })();
