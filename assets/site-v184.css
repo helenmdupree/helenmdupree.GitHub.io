@@ -1,0 +1,109 @@
+@import url("/assets/site-v178-base.css");
+
+/* V1.84 — verified SOUBEL 1920x300 masthead assembled from eight checked slices.
+   No menu is embedded in the artwork. Existing HTML navigation remains below it. */
+.site-header{
+  position:relative!important;
+  top:auto!important;
+  z-index:1000!important;
+  background:#07141b!important;
+  border-bottom:1px solid rgba(255,255,255,.10)!important;
+  backdrop-filter:none!important;
+  overflow:visible!important;
+}
+.site-header::before{
+  content:"";
+  display:block;
+  width:100%;
+  aspect-ratio:1920 / 300;
+  background-color:#d8dde1;
+  background-image:
+    url("/assets/soubel-masthead-00.webp?v=184"),
+    url("/assets/soubel-masthead-01.webp?v=184"),
+    url("/assets/soubel-masthead-02.webp?v=184"),
+    url("/assets/soubel-masthead-03.webp?v=184"),
+    url("/assets/soubel-masthead-04.webp?v=184"),
+    url("/assets/soubel-masthead-05.webp?v=184"),
+    url("/assets/soubel-masthead-06.webp?v=184"),
+    url("/assets/soubel-masthead-07.webp?v=184");
+  background-repeat:no-repeat;
+  background-size:
+    12.5% 100%,12.5% 100%,12.5% 100%,12.5% 100%,
+    12.5% 100%,12.5% 100%,12.5% 100%,12.5% 100%;
+  background-position:
+    0 0,12.5% 0,25% 0,37.5% 0,
+    50% 0,62.5% 0,75% 0,87.5% 0;
+}
+.header-inner{
+  position:relative!important;
+  min-height:60px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:0!important;
+}
+/* Keep the masthead as the home link, while suppressing every legacy logo rendering. */
+.brand-logo{
+  position:absolute!important;
+  top:-15.625vw!important;
+  left:calc((100% - 100vw) / 2)!important;
+  width:100vw!important;
+  height:15.625vw!important;
+  max-width:none!important;
+  min-width:0!important;
+  display:block!important;
+  overflow:hidden!important;
+  background:none!important;
+  text-decoration:none!important;
+  z-index:2!important;
+}
+.brand-logo img,
+.brand-logo::before,
+.brand-logo::after{
+  display:none!important;
+  content:none!important;
+  background:none!important;
+}
+.desktop-nav{
+  width:100%!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:clamp(16px,2.15vw,30px)!important;
+  margin:0!important;
+}
+.desktop-nav>a,.dropbtn{
+  padding:17px 0!important;
+  color:#dce8ea!important;
+  font-size:.87rem!important;
+  font-weight:760!important;
+  white-space:nowrap!important;
+}
+.dropdown-panel{top:54px!important}
+.menu-toggle{margin-left:auto!important}
+
+/* Mobile menu opens beneath the masthead and hamburger row. */
+.mobile-menu{
+  position:relative!important;
+  inset:auto!important;
+  z-index:999!important;
+  width:100%!important;
+}
+.mobile-menu.open{
+  display:block!important;
+  max-height:calc(100dvh - 58px - 15.625vw)!important;
+  overflow:auto!important;
+}
+@media(max-width:1100px){
+  .desktop-nav{gap:16px!important}
+  .desktop-nav>a,.dropbtn{font-size:.80rem!important}
+}
+@media(max-width:900px){
+  .header-inner{min-height:58px!important;justify-content:flex-end!important}
+  .desktop-nav{display:none!important}
+  .menu-toggle{display:block!important;width:44px!important;height:44px!important}
+}
+@media(max-width:420px){
+  .header-inner{min-height:56px!important}
+  .mobile-menu.open{max-height:calc(100dvh - 56px - 15.625vw)!important}
+}
