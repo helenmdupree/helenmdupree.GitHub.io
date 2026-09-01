@@ -59,17 +59,28 @@
   }
 })();
 
-/* SOUBEL header v5 — Retina asset + tablet-safe navigation */
+/* SOUBEL header v6 — split Retina assets + tablet-safe navigation */
 (function(){
-  const img=document.querySelector('.brand-logo img');
+  const brand=document.querySelector('.brand-logo');
+  const img=brand && brand.querySelector('img');
   if(img){
-    img.src='/assets/soubel-header-v5.png';
-    img.removeAttribute('srcset');
+    img.style.opacity='0';
+    img.style.width='100%';
+    img.style.height='100%';
+    img.style.maxWidth='none';
   }
-  if(!document.querySelector('#soubel-header-v5-style')){
+  if(brand) brand.classList.add('soubel-header-v6');
+  if(!document.querySelector('#soubel-header-v6-style')){
     const style=document.createElement('style');
-    style.id='soubel-header-v5-style';
-    style.textContent='.brand-logo{flex:0 0 auto!important}.brand-logo img{width:320px!important;height:auto!important;max-width:none!important;object-fit:contain!important}@media(max-width:1050px){.desktop-nav{display:none!important}.menu-toggle{display:block!important}.brand-logo img{width:320px!important;height:auto!important}.header-inner{min-height:82px!important}.mobile-menu{inset:82px 0 0 0!important}}@media(max-width:620px){.header-inner{min-height:62px!important}.mobile-menu{inset:62px 0 0 0!important}.brand-logo img{width:min(250px,calc(100vw - 100px))!important;height:auto!important}}';
+    style.id='soubel-header-v6-style';
+    style.textContent=`
+.brand-logo.soubel-header-v6{position:relative!important;display:block!important;width:320px!important;height:62px!important;flex:0 0 auto!important;overflow:visible!important}
+.brand-logo.soubel-header-v6::before,.brand-logo.soubel-header-v6::after{content:"";position:absolute;top:50%;transform:translateY(-50%);background-repeat:no-repeat;background-position:center;background-size:contain;pointer-events:none}
+.brand-logo.soubel-header-v6::before{left:0;width:32%;aspect-ratio:240/124;background-image:url('/assets/soubel-header-emblem-v6.png')}
+.brand-logo.soubel-header-v6::after{right:0;width:66%;aspect-ratio:420/67;background-image:url('/assets/soubel-header-text-v6.png')}
+@media(max-width:1050px){.desktop-nav{display:none!important}.menu-toggle{display:block!important}.header-inner{min-height:82px!important}.mobile-menu{inset:82px 0 0 0!important}.brand-logo.soubel-header-v6{width:320px!important;height:62px!important}}
+@media(max-width:620px){.header-inner{min-height:62px!important}.mobile-menu{inset:62px 0 0 0!important}.brand-logo.soubel-header-v6{width:min(250px,calc(100vw - 100px))!important;height:50px!important}}
+`;
     document.head.appendChild(style);
   }
 })();
