@@ -1,0 +1,83 @@
+@import url("/assets/site-v188.css");
+
+/* V1.89 — mobile menu positioning + compact rhythm.
+   Make the open menu a true viewport overlay directly beneath the masthead/nav,
+   eliminate any document-flow gap, and reduce vertical scrolling. */
+@media(max-width:900px){
+  .mobile-menu.open{
+    position:fixed!important;
+    top:calc(15.625vw + 46px)!important;
+    right:0!important;
+    bottom:0!important;
+    left:0!important;
+    inset:auto 0 0 0!important;
+    width:100%!important;
+    max-height:none!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    overscroll-behavior:contain!important;
+    margin:0!important;
+    padding:0 0 20px!important;
+    background:#08161d!important;
+    z-index:1001!important;
+  }
+
+  .mobile-menu .group{
+    margin:0!important;
+    padding:10px 20px 12px!important;
+    border-bottom:1px solid rgba(255,255,255,.08)!important;
+    background:#08161d!important;
+  }
+
+  .mobile-menu .group-title{
+    margin:0 0 4px!important;
+    font-size:.69rem!important;
+    line-height:1.25!important;
+    letter-spacing:.17em!important;
+  }
+
+  .mobile-menu a,
+  .mobile-menu a.sub{
+    padding:6px 0!important;
+    font-size:.96rem!important;
+    line-height:1.35!important;
+  }
+
+  .mobile-menu a.sub{
+    padding-left:10px!important;
+  }
+
+  .mobile-menu .mobile-home-group{
+    padding:8px 20px 10px!important;
+  }
+
+  .mobile-menu .mobile-home{
+    padding:6px 0!important;
+    font-size:.98rem!important;
+    line-height:1.3!important;
+  }
+
+  /* If an older cached script temporarily triggers the V1.88 fallback,
+     keep that fallback compact and dark rather than allowing a light gap. */
+  .mobile-menu.open:not(:has(.mobile-home-group)){
+    padding-top:54px!important;
+  }
+
+  body:not(:has(.mobile-menu .mobile-home-group)) .site-header:has(+ .mobile-menu.open) .brand-logo{
+    height:54px!important;
+    background:#08161d!important;
+  }
+
+  body:not(:has(.mobile-menu .mobile-home-group)) .site-header:has(+ .mobile-menu.open) .brand-logo::after{
+    height:54px!important;
+    padding:0 20px!important;
+    background:#08161d!important;
+    font-size:.98rem!important;
+  }
+}
+
+@media(max-width:420px){
+  .mobile-menu.open{
+    top:calc(15.625vw + 44px)!important;
+  }
+}
