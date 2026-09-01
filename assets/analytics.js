@@ -59,17 +59,17 @@
   }
 })();
 
-/* SOUBEL header asset v4 — validated cache-safe header */
+/* SOUBEL header v5 — Retina asset + tablet-safe navigation */
 (function(){
   const img=document.querySelector('.brand-logo img');
   if(img){
-    img.src='/assets/soubel-header-v4.png';
+    img.src='/assets/soubel-header-v5.png';
     img.removeAttribute('srcset');
   }
-  if(!document.querySelector('#soubel-header-v4-style')){
+  if(!document.querySelector('#soubel-header-v5-style')){
     const style=document.createElement('style');
-    style.id='soubel-header-v4-style';
-    style.textContent='.brand-logo img{width:320px!important;height:auto!important;max-width:none!important;object-fit:contain!important}@media(max-width:1100px){.brand-logo img{width:280px!important}}@media(max-width:620px){.brand-logo img{width:min(250px,calc(100vw - 100px))!important}}';
+    style.id='soubel-header-v5-style';
+    style.textContent='.brand-logo{flex:0 0 auto!important}.brand-logo img{width:320px!important;height:auto!important;max-width:none!important;object-fit:contain!important}@media(max-width:1050px){.desktop-nav{display:none!important}.menu-toggle{display:block!important}.brand-logo img{width:320px!important;height:auto!important}.header-inner{min-height:82px!important}.mobile-menu{inset:82px 0 0 0!important}}@media(max-width:620px){.header-inner{min-height:62px!important}.mobile-menu{inset:62px 0 0 0!important}.brand-logo img{width:min(250px,calc(100vw - 100px))!important;height:auto!important}}';
     document.head.appendChild(style);
   }
 })();
