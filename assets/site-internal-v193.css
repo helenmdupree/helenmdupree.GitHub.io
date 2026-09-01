@@ -1,0 +1,78 @@
+@import url("/assets/site-internal-v192.css");
+
+/* V1.93 — specialized internal hero hierarchy.
+   V1.92 already covers standard .page-hero pages such as Asset Performance,
+   About SOUBEL, and A Career in Motion. This pass brings the remaining
+   specialized hero systems into the same restrained executive scale. */
+
+/* SOUBEL Insights / The Integrity Shift */
+.insights-hero{
+  padding:56px 0 50px!important;
+}
+.insights-hero h1{
+  max-width:980px!important;
+  margin:0!important;
+  font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;
+  font-size:clamp(2.35rem,4vw,3.6rem)!important;
+  font-weight:700!important;
+  line-height:1.03!important;
+  letter-spacing:-.035em!important;
+}
+.insights-hero p{
+  max-width:850px!important;
+  margin:18px 0 0!important;
+  font-size:1.05rem!important;
+  line-height:1.55!important;
+}
+
+/* Operational Trust */
+.operational-trust-page .ot-hero{
+  padding:56px 0 50px!important;
+}
+.operational-trust-page .ot-hero .kicker{
+  margin:0 0 10px!important;
+  font-size:.82rem!important;
+  line-height:1.2!important;
+  letter-spacing:.16em!important;
+}
+.operational-trust-page .ot-hero h1{
+  max-width:900px!important;
+  margin:0!important;
+  font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;
+  font-size:clamp(2.35rem,4vw,3.6rem)!important;
+  font-weight:700!important;
+  line-height:1.03!important;
+  letter-spacing:-.035em!important;
+}
+.operational-trust-page .ot-hero-lead{
+  max-width:800px!important;
+  margin:18px 0 0!important;
+  font-size:1.05rem!important;
+  line-height:1.55!important;
+}
+
+@media(max-width:620px){
+  .insights-hero,
+  .operational-trust-page .ot-hero{
+    padding:42px 0 38px!important;
+  }
+
+  .insights-hero h1,
+  .operational-trust-page .ot-hero h1{
+    font-size:clamp(2rem,9vw,2.7rem)!important;
+    line-height:1.04!important;
+    letter-spacing:-.03em!important;
+  }
+
+  .insights-hero p,
+  .operational-trust-page .ot-hero-lead{
+    margin-top:15px!important;
+    font-size:.98rem!important;
+    line-height:1.5!important;
+  }
+
+  .operational-trust-page .ot-hero .kicker{
+    font-size:.76rem!important;
+    margin-bottom:8px!important;
+  }
+}
