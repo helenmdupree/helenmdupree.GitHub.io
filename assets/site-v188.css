@@ -1,0 +1,48 @@
+@import url("/assets/site-v187.css");
+
+/* V1.88 — mobile menu repair.
+   Remove the unintended light spacer, force a continuous dark menu surface,
+   and make the Home row visible when the current site.js inserts it. */
+@media(max-width:900px){
+  .site-header + .mobile-menu,
+  .mobile-menu,
+  .mobile-menu.open{
+    margin:0!important;
+    margin-top:0!important;
+    transform:none!important;
+    background:#08161d!important;
+  }
+
+  .mobile-menu{
+    padding:0 0 28px!important;
+  }
+
+  .mobile-menu.open{
+    display:block!important;
+  }
+
+  .mobile-menu .group{
+    margin:0!important;
+    background:#08161d!important;
+  }
+
+  .mobile-menu .group:first-child{
+    margin-top:0!important;
+  }
+
+  .mobile-menu .mobile-home-group{
+    display:block!important;
+    padding:14px 20px 16px!important;
+    border-bottom:1px solid rgba(255,255,255,.08)!important;
+    background:#08161d!important;
+  }
+
+  .mobile-menu .mobile-home{
+    display:block!important;
+    color:#fff!important;
+    text-decoration:none!important;
+    font-size:1.04rem!important;
+    font-weight:700!important;
+    padding:9px 0!important;
+  }
+}
