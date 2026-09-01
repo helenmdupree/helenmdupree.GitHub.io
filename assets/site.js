@@ -24,8 +24,20 @@
     resourceLinks.forEach(([href,text])=>{const a=document.createElement('a');a.href=href;a.textContent=text;panel.appendChild(a);});
   }
 
+  function normalizeAimLink(root){
+    if(!root) return;
+    const link=root.querySelector('a[href="/expertise/pipeline-asset-integrity/"],a[href="/expertise/asset-integrity-management/"]');
+    if(link){
+      link.href='/expertise/asset-integrity-management/';
+      link.textContent='Asset Integrity Management';
+    }
+  }
+
   function ensureDesktopNav(){
     document.querySelectorAll('.desktop-nav').forEach(nav=>{
+      const expertise=[...nav.children].find(el=>el.classList?.contains('dropdown') && el.querySelector('.dropbtn')?.textContent.trim()==='Expertise');
+      normalizeAimLink(expertise?.querySelector('.dropdown-panel'));
+
       const intelligence=[...nav.children].find(el=>el.classList?.contains('dropdown') && el.querySelector('.dropbtn')?.textContent.trim()==='Intelligence');
       const ipanel=intelligence?.querySelector('.dropdown-panel');
       if(ipanel && !ipanel.querySelector('a[href="/insights/integrity-shift/"]')){
@@ -89,6 +101,9 @@
         homeGroup.appendChild(home);
         menu.insertBefore(homeGroup,menu.firstChild);
       }
+
+      const expertise=[...menu.querySelectorAll('.group')].find(g=>g.querySelector('.group-title')?.textContent.trim()==='Expertise');
+      normalizeAimLink(expertise);
 
       let intelligence=[...menu.querySelectorAll('.group')].find(g=>g.querySelector('.group-title')?.textContent.trim()==='Intelligence');
       if(intelligence && !intelligence.querySelector('a[href="/insights/integrity-shift/"]')){
