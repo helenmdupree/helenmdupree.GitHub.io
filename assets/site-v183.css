@@ -1,0 +1,98 @@
+@import url("/assets/site-v178-base.css");
+
+/* V1.83 — SOUBEL full-width branded masthead.
+   The approved 1920x300 banner is the only visible brand artwork.
+   Existing navigation remains live HTML directly below the banner. */
+.site-header{
+  position:relative!important;
+  top:auto!important;
+  z-index:1000!important;
+  background:#07141b!important;
+  border-bottom:1px solid rgba(255,255,255,.10)!important;
+  backdrop-filter:none!important;
+  overflow:visible!important;
+}
+.site-header::before{
+  content:"";
+  display:block;
+  width:100%;
+  aspect-ratio:1920 / 300;
+  background:#d8dde1 url("/assets/soubel-header-1920x300.webp") center center / cover no-repeat;
+}
+.header-inner{
+  position:relative!important;
+  min-height:60px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:0!important;
+}
+/* Preserve the home link as a transparent overlay on the masthead; suppress all legacy logo images/text. */
+.brand-logo{
+  position:absolute!important;
+  top:calc(-1 * (100vw * 300 / 1920))!important;
+  left:calc((100% - 100vw) / 2)!important;
+  width:100vw!important;
+  height:calc(100vw * 300 / 1920)!important;
+  max-width:none!important;
+  min-width:0!important;
+  display:block!important;
+  overflow:hidden!important;
+  background:none!important;
+  text-decoration:none!important;
+  z-index:2!important;
+}
+.brand-logo img,
+.brand-logo::before,
+.brand-logo::after{display:none!important;content:none!important;background:none!important}
+.desktop-nav{
+  width:100%!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:clamp(16px,2.15vw,30px)!important;
+  margin:0!important;
+}
+.desktop-nav>a,.dropbtn{
+  padding:17px 0!important;
+  color:#dce8ea!important;
+  font-size:.87rem!important;
+  font-weight:760!important;
+  white-space:nowrap!important;
+}
+.dropdown-panel{top:54px!important}
+.menu-toggle{margin-left:auto!important}
+
+/* Mobile menu expands below the banner + hamburger row instead of floating over the masthead. */
+.mobile-menu{
+  position:relative!important;
+  inset:auto!important;
+  z-index:999!important;
+  width:100%!important;
+}
+.mobile-menu.open{
+  display:block!important;
+  max-height:calc(100dvh - 58px - 15.625vw)!important;
+  overflow:auto!important;
+}
+
+@media(max-width:1100px){
+  .desktop-nav{gap:16px!important}
+  .desktop-nav>a,.dropbtn{font-size:.80rem!important}
+}
+@media(max-width:760px){
+  .header-inner{
+    min-height:58px!important;
+    justify-content:flex-end!important;
+  }
+  .desktop-nav{display:none!important}
+  .menu-toggle{
+    display:block!important;
+    width:44px!important;
+    height:44px!important;
+  }
+}
+@media(max-width:420px){
+  .header-inner{min-height:56px!important}
+  .mobile-menu.open{max-height:calc(100dvh - 56px - 15.625vw)!important}
+}
