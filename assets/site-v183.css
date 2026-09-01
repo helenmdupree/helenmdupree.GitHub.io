@@ -30,10 +30,11 @@
 /* Preserve the home link as a transparent overlay on the masthead; suppress all legacy logo images/text. */
 .brand-logo{
   position:absolute!important;
-  top:calc(-1 * (100vw * 300 / 1920))!important;
-  left:calc((100% - 100vw) / 2)!important;
+  top:-15.625vw!important;
+  left:50%!important;
+  transform:translateX(-50%)!important;
   width:100vw!important;
-  height:calc(100vw * 300 / 1920)!important;
+  height:15.625vw!important;
   max-width:none!important;
   min-width:0!important;
   display:block!important;
