@@ -83,6 +83,13 @@
   function normalizeMobileMenu(){
     buildMobileMenu();
     document.querySelectorAll('.mobile-menu').forEach(menu=>{
+      if(!menu.querySelector('.mobile-home-group')){
+        const homeGroup=document.createElement('div'); homeGroup.className='group mobile-home-group';
+        const home=document.createElement('a'); home.href='/'; home.textContent='Home'; home.className='mobile-home'; home.setAttribute('aria-label','SOUBEL home');
+        homeGroup.appendChild(home);
+        menu.insertBefore(homeGroup,menu.firstChild);
+      }
+
       let intelligence=[...menu.querySelectorAll('.group')].find(g=>g.querySelector('.group-title')?.textContent.trim()==='Intelligence');
       if(intelligence && !intelligence.querySelector('a[href="/insights/integrity-shift/"]')){
         const a=document.createElement('a');a.href='/insights/integrity-shift/';a.textContent='The Integrity Shift';a.className='sub';intelligence.appendChild(a);
