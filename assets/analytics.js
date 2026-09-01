@@ -58,3 +58,18 @@
     addEventListener('scroll',onScroll,{passive:true});
   }
 })();
+
+/* SOUBEL header asset v3 — clean RGBA file with cache-safe filename */
+(function(){
+  const img=document.querySelector('.brand-logo img');
+  if(img){
+    img.src='/assets/soubel-header-v3-rgba.png';
+    img.removeAttribute('srcset');
+  }
+  if(!document.querySelector('#soubel-header-v3-style')){
+    const style=document.createElement('style');
+    style.id='soubel-header-v3-style';
+    style.textContent='@media(max-width:620px){.brand-logo img{width:min(270px,calc(100vw - 100px))!important;height:auto!important;max-width:none!important}}';
+    document.head.appendChild(style);
+  }
+})();
