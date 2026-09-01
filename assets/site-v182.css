@@ -1,0 +1,36 @@
+@import url("/assets/site-v178-base.css");
+
+/* V1.82 — single approved SOUBEL logo image. No generated brand text. */
+.header-inner{min-height:92px!important;gap:24px!important}
+.brand-logo{
+  display:block!important;
+  flex:0 0 auto!important;
+  width:430px!important;
+  max-width:38vw!important;
+  height:auto!important;
+  min-width:0!important;
+  text-decoration:none!important;
+  background:none!important;
+}
+.brand-logo img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-width:none!important;
+  object-fit:contain!important;
+}
+@media(max-width:1200px){
+  .brand-logo{width:360px!important;max-width:35vw!important}
+  .desktop-nav{gap:18px!important}
+}
+@media(max-width:900px){
+  .brand-logo{width:320px!important;max-width:42vw!important}
+}
+@media(max-width:760px){
+  .header-inner{min-height:76px!important;gap:14px!important}
+  .brand-logo{width:285px!important;max-width:calc(100vw - 92px)!important}
+  .mobile-menu{inset:76px 0 0 0!important}
+}
+@media(max-width:420px){
+  .brand-logo{width:250px!important;max-width:calc(100vw - 88px)!important}
+}
