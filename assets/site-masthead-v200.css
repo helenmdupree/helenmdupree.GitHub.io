@@ -1,0 +1,12 @@
+/* V2.00 — cache-safe SOUBEL masthead.
+   Use one SVG composite as the browser-facing masthead. The SVG positions the
+   original eight source slices at fixed native 1920x300 coordinates, so the
+   browser scales one completed image instead of independently positioning
+   eight CSS backgrounds. */
+.site-header::before{
+  content:""!important;
+  display:block!important;
+  width:100%!important;
+  aspect-ratio:1920 / 300!important;
+  background:#d8dde1 url("/assets/soubel-masthead-composite-v200.svg") center center / 100% 100% no-repeat!important;
+}
