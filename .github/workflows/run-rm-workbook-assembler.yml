@@ -1,0 +1,41 @@
+name: Run reliability workbook assembler
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/run-rm-workbook-assembler.yml
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out staging branch
+        uses: actions/checkout@v4
+        with:
+          ref: tmp-rm-workbook-rebrand
+          fetch-depth: 0
+
+      - name: Assemble PDF and verify checksum
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p downloads
+          cat .pdfswap-rm/part*.b64 | tr -d '\r\n' | base64 --decode > downloads/SOUBEL_Reliability_Maintenance_Decision_Workbook.pdf
+          echo "6978d7ec53bc8136997698a41827ec0bd6fbbfa158e0ffb6041db5d814dfa4de  downloads/SOUBEL_Reliability_Maintenance_Decision_Workbook.pdf" | sha256sum -c -
+          file downloads/SOUBEL_Reliability_Maintenance_Decision_Workbook.pdf
+
+      - name: Commit assembled PDF to staging branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .pdfswap-rm
+          git config user.name "helenmdupree"
+          git config user.email "helenmdupree@gmail.com"
+          git add -A downloads/SOUBEL_Reliability_Maintenance_Decision_Workbook.pdf .pdfswap-rm
+          git commit -m "Rebrand reliability maintenance workbook"
+          git push origin HEAD:tmp-rm-workbook-rebrand
