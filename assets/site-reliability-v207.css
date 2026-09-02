@@ -1,9 +1,27 @@
 /* V2.07 — Reliability & Maintenance Strategy density cleanup.
-   Reduce the large dead-space transition between the framework introduction
-   and the first pair of execution cards without changing the page content. */
+   Keep this page executive and readable: less dead space, restrained section
+   headings, and tighter transitions without changing content. */
 
+/* Page-wide density and hierarchy protection. */
+body:has(.reliability-framework) .section{
+  padding:52px 0!important;
+}
+
+body:has(.reliability-framework) .section h2{
+  max-width:1050px!important;
+  font-size:clamp(1.9rem,2.75vw,2.65rem)!important;
+  line-height:1.08!important;
+  letter-spacing:-.025em!important;
+}
+
+body:has(.reliability-framework) .section-intro{
+  font-size:1.04rem!important;
+  line-height:1.58!important;
+}
+
+/* Framework introduction into the four execution cards. */
 .reliability-framework{
-  padding:48px 0 28px!important;
+  padding:44px 0 24px!important;
 }
 
 .reliability-framework .section-intro{
@@ -11,21 +29,46 @@
 }
 
 .reliability-framework + .section.alt{
-  padding-top:34px!important;
-  padding-bottom:54px!important;
+  padding-top:28px!important;
+  padding-bottom:36px!important;
 }
 
 .reliability-framework + .section.alt .lifecycle-grid{
   margin-top:0!important;
 }
 
+/* Remove the second desert between the execution cards and the next idea. */
+.reliability-framework + .section.alt + .section{
+  padding-top:40px!important;
+  padding-bottom:48px!important;
+}
+
+/* Keep the remaining page sections moving at the same editorial pace. */
+body:has(.reliability-framework) .section.alt + .section,
+body:has(.reliability-framework) .section + .section.alt{
+  scroll-margin-top:90px;
+}
+
 @media(max-width:620px){
+  body:has(.reliability-framework) .section{
+    padding:42px 0!important;
+  }
+
+  body:has(.reliability-framework) .section h2{
+    font-size:clamp(1.65rem,7.2vw,2.1rem)!important;
+  }
+
   .reliability-framework{
-    padding:40px 0 24px!important;
+    padding:36px 0 22px!important;
   }
 
   .reliability-framework + .section.alt{
-    padding-top:28px!important;
-    padding-bottom:44px!important;
+    padding-top:24px!important;
+    padding-bottom:32px!important;
+  }
+
+  .reliability-framework + .section.alt + .section{
+    padding-top:34px!important;
+    padding-bottom:40px!important;
   }
 }
