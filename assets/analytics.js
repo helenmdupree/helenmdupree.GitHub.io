@@ -1,6 +1,6 @@
 /* SOUBEL analytics foundation */
 (function(){
-  const GA4_MEASUREMENT_ID = '';
+  const GA4_MEASUREMENT_ID = 'G-J9WDHGCCW3';
   const params = new URLSearchParams(location.search);
   const utm = {};
   ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(k=>{if(params.get(k)) utm[k]=params.get(k);});
