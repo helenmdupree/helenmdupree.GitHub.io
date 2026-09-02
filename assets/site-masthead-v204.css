@@ -1,0 +1,9 @@
+/* V2.04 — SOUBEL masthead derived directly from the user-supplied master banner.
+   Single-file 1536x240 WebP. No slicing, recoloring, emblem substitution, or CSS reconstruction. */
+.site-header::before{
+  content:""!important;
+  display:block!important;
+  width:100%!important;
+  aspect-ratio:1536 / 240!important;
+  background:#d8dde1 url("/assets/soubel-masthead-master-v204.webp") center center / 100% 100% no-repeat!important;
+}
