@@ -1,0 +1,11 @@
+/* V2.02 — cache-safe single-binary SOUBEL masthead.
+   Uses one verified 1920x300 WebP under a new filename. This image is small
+   enough to survive the GitHub connector intact and removes every sliced,
+   SVG-wrapped, or previously corrupt masthead implementation. */
+.site-header::before{
+  content:""!important;
+  display:block!important;
+  width:100%!important;
+  aspect-ratio:1920 / 300!important;
+  background:#d8dde1 url("/assets/soubel-masthead-v202.webp") center center / 100% 100% no-repeat!important;
+}
