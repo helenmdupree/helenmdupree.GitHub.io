@@ -52,6 +52,36 @@
   padding:11px 18px!important;
 }
 
+/* Keep both toolkit downloads visible on white cards. The global secondary
+   button style is white text for dark backgrounds, which made the workbook
+   CTA effectively disappear here. */
+.asset-guide-page .toolkit article{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+}
+
+.asset-guide-page .toolkit article .btn{
+  width:auto!important;
+  margin-top:auto!important;
+  padding:10px 17px!important;
+  border:1px solid #0b6e73!important;
+  border-radius:999px!important;
+  font-weight:800!important;
+}
+
+.asset-guide-page .toolkit article .btn.primary{
+  background:#0b6e73!important;
+  color:#ffffff!important;
+  border-color:#0b6e73!important;
+}
+
+.asset-guide-page .toolkit article .btn.secondary{
+  background:#ffffff!important;
+  color:#0b6e73!important;
+  border-color:#0b6e73!important;
+}
+
 @media(max-width:620px){
   .asset-guide-page .page-hero{
     padding:38px 0 34px!important;
@@ -64,6 +94,9 @@
     align-items:stretch!important;
   }
   .asset-guide-page .guide-actions .btn{
+    width:100%!important;
+  }
+  .asset-guide-page .toolkit article .btn{
     width:100%!important;
   }
 }
