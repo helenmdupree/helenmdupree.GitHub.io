@@ -1,0 +1,36 @@
+name: Assemble PHMSA PDF
+
+on:
+  push:
+    branches:
+      - tmp-phmsa-pdf-replace
+    paths:
+      - .pdfswap/READY
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Rebuild verified PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          target="downloads/SOUBEL_Pipeline_Integrity_Metallurgy_PHMSA_Executive_Technical_Fluency_Guide.pdf"
+          cat .pdfswap/part*.b64 | tr -d '\r\n' | base64 --decode > "${target}.new"
+          actual="$(sha256sum "${target}.new" | awk '{print $1}')"
+          expected="2700c67b07167650481d385eb930ebdf28b83e3eed55dcaea5bf3648d24ced4e"
+          test "$actual" = "$expected"
+          mv "${target}.new" "$target"
+          rm -rf .pdfswap
+          rm -f .github/workflows/assemble-phmsa.yml
+          git config user.name "helenmdupree"
+          git config user.email "helenmdupree@gmail.com"
+          git add -A
+          git commit -m "Replace PHMSA guide with updated SOUBEL logo"
+          git push origin HEAD:tmp-phmsa-pdf-replace
