@@ -1,0 +1,31 @@
+/* V2.07 — Reliability & Maintenance Strategy density cleanup.
+   Reduce the large dead-space transition between the framework introduction
+   and the first pair of execution cards without changing the page content. */
+
+.reliability-framework{
+  padding:48px 0 28px!important;
+}
+
+.reliability-framework .section-intro{
+  margin-bottom:0!important;
+}
+
+.reliability-framework + .section.alt{
+  padding-top:34px!important;
+  padding-bottom:54px!important;
+}
+
+.reliability-framework + .section.alt .lifecycle-grid{
+  margin-top:0!important;
+}
+
+@media(max-width:620px){
+  .reliability-framework{
+    padding:40px 0 24px!important;
+  }
+
+  .reliability-framework + .section.alt{
+    padding-top:28px!important;
+    padding-bottom:44px!important;
+  }
+}
