@@ -1,0 +1,69 @@
+/* V2.06 — When Asset Condition Changes page-specific cleanup.
+   Fix hero contrast and isolate the page from the older global .guide-actions
+   component used elsewhere on the site. */
+
+.asset-guide-page .page-hero{
+  padding:48px 0 42px!important;
+}
+
+.asset-guide-page .page-hero .crumb{
+  color:#8fc9cd!important;
+}
+
+.asset-guide-page .page-hero .kicker{
+  color:#72ced0!important;
+  margin:0 0 10px!important;
+}
+
+.asset-guide-page .page-hero h1{
+  max-width:900px!important;
+  font-size:clamp(2.35rem,3.5vw,3.25rem)!important;
+  line-height:1.04!important;
+  letter-spacing:-.03em!important;
+  color:#f7f5ef!important;
+}
+
+.asset-guide-page .page-hero p{
+  max-width:860px!important;
+  margin:16px 0 0!important;
+  color:#d5e1e4!important;
+  font-size:1.02rem!important;
+  line-height:1.55!important;
+}
+
+.asset-guide-page .page-hero p strong{
+  color:#ffffff!important;
+}
+
+.asset-guide-page .guide-actions{
+  display:flex!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:12px!important;
+  flex-wrap:wrap!important;
+  margin-top:22px!important;
+}
+
+.asset-guide-page .guide-actions .btn{
+  width:auto!important;
+  flex:0 0 auto!important;
+  min-width:0!important;
+  padding:11px 18px!important;
+}
+
+@media(max-width:620px){
+  .asset-guide-page .page-hero{
+    padding:38px 0 34px!important;
+  }
+  .asset-guide-page .page-hero h1{
+    font-size:clamp(2rem,9vw,2.55rem)!important;
+  }
+  .asset-guide-page .guide-actions{
+    flex-direction:column!important;
+    align-items:stretch!important;
+  }
+  .asset-guide-page .guide-actions .btn{
+    width:100%!important;
+  }
+}
