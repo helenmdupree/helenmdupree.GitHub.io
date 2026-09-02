@@ -1,10 +1,9 @@
 @import url("/assets/site-v178-base.css");
 
-/* V1.97 — seamless SOUBEL masthead rendering.
-   The masthead is assembled from eight verified 240x300 slices. Browsers can
-   expose a 1px background-color seam when percentage-sized layers land on
-   fractional device pixels. A slight overlap removes those rounding gaps
-   without changing the artwork, proportions, or navigation geometry. */
+/* V1.98 — seam-safe SOUBEL masthead with fixed slice anchors.
+   Each native 240x300 slice is anchored to its exact eighth of the 1920px
+   artwork. A 1px right-edge bleed covers fractional device-pixel rounding
+   without shifting or distorting the logo geometry. */
 .site-header{
   position:relative!important;
   top:auto!important;
@@ -21,21 +20,29 @@
   aspect-ratio:1920 / 300;
   background-color:#d8dde1;
   background-image:
-    url("/assets/soubel-masthead-00.webp?v=197"),
-    url("/assets/soubel-masthead-01.webp?v=197"),
-    url("/assets/soubel-masthead-02.webp?v=197"),
-    url("/assets/soubel-masthead-03.webp?v=197"),
-    url("/assets/soubel-masthead-04.webp?v=197"),
-    url("/assets/soubel-masthead-05.webp?v=197"),
-    url("/assets/soubel-masthead-06.webp?v=197"),
-    url("/assets/soubel-masthead-07.webp?v=197");
+    url("/assets/soubel-masthead-00.webp?v=198"),
+    url("/assets/soubel-masthead-01.webp?v=198"),
+    url("/assets/soubel-masthead-02.webp?v=198"),
+    url("/assets/soubel-masthead-03.webp?v=198"),
+    url("/assets/soubel-masthead-04.webp?v=198"),
+    url("/assets/soubel-masthead-05.webp?v=198"),
+    url("/assets/soubel-masthead-06.webp?v=198"),
+    url("/assets/soubel-masthead-07.webp?v=198");
   background-repeat:no-repeat;
   background-size:
-    12.75% 100%,12.75% 100%,12.75% 100%,12.75% 100%,
-    12.75% 100%,12.75% 100%,12.75% 100%,12.75% 100%;
+    calc(12.5% + 1px) 100%,calc(12.5% + 1px) 100%,
+    calc(12.5% + 1px) 100%,calc(12.5% + 1px) 100%,
+    calc(12.5% + 1px) 100%,calc(12.5% + 1px) 100%,
+    calc(12.5% + 1px) 100%,calc(12.5% + 1px) 100%;
   background-position:
-    0% 0,14.285714% 0,28.571429% 0,42.857143% 0,
-    57.142857% 0,71.428571% 0,85.714286% 0,100% 0;
+    left 0% top 0,
+    left 12.5% top 0,
+    left 25% top 0,
+    left 37.5% top 0,
+    left 50% top 0,
+    left 62.5% top 0,
+    left 75% top 0,
+    left 87.5% top 0;
 }
 .header-inner{
   position:relative!important;
