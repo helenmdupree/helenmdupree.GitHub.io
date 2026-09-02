@@ -1,0 +1,43 @@
+@import url("/assets/site-aim-v197.css");
+
+/* V1.98 — AIM main-page vertical rhythm refinement.
+   The transition from AIM + Operational Trust into Application Domains was
+   visually over-spaced because both adjacent sections contributed full padding.
+   Tighten only this transition and the Application Domains card entrance. */
+@media(min-width:901px){
+  .aim-page #aim-framework{
+    padding-bottom:34px!important;
+  }
+
+  .aim-page #aim-framework + .section{
+    padding-top:34px!important;
+    padding-bottom:44px!important;
+  }
+
+  .aim-page #aim-framework + .section .grid-2{
+    margin-top:22px!important;
+  }
+
+  .aim-page #aim-framework + .section .grid-2 + .section-intro{
+    margin-top:24px!important;
+  }
+
+  .aim-page #aim-framework + .section .actions{
+    margin-top:22px!important;
+  }
+}
+
+@media(max-width:900px){
+  .aim-page #aim-framework{
+    padding-bottom:34px!important;
+  }
+
+  .aim-page #aim-framework + .section{
+    padding-top:34px!important;
+    padding-bottom:40px!important;
+  }
+
+  .aim-page #aim-framework + .section .grid-2{
+    margin-top:22px!important;
+  }
+}
