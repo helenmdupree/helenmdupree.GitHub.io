@@ -1,0 +1,88 @@
+/* V2.05 — Corrosion & Cathodic Protection Knowledge page visual refinement.
+   Desktop-first surgical pass: improve text contrast, restrain section-heading scale,
+   and tighten vertical rhythm without changing page structure or masthead artwork. */
+
+/* Restore readable contrast to light-background supporting copy. */
+.cp-knowledge-page .cp-library-hero .hero-lead{
+  color:#3f535b!important;
+  opacity:1!important;
+}
+
+.cp-knowledge-page .section:not(.dark) .section-intro{
+  color:#435961!important;
+  opacity:1!important;
+}
+
+.cp-knowledge-page .trust-note{
+  color:#324a52!important;
+  background:#eef4f3!important;
+  border-left:3px solid #168a90!important;
+  opacity:1!important;
+}
+
+.cp-knowledge-page .trust-note strong{
+  color:#18343d!important;
+}
+
+@media (min-width:821px){
+  /* Keep the opening hero compact while preserving its existing hierarchy. */
+  .cp-knowledge-page .cp-library-hero{
+    padding:38px 0 32px!important;
+  }
+
+  .cp-knowledge-page .cp-library-hero .hero-lead{
+    max-width:920px!important;
+    margin-top:14px!important;
+    font-size:1rem!important;
+    line-height:1.58!important;
+  }
+
+  .cp-knowledge-page .cp-library-hero .actions{
+    margin-top:20px!important;
+  }
+
+  /* Restrain Brutus-scale section titles without flattening the hierarchy. */
+  .cp-knowledge-page .section > .wrap > h2{
+    max-width:980px!important;
+    margin:0 0 12px!important;
+    font-size:clamp(1.85rem,2.8vw,2.85rem)!important;
+    line-height:1.08!important;
+    letter-spacing:-.025em!important;
+  }
+
+  /* Tighten the long-scroll rhythm between technical sections. */
+  .cp-knowledge-page .section{
+    padding:42px 0!important;
+  }
+
+  .cp-knowledge-page .section > .wrap > .kicker{
+    margin-bottom:9px!important;
+  }
+
+  .cp-knowledge-page .section > .wrap > .section-intro{
+    max-width:1000px!important;
+    margin:0!important;
+    font-size:1rem!important;
+    line-height:1.58!important;
+  }
+
+  .cp-knowledge-page .data-flow{
+    margin-top:22px!important;
+    padding:16px 0!important;
+  }
+
+  .cp-knowledge-page .content-grid,
+  .cp-knowledge-page .grid-2,
+  .cp-knowledge-page .grid-3{
+    margin-top:24px!important;
+  }
+
+  .cp-knowledge-page .trust-note{
+    margin-top:22px!important;
+    padding:14px 18px!important;
+  }
+
+  .cp-knowledge-page .link-row{
+    margin-top:22px!important;
+  }
+}
