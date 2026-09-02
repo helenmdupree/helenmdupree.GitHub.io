@@ -61,22 +61,23 @@
 /* SOUBEL perspective: preserve the full copy and pair it with the approved context graphic. */
 .asset-performance-page #performance-context .perspective-split{
   display:grid!important;
-  grid-template-columns:minmax(0,1.55fr) minmax(250px,315px)!important;
-  gap:clamp(24px,3.2vw,46px)!important;
+  grid-template-columns:minmax(360px,500px) 240px!important;
+  justify-content:space-between!important;
+  gap:clamp(36px,5vw,64px)!important;
   align-items:center!important;
-  margin-top:18px!important;
+  margin-top:20px!important;
 }
 .asset-performance-page #performance-context .perspective-copy{
   align-self:center!important;
 }
 .asset-performance-page #performance-context .perspective-copy .section-intro{
-  max-width:650px!important;
-  font-size:1.08rem!important;
-  line-height:1.62!important;
+  max-width:500px!important;
+  font-size:1.18rem!important;
+  line-height:1.66!important;
 }
 .asset-performance-page #performance-context .perspective-visual{
-  width:100%!important;
-  max-width:315px!important;
+  width:240px!important;
+  max-width:240px!important;
   margin:0!important;
   justify-self:end!important;
 }
@@ -222,7 +223,8 @@
   }
   .asset-performance-page #performance-context .perspective-visual{
     justify-self:center!important;
-    max-width:330px!important;
+    width:300px!important;
+    max-width:300px!important;
   }
 }
 
@@ -259,6 +261,7 @@
     font-size:clamp(1.65rem,7vw,2.05rem)!important;
   }
   .asset-performance-page #performance-context .perspective-visual{
-    max-width:300px!important;
+    width:280px!important;
+    max-width:280px!important;
   }
 }
