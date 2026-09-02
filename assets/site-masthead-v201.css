@@ -1,0 +1,11 @@
+/* V2.01 — verified single-binary SOUBEL masthead.
+   Browser-facing header now uses one valid 1920x300 WebP asset uploaded as a
+   true binary blob under a brand-new filename. No slices, SVG wrappers, or
+   previously cached/corrupt masthead assets are used. */
+.site-header::before{
+  content:""!important;
+  display:block!important;
+  width:100%!important;
+  aspect-ratio:1920 / 300!important;
+  background:#d8dde1 url("/assets/soubel-masthead-v201.webp") center center / 100% 100% no-repeat!important;
+}
