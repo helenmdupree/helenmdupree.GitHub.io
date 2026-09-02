@@ -89,6 +89,17 @@ body:has(.library-search) .section-intro{
   opacity:1!important;
 }
 
+/* V1.94a — shared contrast protection for data-flow components on dark sections. */
+.section.dark .data-flow{
+  border-color:rgba(255,255,255,.34)!important;
+}
+.section.dark .data-flow span{
+  color:#f2f7f8!important;
+}
+.section.dark .data-flow i{
+  color:#6fd3d5!important;
+}
+
 @media(max-width:620px){
   body:has(.intelligence-toolbar) .topic-hero,
   body:has(.library-search) .topic-hero{
