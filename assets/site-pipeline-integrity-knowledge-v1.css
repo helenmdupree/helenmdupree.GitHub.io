@@ -1,0 +1,150 @@
+/* Pipeline & Asset Integrity Knowledge — live visual QA refinement.
+   Keep technical depth, but restore an executive hierarchy and readable contrast. */
+
+.pipeline-knowledge-page .section{
+  padding:36px 0!important;
+}
+
+/* Numbered section identifiers must function as visible navigation cues. */
+.pipeline-knowledge-page .section .kicker{
+  margin:0 0 9px!important;
+  color:#23737b!important;
+  font-size:.86rem!important;
+  font-weight:800!important;
+  line-height:1.25!important;
+  letter-spacing:.13em!important;
+  opacity:1!important;
+}
+
+/* Restrain the Brutus-scale section titles while preserving authority. */
+.pipeline-knowledge-page .section h2{
+  max-width:980px!important;
+  margin:0 0 12px!important;
+  font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;
+  font-size:clamp(1.78rem,2.35vw,2.25rem)!important;
+  font-weight:700!important;
+  line-height:1.1!important;
+  letter-spacing:-.022em!important;
+}
+
+.pipeline-knowledge-page .section-intro{
+  max-width:1000px!important;
+  margin:0!important;
+  color:#3e565f!important;
+  font-size:1.02rem!important;
+  line-height:1.58!important;
+  opacity:1!important;
+}
+
+.pipeline-knowledge-page .grid-3,
+.pipeline-knowledge-page .grid-2{
+  margin-top:22px!important;
+  gap:18px!important;
+}
+
+/* Technical cards should be readable without competing with the section heading. */
+.pipeline-knowledge-page .card{
+  padding:20px!important;
+}
+.pipeline-knowledge-page .card .label{
+  display:block!important;
+  margin-bottom:8px!important;
+  color:#24757d!important;
+  font-size:.72rem!important;
+  font-weight:800!important;
+  line-height:1.25!important;
+  letter-spacing:.1em!important;
+  opacity:1!important;
+}
+.pipeline-knowledge-page .card h3{
+  margin:0 0 9px!important;
+  font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;
+  font-size:1.08rem!important;
+  font-weight:700!important;
+  line-height:1.3!important;
+}
+.pipeline-knowledge-page .card p{
+  margin-top:10px!important;
+  color:#405860!important;
+  font-size:.94rem!important;
+  line-height:1.56!important;
+  opacity:1!important;
+}
+.pipeline-knowledge-page .card p:first-of-type{
+  margin-top:0!important;
+}
+.pipeline-knowledge-page .card strong{
+  color:#203840!important;
+}
+
+/* Direct-assessment pathway should support the content, not become another display headline. */
+.pipeline-knowledge-page .data-flow{
+  margin:20px 0 0!important;
+  padding:14px 0!important;
+  gap:11px!important;
+}
+.pipeline-knowledge-page .data-flow span{
+  font-size:.9rem!important;
+  font-weight:700!important;
+}
+
+/* The practical distinction is important enough to be plainly readable. */
+.pipeline-knowledge-page .trust-note{
+  margin-top:20px!important;
+  padding:16px 18px!important;
+  color:#eef7f7!important;
+  background:#11333b!important;
+  border-left:3px solid #49c5c7!important;
+  border-radius:8px!important;
+  font-size:.98rem!important;
+  line-height:1.58!important;
+  opacity:1!important;
+}
+.pipeline-knowledge-page .trust-note strong{
+  color:#fff!important;
+}
+
+.pipeline-knowledge-page .link-row{
+  margin-top:13px!important;
+  gap:12px!important;
+}
+.pipeline-knowledge-page .link-row a{
+  font-size:.86rem!important;
+  line-height:1.4!important;
+}
+
+/* Keep the final decision test subordinate to the page hero. */
+.pipeline-knowledge-page .growth-cta h2{
+  font-size:clamp(1.85rem,2.5vw,2.35rem)!important;
+}
+.pipeline-knowledge-page .growth-cta> .wrap > p:not(.kicker){
+  max-width:920px!important;
+  color:#e0eaec!important;
+  font-size:1rem!important;
+  line-height:1.56!important;
+  opacity:1!important;
+}
+
+@media(max-width:760px){
+  .pipeline-knowledge-page .section{
+    padding:30px 0!important;
+  }
+  .pipeline-knowledge-page .section .kicker{
+    font-size:.82rem!important;
+  }
+  .pipeline-knowledge-page .section h2{
+    font-size:clamp(1.55rem,6.6vw,1.95rem)!important;
+  }
+  .pipeline-knowledge-page .section-intro{
+    font-size:.98rem!important;
+  }
+  .pipeline-knowledge-page .card{
+    padding:17px!important;
+  }
+  .pipeline-knowledge-page .card h3{
+    font-size:1.04rem!important;
+  }
+  .pipeline-knowledge-page .card p{
+    font-size:.93rem!important;
+  }
+}
