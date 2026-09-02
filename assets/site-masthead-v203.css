@@ -1,0 +1,10 @@
+/* V2.03 — authoritative SOUBEL masthead from user-supplied master banner.
+   Uses the exact uploaded 1536x240 JPEG. No reconstruction, slicing, recoloring,
+   emblem substitution, or derived artwork. */
+.site-header::before{
+  content:""!important;
+  display:block!important;
+  width:100%!important;
+  aspect-ratio:1536 / 240!important;
+  background:#d8dde1 url("/assets/soubel-masthead-master-v203.jpg") center center / 100% 100% no-repeat!important;
+}
