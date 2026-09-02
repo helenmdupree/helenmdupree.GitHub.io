@@ -1,0 +1,71 @@
+/* V2.07 — AIM Application Domains paired-card normalization.
+   The two-column domain rows should read as matched components even when the
+   right-hand item is a link into deeper knowledge or connected expertise. */
+
+.aim-domain-page .grid-2{
+  align-items:stretch;
+}
+
+.aim-domain-page .grid-2 > .card,
+.aim-domain-page .grid-2 > .knowledge-card{
+  min-height:100%;
+}
+
+/* The linked knowledge/expertise card must share the same box geometry as the
+   representative-asset card beside it. */
+.aim-domain-page .grid-2 > .knowledge-card{
+  display:block;
+  padding:28px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  color:var(--ink);
+  text-decoration:none;
+}
+
+.aim-domain-page .grid-2 > .card .label,
+.aim-domain-page .grid-2 > .knowledge-card > span{
+  display:block;
+  margin:0;
+  color:var(--teal);
+  font-size:.72rem;
+  font-weight:900;
+  line-height:1.2;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+
+.aim-domain-page .grid-2 > .card h3,
+.aim-domain-page .grid-2 > .knowledge-card h3{
+  margin:.45rem 0 .7rem;
+  color:var(--ink);
+  font-size:1.35rem;
+  font-weight:700;
+  line-height:1.18;
+  letter-spacing:normal;
+}
+
+.aim-domain-page .grid-2 > .card p,
+.aim-domain-page .grid-2 > .knowledge-card p{
+  margin:0;
+  color:var(--muted);
+  font-size:1rem;
+  font-weight:400;
+  line-height:1.65;
+}
+
+.aim-domain-page .grid-2 > .knowledge-card:hover{
+  border-color:#b7cdcf;
+  box-shadow:0 16px 36px rgba(7,20,27,.07);
+}
+
+.aim-domain-page .grid-2 > .knowledge-card:hover h3{
+  color:var(--teal);
+}
+
+@media(max-width:620px){
+  .aim-domain-page .grid-2 > .card,
+  .aim-domain-page .grid-2 > .knowledge-card{
+    padding:24px;
+  }
+}
