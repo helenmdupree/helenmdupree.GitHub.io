@@ -1,0 +1,55 @@
+@import url("/assets/site-aim-v196.css");
+
+/* V1.97 — Application Domains visual QA refinement.
+   This page predates the shared .aim-subpage body class, so explicitly apply
+   the same restrained AIM typography and spacing without altering the masthead
+   or other internal pages. */
+@media(min-width:901px){
+  .aim-domain-page .page-hero h1{
+    max-width:900px!important;
+    font-size:clamp(2.25rem,3.35vw,3.15rem)!important;
+    line-height:1.04!important;
+    letter-spacing:-.032em!important;
+  }
+  .aim-domain-page .section h2{
+    max-width:940px!important;
+    font-size:clamp(1.8rem,2.55vw,2.45rem)!important;
+    line-height:1.1!important;
+    letter-spacing:-.025em!important;
+  }
+}
+
+.aim-domain-page .section{
+  padding-top:58px;
+  padding-bottom:58px;
+}
+
+.aim-domain-page .section-intro{
+  max-width:900px;
+}
+
+.aim-domain-page .card h3,
+.aim-domain-page .knowledge-card h3{
+  font-size:1.18rem;
+  line-height:1.25;
+}
+
+.aim-domain-page .page-hero p{
+  max-width:820px!important;
+}
+
+@media(max-width:900px){
+  .aim-domain-page .section{
+    padding-top:46px;
+    padding-bottom:46px;
+  }
+}
+
+@media(max-width:620px){
+  .aim-domain-page .page-hero h1{
+    font-size:clamp(1.95rem,8.3vw,2.55rem)!important;
+  }
+  .aim-domain-page .section h2{
+    font-size:clamp(1.6rem,7vw,2rem)!important;
+  }
+}
