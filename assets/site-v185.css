@@ -1,9 +1,9 @@
 @import url("/assets/site-v178-base.css");
 
-/* V1.98 — seam-safe SOUBEL masthead with fixed slice anchors.
-   Each native 240x300 slice is anchored to its exact eighth of the 1920px
-   artwork. A 1px right-edge bleed covers fractional device-pixel rounding
-   without shifting or distorting the logo geometry. */
+/* V1.99 — single-image SOUBEL masthead.
+   Retire the eight-slice rendering completely. The masthead now uses one
+   continuous 1920x300 image so there are no browser seams, overlaps, or
+   cumulative slice-position errors to distort the SOUBEL emblem. */
 .site-header{
   position:relative!important;
   top:auto!important;
@@ -19,30 +19,10 @@
   width:100%;
   aspect-ratio:1920 / 300;
   background-color:#d8dde1;
-  background-image:
-    url("/assets/soubel-masthead-00.webp?v=198"),
-    url("/assets/soubel-masthead-01.webp?v=198"),
-    url("/assets/soubel-masthead-02.webp?v=198"),
-    url("/assets/soubel-masthead-03.webp?v=198"),
-    url("/assets/soubel-masthead-04.webp?v=198"),
-    url("/assets/soubel-masthead-05.webp?v=198"),
-    url("/assets/soubel-masthead-06.webp?v=198"),
-    url("/assets/soubel-masthead-07.webp?v=198");
+  background-image:url("/assets/soubel-header-1920x300.webp?v=199");
   background-repeat:no-repeat;
-  background-size:
-    calc(12.5% + 1px) 100%,calc(12.5% + 1px) 100%,
-    calc(12.5% + 1px) 100%,calc(12.5% + 1px) 100%,
-    calc(12.5% + 1px) 100%,calc(12.5% + 1px) 100%,
-    calc(12.5% + 1px) 100%,calc(12.5% + 1px) 100%;
-  background-position:
-    left 0% top 0,
-    left 12.5% top 0,
-    left 25% top 0,
-    left 37.5% top 0,
-    left 50% top 0,
-    left 62.5% top 0,
-    left 75% top 0,
-    left 87.5% top 0;
+  background-size:100% 100%;
+  background-position:center center;
 }
 .header-inner{
   position:relative!important;
