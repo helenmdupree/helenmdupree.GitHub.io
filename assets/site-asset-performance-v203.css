@@ -58,6 +58,29 @@
   line-height:1.56!important;
 }
 
+/* SOUBEL perspective: preserve the full copy and pair it with the approved context graphic. */
+.asset-performance-page #performance-context .perspective-split{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) minmax(340px,430px)!important;
+  gap:clamp(38px,5vw,76px)!important;
+  align-items:start!important;
+  margin-top:18px!important;
+}
+.asset-performance-page #performance-context .perspective-copy .section-intro{
+  max-width:560px!important;
+}
+.asset-performance-page #performance-context .perspective-visual{
+  width:100%!important;
+  max-width:430px!important;
+  margin:0!important;
+  justify-self:end!important;
+}
+.asset-performance-page #performance-context .perspective-visual img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+}
+
 /* Five-part performance system: replace loose stacked text with a compact system view. */
 .asset-performance-page .growth-grid.five{
   display:grid!important;
@@ -183,6 +206,20 @@
   }
 }
 
+@media(max-width:900px){
+  .asset-performance-page #performance-context .perspective-split{
+    grid-template-columns:1fr!important;
+    gap:24px!important;
+  }
+  .asset-performance-page #performance-context .perspective-copy .section-intro{
+    max-width:760px!important;
+  }
+  .asset-performance-page #performance-context .perspective-visual{
+    justify-self:center!important;
+    max-width:480px!important;
+  }
+}
+
 @media(max-width:760px){
   .asset-performance-page .page-hero{
     padding:34px 0 30px!important;
@@ -214,5 +251,8 @@
   }
   .asset-performance-page .growth-cta h2{
     font-size:clamp(1.65rem,7vw,2.05rem)!important;
+  }
+  .asset-performance-page #performance-context .perspective-visual{
+    max-width:420px!important;
   }
 }
