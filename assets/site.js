@@ -18,15 +18,15 @@
     ['/expertise/digital-transformation-ai/','Digital Transformation & AI']
   ];
 
-  const intelligenceLinks=[
-    ['/industry-intelligence/','Industry Intelligence',false],
+  const knowledgeLinks=[
     ['/knowledge-library/','Knowledge Library',false],
-    ['/knowledge-library/asset-integrity-management/','Asset Integrity Management',true],
-    ['/knowledge-library/pipeline-asset-integrity/','Pipeline Integrity',true],
-    ['/knowledge-library/tank-terminal-integrity/','Tank & Terminal Integrity',true],
-    ['/knowledge-library/corrosion-cathodic-protection/','Corrosion & Cathodic Protection',true],
-    ['/knowledge-library/asset-performance/','Asset Performance',true],
-    ['/knowledge-library/digital-transformation-ai/','Digital Transformation & AI',true],
+    ['/knowledge-library/asset-integrity-management/','Asset Integrity Management',false],
+    ['/knowledge-library/pipeline-asset-integrity/','Pipeline Integrity',false],
+    ['/knowledge-library/tank-terminal-integrity/','Tank & Terminal Integrity',false],
+    ['/knowledge-library/corrosion-cathodic-protection/','Corrosion & Cathodic Protection',false],
+    ['/knowledge-library/asset-performance/','Asset Performance',false],
+    ['/knowledge-library/digital-transformation-ai/','Digital & AI Knowledge',false],
+    ['/industry-intelligence/','Industry Intelligence',false],
     ['/analysis-perspectives/','Analysis & Perspectives',false]
   ];
 
@@ -52,7 +52,7 @@
     style.textContent='\
       .desktop-nav .resources-dropdown .dropdown-panel{left:auto!important;right:0!important;max-width:min(390px,calc(100vw - 28px))!important}\
       .desktop-nav .resources-dropdown .dropdown-panel a{white-space:normal!important}\
-      .desktop-nav .intelligence-dropdown .dropdown-panel{min-width:300px!important;max-width:min(360px,calc(100vw - 28px))!important}\
+      .desktop-nav .knowledge-dropdown .dropdown-panel{min-width:300px!important;max-width:min(360px,calc(100vw - 28px))!important}\
       .desktop-nav .dropdown-panel .knowledge-subitem{padding-left:30px!important;font-size:.91em!important;color:#496169!important}\
       .desktop-nav .dropdown-panel .knowledge-subitem::before{content:"↳";margin-right:7px;color:#11858b}\
       .mobile-menu .knowledge-subitem{padding-left:30px!important;font-size:.93em!important;color:#60747b!important}\
@@ -89,7 +89,7 @@
       nav.innerHTML='';
       nav.appendChild(makeDropdown('Markets',marketsLinks));
       nav.appendChild(makeDropdown('Expertise',expertiseLinks));
-      nav.appendChild(makeDropdown('Intelligence',intelligenceLinks,'intelligence-dropdown'));
+      nav.appendChild(makeDropdown('Knowledge',knowledgeLinks,'knowledge-dropdown'));
       nav.appendChild(makeDropdown('Resources',resourceLinks,'resources-dropdown'));
       nav.appendChild(makeAnchor('/operational-trust/','Operational Trust'));
       nav.appendChild(makeDropdown('About',aboutLinks));
@@ -127,7 +127,7 @@
 
     menu.appendChild(buildMobileGroup('Markets',marketsLinks));
     menu.appendChild(buildMobileGroup('Expertise',expertiseLinks));
-    menu.appendChild(buildMobileGroup('Intelligence',intelligenceLinks));
+    menu.appendChild(buildMobileGroup('Knowledge',knowledgeLinks));
     menu.appendChild(buildMobileGroup('Resources',resourceLinks));
 
     const trustGroup=document.createElement('div');
