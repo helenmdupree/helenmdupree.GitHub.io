@@ -1,0 +1,25 @@
+@import url("/assets/site-aim-v198.css");
+
+/* V1.99 — AIM main-page transition tightening.
+   Reduce the remaining dead space between the decision-flow row and the
+   Application Domains section. Preserve the approved heading, paragraph,
+   card, navigation, and masthead treatments. */
+@media(min-width:901px){
+  .aim-page #aim-framework{
+    padding-bottom:14px!important;
+  }
+
+  .aim-page #aim-framework + .section{
+    padding-top:18px!important;
+  }
+}
+
+@media(max-width:900px){
+  .aim-page #aim-framework{
+    padding-bottom:20px!important;
+  }
+
+  .aim-page #aim-framework + .section{
+    padding-top:22px!important;
+  }
+}
