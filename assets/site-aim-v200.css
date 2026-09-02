@@ -1,0 +1,33 @@
+@import url("/assets/site-aim-v199.css");
+
+/* V2.00 — AIM decision-flow trailing-space correction.
+   The visible dead band was not solely adjacent-section padding; the flow
+   component itself was contributing trailing space. Collapse that trailing
+   margin and keep only a compact section transition. */
+@media(min-width:901px){
+  .aim-page #aim-framework .data-flow{
+    margin-bottom:0!important;
+  }
+
+  .aim-page #aim-framework{
+    padding-bottom:8px!important;
+  }
+
+  .aim-page #aim-framework + .section{
+    padding-top:16px!important;
+  }
+}
+
+@media(max-width:900px){
+  .aim-page #aim-framework .data-flow{
+    margin-bottom:0!important;
+  }
+
+  .aim-page #aim-framework{
+    padding-bottom:14px!important;
+  }
+
+  .aim-page #aim-framework + .section{
+    padding-top:18px!important;
+  }
+}
