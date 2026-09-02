@@ -1,0 +1,218 @@
+/* V2.03 — Asset Performance live visual QA refinement.
+   Directly bound to body.asset-performance-page so the generic internal-page
+   display scale cannot override the restrained executive treatment. */
+
+.asset-performance-page .page-hero{
+  padding:42px 0 38px!important;
+}
+.asset-performance-page .page-hero .crumb{
+  margin-bottom:8px!important;
+}
+.asset-performance-page .page-hero .kicker{
+  margin:0 0 9px!important;
+  font-size:.74rem!important;
+  line-height:1.2!important;
+  letter-spacing:.16em!important;
+}
+.asset-performance-page .page-hero h1{
+  max-width:900px!important;
+  margin:0!important;
+  font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;
+  font-size:clamp(2.15rem,3.55vw,3.3rem)!important;
+  font-weight:700!important;
+  line-height:1.03!important;
+  letter-spacing:-.032em!important;
+}
+.asset-performance-page .page-hero p:not(.kicker){
+  max-width:900px!important;
+  margin:14px 0 0!important;
+  font-size:1rem!important;
+  line-height:1.54!important;
+}
+.asset-performance-page .page-hero .actions{
+  margin-top:22px!important;
+}
+
+.asset-performance-page .section{
+  padding:34px 0!important;
+}
+.asset-performance-page .section .kicker{
+  margin:0 0 7px!important;
+  font-size:.72rem!important;
+  line-height:1.2!important;
+  letter-spacing:.15em!important;
+}
+.asset-performance-page .section h2{
+  max-width:930px!important;
+  margin:0 0 10px!important;
+  font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;
+  font-size:clamp(1.72rem,2.35vw,2.3rem)!important;
+  font-weight:700!important;
+  line-height:1.09!important;
+  letter-spacing:-.024em!important;
+}
+.asset-performance-page .section-intro{
+  max-width:930px!important;
+  margin:0!important;
+  font-size:.99rem!important;
+  line-height:1.56!important;
+}
+
+/* Five-part performance system: replace loose stacked text with a compact system view. */
+.asset-performance-page .growth-grid.five{
+  display:grid!important;
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  gap:12px!important;
+  margin-top:22px!important;
+}
+.asset-performance-page .growth-card{
+  min-width:0!important;
+  padding:17px!important;
+  border:1px solid var(--line)!important;
+  border-radius:14px!important;
+  background:#fff!important;
+}
+.asset-performance-page .growth-card>span{
+  display:block!important;
+  margin:0 0 7px!important;
+  color:var(--teal)!important;
+  font-size:.68rem!important;
+  font-weight:900!important;
+  letter-spacing:.12em!important;
+}
+.asset-performance-page .growth-card h3{
+  margin:0 0 7px!important;
+  font-size:1rem!important;
+  line-height:1.22!important;
+}
+.asset-performance-page .growth-card p{
+  margin:0!important;
+  color:#50666e!important;
+  font-size:.88rem!important;
+  line-height:1.48!important;
+}
+
+/* Signal / decision systems */
+.asset-performance-page .cp-flow,
+.asset-performance-page .data-flow{
+  margin:18px 0 0!important;
+  padding:14px 0!important;
+  gap:11px!important;
+}
+.asset-performance-page .cp-flow span,
+.asset-performance-page .data-flow span{
+  font-size:.9rem!important;
+}
+.asset-performance-page .cp-note{
+  max-width:920px!important;
+  margin:14px 0 0!important;
+  font-size:.98rem!important;
+  line-height:1.55!important;
+}
+
+/* Tag rows should support the content, not create another oversized block. */
+.asset-performance-page .equipment-strip{
+  gap:7px!important;
+  margin:18px 0 0!important;
+}
+.asset-performance-page .equipment-strip span{
+  padding:6px 9px!important;
+  font-size:.76rem!important;
+  line-height:1.25!important;
+}
+
+.asset-performance-page .ai-callout{
+  max-width:930px!important;
+  margin-top:17px!important;
+  padding:15px 17px!important;
+  border-left:3px solid var(--teal)!important;
+  background:#fff!important;
+  color:#40565e!important;
+  font-size:.94rem!important;
+  line-height:1.55!important;
+}
+
+/* Connected Knowledge: use the page width instead of leaving links floating in white space. */
+.asset-performance-page .knowledge-cards{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  column-gap:30px!important;
+  margin-top:20px!important;
+  border-top:1px solid var(--line)!important;
+}
+.asset-performance-page .knowledge-card{
+  padding:14px 0!important;
+}
+.asset-performance-page .knowledge-card span{
+  margin-bottom:5px!important;
+  font-size:.66rem!important;
+}
+.asset-performance-page .knowledge-card h3{
+  margin:0 0 4px!important;
+  font-size:1.05rem!important;
+  line-height:1.24!important;
+}
+.asset-performance-page .knowledge-card p{
+  font-size:.9rem!important;
+  line-height:1.45!important;
+}
+
+/* Final Decision Test was still using display-heading scale. */
+.asset-performance-page .growth-cta{
+  padding:38px 0!important;
+}
+.asset-performance-page .growth-cta h2{
+  max-width:900px!important;
+  font-size:clamp(1.9rem,2.7vw,2.55rem)!important;
+  line-height:1.08!important;
+}
+.asset-performance-page .growth-cta> .wrap > p:not(.kicker){
+  max-width:900px!important;
+  margin:0!important;
+  color:#d3dfe2!important;
+  font-size:1rem!important;
+  line-height:1.55!important;
+}
+.asset-performance-page .growth-cta .actions{
+  margin-top:22px!important;
+}
+
+@media(max-width:1050px){
+  .asset-performance-page .growth-grid.five{
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  }
+}
+
+@media(max-width:760px){
+  .asset-performance-page .page-hero{
+    padding:34px 0 30px!important;
+  }
+  .asset-performance-page .page-hero h1{
+    font-size:clamp(1.95rem,8.8vw,2.55rem)!important;
+  }
+  .asset-performance-page .page-hero p:not(.kicker){
+    font-size:.96rem!important;
+  }
+  .asset-performance-page .section{
+    padding:28px 0!important;
+  }
+  .asset-performance-page .section h2{
+    font-size:clamp(1.55rem,6.8vw,1.95rem)!important;
+  }
+  .asset-performance-page .growth-grid.five{
+    grid-template-columns:1fr!important;
+    gap:10px!important;
+  }
+  .asset-performance-page .growth-card{
+    padding:15px!important;
+  }
+  .asset-performance-page .knowledge-cards{
+    grid-template-columns:1fr!important;
+  }
+  .asset-performance-page .growth-cta{
+    padding:32px 0!important;
+  }
+  .asset-performance-page .growth-cta h2{
+    font-size:clamp(1.65rem,7vw,2.05rem)!important;
+  }
+}
