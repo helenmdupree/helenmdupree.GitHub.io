@@ -1,7 +1,10 @@
 @import url("/assets/site-v178-base.css");
 
-/* V1.85 — verified SOUBEL 1920x300 masthead assembled from eight checked slices.
-   No menu is embedded in the artwork. Existing HTML navigation remains below it. */
+/* V1.97 — seamless SOUBEL masthead rendering.
+   The masthead is assembled from eight verified 240x300 slices. Browsers can
+   expose a 1px background-color seam when percentage-sized layers land on
+   fractional device pixels. A slight overlap removes those rounding gaps
+   without changing the artwork, proportions, or navigation geometry. */
 .site-header{
   position:relative!important;
   top:auto!important;
@@ -18,20 +21,18 @@
   aspect-ratio:1920 / 300;
   background-color:#d8dde1;
   background-image:
-    url("/assets/soubel-masthead-00.webp?v=185"),
-    url("/assets/soubel-masthead-01.webp?v=185"),
-    url("/assets/soubel-masthead-02.webp?v=185"),
-    url("/assets/soubel-masthead-03.webp?v=185"),
-    url("/assets/soubel-masthead-04.webp?v=185"),
-    url("/assets/soubel-masthead-05.webp?v=185"),
-    url("/assets/soubel-masthead-06.webp?v=185"),
-    url("/assets/soubel-masthead-07.webp?v=185");
+    url("/assets/soubel-masthead-00.webp?v=197"),
+    url("/assets/soubel-masthead-01.webp?v=197"),
+    url("/assets/soubel-masthead-02.webp?v=197"),
+    url("/assets/soubel-masthead-03.webp?v=197"),
+    url("/assets/soubel-masthead-04.webp?v=197"),
+    url("/assets/soubel-masthead-05.webp?v=197"),
+    url("/assets/soubel-masthead-06.webp?v=197"),
+    url("/assets/soubel-masthead-07.webp?v=197");
   background-repeat:no-repeat;
   background-size:
-    12.5% 100%,12.5% 100%,12.5% 100%,12.5% 100%,
-    12.5% 100%,12.5% 100%,12.5% 100%,12.5% 100%;
-  /* Percentage background-position is measured over the remaining 87.5% width.
-     These coordinates place each 12.5%-wide slice at exact eighths of the masthead. */
+    12.75% 100%,12.75% 100%,12.75% 100%,12.75% 100%,
+    12.75% 100%,12.75% 100%,12.75% 100%,12.75% 100%;
   background-position:
     0% 0,14.285714% 0,28.571429% 0,42.857143% 0,
     57.142857% 0,71.428571% 0,85.714286% 0,100% 0;
