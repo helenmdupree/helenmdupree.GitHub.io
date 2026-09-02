@@ -41,6 +41,7 @@
   const aboutLinks=[
     ['/about/','About SOUBEL',false],
     ['/about/experience/','Experience',false],
+    ['/about/career-in-motion/','Career in Motion',false],
     ['/about/reading-influence/','Reading & Influence',false],
     ['/about/reading-influence/thought-pieces/','Thought Pieces',true],
     ['/about/reading-influence/books/','Books That Stayed',true]
