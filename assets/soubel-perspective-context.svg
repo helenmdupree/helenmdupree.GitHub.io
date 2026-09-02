@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1083 1794" role="img" aria-labelledby="title desc">
+  <title id="title">SOUBEL perspective on asset performance context</title>
+  <desc id="desc">The same equipment depends on operating context. Define the operating objective first, consider operational performance, efficiency and cost, and risk and asset life, then decide the appropriate data, technology, maintenance, or intervention.</desc>
+  <defs>
+    <style>
+      .sans{font-family:Arial,Helvetica,sans-serif}
+      .label{font-size:31px;font-weight:700;letter-spacing:9px;fill:#38c6ba}
+      .h1{font-size:50px;font-weight:700;fill:#fff}
+      .h2{font-size:47px;font-weight:700;fill:#fff}
+      .sub{font-size:31px;font-weight:400;fill:#9fc2c4}
+      .group{font-size:31px;font-weight:700;letter-spacing:7px;fill:#38c6ba}
+      .card-title{font-size:42px;font-weight:700;fill:#fff}
+      .card-sub{font-size:30px;font-weight:400;fill:#9fc2c4}
+      .decision{font-size:44px;font-weight:700;fill:#081a1e}
+      .decision-sub{font-size:30px;font-weight:400;fill:#0f2a30}
+    </style>
+  </defs>
+  <rect x="1" y="1" width="1081" height="1792" rx="56" fill="#081a1e"/>
+  <path d="M0 260 C230 165 430 205 610 240 S930 255 1083 135" fill="none" stroke="#1f4a50" stroke-width="5" opacity=".9"/>
+  <path d="M0 330 C265 235 430 285 625 315 S905 325 1083 235" fill="none" stroke="#1f4a50" stroke-width="4" opacity=".7"/>
+
+  <text class="sans label" x="60" y="80">THE SOUBEL PERSPECTIVE</text>
+
+  <rect x="60" y="150" width="963" height="182" rx="29" fill="#123138" stroke="#1f4a50" stroke-width="3"/>
+  <text class="sans h1" x="110" y="220">Same equipment</text>
+  <text class="sans sub" x="110" y="278">performance depends on context</text>
+
+  <line x1="541.5" y1="332" x2="541.5" y2="388" stroke="#38c6ba" stroke-width="5"/>
+  <path d="M525 377 L541.5 390 L541.5 366" fill="none" stroke="#38c6ba" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="60" y="405" width="963" height="182" rx="29" fill="#123138" stroke="#1f4a50" stroke-width="3"/>
+  <rect x="60" y="405" width="12" height="182" fill="#38c6ba"/>
+  <text class="sans h2" x="110" y="476">Operating objective</text>
+  <text class="sans sub" x="110" y="532">define intended function first</text>
+
+  <line x1="541.5" y1="587" x2="541.5" y2="642" stroke="#38c6ba" stroke-width="5"/>
+  <path d="M525 631 L541.5 644 L541.5 620" fill="none" stroke="#38c6ba" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="45" y="650" width="993" height="842" rx="43" fill="none" stroke="#38c6ba" stroke-width="3" stroke-dasharray="14 12"/>
+  <text class="sans group" x="181" y="722">FACTORS SHAPING THE ANSWER</text>
+
+  <rect x="105" y="772" width="873" height="182" rx="29" fill="#123138"/>
+  <rect x="105" y="772" width="10" height="182" fill="#38c6ba"/>
+  <text class="sans card-title" x="150" y="842">Operational performance</text>
+  <text class="sans card-sub" x="150" y="898">throughput, reliability, integrity</text>
+
+  <rect x="105" y="997" width="873" height="230" rx="29" fill="#123138"/>
+  <rect x="105" y="997" width="10" height="230" fill="#38c6ba"/>
+  <text class="sans card-title" x="150" y="1067">Efficiency and cost</text>
+  <text class="sans card-sub" x="150" y="1123">energy use, maintenance burden,</text>
+  <text class="sans card-sub" x="150" y="1172">lifecycle cost</text>
+
+  <rect x="105" y="1267" width="873" height="182" rx="29" fill="#123138"/>
+  <rect x="105" y="1267" width="10" height="182" fill="#38c6ba"/>
+  <text class="sans card-title" x="150" y="1337">Risk and asset life</text>
+  <text class="sans card-sub" x="150" y="1393">availability, remaining life, safety</text>
+
+  <line x1="541.5" y1="1492" x2="541.5" y2="1546" stroke="#38c6ba" stroke-width="5"/>
+  <path d="M525 1535 L541.5 1548 L541.5 1524" fill="none" stroke="#38c6ba" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="60" y="1555" width="963" height="190" rx="29" fill="#38c6ba"/>
+  <text class="sans decision" x="110" y="1630">Then decide</text>
+  <text class="sans decision-sub" x="110" y="1688">data, tech, maintenance, intervention</text>
+</svg>
