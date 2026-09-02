@@ -1,0 +1,106 @@
+/* V2.01 — Midstream & Pipelines live visual QA refinement.
+   Page-scoped via #operating-reality so other Markets/Expertise pages are untouched. */
+
+@media(min-width:901px){
+  body:has(#operating-reality) .section{
+    padding-top:46px!important;
+    padding-bottom:46px!important;
+  }
+
+  body:has(#operating-reality) .section h2{
+    max-width:940px!important;
+    font-size:clamp(1.9rem,2.75vw,2.65rem)!important;
+    line-height:1.08!important;
+    letter-spacing:-.026em!important;
+  }
+
+  body:has(#operating-reality) #operating-reality{
+    padding-top:42px!important;
+    padding-bottom:38px!important;
+  }
+
+  body:has(#operating-reality) .data-flow{
+    margin:22px 0 0!important;
+    padding:16px 0!important;
+  }
+
+  body:has(#operating-reality) .grid-2{
+    margin-top:24px!important;
+    gap:16px!important;
+  }
+
+  body:has(#operating-reality) .card{
+    padding:22px!important;
+  }
+
+  body:has(#operating-reality) .card h3{
+    font-size:1.14rem!important;
+    line-height:1.25!important;
+  }
+
+  body:has(#operating-reality) .knowledge-cards{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    column-gap:32px!important;
+    margin-top:24px!important;
+  }
+
+  body:has(#operating-reality) .knowledge-card{
+    padding:16px 0!important;
+  }
+
+  body:has(#operating-reality) .knowledge-card span,
+  body:has(#operating-reality) .knowledge-card h3,
+  body:has(#operating-reality) .knowledge-card p{
+    display:block!important;
+  }
+
+  body:has(#operating-reality) main > .section.alt:last-child{
+    padding-top:42px!important;
+    padding-bottom:42px!important;
+  }
+}
+
+body:has(#operating-reality) .section-intro{
+  max-width:900px!important;
+  font-size:1.02rem!important;
+  line-height:1.58!important;
+}
+
+/* Final CTA sits on a light background; restore visible button contrast. */
+body:has(#operating-reality) main > .section.alt:last-child .btn.primary{
+  background:#07141b!important;
+  color:#fff!important;
+  border-color:#07141b!important;
+}
+body:has(#operating-reality) main > .section.alt:last-child .btn.secondary{
+  background:transparent!important;
+  color:#0b7379!important;
+  border-color:#7aaeb2!important;
+}
+
+@media(max-width:900px){
+  body:has(#operating-reality) .section{
+    padding-top:40px!important;
+    padding-bottom:40px!important;
+  }
+  body:has(#operating-reality) .section h2{
+    font-size:clamp(1.65rem,6.8vw,2.15rem)!important;
+    line-height:1.1!important;
+    letter-spacing:-.022em!important;
+  }
+  body:has(#operating-reality) .data-flow{
+    margin:20px 0 0!important;
+    padding:14px 0!important;
+  }
+}
+
+@media(max-width:760px){
+  body:has(#operating-reality) .knowledge-cards{
+    display:block!important;
+    margin-top:22px!important;
+  }
+  body:has(#operating-reality) .knowledge-card{
+    padding:16px 0!important;
+  }
+}
