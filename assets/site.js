@@ -88,6 +88,7 @@
   function ensureDesktopNav(){
     document.querySelectorAll('.desktop-nav').forEach(nav=>{
       nav.innerHTML='';
+      nav.appendChild(makeAnchor('/','Home','nav-home'));
       nav.appendChild(makeDropdown('Markets',marketsLinks));
       nav.appendChild(makeDropdown('Expertise',expertiseLinks));
       nav.appendChild(makeDropdown('Knowledge',knowledgeLinks,'knowledge-dropdown'));
