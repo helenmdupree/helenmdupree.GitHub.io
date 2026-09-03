@@ -121,12 +121,66 @@ body > main > .hero .hero-lead{
   white-space:nowrap;
 }
 
+/* V2.10 — Operational Trust becomes a concise thesis band, not a second homepage. */
+.home-trust{
+  padding:54px 0 56px;
+  color:#fff;
+  background:linear-gradient(135deg,#061219,#0b2830);
+}
+
+.home-trust .home-trust-inner{
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+  gap:54px;
+  align-items:center;
+}
+
+.home-trust .eyebrow{
+  margin:0 0 10px;
+  color:#7fd1d3;
+}
+
+.home-trust h2{
+  max-width:560px;
+  margin:0;
+  color:#fff;
+  font-size:clamp(1.95rem,3.2vw,2.75rem)!important;
+  line-height:1.06!important;
+  letter-spacing:-.03em!important;
+}
+
+.home-trust .home-trust-copy{
+  max-width:650px;
+}
+
+.home-trust .home-trust-copy p{
+  margin:0 0 18px;
+  color:#d4e0e3;
+  font-size:1rem;
+  line-height:1.62;
+}
+
+.home-trust .home-trust-link{
+  color:#8ed9da;
+  font-size:.9rem;
+  font-weight:800;
+  text-decoration:none;
+}
+
+.home-trust .home-trust-link:hover{
+  text-decoration:underline;
+}
+
 @media(max-width:900px){
   .home-pathways .pathway-grid{
     grid-template-columns:1fr;
   }
   .home-pathways .pathway-card{
     min-height:0;
+  }
+  .home-trust .home-trust-inner{
+    grid-template-columns:1fr;
+    gap:22px;
   }
 }
 
@@ -153,5 +207,9 @@ body > main > .hero .hero-lead{
     min-width:100%;
     font-size:.72rem;
     letter-spacing:.095em;
+  }
+
+  .home-trust{
+    padding:44px 0 46px;
   }
 }
