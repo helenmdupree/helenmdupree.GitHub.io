@@ -1,0 +1,19 @@
+/* V2.09 — About page optical centering.
+   The executive-profile rail creates a left-heavy visual field even when the
+   credo is mathematically centered in the content wrap.  Shift the full-width
+   philosophical block and the line beneath it to the optical center on desktop,
+   while keeping mobile naturally centered. */
+
+@media (min-width:821px){
+  .about-platform .about-credo,
+  .about-platform .about-strategy{
+    transform:translateX(clamp(28px,3vw,44px));
+  }
+}
+
+@media (max-width:820px){
+  .about-platform .about-credo,
+  .about-platform .about-strategy{
+    transform:none;
+  }
+}
