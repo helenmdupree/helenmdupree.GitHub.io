@@ -1,0 +1,31 @@
+/* Homepage V2.08 — architecture positioning + tighter hero entry.
+   Keep the masthead and navigation unchanged; reduce only the space between
+   the menu and the first homepage message. */
+
+body > main > .hero{
+  padding-top:42px!important;
+}
+
+body > main > .hero .hero-inner{
+  padding-top:0!important;
+}
+
+body > main > .hero .eyebrow{
+  margin-top:0!important;
+  margin-bottom:18px!important;
+}
+
+body > main > .hero .hero-lead{
+  max-width:980px!important;
+  line-height:1.58!important;
+}
+
+@media(max-width:760px){
+  body > main > .hero{
+    padding-top:30px!important;
+  }
+
+  body > main > .hero .eyebrow{
+    margin-bottom:14px!important;
+  }
+}
