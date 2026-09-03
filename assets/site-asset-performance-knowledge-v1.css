@@ -121,14 +121,60 @@
   margin-top:18px!important;
 }
 
-.asset-performance-knowledge-page .equipment-strip{
-  margin-top:20px!important;
-  gap:9px!important;
+/* Replace nonfunctional pill-like labels with four obvious live destinations. */
+.asset-performance-knowledge-page .ap-depth-grid{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:16px!important;
+  margin-top:22px!important;
 }
-.asset-performance-knowledge-page .equipment-strip span{
-  color:#40575f!important;
-  font-size:.86rem!important;
-  line-height:1.35!important;
+.asset-performance-knowledge-page .ap-depth-card{
+  display:flex!important;
+  min-height:170px!important;
+  padding:22px!important;
+  flex-direction:column!important;
+  justify-content:flex-start!important;
+  gap:10px!important;
+  color:#17333b!important;
+  background:#fff!important;
+  border:1px solid #d8e2e4!important;
+  border-radius:16px!important;
+  text-decoration:none!important;
+  box-shadow:none!important;
+  transition:border-color .18s ease,transform .18s ease!important;
+}
+.asset-performance-knowledge-page .ap-depth-card:hover,
+.asset-performance-knowledge-page .ap-depth-card:focus-visible{
+  border-color:#2f9da1!important;
+  transform:translateY(-2px)!important;
+  outline:none!important;
+}
+.asset-performance-knowledge-page .ap-depth-card strong{
+  color:#163840!important;
+  font-size:1.05rem!important;
+  line-height:1.3!important;
+}
+.asset-performance-knowledge-page .ap-depth-card span{
+  color:#526970!important;
+  font-size:.93rem!important;
+  line-height:1.55!important;
+}
+.asset-performance-knowledge-page .ap-depth-card em{
+  margin-top:auto!important;
+  color:#168e96!important;
+  font-size:.92rem!important;
+  font-style:normal!important;
+  font-weight:800!important;
+}
+.asset-performance-knowledge-page .ap-topic-note{
+  max-width:1180px!important;
+  margin:20px 0 0!important;
+  color:#586e75!important;
+  font-size:.9rem!important;
+  line-height:1.58!important;
+}
+.asset-performance-knowledge-page .ap-topic-note strong{
+  color:#344e56!important;
 }
 
 /* Final connected-knowledge statement should not return to Brutus scale. */
@@ -165,5 +211,12 @@
   }
   .asset-performance-knowledge-page .ap-decision-grid article{
     padding:16px!important;
+  }
+  .asset-performance-knowledge-page .ap-depth-grid{
+    grid-template-columns:1fr!important;
+  }
+  .asset-performance-knowledge-page .ap-depth-card{
+    min-height:0!important;
+    padding:18px!important;
   }
 }
