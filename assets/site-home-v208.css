@@ -4,6 +4,7 @@
 
 body > main > .hero{
   padding-top:42px!important;
+  padding-bottom:56px!important;
 }
 
 body > main > .hero .hero-inner{
@@ -15,9 +16,22 @@ body > main > .hero .eyebrow{
   margin-bottom:18px!important;
 }
 
+body > main > .hero h1{
+  max-width:900px!important;
+  font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;
+  font-size:clamp(2.55rem,4.6vw,4.25rem)!important;
+  font-weight:700!important;
+  line-height:1.02!important;
+  letter-spacing:-.04em!important;
+}
+
 body > main > .hero .hero-lead{
-  max-width:980px!important;
-  line-height:1.58!important;
+  max-width:900px!important;
+  line-height:1.55!important;
+}
+
+body > main > .hero .actions{
+  margin-top:24px!important;
 }
 
 /* V2.09 — three editorial gateways replace the former Markets + Expertise catalog. */
@@ -171,7 +185,60 @@ body > main > .hero .hero-lead{
   text-decoration:underline;
 }
 
-/* V2.11 — compact closing architecture replaces duplicated About + Intelligence catalogs. */
+/* V2.11 — Current Thinking remains evidence, but no longer dominates the page. */
+.featured-insights{
+  padding:54px 0 58px!important;
+}
+
+.featured-insights .section-heading-row{
+  margin-bottom:26px!important;
+}
+
+.featured-insights .section-heading-row h2{
+  max-width:740px!important;
+  margin-bottom:10px!important;
+  font-size:clamp(1.9rem,3vw,2.55rem)!important;
+  line-height:1.08!important;
+  letter-spacing:-.025em!important;
+}
+
+.featured-insights .featured-intro{
+  max-width:720px!important;
+  margin-bottom:0!important;
+}
+
+.featured-insights .editorial-grid{
+  gap:18px!important;
+}
+
+.featured-insights .insight-card-media{
+  height:168px!important;
+  overflow:hidden;
+}
+
+.featured-insights .insight-card-media img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+}
+
+.featured-insights .insight-card-body{
+  padding:19px 20px 20px!important;
+}
+
+.featured-insights .insight-card-body h3{
+  margin-bottom:9px!important;
+  font-size:1.04rem!important;
+  line-height:1.28!important;
+}
+
+.featured-insights .insight-card-body p{
+  margin-bottom:14px!important;
+  font-size:.88rem!important;
+  line-height:1.52!important;
+}
+
+/* V2.12 — compact closing architecture replaces duplicated About + Intelligence catalogs. */
 .home-closing{
   padding:58px 0 62px;
   background:#fff;
@@ -277,10 +344,15 @@ body > main > .hero .hero-lead{
 @media(max-width:760px){
   body > main > .hero{
     padding-top:30px!important;
+    padding-bottom:44px!important;
   }
 
   body > main > .hero .eyebrow{
     margin-bottom:14px!important;
+  }
+
+  body > main > .hero h1{
+    font-size:clamp(2.25rem,11vw,3rem)!important;
   }
 
   .home-pathways{
@@ -302,6 +374,14 @@ body > main > .hero .hero-lead{
   .home-trust,
   .home-closing{
     padding:44px 0 46px;
+  }
+
+  .featured-insights{
+    padding:44px 0 48px!important;
+  }
+
+  .featured-insights .insight-card-media{
+    height:150px!important;
   }
 
   .home-intelligence-links a{
