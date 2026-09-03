@@ -84,3 +84,13 @@
     document.head.appendChild(style);
   }
 })();
+
+/* SOUBEL global search loader */
+(function(){
+  if(document.querySelector('script[data-soubel-global-search]')) return;
+  const script=document.createElement('script');
+  script.src='/assets/global-search.js?v=1';
+  script.defer=true;
+  script.dataset.soubelGlobalSearch='true';
+  document.head.appendChild(script);
+})();
