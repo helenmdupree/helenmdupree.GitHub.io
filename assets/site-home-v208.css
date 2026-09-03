@@ -20,6 +20,28 @@ body > main > .hero .hero-lead{
   line-height:1.58!important;
 }
 
+.home-service-principle{
+  padding:34px 24px 36px;
+  background:#fff;
+  border-top:1px solid rgba(20,48,55,.08);
+  border-bottom:1px solid rgba(20,48,55,.08);
+  text-align:center;
+  overflow:hidden;
+}
+
+.home-service-principle p{
+  margin:0 auto;
+  max-width:none;
+  color:#1d343a;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(.82rem,1.22vw,1.08rem);
+  font-weight:500;
+  line-height:1.2;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+
 @media(max-width:760px){
   body > main > .hero{
     padding-top:30px!important;
@@ -27,5 +49,17 @@ body > main > .hero .hero-lead{
 
   body > main > .hero .eyebrow{
     margin-bottom:14px!important;
+  }
+
+  .home-service-principle{
+    padding:28px 14px 30px;
+    overflow-x:auto;
+  }
+
+  .home-service-principle p{
+    width:max-content;
+    min-width:100%;
+    font-size:.72rem;
+    letter-spacing:.095em;
   }
 }
