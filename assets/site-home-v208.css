@@ -1,6 +1,6 @@
 /* Homepage V2.08 — architecture positioning + tighter hero entry.
-   Keep the masthead and navigation unchanged; reduce only the space between
-   the menu and the first homepage message. */
+   Homepage V2.09 begins the editorial reduction: the home page should orient,
+   create curiosity, and route visitors into the deeper SOUBEL architecture. */
 
 body > main > .hero{
   padding-top:42px!important;
@@ -18,6 +18,85 @@ body > main > .hero .eyebrow{
 body > main > .hero .hero-lead{
   max-width:980px!important;
   line-height:1.58!important;
+}
+
+/* V2.09 — three editorial gateways replace the former Markets + Expertise catalog. */
+.home-pathways{
+  padding:58px 0 62px!important;
+}
+
+.home-pathways .pathway-heading{
+  max-width:760px;
+  margin-bottom:28px;
+}
+
+.home-pathways .pathway-heading h2{
+  max-width:760px;
+  margin-bottom:12px;
+  font-size:clamp(1.9rem,3vw,2.65rem)!important;
+  line-height:1.08!important;
+  letter-spacing:-.025em!important;
+}
+
+.home-pathways .pathway-heading .section-intro{
+  max-width:720px;
+  margin-bottom:0;
+}
+
+.home-pathways .pathway-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+
+.home-pathways .pathway-card{
+  display:flex;
+  min-height:230px;
+  padding:25px 24px 23px;
+  flex-direction:column;
+  text-decoration:none;
+  background:#fff;
+  border:1px solid rgba(21,55,63,.13);
+  border-radius:10px;
+  box-shadow:0 8px 24px rgba(6,30,37,.045);
+  transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;
+}
+
+.home-pathways .pathway-card:hover{
+  transform:translateY(-2px);
+  border-color:rgba(20,129,134,.38);
+  box-shadow:0 12px 28px rgba(6,30,37,.08);
+}
+
+.home-pathways .pathway-card .pathway-label{
+  margin-bottom:12px;
+  color:#168287;
+  font-size:.7rem;
+  font-weight:800;
+  line-height:1.2;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+
+.home-pathways .pathway-card h3{
+  margin:0 0 11px;
+  color:#18363d;
+  font-size:1.22rem!important;
+  line-height:1.2!important;
+}
+
+.home-pathways .pathway-card p{
+  margin:0 0 20px;
+  color:#536970;
+  font-size:.94rem;
+  line-height:1.55;
+}
+
+.home-pathways .pathway-card .pathway-link{
+  margin-top:auto;
+  color:#126f74;
+  font-size:.84rem;
+  font-weight:800;
 }
 
 .home-service-principle{
@@ -42,6 +121,15 @@ body > main > .hero .hero-lead{
   white-space:nowrap;
 }
 
+@media(max-width:900px){
+  .home-pathways .pathway-grid{
+    grid-template-columns:1fr;
+  }
+  .home-pathways .pathway-card{
+    min-height:0;
+  }
+}
+
 @media(max-width:760px){
   body > main > .hero{
     padding-top:30px!important;
@@ -49,6 +137,10 @@ body > main > .hero .hero-lead{
 
   body > main > .hero .eyebrow{
     margin-bottom:14px!important;
+  }
+
+  .home-pathways{
+    padding:44px 0 48px!important;
   }
 
   .home-service-principle{
