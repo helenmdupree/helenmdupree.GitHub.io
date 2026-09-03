@@ -1,6 +1,6 @@
 /* V2.07 — Reliability & Maintenance Strategy density cleanup.
    Keep this page executive and readable: less dead space, restrained section
-   headings, and tighter transitions without changing content. */
+   headings, tighter transitions, and high-contrast resource actions. */
 
 /* Page-wide density and hierarchy protection. */
 body:has(.reliability-framework) .section{
@@ -47,6 +47,28 @@ body:has(.reliability-framework) .section-intro{
 body:has(.reliability-framework) .section.alt + .section,
 body:has(.reliability-framework) .section + .section.alt{
   scroll-margin-top:90px;
+}
+
+/* The global secondary button is designed for dark backgrounds. This resource
+   band is light, so force a readable, deliberate secondary action here. */
+body:has(.reliability-framework) #tool .decision-guide-band .guide-actions .btn.secondary{
+  color:#0a5960!important;
+  background:#edf7f7!important;
+  border:1px solid #8fb8bb!important;
+}
+
+body:has(.reliability-framework) #tool .decision-guide-band .guide-actions .btn.secondary:hover,
+body:has(.reliability-framework) #tool .decision-guide-band .guide-actions .btn.secondary:focus-visible{
+  color:#063d43!important;
+  background:#e2f1f1!important;
+  border-color:#5b989c!important;
+}
+
+/* Connected Knowledge cards should all resolve somewhere intentionally. */
+body:has(.reliability-framework) .lifecycle-grid .text-link{
+  display:inline-block;
+  margin-top:14px;
+  font-weight:800;
 }
 
 @media(max-width:620px){
