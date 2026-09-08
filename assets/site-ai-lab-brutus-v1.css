@@ -1,0 +1,12 @@
+/* SOUBEL Oil & Gas AI Lab — display typography override.
+   Brutus is the intended SOUBEL display face for the Lab.  Fallbacks are
+   provided only for environments where the Brutus webfont is unavailable. */
+.ai-lab-page .lab-hero h1,
+.ai-lab-page .lab-section h2,
+.ai-lab-page .pillar-card h3,
+.ai-lab-page .integrity-card h3,
+.ai-lab-page .signal-card h3,
+.ai-lab-page .dashboard-box h3,
+.ai-lab-page .lab-closing strong{
+  font-family:"Brutus","Baskerville","Georgia",serif!important;
+}
