@@ -1,5 +1,6 @@
 name: SOUBEL One-Time Search Index Remediation
 
+# One-time recovery trigger
 on:
   push:
     branches:
