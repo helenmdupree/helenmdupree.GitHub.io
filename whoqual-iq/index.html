@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WhoQual-IQ | SOUBEL</title>
+  <meta name="description" content="WhoQual-IQ helps determine what qualified needs to mean for the work being contemplated." />
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="canonical" href="https://soubel.com/whoqual-iq/" />
+  <link rel="stylesheet" href="/assets/site.css?v=207" />
+  <link rel="stylesheet" href="/assets/whoqual-iq-v01.css" />
+</head>
+<body class="whoqual-page">
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a aria-label="SOUBEL home" class="brand-logo" href="/"><img alt="SOUBEL — Operational Trust" src="/assets/soubel-logo-horizontal.png" /></a>
+    <nav aria-label="Primary navigation" class="desktop-nav">
+      <a href="/knowledge-library/">Knowledge Library</a>
+      <a href="/operational-trust/">Operational Trust</a>
+      <a href="/about/">About</a>
+    </nav>
+    <button aria-expanded="false" aria-label="Open menu" class="menu-toggle"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="whoqual-hero">
+    <div class="wrap whoqual-hero-inner">
+      <div>
+        <p class="eyebrow">SOUBEL WORK INTELLIGENCE</p>
+        <h1>WhoQual-IQ</h1>
+        <p class="hero-lead">WhoQual-IQ helps determine what qualified needs to mean for the work being contemplated.</p>
+      </div>
+      <div class="locale-switch" role="group" aria-label="Language">
+        <button type="button" class="locale-btn active" data-locale="en-US" aria-pressed="true">English</button>
+        <span aria-hidden="true">|</span>
+        <button type="button" class="locale-btn" data-locale="es-419" aria-pressed="false">Español</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="whoqual-shell section">
+    <div class="wrap">
+      <div class="whoqual-progress" aria-label="Project progress">
+        <span class="active" data-step="1">1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+      </div>
+
+      <section class="whoqual-panel active" id="step-input" data-panel="input">
+        <p class="kicker" data-i18n="stage_1_kicker">TELL US ABOUT THE WORK</p>
+        <h2 data-i18n="stage_1_title">What work are you considering?</h2>
+        <p class="section-intro" data-i18n="stage_1_intro">Start in your own words. You do not need to know SOUBEL's technical classifications.</p>
+
+        <form id="whoqual-form" novalidate>
+          <label class="whoqual-label" for="work-description" data-i18n="work_label">Describe the work</label>
+          <textarea id="work-description" name="workDescription" rows="7" maxlength="5000" placeholder="Example: We need to replace a deep groundbed on an operating pipeline station..." required></textarea>
+          <div class="field-help"><span id="work-count">0</span>/5000</div>
+
+          <div class="whoqual-grid">
+            <div>
+              <label class="whoqual-label" for="asset-type" data-i18n="asset_label">Asset</label>
+              <select id="asset-type" name="assetType">
+                <option value="" data-i18n="not_sure">Not sure</option>
+                <option value="pipeline">Pipeline</option>
+                <option value="tank">Tank</option>
+                <option value="marine">Marine / Waterfront</option>
+                <option value="offshore">Offshore</option>
+                <option value="reinforced-concrete">Reinforced Concrete</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="whoqual-label" for="project-status" data-i18n="status_label">Project status</label>
+              <select id="project-status" name="projectStatus">
+                <option value="" data-i18n="not_sure">Not sure</option>
+                <option value="planning">Planning</option>
+                <option value="design">Design</option>
+                <option value="ready-to-execute">Ready to execute</option>
+                <option value="in-progress">In progress</option>
+                <option value="troubleshooting">Troubleshooting</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="whoqual-actions">
+            <button class="btn primary" type="submit" data-i18n="review_button">Review what I told SOUBEL</button>
+            <button class="btn secondary" type="button" id="clear-project" data-i18n="clear_button">Clear project</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="whoqual-panel" id="step-review" data-panel="review" hidden>
+        <p class="kicker" data-i18n="stage_2_kicker">HERE'S WHAT I UNDERSTOOD</p>
+        <h2 data-i18n="stage_2_title">Review the project facts before we reason from them.</h2>
+        <p class="section-intro" data-i18n="stage_2_intro">This first implementation preserves your input exactly. No technical interpretation has been performed yet.</p>
+
+        <div class="project-facts">
+          <div class="fact-block">
+            <span data-i18n="fact_told">What I told SOUBEL</span>
+            <p id="review-description"></p>
+          </div>
+          <div class="fact-grid">
+            <div class="fact-block"><span data-i18n="fact_asset">Asset</span><p id="review-asset">—</p></div>
+            <div class="fact-block"><span data-i18n="fact_status">Project status</span><p id="review-status">—</p></div>
+          </div>
+          <div class="fact-block muted">
+            <span data-i18n="fact_understood">What SOUBEL understood</span>
+            <p data-i18n="not_interpreted">Protected reasoning is not connected in this shell yet. Your original project facts have been preserved without inference.</p>
+          </div>
+        </div>
+
+        <div class="decision-boundary" role="note">
+          <strong>Decision boundary</strong>
+          <p>WhoQual-IQ identifies what qualified needs to mean for the work being contemplated. Final qualification, authorization, staffing and acceptance remain with the applicable employer, owner/operator, authority or project decision maker.</p>
+        </div>
+
+        <div class="whoqual-actions">
+          <button class="btn primary" type="button" id="continue-project" disabled data-i18n="continue_button">Continue to a few questions</button>
+          <button class="btn secondary" type="button" id="edit-project" data-i18n="edit_button">Edit project</button>
+        </div>
+        <p class="build-note" data-i18n="build_note">Protected reasoning will be connected only after the private engine is implemented and tested.</p>
+      </section>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div><div class="footer-brand">SOUBEL · Operational Trust</div><div class="footer-small">© 2022–2026 SOUBEL. All Rights Reserved.</div></div>
+    <div class="footer-small">Houston, Texas</div>
+  </div>
+</footer>
+<script src="/assets/site.js"></script>
+<script src="/assets/whoqual-iq-v01.js"></script>
+</body>
+</html>
