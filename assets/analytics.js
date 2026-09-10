@@ -9,6 +9,7 @@
   }
 
   window.dataLayer = window.dataLayer || [];
+  // Privacy guard: never send literal public-site search text to analytics.
   window.gtag = window.gtag || function(){
     const args=Array.from(arguments);
     if(args[0]==='event' && args[1]==='site_search' && args[2] && typeof args[2]==='object'){
