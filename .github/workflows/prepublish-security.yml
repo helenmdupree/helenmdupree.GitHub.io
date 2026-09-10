@@ -1,0 +1,28 @@
+name: SOUBEL Public Pre-Publish Gate
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches:
+      - security/prepublish-gate-v1
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  prepublish-security:
+    name: Pre-Publish Security Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run SOUBEL pre-publish checker
+        run: python .github/scripts/prepublish_check.py
