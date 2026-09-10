@@ -115,7 +115,23 @@ for path in ROOT.rglob("*"):
         if pattern.search(text):
             fail(f"Possible {label} found in public file: {rel}")
 
-# 6. Existing deployment fragments are not a publish blocker yet, but stay visible.
+# 6. Keep redirect-only legacy routes out of the public client-side search corpus.
+search_index = ROOT / "assets" / "library-search-index.js"
+if not search_index.exists():
+    fail("assets/library-search-index.js is missing.")
+else:
+    search_index_text = search_index.read_text(encoding="utf-8")
+    forbidden_search_records = (
+        '"url":"/expertise/pipeline-asset-integrity/"',
+    )
+    for forbidden_record in forbidden_search_records:
+        if forbidden_record in search_index_text:
+            fail(
+                "Redirect-only legacy route found in public search index: "
+                + forbidden_record
+            )
+
+# 7. Existing deployment fragments are not a publish blocker yet, but stay visible.
 if (ROOT / ".deploy").exists():
     warn(".deploy/ exists in the public repository. It is a documented cleanup candidate and should contain no private material.")
 
@@ -129,4 +145,4 @@ if errors:
     sys.exit(1)
 
 print("\nPRE-PUBLISH GATE: PASS")
-print("CNAME, crawl directives, sitemap, public/private path boundaries, and common secret patterns passed.")
+print("CNAME, crawl directives, sitemap, public/private path boundaries, search-index exclusions, and common secret patterns passed.")
