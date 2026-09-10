@@ -9,7 +9,20 @@
   }
 
   window.dataLayer = window.dataLayer || [];
-  window.gtag = window.gtag || function(){dataLayer.push(arguments);};
+  // Privacy guard: never send literal public-site search text to analytics.
+  window.gtag = window.gtag || function(){
+    const args=Array.from(arguments);
+    if(args[0]==='event' && args[1]==='site_search' && args[2] && typeof args[2]==='object'){
+      const safe=Object.assign({},args[2]);
+      if(Object.prototype.hasOwnProperty.call(safe,'search_term')){
+        const n=String(safe.search_term||'').length;
+        safe.search_length_bucket=n<10?'2-9':n<25?'10-24':n<50?'25-49':'50+';
+        delete safe.search_term;
+      }
+      args[2]=safe;
+    }
+    dataLayer.push(args);
+  };
 
   if(GA4_MEASUREMENT_ID){
     const sc=document.createElement('script');
