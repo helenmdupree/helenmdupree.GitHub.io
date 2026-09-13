@@ -11,6 +11,7 @@
 
   const expertiseLinks=[
     ['/expertise/commercial-growth-strategic-accounts/','Commercial Growth & Strategic Accounts'],
+    ['/expertise/commercial-growth-strategic-accounts/#channel-management','Channel Management',true],
     ['/expertise/corrosion-cathodic-protection/','Corrosion & Cathodic Protection'],
     ['/expertise/asset-integrity-management/','Asset Integrity Management'],
     ['/expertise/asset-performance/','Asset Performance'],
