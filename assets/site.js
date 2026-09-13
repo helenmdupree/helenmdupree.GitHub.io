@@ -11,7 +11,10 @@
 
   const expertiseLinks=[
     ['/expertise/commercial-growth-strategic-accounts/','Commercial Growth & Strategic Accounts'],
+    ['/expertise/commercial-growth-strategic-accounts/#revenue-strategy','Revenue Strategy',true],
+    ['/expertise/commercial-growth-strategic-accounts/#strategic-accounts','Strategic Accounts',true],
     ['/expertise/commercial-growth-strategic-accounts/#channel-management','Channel Management',true],
+    ['/expertise/commercial-growth-strategic-accounts/#revenue-forecasting','Revenue Forecasting',true],
     ['/expertise/corrosion-cathodic-protection/','Corrosion & Cathodic Protection'],
     ['/expertise/asset-integrity-management/','Asset Integrity Management'],
     ['/expertise/asset-performance/','Asset Performance'],
@@ -194,10 +197,53 @@
     }
   }
 
+  function enhanceCommercialGrowth(){
+    if(path!=='/expertise/commercial-growth-strategic-accounts/') return;
+    const main=document.querySelector('main');
+    if(!main) return;
+
+    const thesis=[...main.querySelectorAll(':scope > section')].find(section=>section.querySelector('.kicker')?.textContent.trim()==='THE COMMERCIAL THESIS');
+    if(thesis){
+      thesis.id='revenue-strategy';
+      const wrap=thesis.querySelector('.wrap');
+      if(wrap){
+        wrap.classList.remove('commercial-thesis');
+        wrap.innerHTML='<p class="kicker">REVENUE STRATEGY</p><h2>Growth has to be built from evidence.</h2><p class="section-intro">Revenue strategy begins with a credible answer to three questions: where can profitable growth come from, what is preventing capture today, and which opportunities deserve investment.</p><div class="prose"><p>SOUBEL evaluates market demand, existing accounts, whitespace, competitive position, pricing, commercial capacity, channel performance, and operational constraints together. The objective is to separate attractive ideas from opportunities the organization can actually win, deliver, and sustain.</p><p>The result is a prioritized growth path tied to measurable revenue, margin, timing, ownership, and execution requirements.</p></div>';
+      }
+    }
+
+    const applications=document.querySelector('#applications');
+    if(applications && !document.querySelector('#strategic-accounts')){
+      const section=document.createElement('section');
+      section.className='section';
+      section.id='strategic-accounts';
+      section.innerHTML='<div class="wrap"><p class="kicker">STRATEGIC ACCOUNTS</p><h2>Large accounts require more than relationship coverage.</h2><p class="section-intro">Strategic-account growth depends on understanding how the customer actually buys, where value is created, who owns the problem, what evidence is required, and where credible whitespace exists across the organization.</p><div class="prose"><p>SOUBEL examines account structure, operating priorities, decision pathways, existing footprint, competitive position, budget ownership, technical requirements, and commercial economics to identify where deeper penetration is justified.</p><p>The goal is not more account activity. It is a focused account strategy that connects customer need to executable revenue opportunities.</p></div></div>';
+      applications.parentNode.insertBefore(section,applications);
+    }
+
+    const channel=document.querySelector('#channel-management');
+    if(channel){
+      const wrap=channel.querySelector('.wrap');
+      if(wrap){
+        const intro=wrap.querySelector('.section-intro');
+        if(intro) intro.textContent='Productive channels require more than distributor coverage or representative agreements. They depend on clear market roles, aligned economics, local seller activation, account ownership, technical capability, reliable performance data, and a recurring management cadence that connects partner activity to measurable commercial outcomes.';
+      }
+    }
+
+    if(channel && !document.querySelector('#revenue-forecasting')){
+      const section=document.createElement('section');
+      section.className='section alt';
+      section.id='revenue-forecasting';
+      section.innerHTML='<div class="wrap"><p class="kicker">REVENUE FORECASTING</p><h2>A forecast should explain where the number comes from.</h2><p class="section-intro">Revenue forecasting is more than adding opportunities in a CRM and applying probability percentages. A useful forecast distinguishes committed revenue from probable revenue, identifies what must happen for an opportunity to advance, and exposes where timing, evidence, customer action, or internal execution could change the outcome.</p><div class="commercial-rows"><div class="commercial-row"><div class="num">01 · EVIDENCE</div><div><h3>Build the forecast from the underlying commercial evidence.</h3><p>Opportunity stage, customer commitment, buying process, technical qualification, competitive position, pricing, partner involvement, delivery capacity, historical conversion, timing, and known dependencies all shape forecast confidence.</p></div></div><div class="commercial-row"><div class="num">02 · MOTION</div><div><h3>Separate revenue motions that behave differently.</h3><p>Existing-account expansion, new-logo growth, channel revenue, recurring revenue, project-based sales, and one-time transactions should not be treated as though they carry the same level of predictability.</p></div></div><div class="commercial-row"><div class="num">03 · ACTION</div><div><h3>Make the assumptions visible enough to manage.</h3><p>The objective is a forecast leadership can interrogate, understand, and act on, with clear assumptions, confidence levels, risks, and next actions behind the number.</p></div></div></div></div>';
+      channel.insertAdjacentElement('afterend',section);
+    }
+  }
+
   ensureDesktopNav();
   normalizeMobileMenu();
   normalizeLegacyAimLinks(document);
   connectTerminalIntegrity();
+  enhanceCommercialGrowth();
 
   const btn=document.querySelector('.menu-toggle');
   const menu=document.querySelector('.mobile-menu');
