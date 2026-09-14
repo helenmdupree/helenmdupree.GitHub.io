@@ -1,0 +1,27 @@
+/* Lifecycle Economics — concise Asset Performance Path 3 narrative. */
+.lifecycle-economics-page .page-hero{padding:40px 0 34px!important}
+.lifecycle-economics-page .page-hero h1{max-width:980px!important;margin:.18rem 0 .72rem!important;font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;font-size:clamp(2rem,3vw,2.8rem)!important;font-weight:700!important;line-height:1.05!important;letter-spacing:-.03em!important}
+.lifecycle-economics-page .page-hero p:not(.kicker){max-width:940px!important;font-size:1rem!important;line-height:1.56!important}
+.lifecycle-economics-page .section{padding:36px 0!important}
+.lifecycle-economics-page .section .kicker{margin:0 0 8px!important;color:#23737b!important;font-size:.78rem!important;font-weight:800!important;letter-spacing:.13em!important;opacity:1!important}
+.lifecycle-economics-page .section h2{max-width:940px!important;margin:0 0 11px!important;font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;font-size:clamp(1.72rem,2.3vw,2.22rem)!important;font-weight:700!important;line-height:1.1!important;letter-spacing:-.022em!important}
+.lifecycle-economics-page .section-intro{max-width:980px!important;margin:0!important;color:#3e565f!important;font-size:.99rem!important;line-height:1.58!important;opacity:1!important}
+.lifecycle-economics-page .economics-questions{margin-top:24px!important;border-top:1px solid #ccdadd!important}
+.lifecycle-economics-page .economics-question{display:grid!important;grid-template-columns:48px minmax(0,1fr)!important;gap:18px!important;padding:19px 0!important;border-bottom:1px solid #ccdadd!important}
+.lifecycle-economics-page .economics-question>span{color:#168e96!important;font-size:.78rem!important;font-weight:900!important;line-height:1.35!important;letter-spacing:.06em!important}
+.lifecycle-economics-page .economics-question h3{margin:0 0 6px!important;color:#173840!important;font-size:1.08rem!important;line-height:1.3!important}
+.lifecycle-economics-page .economics-question p{max-width:980px!important;margin:0!important;color:#465e66!important;font-size:.94rem!important;line-height:1.56!important}
+.lifecycle-economics-page .economics-note{margin-top:20px!important;padding:15px 17px!important;background:#f1f6f6!important;border-left:3px solid #2f9da1!important;color:#3d565e!important;font-size:.94rem!important;line-height:1.58!important}
+.lifecycle-economics-page .resource-strip{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;gap:36px!important;align-items:center!important;margin-top:26px!important;padding:22px 0!important;border-top:1px solid #ccdadd!important;border-bottom:1px solid #ccdadd!important}
+.lifecycle-economics-page .resource-strip h3{margin:3px 0 7px!important;font-size:1.18rem!important;line-height:1.3!important}
+.lifecycle-economics-page .resource-strip p:not(.kicker){max-width:780px!important;margin:0!important;color:#4b626a!important;font-size:.93rem!important;line-height:1.52!important}
+.lifecycle-economics-page .reference-basis{padding-top:32px!important;padding-bottom:32px!important}
+.lifecycle-economics-page .basis-line{margin-top:18px!important;padding-top:15px!important;border-top:1px solid #d7e1e3!important;color:#466069!important;font-size:.92rem!important;line-height:1.58!important}
+.lifecycle-economics-page .basis-line a{font-weight:750!important}
+.lifecycle-economics-page .btn.secondary{background:#fff!important;color:#0b6e73!important;border-color:#0b6e73!important}
+.lifecycle-economics-page .growth-cta{padding:38px 0!important}
+.lifecycle-economics-page .growth-cta .wrap{display:flex!important;align-items:flex-end!important;justify-content:space-between!important;gap:36px!important}
+.lifecycle-economics-page .growth-cta h2{max-width:900px!important;font-size:clamp(1.85rem,2.45vw,2.3rem)!important}
+.lifecycle-economics-page .growth-cta p:not(.kicker){max-width:860px!important;color:#dfe9eb!important;font-size:1rem!important;line-height:1.58!important;opacity:1!important}
+.lifecycle-economics-page .next-path{white-space:nowrap!important;color:#79d0d2!important;text-decoration:none!important;font-weight:850!important}
+@media(max-width:760px){.lifecycle-economics-page .page-hero{padding:34px 0 30px!important}.lifecycle-economics-page .section{padding:30px 0!important}.lifecycle-economics-page .economics-question,.lifecycle-economics-page .resource-strip{grid-template-columns:1fr!important;gap:7px!important}.lifecycle-economics-page .section h2{font-size:clamp(1.5rem,6.4vw,1.9rem)!important}.lifecycle-economics-page .growth-cta .wrap{display:block!important}.lifecycle-economics-page .next-path{display:inline-block!important;margin-top:16px!important;white-space:normal!important}}
