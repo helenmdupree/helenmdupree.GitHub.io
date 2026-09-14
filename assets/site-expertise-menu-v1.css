@@ -4,6 +4,9 @@
     min-width:720px!important;
     max-width:min(760px,calc(100vw - 36px))!important;
     padding:18px 20px 20px!important;
+    left:-190px!important;
+    right:auto!important;
+    transform:none!important;
     grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)!important;
     grid-auto-rows:auto;
     column-gap:34px!important;
