@@ -1,0 +1,1 @@
+Review scope: remove the redundant Commercial Method section from the Commercial Growth front page, shift the two-column Expertise dropdown left for better viewport balance, and normalize the Midstream INTEGRITY contribution card to the current Asset Integrity Management route and markup.
