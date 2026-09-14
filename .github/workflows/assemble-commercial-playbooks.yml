@@ -1,0 +1,46 @@
+name: Assemble Commercial Playbook PDFs
+on:
+  push:
+    branches: [commercial-playbook-pdf-publication]
+    paths:
+      - 'pdf-staging/READY'
+permissions:
+  contents: write
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: commercial-playbook-pdf-publication
+      - name: Assemble PDFs
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64
+          src = Path('pdf-staging')
+          out = Path('downloads/commercial-growth-playbooks')
+          out.mkdir(parents=True, exist_ok=True)
+          mapping = {
+            'first90': 'SOUBEL_The_First_90_Days.pdf',
+            'signal': 'SOUBEL_From_Market_Signal_to_Revenue.pdf',
+            'scale': 'SOUBEL_SCALE_Building_the_Enterprise_Behind_the_Ambition.pdf',
+          }
+          for prefix, filename in mapping.items():
+              parts = sorted(src.glob(prefix + '-*.b64'))
+              if not parts:
+                  raise SystemExit(f'Missing chunks for {prefix}')
+              data = ''.join(p.read_text().strip() for p in parts)
+              (out / filename).write_bytes(base64.b64decode(data))
+          PY
+          rm -rf pdf-staging
+          rm -f .github/workflows/assemble-commercial-playbooks.yml
+      - name: Commit assembled PDFs
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Add Commercial Growth playbook PDFs'
+          git push origin HEAD:commercial-playbook-pdf-publication
