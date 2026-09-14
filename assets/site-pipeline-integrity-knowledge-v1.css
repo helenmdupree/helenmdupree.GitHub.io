@@ -77,6 +77,70 @@
   color:#203840!important;
 }
 
+/* Hero page navigator: one compact control for section jumps plus the Knowledge Library. */
+.pipeline-knowledge-page .hero-page-nav{
+  position:relative;
+}
+.pipeline-knowledge-page .hero-page-nav summary{
+  list-style:none;
+  cursor:pointer;
+  user-select:none;
+}
+.pipeline-knowledge-page .hero-page-nav summary::-webkit-details-marker{
+  display:none;
+}
+.pipeline-knowledge-page .hero-page-nav summary::after{
+  content:" +";
+  margin-left:7px;
+  font-weight:800;
+}
+.pipeline-knowledge-page .hero-page-nav[open] summary::after{
+  content:" −";
+}
+.pipeline-knowledge-page .hero-page-nav-panel{
+  position:absolute;
+  z-index:20;
+  top:calc(100% + 10px);
+  left:0;
+  width:min(390px,82vw);
+  padding:10px;
+  border:1px solid rgba(116,207,210,.34);
+  border-radius:14px;
+  background:#0c2730;
+  box-shadow:0 18px 45px rgba(0,0,0,.26);
+}
+.pipeline-knowledge-page .hero-page-nav-panel a{
+  display:block;
+  padding:10px 12px;
+  border-radius:8px;
+  color:#edf7f7;
+  font-size:.92rem;
+  font-weight:650;
+  line-height:1.35;
+  text-decoration:none;
+}
+.pipeline-knowledge-page .hero-page-nav-panel a:hover,
+.pipeline-knowledge-page .hero-page-nav-panel a:focus-visible{
+  background:rgba(104,205,207,.12);
+  color:#8bdadc;
+}
+.pipeline-knowledge-page .hero-page-nav-divider{
+  height:1px;
+  margin:7px 4px;
+  background:rgba(255,255,255,.14);
+}
+.pipeline-knowledge-page .hero-page-nav-panel .library-link{
+  color:#8bdadc;
+}
+.pipeline-knowledge-page .cp-hero .crumb a{
+  color:inherit;
+  text-decoration:none;
+}
+.pipeline-knowledge-page .cp-hero .crumb a:hover,
+.pipeline-knowledge-page .cp-hero .crumb a:focus-visible{
+  text-decoration:underline;
+}
+
 /* Direct-assessment pathway should support the content, not become another display headline. */
 .pipeline-knowledge-page .data-flow{
   margin:20px 0 0!important;
@@ -146,5 +210,15 @@
   }
   .pipeline-knowledge-page .card p{
     font-size:.93rem!important;
+  }
+  .pipeline-knowledge-page .hero-page-nav-panel{
+    position:fixed;
+    left:18px;
+    right:18px;
+    top:auto;
+    bottom:18px;
+    width:auto;
+    max-height:72vh;
+    overflow:auto;
   }
 }
