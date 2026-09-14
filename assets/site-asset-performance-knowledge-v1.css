@@ -54,18 +54,9 @@
   opacity:1!important;
 }
 
+/* Retire repeated arrow chains on this branch. The surrounding copy now carries the story. */
 .asset-performance-knowledge-page .data-flow{
-  margin:20px 0 0!important;
-  padding:14px 0!important;
-  gap:11px!important;
-}
-.asset-performance-knowledge-page .data-flow span{
-  color:#314b53!important;
-  font-size:.9rem!important;
-  font-weight:700!important;
-}
-.asset-performance-knowledge-page .data-flow i{
-  color:#33868d!important;
+  display:none!important;
 }
 
 .asset-performance-knowledge-page .ap-decision-grid{
@@ -119,6 +110,23 @@
 
 .asset-performance-knowledge-page .actions{
   margin-top:18px!important;
+}
+
+/* Light sections need an explicit secondary-button treatment; global dark-button text caused invisible labels. */
+.asset-performance-knowledge-page .section .actions .btn.secondary{
+  background:#ffffff!important;
+  color:#0b6e73!important;
+  border-color:#0b6e73!important;
+}
+.asset-performance-knowledge-page .section .actions .btn.secondary:hover,
+.asset-performance-knowledge-page .section .actions .btn.secondary:focus-visible{
+  background:#eef6f6!important;
+  color:#075e63!important;
+}
+
+/* Digital should support the decision narrative rather than introduce another process diagram. */
+.asset-performance-knowledge-page #digital .section-intro{
+  max-width:920px!important;
 }
 
 /* Replace nonfunctional pill-like labels with four obvious live destinations. */
