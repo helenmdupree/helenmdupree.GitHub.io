@@ -18,7 +18,7 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
-          import base64
+          import base64, lzma
           src = Path('pdf-staging')
           out = Path('downloads/commercial-growth-playbooks')
           out.mkdir(parents=True, exist_ok=True)
@@ -32,7 +32,8 @@ jobs:
               if not parts:
                   raise SystemExit(f'Missing chunks for {prefix}')
               data = ''.join(p.read_text().strip() for p in parts)
-              (out / filename).write_bytes(base64.b64decode(data))
+              compressed = base64.b64decode(data)
+              (out / filename).write_bytes(lzma.decompress(compressed))
           PY
           rm -rf pdf-staging
           rm -f .github/workflows/assemble-commercial-playbooks.yml
