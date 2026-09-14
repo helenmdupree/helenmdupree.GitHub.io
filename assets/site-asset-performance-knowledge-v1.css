@@ -1,230 +1,28 @@
-/* Asset Performance Knowledge — live visual QA refinement.
-   Restore an executive hierarchy, readable contrast, and tighter section rhythm. */
-
-.asset-performance-knowledge-page .page-hero{
-  padding:40px 0 34px!important;
-}
-.asset-performance-knowledge-page .page-hero h1{
-  max-width:900px!important;
-  margin:.18rem 0 .72rem!important;
-  font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;
-  font-size:clamp(2rem,3vw,2.8rem)!important;
-  font-weight:700!important;
-  line-height:1.04!important;
-  letter-spacing:-.03em!important;
-}
-.asset-performance-knowledge-page .page-hero p:not(.kicker){
-  max-width:900px!important;
-  font-size:1rem!important;
-  line-height:1.56!important;
-}
-
-.asset-performance-knowledge-page .section{
-  padding:36px 0!important;
-}
-
-/* Make section identifiers visible enough to orient the reader. */
-.asset-performance-knowledge-page .section .kicker{
-  margin:0 0 9px!important;
-  color:#23737b!important;
-  font-size:.84rem!important;
-  font-weight:800!important;
-  line-height:1.25!important;
-  letter-spacing:.13em!important;
-  opacity:1!important;
-}
-
-/* Kill the billboard scale while preserving authority. */
-.asset-performance-knowledge-page .section h2{
-  max-width:940px!important;
-  margin:0 0 12px!important;
-  font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;
-  font-size:clamp(1.78rem,2.35vw,2.22rem)!important;
-  font-weight:700!important;
-  line-height:1.1!important;
-  letter-spacing:-.022em!important;
-}
-
-.asset-performance-knowledge-page .section-intro{
-  max-width:1000px!important;
-  margin:0!important;
-  color:#3e565f!important;
-  font-size:1rem!important;
-  line-height:1.6!important;
-  opacity:1!important;
-}
-
-/* Retire repeated arrow chains on this branch. The surrounding copy now carries the story. */
-.asset-performance-knowledge-page .data-flow{
-  display:none!important;
-}
-
-.asset-performance-knowledge-page .ap-decision-grid{
-  margin-top:20px!important;
-  gap:16px!important;
-}
-.asset-performance-knowledge-page .ap-decision-grid article{
-  padding:18px!important;
-}
-.asset-performance-knowledge-page .ap-decision-grid h3{
-  margin:0 0 7px!important;
-  color:#203840!important;
-  font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;
-  font-size:1.02rem!important;
-  font-weight:700!important;
-  line-height:1.3!important;
-}
-.asset-performance-knowledge-page .ap-decision-grid p{
-  margin:0!important;
-  color:#445c64!important;
-  font-size:.93rem!important;
-  line-height:1.55!important;
-  opacity:1!important;
-}
-
-.asset-performance-knowledge-page .ap-callout{
-  margin-top:18px!important;
-  padding:15px 17px!important;
-  color:#39525a!important;
-  background:#f1f6f6!important;
-  border-left:3px solid #2f9da1!important;
-  font-size:.94rem!important;
-  line-height:1.58!important;
-  opacity:1!important;
-}
-.asset-performance-knowledge-page .ap-callout strong{
-  color:#173840!important;
-}
-
-/* Source context should be secondary, not invisible. */
-.asset-performance-knowledge-page .ap-source-note{
-  margin-top:18px!important;
-  color:#536a71!important;
-  font-size:.86rem!important;
-  line-height:1.55!important;
-  opacity:1!important;
-}
-.asset-performance-knowledge-page .ap-source-note strong{
-  color:#334c54!important;
-}
-
-.asset-performance-knowledge-page .actions{
-  margin-top:18px!important;
-}
-
-/* Light sections need an explicit secondary-button treatment; global dark-button text caused invisible labels. */
-.asset-performance-knowledge-page .section .actions .btn.secondary{
-  background:#ffffff!important;
-  color:#0b6e73!important;
-  border-color:#0b6e73!important;
-}
-.asset-performance-knowledge-page .section .actions .btn.secondary:hover,
-.asset-performance-knowledge-page .section .actions .btn.secondary:focus-visible{
-  background:#eef6f6!important;
-  color:#075e63!important;
-}
-
-/* Digital should support the decision narrative rather than introduce another process diagram. */
-.asset-performance-knowledge-page #digital .section-intro{
-  max-width:920px!important;
-}
-
-/* Replace nonfunctional pill-like labels with four obvious live destinations. */
-.asset-performance-knowledge-page .ap-depth-grid{
-  display:grid!important;
-  grid-template-columns:repeat(2,minmax(0,1fr))!important;
-  gap:16px!important;
-  margin-top:22px!important;
-}
-.asset-performance-knowledge-page .ap-depth-card{
-  display:flex!important;
-  min-height:170px!important;
-  padding:22px!important;
-  flex-direction:column!important;
-  justify-content:flex-start!important;
-  gap:10px!important;
-  color:#17333b!important;
-  background:#fff!important;
-  border:1px solid #d8e2e4!important;
-  border-radius:16px!important;
-  text-decoration:none!important;
-  box-shadow:none!important;
-  transition:border-color .18s ease,transform .18s ease!important;
-}
-.asset-performance-knowledge-page .ap-depth-card:hover,
-.asset-performance-knowledge-page .ap-depth-card:focus-visible{
-  border-color:#2f9da1!important;
-  transform:translateY(-2px)!important;
-  outline:none!important;
-}
-.asset-performance-knowledge-page .ap-depth-card strong{
-  color:#163840!important;
-  font-size:1.05rem!important;
-  line-height:1.3!important;
-}
-.asset-performance-knowledge-page .ap-depth-card span{
-  color:#526970!important;
-  font-size:.93rem!important;
-  line-height:1.55!important;
-}
-.asset-performance-knowledge-page .ap-depth-card em{
-  margin-top:auto!important;
-  color:#168e96!important;
-  font-size:.92rem!important;
-  font-style:normal!important;
-  font-weight:800!important;
-}
-.asset-performance-knowledge-page .ap-topic-note{
-  max-width:1180px!important;
-  margin:20px 0 0!important;
-  color:#586e75!important;
-  font-size:.9rem!important;
-  line-height:1.58!important;
-}
-.asset-performance-knowledge-page .ap-topic-note strong{
-  color:#344e56!important;
-}
-
-/* Final connected-knowledge statement should not return to Brutus scale. */
-.asset-performance-knowledge-page .growth-cta h2{
-  max-width:900px!important;
-  font-size:clamp(1.85rem,2.45vw,2.3rem)!important;
-}
-.asset-performance-knowledge-page .growth-cta > .wrap > p:not(.kicker){
-  max-width:920px!important;
-  color:#dfe9eb!important;
-  font-size:1rem!important;
-  line-height:1.58!important;
-  opacity:1!important;
-}
-
-@media(max-width:760px){
-  .asset-performance-knowledge-page .page-hero{
-    padding:34px 0 30px!important;
-  }
-  .asset-performance-knowledge-page .page-hero h1{
-    font-size:clamp(1.85rem,7vw,2.35rem)!important;
-  }
-  .asset-performance-knowledge-page .section{
-    padding:30px 0!important;
-  }
-  .asset-performance-knowledge-page .section .kicker{
-    font-size:.81rem!important;
-  }
-  .asset-performance-knowledge-page .section h2{
-    font-size:clamp(1.5rem,6.4vw,1.9rem)!important;
-  }
-  .asset-performance-knowledge-page .section-intro{
-    font-size:.97rem!important;
-  }
-  .asset-performance-knowledge-page .ap-decision-grid article{
-    padding:16px!important;
-  }
-  .asset-performance-knowledge-page .ap-depth-grid{
-    grid-template-columns:1fr!important;
-  }
-  .asset-performance-knowledge-page .ap-depth-card{
-    min-height:0!important;
-    padding:18px!important;
-  }
-}
+/* Asset Performance Knowledge — concise branch index. */
+.asset-performance-knowledge-page .page-hero{padding:40px 0 34px!important}
+.asset-performance-knowledge-page .page-hero h1{max-width:920px!important;margin:.18rem 0 .72rem!important;font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;font-size:clamp(2rem,3vw,2.8rem)!important;font-weight:700!important;line-height:1.05!important;letter-spacing:-.03em!important}
+.asset-performance-knowledge-page .page-hero p:not(.kicker){max-width:900px!important;font-size:1rem!important;line-height:1.56!important}
+.asset-performance-knowledge-page .section{padding:36px 0!important}
+.asset-performance-knowledge-page .section .kicker{margin:0 0 8px!important;color:#23737b!important;font-size:.78rem!important;font-weight:800!important;letter-spacing:.13em!important;opacity:1!important}
+.asset-performance-knowledge-page .section h2{max-width:940px!important;margin:0 0 11px!important;font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;font-size:clamp(1.72rem,2.3vw,2.22rem)!important;font-weight:700!important;line-height:1.1!important;letter-spacing:-.022em!important}
+.asset-performance-knowledge-page .section-intro{max-width:940px!important;margin:0!important;color:#3e565f!important;font-size:.99rem!important;line-height:1.58!important;opacity:1!important}
+.asset-performance-knowledge-page .knowledge-paths{margin-top:24px!important;border-top:1px solid #ccdadd!important}
+.asset-performance-knowledge-page .knowledge-path{display:grid!important;grid-template-columns:220px minmax(0,1fr)!important;gap:30px!important;padding:20px 0!important;border-bottom:1px solid #ccdadd!important;color:#173840!important;text-decoration:none!important}
+.asset-performance-knowledge-page .knowledge-path>span{color:#168e96!important;font-size:.7rem!important;font-weight:900!important;line-height:1.3!important;letter-spacing:.11em!important}
+.asset-performance-knowledge-page .knowledge-path h3{margin:0 0 6px!important;font-size:1.08rem!important;line-height:1.3!important}
+.asset-performance-knowledge-page .knowledge-path p{margin:0!important;color:#4b626a!important;font-size:.94rem!important;line-height:1.55!important}
+.asset-performance-knowledge-page .knowledge-path:hover h3{color:#168e96!important}
+.asset-performance-knowledge-page .digital-note{margin-top:20px!important;padding:15px 17px!important;background:#f1f6f6!important;border-left:3px solid #2f9da1!important;color:#3d565e!important;font-size:.94rem!important;line-height:1.58!important}
+.asset-performance-knowledge-page .digital-note a{font-weight:800!important}
+.asset-performance-knowledge-page .tool-lines{margin-top:22px!important;border-top:1px solid #ccdadd!important}
+.asset-performance-knowledge-page .tool-line{display:grid!important;grid-template-columns:220px minmax(0,1fr) 90px!important;gap:28px!important;align-items:start!important;padding:17px 0!important;border-bottom:1px solid #ccdadd!important;color:#173840!important;text-decoration:none!important}
+.asset-performance-knowledge-page .tool-line>span{color:#168e96!important;font-size:.68rem!important;font-weight:900!important;line-height:1.3!important;letter-spacing:.1em!important}
+.asset-performance-knowledge-page .tool-line strong{display:block!important;margin-bottom:3px!important;font-size:1.02rem!important;line-height:1.3!important}
+.asset-performance-knowledge-page .tool-line small{display:block!important;color:#526970!important;font-size:.9rem!important;line-height:1.48!important}
+.asset-performance-knowledge-page .tool-line em{color:#168e96!important;font-size:.9rem!important;font-style:normal!important;font-weight:800!important;text-align:right!important}
+.asset-performance-knowledge-page .growth-cta{padding:38px 0!important}
+.asset-performance-knowledge-page .growth-cta h2{max-width:900px!important;font-size:clamp(1.85rem,2.45vw,2.3rem)!important}
+.asset-performance-knowledge-page .growth-cta>.wrap>p:not(.kicker){max-width:900px!important;color:#dfe9eb!important;font-size:1rem!important;line-height:1.58!important;opacity:1!important}
+.asset-performance-knowledge-page .btn.secondary{background:#fff!important;color:#0b6e73!important;border-color:#0b6e73!important}
+.asset-performance-knowledge-page .growth-cta .btn.secondary{background:transparent!important;color:#fff!important;border-color:rgba(255,255,255,.55)!important}
+@media(max-width:760px){.asset-performance-knowledge-page .page-hero{padding:34px 0 30px!important}.asset-performance-knowledge-page .section{padding:30px 0!important}.asset-performance-knowledge-page .knowledge-path,.asset-performance-knowledge-page .tool-line{grid-template-columns:1fr!important;gap:6px!important}.asset-performance-knowledge-page .tool-line em{text-align:left!important}.asset-performance-knowledge-page .section h2{font-size:clamp(1.5rem,6.4vw,1.9rem)!important}}
