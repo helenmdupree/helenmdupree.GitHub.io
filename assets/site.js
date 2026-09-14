@@ -11,10 +11,11 @@
 
   const expertiseLinks=[
     ['/expertise/commercial-growth-strategic-accounts/','Commercial Growth & Strategic Accounts'],
-    ['/expertise/commercial-growth-strategic-accounts/#revenue-strategy','Revenue Strategy',true],
-    ['/expertise/commercial-growth-strategic-accounts/#strategic-accounts','Strategic Accounts',true],
-    ['/expertise/commercial-growth-strategic-accounts/#channel-management','Channel Management',true],
-    ['/expertise/commercial-growth-strategic-accounts/#revenue-forecasting','Revenue Forecasting',true],
+    ['/expertise/commercial-growth-strategic-accounts/playbook-system/','Commercial Growth Playbook System',true],
+    ['/expertise/commercial-growth-strategic-accounts/revenue-strategy/','Revenue Strategy',true],
+    ['/expertise/commercial-growth-strategic-accounts/strategic-accounts/','Strategic Accounts',true],
+    ['/expertise/commercial-growth-strategic-accounts/channel-strategy-partner-management/','Channel Strategy & Partner Management',true],
+    ['/expertise/commercial-growth-strategic-accounts/revenue-forecasting/','Revenue Forecasting',true],
     ['/expertise/corrosion-cathodic-protection/','Corrosion & Cathodic Protection'],
     ['/expertise/asset-integrity-management/','Asset Integrity Management'],
     ['/expertise/asset-performance/','Asset Performance'],
@@ -58,7 +59,10 @@
       .desktop-nav .resources-dropdown .dropdown-panel{left:auto!important;right:0!important;max-width:min(390px,calc(100vw - 28px))!important}\
       .desktop-nav .resources-dropdown .dropdown-panel a{white-space:normal!important}\
       .desktop-nav .knowledge-dropdown .dropdown-panel{min-width:300px!important;max-width:min(360px,calc(100vw - 28px))!important}\
+      .desktop-nav .expertise-dropdown .dropdown-panel{min-width:390px!important;max-width:min(430px,calc(100vw - 28px))!important}\
+      .desktop-nav .expertise-dropdown .dropdown-panel a{white-space:normal!important}\
       .desktop-nav .dropdown-panel .knowledge-subitem{padding-left:30px!important;font-size:.91em!important;color:#496169!important}\
+      .desktop-nav .expertise-dropdown .knowledge-subitem{color:#7ea7b0!important;padding-top:11px!important;padding-bottom:11px!important}\
       .desktop-nav .dropdown-panel .knowledge-subitem::before{content:"↳";margin-right:7px;color:#11858b}\
       .mobile-menu .knowledge-subitem{padding-left:30px!important;font-size:.93em!important;color:#60747b!important}\
     ';
@@ -94,7 +98,7 @@
       nav.innerHTML='';
       nav.appendChild(makeAnchor('/','Home','nav-home'));
       nav.appendChild(makeDropdown('Markets',marketsLinks));
-      nav.appendChild(makeDropdown('Expertise',expertiseLinks));
+      nav.appendChild(makeDropdown('Expertise',expertiseLinks,'expertise-dropdown'));
       nav.appendChild(makeDropdown('Knowledge',knowledgeLinks,'knowledge-dropdown'));
       nav.appendChild(makeDropdown('Resources',resourceLinks,'resources-dropdown'));
       nav.appendChild(makeAnchor('/operational-trust/','Operational Trust'));
