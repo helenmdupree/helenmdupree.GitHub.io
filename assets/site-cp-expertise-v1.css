@@ -1,0 +1,164 @@
+/* Corrosion & Cathodic Protection expertise page refinement.
+   Scoped to this page so the Brutus-font cleanup does not affect other sections. */
+
+.cp-expertise-page .section{
+  padding:52px 0!important;
+}
+
+.cp-expertise-page .section .kicker{
+  margin:0 0 10px!important;
+  font-size:.76rem!important;
+  line-height:1.2!important;
+  letter-spacing:.16em!important;
+}
+
+.cp-expertise-page .section h2{
+  max-width:1040px!important;
+  margin:0!important;
+  font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;
+  font-size:clamp(2rem,3.15vw,2.85rem)!important;
+  font-weight:700!important;
+  line-height:1.08!important;
+  letter-spacing:-.028em!important;
+}
+
+.cp-expertise-page .section h3{
+  font-size:1.2rem!important;
+  line-height:1.25!important;
+}
+
+.cp-expertise-page .section p,
+.cp-expertise-page .section-intro,
+.cp-expertise-page .lead-copy{
+  font-size:1rem!important;
+  line-height:1.62!important;
+}
+
+.cp-expertise-page .section-intro{
+  max-width:940px!important;
+  margin:16px 0 22px!important;
+  color:#4d626a!important;
+}
+
+.cp-expertise-page .cp-intro{
+  column-gap:44px!important;
+  row-gap:22px!important;
+  align-items:start!important;
+}
+
+.cp-expertise-page .cp-intro p{
+  margin-top:0!important;
+}
+
+.cp-expertise-page .cp-four{
+  margin-top:26px!important;
+  gap:18px!important;
+}
+
+.cp-expertise-page .cp-four article{
+  padding:22px!important;
+}
+
+.cp-expertise-page .cp-four article span{
+  margin-bottom:8px!important;
+}
+
+.cp-expertise-page .cp-four article h3{
+  margin:0 0 8px!important;
+}
+
+.cp-expertise-page .cp-four article p{
+  margin:0!important;
+}
+
+.cp-expertise-page .cp-system h2,
+.cp-expertise-page .growth-cta h2{
+  max-width:980px!important;
+}
+
+.cp-expertise-page .cp-flow{
+  margin:26px 0 18px!important;
+  gap:10px 14px!important;
+}
+
+.cp-expertise-page .cp-flow span{
+  font-size:.96rem!important;
+  line-height:1.35!important;
+}
+
+.cp-expertise-page .cp-system-note{
+  max-width:920px!important;
+  margin:16px 0 0!important;
+}
+
+.cp-expertise-page .filter-row{
+  margin:18px 0 8px!important;
+  gap:8px 14px!important;
+}
+
+.cp-expertise-page .filter-row a{
+  font-size:.96rem!important;
+  line-height:1.35!important;
+}
+
+.cp-expertise-page .text-link{
+  display:inline-block!important;
+  margin-top:8px!important;
+  font-size:.98rem!important;
+}
+
+.cp-expertise-page .integrity-data .section-intro{
+  margin-bottom:20px!important;
+}
+
+.cp-expertise-page .library-bridge,
+.cp-expertise-page .cp-proof{
+  gap:40px!important;
+  align-items:start!important;
+}
+
+.cp-expertise-page .library-bridge p,
+.cp-expertise-page .cp-proof p{
+  max-width:900px!important;
+}
+
+.cp-expertise-page .library-links{
+  gap:10px!important;
+}
+
+.cp-expertise-page .library-links a{
+  padding:16px 0!important;
+}
+
+.cp-expertise-page .source-box{
+  padding:22px!important;
+}
+
+.cp-expertise-page .growth-cta .actions{
+  margin-top:24px!important;
+}
+
+@media(max-width:760px){
+  .cp-expertise-page .section{
+    padding:42px 0!important;
+  }
+
+  .cp-expertise-page .section h2{
+    font-size:clamp(1.75rem,7.4vw,2.2rem)!important;
+    line-height:1.1!important;
+  }
+
+  .cp-expertise-page .cp-four,
+  .cp-expertise-page .library-bridge,
+  .cp-expertise-page .cp-proof{
+    gap:16px!important;
+  }
+
+  .cp-expertise-page .cp-four article{
+    padding:18px!important;
+  }
+
+  .cp-expertise-page .cp-flow{
+    margin-top:22px!important;
+  }
+}
