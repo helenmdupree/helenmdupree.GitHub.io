@@ -1,0 +1,57 @@
+/* Expertise desktop menu: two-column information architecture. */
+@media (min-width:901px){
+  body .desktop-nav .expertise-dropdown .dropdown-panel{
+    min-width:720px!important;
+    max-width:min(760px,calc(100vw - 36px))!important;
+    padding:18px 20px 20px!important;
+    grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)!important;
+    grid-auto-rows:auto;
+    column-gap:34px!important;
+    row-gap:0!important;
+  }
+
+  body .desktop-nav .expertise-dropdown:hover .dropdown-panel,
+  body .desktop-nav .expertise-dropdown:focus-within .dropdown-panel{
+    display:grid!important;
+  }
+
+  body .desktop-nav .expertise-dropdown .dropdown-panel::before,
+  body .desktop-nav .expertise-dropdown .dropdown-panel::after{
+    align-self:end;
+    padding:2px 14px 10px;
+    color:#79d0d2;
+    font-size:.7rem;
+    font-weight:900;
+    letter-spacing:.15em;
+    line-height:1.2;
+  }
+
+  body .desktop-nav .expertise-dropdown .dropdown-panel::before{
+    content:"COMMERCIAL";
+    grid-column:1;
+    grid-row:1;
+  }
+
+  body .desktop-nav .expertise-dropdown .dropdown-panel::after{
+    content:"TECHNICAL & OPERATIONAL";
+    grid-column:2;
+    grid-row:1;
+  }
+
+  body .desktop-nav .expertise-dropdown .dropdown-panel > a{
+    min-width:0;
+  }
+
+  body .desktop-nav .expertise-dropdown .dropdown-panel > a:nth-child(1){grid-column:1;grid-row:2;font-weight:850;}
+  body .desktop-nav .expertise-dropdown .dropdown-panel > a:nth-child(2){grid-column:1;grid-row:3;}
+  body .desktop-nav .expertise-dropdown .dropdown-panel > a:nth-child(3){grid-column:1;grid-row:4;}
+  body .desktop-nav .expertise-dropdown .dropdown-panel > a:nth-child(4){grid-column:1;grid-row:5;}
+  body .desktop-nav .expertise-dropdown .dropdown-panel > a:nth-child(5){grid-column:1;grid-row:6;}
+  body .desktop-nav .expertise-dropdown .dropdown-panel > a:nth-child(6){grid-column:1;grid-row:7;}
+
+  body .desktop-nav .expertise-dropdown .dropdown-panel > a:nth-child(7){grid-column:2;grid-row:2;font-weight:850;}
+  body .desktop-nav .expertise-dropdown .dropdown-panel > a:nth-child(8){grid-column:2;grid-row:3;}
+  body .desktop-nav .expertise-dropdown .dropdown-panel > a:nth-child(9){grid-column:2;grid-row:4;}
+  body .desktop-nav .expertise-dropdown .dropdown-panel > a:nth-child(10){grid-column:2;grid-row:5;}
+  body .desktop-nav .expertise-dropdown .dropdown-panel > a:nth-child(11){grid-column:2;grid-row:6;}
+}
