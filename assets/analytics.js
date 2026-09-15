@@ -181,3 +181,13 @@
     setTimeout(refineKnowledgeMenu,0);
   }
 })();
+
+/* SOUBEL Knowledge dropdown close behavior */
+(function(){
+  if(document.querySelector('script[data-soubel-knowledge-dropdown-fix]')) return;
+  const script=document.createElement('script');
+  script.src='/assets/knowledge-dropdown-fix.js?v=1';
+  script.defer=true;
+  script.dataset.soubelKnowledgeDropdownFix='true';
+  document.head.appendChild(script);
+})();
