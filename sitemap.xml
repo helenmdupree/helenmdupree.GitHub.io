@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/sitemap/0.9">
   <url><loc>https://soubel.com/</loc></url>
   <url><loc>https://soubel.com/markets/midstream-pipelines/</loc></url>
   <url><loc>https://soubel.com/markets/downstream-refining/</loc></url>
@@ -20,7 +20,6 @@
   <url><loc>https://soubel.com/expertise/asset-performance/</loc></url>
   <url><loc>https://soubel.com/expertise/operational-risk/</loc></url>
   <url><loc>https://soubel.com/expertise/digital-transformation-ai/</loc></url>
-  <url><loc>https://soubel.com/operational-trust/</loc></url>
   <url><loc>https://soubel.com/resources/</loc></url>
   <url><loc>https://soubel.com/resources/pipeline-integrity-metallurgy-phmsa/</loc></url>
   <url><loc>https://soubel.com/resources/when-asset-condition-changes/</loc></url>
