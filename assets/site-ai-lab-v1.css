@@ -78,14 +78,14 @@
 
 /* v0.8 readability pass: preserve approved image treatment; improve content and navigation contrast */
 .ai-lab-page .glass-shell{
-  background:linear-gradient(118deg,rgba(226,242,243,.34),rgba(210,232,234,.24));
+  background:linear-gradient(118deg,rgba(226,242,243,.38),rgba(210,232,234,.28));
 }
 .ai-lab-page .lab-hero{
-  background:linear-gradient(105deg,rgba(245,251,251,.26),rgba(232,245,246,.14) 72%);
+  background:linear-gradient(105deg,rgba(245,251,251,.30),rgba(232,245,246,.18) 72%);
 }
 .ai-lab-page .metric,
 .ai-lab-page .glass-card{
-  background:rgba(235,247,248,.42);
+  background:rgba(235,247,248,.46);
 }
 .ai-lab-page .hero-lead,
 .ai-lab-page .glass-card p,
