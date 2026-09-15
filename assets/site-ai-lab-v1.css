@@ -124,3 +124,10 @@
 
 /* v0.12 keep primary Lab title on one line at desktop widths */
 @media(min-width:900px){.ai-lab-page .lab-title-block h1{font-size:clamp(2.35rem,3.65vw,3.45rem);white-space:nowrap}}
+
+
+/* v0.13 definitive desktop title fit */
+@media(min-width:900px){
+ .ai-lab-page .lab-hero{padding-left:28px;padding-right:28px}
+ .ai-lab-page .lab-title-block h1{max-width:none!important;width:100%;font-size:clamp(2.2rem,3.25vw,3.1rem)!important;letter-spacing:-.045em;white-space:nowrap!important}
+}
