@@ -136,3 +136,6 @@
 .ai-lab-page .lab-overview{margin-top:4px;max-width:none}
 .ai-lab-page .lab-overview p{margin:0;color:#123943;font-size:clamp(1.05rem,1.25vw,1.2rem);line-height:1.62;font-weight:500}
 .ai-lab-page .lab-overview p+p{margin-top:18px}
+
+/* v0.17 add complementary heading contrast across dashboard cards */
+.ai-lab-page .dashboard-grid .glass-card h2{color:#174b3a}
