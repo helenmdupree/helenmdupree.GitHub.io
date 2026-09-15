@@ -74,3 +74,33 @@
   background-position:center top;
   background-repeat:repeat-y;
 }
+
+
+/* v0.8 readability pass: preserve approved image treatment; improve content and navigation contrast */
+.ai-lab-page .glass-shell{
+  background:linear-gradient(118deg,rgba(226,242,243,.30),rgba(210,232,234,.20));
+}
+.ai-lab-page .lab-hero{
+  background:linear-gradient(105deg,rgba(245,251,251,.22),rgba(232,245,246,.10) 72%);
+}
+.ai-lab-page .metric,
+.ai-lab-page .glass-card{
+  background:rgba(235,247,248,.38);
+}
+.ai-lab-page .hero-lead,
+.ai-lab-page .glass-card p,
+.ai-lab-page .research-list li,
+.ai-lab-page .metric span{
+  color:#294a52;
+}
+.ai-lab-page .site-header{
+  background:rgba(7,28,36,.88);
+}
+.ai-lab-page .desktop-nav > a,
+.ai-lab-page .desktop-nav .dropbtn{
+  color:#f4f8f8;
+}
+.ai-lab-page .desktop-nav > a:hover,
+.ai-lab-page .desktop-nav .dropbtn:hover{
+  color:#9edbdd;
+}
