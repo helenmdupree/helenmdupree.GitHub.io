@@ -139,3 +139,6 @@
 
 /* v0.17 add complementary heading contrast across dashboard cards */
 .ai-lab-page .dashboard-grid .glass-card h2{color:#174b3a}
+
+/* v0.18 make dashboard headline accent visibly distinct */
+.ai-lab-page .dashboard-grid .glass-card h2{color:#6A2E3B}
