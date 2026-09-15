@@ -104,3 +104,9 @@
 .ai-lab-page .desktop-nav .dropbtn:hover{
   color:#9edbdd;
 }
+
+
+/* v0.9 AI Capital Conditions compact indicator treatment */
+.ai-lab-page .capital-indicators{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.ai-lab-page .capital-indicators span{display:inline-flex;padding:7px 9px;border:1px solid rgba(9,105,111,.18);border-radius:999px;background:rgba(255,255,255,.46);color:#28535a;font-size:.72rem;line-height:1.15;font-weight:800}
+.ai-lab-page .capital-card .principle{margin-top:15px}
