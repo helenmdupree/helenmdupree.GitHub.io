@@ -43,6 +43,8 @@
     ['/resources/pipeline-integrity-metallurgy-phmsa/','Pipeline Integrity, Metallurgy & PHMSA']
   ];
 
+  knowledgeLinks.push(...resourceLinks.map(([href,text])=>[href,text,false]));
+
   const aboutLinks=[
     ['/about/','About SOUBEL',false],
     ['/about/experience/','Experience',false],
@@ -58,7 +60,8 @@
     style.textContent='\
       .desktop-nav .resources-dropdown .dropdown-panel{left:auto!important;right:0!important;max-width:min(390px,calc(100vw - 28px))!important}\
       .desktop-nav .resources-dropdown .dropdown-panel a{white-space:normal!important}\
-      .desktop-nav .knowledge-dropdown .dropdown-panel{min-width:300px!important;max-width:min(360px,calc(100vw - 28px))!important}\
+      .desktop-nav .knowledge-dropdown .dropdown-panel{min-width:300px!important;max-width:min(390px,calc(100vw - 28px))!important}\
+      .desktop-nav .knowledge-dropdown .dropdown-panel a{white-space:normal!important}\
       .desktop-nav .expertise-dropdown .dropdown-panel{min-width:390px!important;max-width:min(430px,calc(100vw - 28px))!important}\
       .desktop-nav .expertise-dropdown .dropdown-panel a{white-space:normal!important}\
       .desktop-nav .dropdown-panel .knowledge-subitem{padding-left:30px!important;font-size:.91em!important;color:#496169!important}\
@@ -99,9 +102,9 @@
       nav.appendChild(makeAnchor('/','Home','nav-home'));
       nav.appendChild(makeDropdown('Markets',marketsLinks));
       nav.appendChild(makeDropdown('Expertise',expertiseLinks,'expertise-dropdown'));
+      nav.appendChild(makeAnchor('/industry-intelligence/oil-gas-ai-lab/','Oil & Gas AI Lab'));
+      nav.appendChild(makeAnchor('/ask-soubel/','Ask SOUBEL'));
       nav.appendChild(makeDropdown('Knowledge',knowledgeLinks,'knowledge-dropdown'));
-      nav.appendChild(makeDropdown('Resources',resourceLinks,'resources-dropdown'));
-      nav.appendChild(makeAnchor('/operational-trust/','Operational Trust'));
       nav.appendChild(makeDropdown('About',aboutLinks));
     });
   }
@@ -121,6 +124,13 @@
     return group;
   }
 
+  function buildMobileLink(href,text){
+    const group=document.createElement('div');
+    group.className='group';
+    group.appendChild(makeAnchor(href,text));
+    return group;
+  }
+
   function normalizeMobileMenu(){
     document.querySelectorAll('.mobile-menu').forEach(menu=>menu.remove());
     const header=document.querySelector('.site-header');
@@ -137,14 +147,9 @@
 
     menu.appendChild(buildMobileGroup('Markets',marketsLinks));
     menu.appendChild(buildMobileGroup('Expertise',expertiseLinks));
+    menu.appendChild(buildMobileLink('/industry-intelligence/oil-gas-ai-lab/','Oil & Gas AI Lab'));
+    menu.appendChild(buildMobileLink('/ask-soubel/','Ask SOUBEL'));
     menu.appendChild(buildMobileGroup('Knowledge',knowledgeLinks));
-    menu.appendChild(buildMobileGroup('Resources',resourceLinks));
-
-    const trustGroup=document.createElement('div');
-    trustGroup.className='group';
-    trustGroup.appendChild(makeAnchor('/operational-trust/','Operational Trust'));
-    menu.appendChild(trustGroup);
-
     menu.appendChild(buildMobileGroup('About',aboutLinks));
     header.insertAdjacentElement('afterend',menu);
   }
@@ -266,9 +271,9 @@
     const ot=[...document.querySelectorAll('main > section.dark')].find(section=>section.querySelector('.eyebrow')?.textContent.trim()==='OPERATIONAL TRUST');
     if(ot){
       ot.classList.add('home-ot-compact');
-      ot.innerHTML='<div class="wrap home-ot-row"><div><p class="eyebrow">OPERATIONAL TRUST</p><h2>Trust has to survive the handoff.</h2><p class="section-intro">Evidence, judgment, decisions, and field execution stay connected to the outcome.</p></div><a class="home-ot-link" href="/operational-trust/">Explore Operational Trust →</a></div>';
+      ot.innerHTML='<div class="wrap home-ot-row"><div><p class="eyebrow">OPERATIONAL TRUST</p><h2>Trust has to survive the handoff.</h2><p class="section-intro">Evidence, judgment, decisions, and field execution stay connected to the outcome.</p></div></div>';
       if(!document.querySelector('#home-ot-compact-style')){
-        const style=document.createElement('style');style.id='home-ot-compact-style';style.textContent='.home-ot-compact{padding:34px 0!important}.home-ot-row{display:flex;align-items:flex-end;justify-content:space-between;gap:36px}.home-ot-row h2{font-size:clamp(1.65rem,2.5vw,2.35rem);line-height:1.08;letter-spacing:-.025em;margin:.12rem 0 .45rem;max-width:650px}.home-ot-row .section-intro{font-size:.96rem;line-height:1.5;max-width:690px}.home-ot-link{color:#79d0d2;text-decoration:none;font-weight:850;white-space:nowrap;padding-bottom:4px}@media(max-width:760px){.home-ot-row{display:block}.home-ot-link{display:inline-block;margin-top:16px;white-space:normal}}';document.head.appendChild(style);
+        const style=document.createElement('style');style.id='home-ot-compact-style';style.textContent='.home-ot-compact{padding:34px 0!important}.home-ot-row{display:flex;align-items:flex-end;justify-content:space-between;gap:36px}.home-ot-row h2{font-size:clamp(1.65rem,2.5vw,2.35rem);line-height:1.08;letter-spacing:-.025em;margin:.12rem 0 .45rem;max-width:650px}.home-ot-row .section-intro{font-size:.96rem;line-height:1.5;max-width:690px}@media(max-width:760px){.home-ot-row{display:block}}';document.head.appendChild(style);
       }
     }
   }
