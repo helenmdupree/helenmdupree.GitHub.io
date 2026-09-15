@@ -7,7 +7,7 @@
  radial-gradient(ellipse at 13% 18%,rgba(11,77,86,.62) 0 5%,transparent 20%),
  radial-gradient(ellipse at 84% 15%,rgba(19,113,119,.45) 0 6%,transparent 24%),
  linear-gradient(90deg,transparent 0 8%,rgba(15,62,70,.42) 9% 13%,transparent 15% 24%,rgba(27,83,88,.28) 26% 30%,transparent 33% 68%,rgba(20,76,83,.34) 71% 76%,transparent 79%),
- linear-gradient(180deg,#7d999d 0%,#d6e0e0 46%,#8aa3a6 100%);filter:blur(24px);transform:scale(1.08)}
+ linear-gradient(180deg,#7d999d 0%,#d6e0e0 46%,#8aa3a6 100%);filter:none;transform:none}
 .ai-lab-page .glass-stage:after{content:"";position:absolute;inset:0;z-index:-2;background:
  linear-gradient(112deg,rgba(255,255,255,.50),rgba(255,255,255,.10) 31%,rgba(255,255,255,.34) 49%,rgba(255,255,255,.08) 68%,rgba(255,255,255,.38)),
  repeating-linear-gradient(90deg,rgba(255,255,255,.10) 0 1px,transparent 1px 13vw);backdrop-filter:blur(11px) saturate(.8)}
