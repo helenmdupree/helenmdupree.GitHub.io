@@ -11,7 +11,7 @@
 .ai-lab-page .glass-stage:after{content:"";position:absolute;inset:0;z-index:-2;background:
  linear-gradient(112deg,rgba(255,255,255,.50),rgba(255,255,255,.10) 31%,rgba(255,255,255,.34) 49%,rgba(255,255,255,.08) 68%,rgba(255,255,255,.38)),
  repeating-linear-gradient(90deg,rgba(255,255,255,.10) 0 1px,transparent 1px 13vw);backdrop-filter:none;-webkit-backdrop-filter:none}
-.ai-lab-page .glass-shell{border:1px solid rgba(255,255,255,.58);border-radius:26px;background:rgba(239,247,247,.58);box-shadow:0 24px 70px rgba(8,42,49,.18),inset 0 1px rgba(255,255,255,.78);backdrop-filter:blur(22px) saturate(.88)}
+.ai-lab-page .glass-shell{border:1px solid rgba(255,255,255,.58);border-radius:26px;background:rgba(239,247,247,.58);box-shadow:0 24px 70px rgba(8,42,49,.18),inset 0 1px rgba(255,255,255,.78);backdrop-filter:none;-webkit-backdrop-filter:none}
 .ai-lab-page .lab-hero{padding:38px 40px 30px}
 .ai-lab-page .eyebrow,.ai-lab-page .kicker{margin:0 0 9px;color:#087d82;font-size:.7rem;line-height:1.2;letter-spacing:.16em;font-weight:850}
 .ai-lab-page .lab-hero h1{max-width:900px;margin:0;color:#102f37;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:clamp(2.25rem,3.7vw,3.5rem);font-weight:700;line-height:1.03;letter-spacing:-.038em}
