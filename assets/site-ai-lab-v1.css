@@ -60,13 +60,11 @@
   backdrop-filter:blur(2px) saturate(.88);
 }
 
-
 /* v0.6 clarity correction: source image supplies its own blur; do not blur it again */
 .ai-lab-page .glass-stage:after{backdrop-filter:none;-webkit-backdrop-filter:none;background:linear-gradient(108deg,rgba(255,255,255,.08),transparent 24%,rgba(255,255,255,.035) 48%,transparent 70%,rgba(255,255,255,.05))}
 .ai-lab-page .glass-shell{background:linear-gradient(118deg,rgba(225,242,243,.10),rgba(207,230,232,.045));backdrop-filter:none;-webkit-backdrop-filter:none}
 .ai-lab-page .lab-hero{background:linear-gradient(105deg,rgba(246,252,252,.07),rgba(235,247,247,.018) 72%)}
 .ai-lab-page .metric,.ai-lab-page .glass-card{background:rgba(232,246,247,.18);backdrop-filter:none;-webkit-backdrop-filter:none}
-
 
 /* v0.7 background composition: reduce cover-style enlargement and preserve source detail */
 .ai-lab-page .glass-stage{
@@ -74,7 +72,6 @@
   background-position:center top;
   background-repeat:repeat-y;
 }
-
 
 /* v0.8 readability pass: preserve approved image treatment; improve content and navigation contrast */
 .ai-lab-page .glass-shell{
@@ -105,26 +102,21 @@
   color:#9edbdd;
 }
 
-
 /* v0.9 AI Capital Conditions compact indicator treatment */
 .ai-lab-page .capital-indicators{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
 .ai-lab-page .capital-indicators span{display:inline-flex;padding:7px 9px;border:1px solid rgba(9,105,111,.18);border-radius:999px;background:rgba(255,255,255,.46);color:#28535a;font-size:.72rem;line-height:1.15;font-weight:800}
 .ai-lab-page .capital-card .principle{margin-top:15px}
 
-
 /* v0.10 strengthen Lab identity hierarchy */
 .ai-lab-page .lab-hero .eyebrow{margin-bottom:14px;color:#006f76;font-size:clamp(.95rem,1.35vw,1.18rem);line-height:1.15;letter-spacing:.13em;font-weight:900}
-
 
 /* v0.11 special-page title hierarchy: Lab name is the title, not an eyebrow */
 .ai-lab-page .lab-title-block{margin:0 0 18px;padding:0 0 16px;border-bottom:1px solid rgba(9,105,111,.24)}
 .ai-lab-page .lab-title-block h1{max-width:none;margin:0;color:#0b333c;font-size:clamp(2.45rem,4.25vw,4rem);font-weight:750;line-height:1.02;letter-spacing:-.035em}
 .ai-lab-page .lab-title-block .lab-positioning{margin:10px 0 0;color:#087d82;font-size:clamp(1.05rem,1.5vw,1.3rem);line-height:1.2;font-weight:800;letter-spacing:.015em}
 
-
 /* v0.12 keep primary Lab title on one line at desktop widths */
 @media(min-width:900px){.ai-lab-page .lab-title-block h1{font-size:clamp(2.35rem,3.65vw,3.45rem);white-space:nowrap}}
-
 
 /* v0.13 definitive desktop title fit */
 @media(min-width:900px){
@@ -139,3 +131,8 @@
 
 /* v0.15 improve capital evidence-label contrast */
 .ai-lab-page .capital-card .principle{color:#0b5961}
+
+/* v0.16 improve Lab overview readability without adding another card */
+.ai-lab-page .lab-overview{margin-top:4px;max-width:none}
+.ai-lab-page .lab-overview p{margin:0;color:#123943;font-size:clamp(1.05rem,1.25vw,1.2rem);line-height:1.62;font-weight:500}
+.ai-lab-page .lab-overview p+p{margin-top:18px}
