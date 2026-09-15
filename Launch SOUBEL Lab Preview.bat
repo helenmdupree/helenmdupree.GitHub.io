@@ -1,9 +1,9 @@
 @echo off
 setlocal
 cd /d "%~dp0"
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0tools\preview-soubel-lab.ps1"
-if errorlevel 1 (
-  echo.
-  echo SOUBEL Lab preview could not start.
-  pause
-)
+echo Starting SOUBEL local preview...
+echo.
+powershell.exe -NoProfile -ExecutionPolicy Bypass -NoExit -File "%~dp0tools\preview-soubel-lab.ps1"
+echo.
+echo The preview process ended.
+pause
