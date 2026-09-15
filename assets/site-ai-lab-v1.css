@@ -64,3 +64,91 @@ backdrop-filter:blur(7px) saturate(.78)}
 .ai-lab-page .hero-lead{max-width:760px}
 .ai-lab-page .metric,.ai-lab-page .glass-card{background:rgba(248,252,252,.39);border-color:rgba(255,255,255,.76);backdrop-filter:blur(12px) saturate(.82)}
 .ai-lab-page .watch-list span,.ai-lab-page .signal{background:rgba(255,255,255,.34)}
+
+/* v0.3 approved design direction — abstract industrial depth; interface lives on the glass */
+.ai-lab-page .glass-stage{
+  min-height:720px;
+  padding:42px 0 74px;
+  background:
+    radial-gradient(ellipse at 50% 108%,rgba(225,238,238,.72),transparent 48%),
+    linear-gradient(180deg,#91aaad 0%,#5f858a 45%,#365f66 100%);
+}
+.ai-lab-page .glass-stage:before{
+  inset:-10%;
+  background:
+    radial-gradient(ellipse at 15% 20%,rgba(232,248,247,.78) 0 2%,transparent 10%),
+    radial-gradient(ellipse at 82% 18%,rgba(207,240,239,.62) 0 2%,transparent 11%),
+    radial-gradient(ellipse at 66% 70%,rgba(170,224,220,.38) 0 3%,transparent 14%),
+    repeating-linear-gradient(90deg,
+      transparent 0 7%,
+      rgba(6,48,57,.50) 7.5% 9%,
+      rgba(175,213,212,.18) 9.5% 12%,
+      transparent 13% 21%),
+    repeating-linear-gradient(180deg,
+      rgba(222,238,237,.20) 0 3%,
+      transparent 4% 17%,
+      rgba(7,55,63,.24) 18% 21%,
+      transparent 22% 34%),
+    linear-gradient(115deg,#d1dfdf 0%,#537b80 24%,#aec5c4 48%,#3f6b72 70%,#b8cccb 100%);
+  filter:blur(30px) saturate(.68);
+  transform:scale(1.13);
+}
+.ai-lab-page .glass-stage:after{
+  background:
+    linear-gradient(108deg,rgba(255,255,255,.32),transparent 22%,rgba(255,255,255,.14) 41%,transparent 59%,rgba(255,255,255,.24) 78%,transparent),
+    repeating-linear-gradient(90deg,rgba(255,255,255,.12) 0 1px,transparent 1px 16.66%);
+  backdrop-filter:blur(5px) saturate(.82);
+}
+.ai-lab-page .glass-shell{
+  border:1px solid rgba(255,255,255,.68);
+  border-radius:20px;
+  background:linear-gradient(120deg,rgba(239,248,248,.31),rgba(221,238,238,.20));
+  box-shadow:0 28px 90px rgba(4,32,39,.24),inset 0 1px rgba(255,255,255,.78);
+  backdrop-filter:blur(13px) saturate(.86);
+}
+.ai-lab-page .lab-hero{
+  padding:36px 38px 25px;
+  border-bottom:1px solid rgba(255,255,255,.38);
+}
+.ai-lab-page .lab-hero h1{
+  max-width:720px;
+  font-size:clamp(2rem,3vw,2.9rem);
+  letter-spacing:-.03em;
+}
+.ai-lab-page .hero-lead{max-width:800px;color:#294f57}
+.ai-lab-page .lab-scope-line span{
+  background:rgba(246,252,252,.22);
+  border-color:rgba(255,255,255,.48);
+}
+.ai-lab-page .lab-dashboard{padding:20px 38px 36px}
+.ai-lab-page .lab-metrics{gap:1px;margin-bottom:14px;border:1px solid rgba(255,255,255,.42);border-radius:12px;overflow:hidden}
+.ai-lab-page .metric{
+  border:0;
+  border-radius:0;
+  background:rgba(244,251,251,.20);
+  box-shadow:none;
+  backdrop-filter:blur(8px);
+}
+.ai-lab-page .metric + .metric{border-left:1px solid rgba(255,255,255,.35)}
+.ai-lab-page .dashboard-grid{gap:10px}
+.ai-lab-page .glass-card{
+  border:1px solid rgba(255,255,255,.46);
+  border-radius:12px;
+  background:rgba(242,250,250,.22);
+  box-shadow:0 8px 24px rgba(10,49,56,.06),inset 0 1px rgba(255,255,255,.52);
+  backdrop-filter:blur(10px) saturate(.84);
+}
+.ai-lab-page .watch-list span,.ai-lab-page .signal{
+  background:rgba(255,255,255,.20);
+}
+.ai-lab-page .instrument-card{
+  margin-top:10px;
+  border-color:rgba(255,255,255,.34);
+  background:linear-gradient(120deg,rgba(7,58,67,.73),rgba(8,105,108,.48));
+  box-shadow:0 12px 32px rgba(6,42,49,.12);
+  backdrop-filter:blur(10px);
+}
+@media(max-width:850px){
+  .ai-lab-page .metric + .metric{border-left:0}
+  .ai-lab-page .metric:nth-child(odd){border-right:1px solid rgba(255,255,255,.35)}
+}
