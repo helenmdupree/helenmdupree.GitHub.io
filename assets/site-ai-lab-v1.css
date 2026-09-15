@@ -142,3 +142,10 @@
 
 /* v0.18 make dashboard headline accent visibly distinct */
 .ai-lab-page .dashboard-grid .glass-card h2{color:#6A2E3B}
+
+/* v0.19 hero copy scrim: improve readability without adding another card */
+.ai-lab-page .lab-hero{position:relative;isolation:isolate;overflow:hidden}
+.ai-lab-page .lab-hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(238,248,249,.74) 0%,rgba(233,246,247,.64) 43%,rgba(230,244,246,.44) 72%,rgba(230,244,246,.16) 100%)}
+.ai-lab-page .lab-title-block h1{color:#082f38;text-shadow:0 1px 0 rgba(255,255,255,.35)}
+.ai-lab-page .lab-overview p{color:#0d3139;font-weight:550;text-shadow:0 1px 0 rgba(255,255,255,.28)}
+.ai-lab-page .instrument-status{display:inline-block;margin-top:14px;color:#f4fbfb;font-size:.82rem;font-weight:850;border-bottom:1px solid rgba(255,255,255,.38);cursor:default}
