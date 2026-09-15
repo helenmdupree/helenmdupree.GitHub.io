@@ -1,7 +1,5 @@
 $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $PSScriptRoot
-$port = 8000
-$url = "http://localhost:$port/industry-intelligence/oil-gas-ai-lab/"
 
 function Get-ContentType([string]$path) {
   switch ([IO.Path]::GetExtension($path).ToLowerInvariant()) {
@@ -19,15 +17,33 @@ function Get-ContentType([string]$path) {
   }
 }
 
-$listener = [Net.HttpListener]::new()
-$listener.Prefixes.Add("http://localhost:$port/")
-try { $listener.Start() } catch {
-  Write-Host "Port $port is unavailable. Close any existing local preview and try again."
+$listener = $null
+$port = $null
+foreach ($candidatePort in 8000..8010) {
+  $candidateListener = [Net.HttpListener]::new()
+  $candidateListener.Prefixes.Add("http://localhost:$candidatePort/")
+  try {
+    $candidateListener.Start()
+    $listener = $candidateListener
+    $port = $candidatePort
+    break
+  } catch {
+    try { $candidateListener.Close() } catch {}
+  }
+}
+
+if (-not $listener) {
+  Write-Host "No available local preview port was found between 8000 and 8010."
   exit 1
 }
+
+$url = "http://localhost:$port/industry-intelligence/oil-gas-ai-lab/"
 Write-Host ""
 Write-Host "SOUBEL Oil & Gas AI Lab local preview"
 Write-Host "Opening $url"
+if ($port -ne 8000) {
+  Write-Host "Port 8000 was already in use, so the preview selected port $port instead."
+}
 Write-Host "Leave this window open while reviewing. Press Ctrl+C to stop."
 Start-Process $url
 
