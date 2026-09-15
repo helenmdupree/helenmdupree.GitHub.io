@@ -114,3 +114,9 @@
 
 /* v0.10 strengthen Lab identity hierarchy */
 .ai-lab-page .lab-hero .eyebrow{margin-bottom:14px;color:#006f76;font-size:clamp(.95rem,1.35vw,1.18rem);line-height:1.15;letter-spacing:.13em;font-weight:900}
+
+
+/* v0.11 special-page title hierarchy: Lab name is the title, not an eyebrow */
+.ai-lab-page .lab-title-block{margin:0 0 18px;padding:0 0 16px;border-bottom:1px solid rgba(9,105,111,.24)}
+.ai-lab-page .lab-title-block h1{max-width:none;margin:0;color:#0b333c;font-size:clamp(2.45rem,4.25vw,4rem);font-weight:750;line-height:1.02;letter-spacing:-.035em}
+.ai-lab-page .lab-title-block .lab-positioning{margin:10px 0 0;color:#087d82;font-size:clamp(1.05rem,1.5vw,1.3rem);line-height:1.2;font-weight:800;letter-spacing:.015em}
