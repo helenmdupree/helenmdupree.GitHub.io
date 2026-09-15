@@ -45,64 +45,6 @@
 @media(max-width:850px){.ai-lab-page .lab-metrics{grid-template-columns:repeat(2,1fr)}.ai-lab-page .dashboard-grid{grid-template-columns:1fr}}
 @media(max-width:620px){.ai-lab-page .glass-stage{padding:24px 0 34px}.ai-lab-page .glass-shell{border-radius:18px}.ai-lab-page .lab-hero,.ai-lab-page .lab-dashboard{padding-left:20px;padding-right:20px}.ai-lab-page .lab-dashboard{padding-bottom:22px}.ai-lab-page .watch-list{grid-template-columns:1fr}.ai-lab-page .lab-hero h1{font-size:clamp(2rem,10vw,2.6rem)}}
 
-/* v0.4 depth pass — abstract equipment field behind architectural privacy glass */
-.ai-lab-page .glass-stage{
-  background:
-    radial-gradient(ellipse at 50% 112%,rgba(232,242,241,.62) 0 12%,transparent 48%),
-    linear-gradient(180deg,#9cb1b3 0%,#6f9296 34%,#416b72 72%,#315a62 100%);
-}
-.ai-lab-page .glass-stage:before{
-  inset:-12%;
-  background:
-    radial-gradient(ellipse at 12% 24%,rgba(222,247,244,.88) 0 1.2%,rgba(151,218,214,.34) 4%,transparent 11%),
-    radial-gradient(ellipse at 84% 16%,rgba(226,248,246,.82) 0 1%,rgba(128,208,205,.30) 4%,transparent 10%),
-    radial-gradient(ellipse at 73% 61%,rgba(177,231,226,.48) 0 1.3%,transparent 9%),
-    radial-gradient(ellipse at 31% 76%,rgba(223,239,237,.44) 0 2%,transparent 13%),
-    linear-gradient(90deg,
-      transparent 0 4%,
-      rgba(9,44,53,.68) 5% 8%,
-      rgba(126,175,177,.28) 9% 13%,
-      transparent 14% 20%,
-      rgba(12,61,68,.56) 21% 26%,
-      rgba(184,215,213,.25) 27% 31%,
-      transparent 32% 39%,
-      rgba(5,47,56,.72) 40% 44%,
-      rgba(129,181,181,.24) 45% 52%,
-      transparent 53% 62%,
-      rgba(8,58,66,.64) 63% 69%,
-      rgba(187,216,213,.20) 70% 75%,
-      transparent 76% 84%,
-      rgba(5,43,53,.72) 85% 90%,
-      transparent 92%),
-    linear-gradient(180deg,
-      rgba(233,242,241,.74) 0 6%,
-      rgba(39,84,91,.52) 7% 11%,
-      transparent 12% 25%,
-      rgba(207,226,224,.22) 26% 30%,
-      rgba(17,65,72,.38) 31% 35%,
-      transparent 36% 55%,
-      rgba(214,230,227,.20) 56% 60%,
-      rgba(10,56,65,.45) 61% 67%,
-      transparent 68%),
-    linear-gradient(117deg,#d8e4e3 0%,#527c82 18%,#a7c0bf 35%,#39676e 55%,#9db9b8 72%,#315f68 100%);
-  filter:blur(22px) saturate(.76) contrast(1.06);
-  transform:scale(1.12);
-}
-.ai-lab-page .glass-stage:after{
-  background:
-    linear-gradient(104deg,rgba(255,255,255,.34),transparent 18%,rgba(255,255,255,.10) 34%,transparent 48%,rgba(255,255,255,.25) 67%,transparent 83%),
-    linear-gradient(90deg,transparent 0 15.8%,rgba(232,246,245,.18) 16% 16.15%,transparent 16.3% 49.7%,rgba(235,248,247,.16) 50% 50.15%,transparent 50.3% 83.1%,rgba(230,245,244,.17) 83.35% 83.5%,transparent 83.7%),
-    linear-gradient(180deg,rgba(255,255,255,.12),transparent 16%,transparent 82%,rgba(7,45,53,.18));
-  backdrop-filter:blur(3px) saturate(.86);
-}
-.ai-lab-page .glass-shell{
-  background:linear-gradient(118deg,rgba(240,248,248,.26),rgba(222,238,238,.15));
-  backdrop-filter:blur(10px) saturate(.88);
-}
-.ai-lab-page .lab-hero{background:linear-gradient(105deg,rgba(247,251,251,.11),transparent 70%)}
-.ai-lab-page .metric,.ai-lab-page .glass-card{background:rgba(244,250,250,.18)}
-
-
 /* v0.5 approved photographic lab background */
 .ai-lab-page .glass-stage{
   background:#416b72 url("/assets/soubel-ai-lab-glass-background.png") center center / cover no-repeat;
