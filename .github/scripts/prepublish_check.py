@@ -5,10 +5,12 @@ import re
 import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[2]
 errors: list[str] = []
 warnings: list[str] = []
+sitemap_paths: set[str] = set()
 
 
 def fail(message: str) -> None:
@@ -17,6 +19,23 @@ def fail(message: str) -> None:
 
 def warn(message: str) -> None:
     warnings.append(message)
+
+
+def route_for_index(path: Path) -> str:
+    rel = path.relative_to(ROOT).as_posix()
+    if rel == "index.html":
+        return "/"
+    return "/" + rel.removesuffix("index.html")
+
+
+def internal_target_exists(target: str) -> bool:
+    clean = urlsplit(target).path
+    if clean == "/":
+        return (ROOT / "index.html").exists()
+    rel = clean.lstrip("/")
+    if clean.endswith("/"):
+        return (ROOT / rel / "index.html").exists()
+    return (ROOT / rel).exists()
 
 
 # 1. Guard the custom-domain contract.
@@ -60,6 +79,9 @@ else:
         for loc in locs:
             if not (loc == "https://soubel.com/" or loc.startswith("https://soubel.com/")):
                 fail(f"sitemap.xml contains a non-SOUBEL URL: {loc}")
+                continue
+            parsed = urlsplit(loc)
+            sitemap_paths.add(parsed.path or "/")
     except ET.ParseError as exc:
         fail(f"sitemap.xml is not valid XML: {exc}")
 
@@ -104,7 +126,6 @@ for path in ROOT.rglob("*"):
     if not path.is_file() or path.suffix.lower() not in text_suffixes:
         continue
     rel = path.relative_to(ROOT)
-    # The checker itself contains regex examples by design.
     if rel.as_posix() == ".github/scripts/prepublish_check.py":
         continue
     try:
@@ -131,7 +152,56 @@ else:
                 + forbidden_record
             )
 
-# 7. Existing deployment fragments are not a publish blocker yet, but stay visible.
+# 7. Verify internal HTML links and referenced local assets resolve in the repository.
+attribute_pattern = re.compile(r"(?:href|src)\s*=\s*['\"]([^'\"]+)['\"]", re.IGNORECASE)
+for html in ROOT.rglob("*.html"):
+    if html.name == "404.html":
+        continue
+    try:
+        text = html.read_text(encoding="utf-8")
+    except UnicodeDecodeError:
+        continue
+    rel = html.relative_to(ROOT).as_posix()
+    for target in attribute_pattern.findall(text):
+        if not target.startswith("/") or target.startswith("//"):
+            continue
+        if not internal_target_exists(target):
+            fail(f"Broken internal reference in {rel}: {target}")
+
+# 8. Require every indexable public HTML route to appear in the sitemap, and every sitemap route to exist.
+public_routes: set[str] = set()
+for html in ROOT.rglob("index.html"):
+    text = html.read_text(encoding="utf-8", errors="ignore")
+    if re.search(r'<meta[^>]+name=["\']robots["\'][^>]+content=["\'][^"\']*noindex', text, re.IGNORECASE):
+        continue
+    public_routes.add(route_for_index(html))
+
+for route in sorted(public_routes - sitemap_paths):
+    fail(f"Indexable public route missing from sitemap.xml: {route}")
+for route in sorted(sitemap_paths - public_routes):
+    fail(f"sitemap.xml route has no indexable public page: {route}")
+
+# 9. Verify canonical URLs on indexable pages point to their own public route.
+canonical_pattern = re.compile(
+    r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']https://soubel\.com([^"\']*)["\']',
+    re.IGNORECASE,
+)
+for html in ROOT.rglob("index.html"):
+    text = html.read_text(encoding="utf-8", errors="ignore")
+    if re.search(r'<meta[^>]+name=["\']robots["\'][^>]+content=["\'][^"\']*noindex', text, re.IGNORECASE):
+        continue
+    route = route_for_index(html)
+    match = canonical_pattern.search(text)
+    if not match:
+        fail(f"Indexable public page has no SOUBEL canonical URL: {html.relative_to(ROOT)}")
+        continue
+    canonical_path = match.group(1) or "/"
+    if canonical_path != route:
+        fail(
+            f"Canonical mismatch in {html.relative_to(ROOT)}: expected {route}, found {canonical_path}"
+        )
+
+# 10. Existing deployment fragments are not a publish blocker yet, but stay visible.
 if (ROOT / ".deploy").exists():
     warn(".deploy/ exists in the public repository. It is a documented cleanup candidate and should contain no private material.")
 
@@ -145,4 +215,4 @@ if errors:
     sys.exit(1)
 
 print("\nPRE-PUBLISH GATE: PASS")
-print("CNAME, crawl directives, sitemap, public/private path boundaries, search-index exclusions, and common secret patterns passed.")
+print("CNAME, crawl directives, sitemap parity, internal references, canonicals, public/private path boundaries, search-index exclusions, and common secret patterns passed.")
