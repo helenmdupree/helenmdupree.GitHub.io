@@ -136,3 +136,6 @@
 @media(min-width:900px){
  .ai-lab-page .hero-lead{max-width:none;width:100%}
 }
+
+/* v0.15 improve capital evidence-label contrast */
+.ai-lab-page .capital-card .principle{color:#0b5961}
