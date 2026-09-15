@@ -4,6 +4,7 @@ from __future__ import annotations
 import re
 import sys
 import xml.etree.ElementTree as ET
+from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -38,6 +39,26 @@ def internal_target_exists(target: str) -> bool:
     return (ROOT / rel).exists()
 
 
+class HeadMetadataParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.robots = ""
+        self.canonical = ""
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        values = {str(key).lower(): (value or "") for key, value in attrs}
+        if tag.lower() == "meta" and values.get("name", "").lower() == "robots":
+            self.robots = values.get("content", "")
+        if tag.lower() == "link" and "canonical" in values.get("rel", "").lower().split():
+            self.canonical = values.get("href", "")
+
+
+def page_metadata(path: Path) -> HeadMetadataParser:
+    parser = HeadMetadataParser()
+    parser.feed(path.read_text(encoding="utf-8", errors="ignore"))
+    return parser
+
+
 # 1. Guard the custom-domain contract.
 cname = ROOT / "CNAME"
 if not cname.exists():
@@ -67,10 +88,10 @@ else:
     try:
         tree = ET.parse(sitemap)
         root = tree.getroot()
-        ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
         locs = [
             (node.text or "").strip()
-            for node in root.findall("sm:url/sm:loc", ns)
+            for node in root.iter()
+            if node.tag.rsplit("}", 1)[-1] == "loc"
         ]
         if not locs:
             fail("sitemap.xml contains no URL entries.")
@@ -86,11 +107,7 @@ else:
         fail(f"sitemap.xml is not valid XML: {exc}")
 
 # 4. Fail closed on files that should never live in the public repository.
-forbidden_names = {
-    ".env",
-    "id_rsa",
-    "id_ed25519",
-}
+forbidden_names = {".env", "id_rsa", "id_ed25519"}
 forbidden_suffixes = {".pem", ".key", ".p12", ".pfx"}
 forbidden_roots = {"whoqual", "security", "private", "internal"}
 
@@ -100,7 +117,6 @@ for path in ROOT.rglob("*"):
     rel = path.relative_to(ROOT)
     parts_lower = [part.lower() for part in rel.parts]
     name_lower = path.name.lower()
-
     if name_lower in forbidden_names or name_lower.startswith(".env."):
         fail(f"Forbidden sensitive file in public repository: {rel}")
     if path.suffix.lower() in forbidden_suffixes:
@@ -142,15 +158,10 @@ if not search_index.exists():
     fail("assets/library-search-index.js is missing.")
 else:
     search_index_text = search_index.read_text(encoding="utf-8")
-    forbidden_search_records = (
-        '"url":"/expertise/pipeline-asset-integrity/"',
-    )
+    forbidden_search_records = ('"url":"/expertise/pipeline-asset-integrity/"',)
     for forbidden_record in forbidden_search_records:
         if forbidden_record in search_index_text:
-            fail(
-                "Redirect-only legacy route found in public search index: "
-                + forbidden_record
-            )
+            fail("Redirect-only legacy route found in public search index: " + forbidden_record)
 
 # 7. Verify internal HTML links and referenced local assets resolve in the repository.
 attribute_pattern = re.compile(r"(?:href|src)\s*=\s*['\"]([^'\"]+)['\"]", re.IGNORECASE)
@@ -170,9 +181,11 @@ for html in ROOT.rglob("*.html"):
 
 # 8. Require every indexable public HTML route to appear in the sitemap, and every sitemap route to exist.
 public_routes: set[str] = set()
+metadata_by_path: dict[Path, HeadMetadataParser] = {}
 for html in ROOT.rglob("index.html"):
-    text = html.read_text(encoding="utf-8", errors="ignore")
-    if re.search(r'<meta[^>]+name=["\']robots["\'][^>]+content=["\'][^"\']*noindex', text, re.IGNORECASE):
+    metadata = page_metadata(html)
+    metadata_by_path[html] = metadata
+    if "noindex" in metadata.robots.lower():
         continue
     public_routes.add(route_for_index(html))
 
@@ -182,24 +195,20 @@ for route in sorted(sitemap_paths - public_routes):
     fail(f"sitemap.xml route has no indexable public page: {route}")
 
 # 9. Verify canonical URLs on indexable pages point to their own public route.
-canonical_pattern = re.compile(
-    r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']https://soubel\.com([^"\']*)["\']',
-    re.IGNORECASE,
-)
-for html in ROOT.rglob("index.html"):
-    text = html.read_text(encoding="utf-8", errors="ignore")
-    if re.search(r'<meta[^>]+name=["\']robots["\'][^>]+content=["\'][^"\']*noindex', text, re.IGNORECASE):
+for html, metadata in metadata_by_path.items():
+    if "noindex" in metadata.robots.lower():
         continue
     route = route_for_index(html)
-    match = canonical_pattern.search(text)
-    if not match:
-        fail(f"Indexable public page has no SOUBEL canonical URL: {html.relative_to(ROOT)}")
+    if not metadata.canonical:
+        fail(f"Indexable public page has no canonical URL: {html.relative_to(ROOT)}")
         continue
-    canonical_path = match.group(1) or "/"
+    parsed = urlsplit(metadata.canonical)
+    if parsed.scheme != "https" or parsed.netloc != "soubel.com":
+        fail(f"Indexable public page has non-SOUBEL canonical URL: {html.relative_to(ROOT)} -> {metadata.canonical}")
+        continue
+    canonical_path = parsed.path or "/"
     if canonical_path != route:
-        fail(
-            f"Canonical mismatch in {html.relative_to(ROOT)}: expected {route}, found {canonical_path}"
-        )
+        fail(f"Canonical mismatch in {html.relative_to(ROOT)}: expected {route}, found {canonical_path}")
 
 # 10. Existing deployment fragments are not a publish blocker yet, but stay visible.
 if (ROOT / ".deploy").exists():
