@@ -149,3 +149,6 @@
 .ai-lab-page .lab-title-block h1{color:#082f38;text-shadow:0 1px 0 rgba(255,255,255,.35)}
 .ai-lab-page .lab-overview p{color:#0d3139;font-weight:550;text-shadow:0 1px 0 rgba(255,255,255,.28)}
 .ai-lab-page .instrument-status{display:inline-block;margin-top:14px;color:#f4fbfb;font-size:.82rem;font-weight:850;border-bottom:1px solid rgba(255,255,255,.38);cursor:default}
+
+/* v0.20 separate hero scrim from metric row */
+.ai-lab-page .lab-dashboard{padding-top:26px}
