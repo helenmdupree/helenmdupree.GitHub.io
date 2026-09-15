@@ -110,3 +110,7 @@
 .ai-lab-page .capital-indicators{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
 .ai-lab-page .capital-indicators span{display:inline-flex;padding:7px 9px;border:1px solid rgba(9,105,111,.18);border-radius:999px;background:rgba(255,255,255,.46);color:#28535a;font-size:.72rem;line-height:1.15;font-weight:800}
 .ai-lab-page .capital-card .principle{margin-top:15px}
+
+
+/* v0.10 strengthen Lab identity hierarchy */
+.ai-lab-page .lab-hero .eyebrow{margin-bottom:14px;color:#006f76;font-size:clamp(.95rem,1.35vw,1.18rem);line-height:1.15;letter-spacing:.13em;font-weight:900}
