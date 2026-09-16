@@ -80,7 +80,7 @@
       if(indexPromise) return indexPromise;
       indexPromise=new Promise((resolve,reject)=>{
         const s=document.createElement('script');
-        s.src='/assets/library-search-index.js';
+        s.src='/assets/library-search-index-v2.js?v=1';
         s.onload=()=>Array.isArray(window.SOUBEL_SEARCH_INDEX)?resolve(window.SOUBEL_SEARCH_INDEX):reject(new Error('Search index unavailable'));
         s.onerror=()=>reject(new Error('Search index failed to load'));
         document.head.appendChild(s);
@@ -92,6 +92,12 @@
       return String(value||'').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
     }
 
+    function hasTerm(haystack,term){
+      if(!term) return false;
+      if(term.length<=3) return (' '+haystack+' ').includes(' '+term+' ');
+      return haystack.includes(term);
+    }
+
     function scoreItem(item,query){
       const q=clean(query);
       if(!q) return 0;
@@ -100,16 +106,16 @@
       const desc=clean((item.description||'')+' '+(item.headings||''));
       const body=clean(item.text||'');
       let score=0;
-      if(title.includes(q)) score+=80;
-      if(desc.includes(q)) score+=45;
-      if(body.includes(q)) score+=18;
+      if(hasTerm(title,q)) score+=80;
+      if(hasTerm(desc,q)) score+=45;
+      if(hasTerm(body,q)) score+=18;
       tokens.forEach(t=>{
-        if(title.includes(t)) score+=18;
-        else if(desc.includes(t)) score+=8;
-        else if(body.includes(t)) score+=2;
+        if(hasTerm(title,t)) score+=18;
+        else if(hasTerm(desc,t)) score+=8;
+        else if(hasTerm(body,t)) score+=2;
       });
-      if(tokens.length>1 && tokens.every(t=>title.includes(t))) score+=30;
-      if(tokens.every(t=>(title+' '+desc+' '+body).includes(t))) score+=12;
+      if(tokens.length>1 && tokens.every(t=>hasTerm(title,t))) score+=30;
+      if(tokens.every(t=>hasTerm(title+' '+desc+' '+body,t))) score+=12;
       return score;
     }
 
@@ -157,6 +163,7 @@
     }
 
     function openSearch(){
+      resetSearchState();
       const menu=document.querySelector('.mobile-menu');
       const menuBtn=document.querySelector('.menu-toggle');
       if(menu && menu.classList.contains('open')) menu.classList.remove('open');
@@ -168,7 +175,17 @@
       setTimeout(()=>input.focus(),25);
     }
 
+    function resetSearchState(){
+      input.value='';
+      status.textContent='';
+      results.innerHTML='';
+      lastReportedQuery='';
+      const panel=overlay.querySelector('.soubel-search-panel');
+      if(panel) panel.scrollTop=0;
+    }
+
     function closeSearch(){
+      resetSearchState();
       overlay.hidden=true;
       button.setAttribute('aria-expanded','false');
       document.body.style.overflow=document.body.dataset.soubelSearchOverflow||'';
