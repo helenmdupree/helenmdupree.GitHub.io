@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "domain": "corrosion-cathodic-protection",
+  "purpose": "Canonical short-form glossary definitions for inline teaching and the SOUBEL A-Z Knowledge Library.",
+  "records": [
+    {"id":"anode","term":"Anode","aliases":["anodes"],"definition":"An electrode that supplies protective current to the structure in a cathodic-protection system.","category":"Cathodic Protection"},
+    {"id":"rectifier","term":"Rectifier","aliases":["rectifiers"],"definition":"A power unit that converts AC electricity to controlled DC output for an impressed-current cathodic-protection system.","category":"Cathodic Protection"},
+    {"id":"reference-electrode","term":"Reference Electrode","aliases":["reference electrode","reference electrodes","reference-electrode"],"definition":"A stable electrical reference used to compare the potential of the protected structure.","category":"Measurement"},
+    {"id":"test-station","term":"Test Station","aliases":["test station","test stations"],"definition":"An aboveground access point that brings selected electrical leads from a buried or submerged structure to a location where technicians can make measurements, inspect connections, or evaluate bonds.","category":"Field Access"},
+    {"id":"coupon","term":"Coupon","aliases":["coupon","coupons"],"definition":"A small metal sample electrically connected to or associated with a structure and used to help evaluate localized cathodic-protection conditions.","category":"Measurement"},
+    {"id":"junction-box","term":"Junction Box","aliases":["junction box","junction boxes"],"definition":"An enclosure used to organize electrical leads, bonds, resistors, shunts, and monitoring connections in a cathodic-protection system.","category":"Cathodic Protection"},
+    {"id":"rmu","term":"Remote Monitoring Unit (RMU)","aliases":["rmu","rmus","remote monitoring unit","remote monitoring units"],"definition":"A device that collects selected field measurements and transmits them for off-site review.","category":"Monitoring"},
+    {"id":"sensor","term":"Sensor","aliases":["sensor","sensors"],"definition":"A device that detects or measures a selected physical or electrical condition and provides data for monitoring or evaluation.","category":"Monitoring"},
+    {"id":"cables-connections","term":"Cables and Connections","aliases":["cables and connections"],"definition":"The conductors, splices, terminations, and related connections that carry current or measurement signals between parts of the cathodic-protection system.","category":"Cathodic Protection"},
+    {"id":"electrical-continuity","term":"Electrical Continuity","aliases":["electrical continuity","continuity"],"definition":"A continuous conductive path that allows electrical current to flow through connected parts of the structure.","category":"Electrical"},
+    {"id":"interference","term":"Interference","aliases":["interference"],"definition":"Electrical influence from another current source that changes the conditions on the structure being protected.","category":"Electrical"},
+    {"id":"structure-to-electrolyte-potential","term":"Structure-to-Electrolyte Potential","aliases":["structure-to-electrolyte potential"],"definition":"The voltage difference measured between a metallic structure and a reference electrode in the surrounding electrolyte.","category":"Measurement"},
+    {"id":"cips-cis","term":"CIPS / CIS","aliases":["cips / cis","cips","cis","close-interval potential survey","close-interval survey"],"definition":"Close-interval potential survey / close-interval survey: closely spaced structure-to-electrolyte potential readings collected along a buried pipeline.","category":"Field Survey"},
+    {"id":"dcvg","term":"DCVG","aliases":["dcvg","direct current voltage gradient"],"definition":"Direct current voltage gradient: an aboveground survey method used to help locate coating defects and evaluate current flow around a buried pipeline.","category":"Field Survey"},
+    {"id":"ecda","term":"ECDA","aliases":["ecda","external corrosion direct assessment"],"definition":"External corrosion direct assessment: a structured process that combines pre-assessment, indirect inspection, direct examination, and post-assessment to evaluate external corrosion threats.","category":"Integrity Assessment"}
+  ]
+}
