@@ -1,8 +1,6 @@
 /* V2.05 — Corrosion & Cathodic Protection Knowledge page visual refinement.
-   Desktop-first surgical pass: improve text contrast, restrain section-heading scale,
-   and tighten vertical rhythm without changing page structure or masthead artwork. */
+   Updated to add a compact top index and remove the buried sidebar pattern. */
 
-/* Restore readable contrast to light-background supporting copy. */
 .cp-knowledge-page .cp-library-hero .hero-lead{
   color:#3f535b!important;
   opacity:1!important;
@@ -24,8 +22,55 @@
   color:#18343d!important;
 }
 
+.cp-knowledge-page .cp-index-section{
+  padding:18px 0!important;
+  background:#f4f8f7!important;
+  border-top:1px solid rgba(20,70,78,.08)!important;
+  border-bottom:1px solid rgba(20,70,78,.08)!important;
+}
+
+.cp-knowledge-page .cp-knowledge-index{
+  display:grid!important;
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  gap:0!important;
+}
+
+.cp-knowledge-page .cp-knowledge-index a{
+  display:flex!important;
+  align-items:center!important;
+  gap:10px!important;
+  padding:10px 16px!important;
+  color:#18343d!important;
+  text-decoration:none!important;
+  border-left:1px solid rgba(20,70,78,.12)!important;
+}
+
+.cp-knowledge-page .cp-knowledge-index a:first-child{
+  border-left:0!important;
+}
+
+.cp-knowledge-page .cp-knowledge-index span{
+  color:#168a90!important;
+  font-size:.72rem!important;
+  letter-spacing:.08em!important;
+}
+
+.cp-knowledge-page .cp-knowledge-index strong{
+  font-size:.92rem!important;
+  line-height:1.25!important;
+}
+
+.cp-knowledge-page .cp-foundation-prose{
+  max-width:900px!important;
+  margin-top:22px!important;
+}
+
+.cp-knowledge-page .cp-foundation-prose h3{
+  margin:0 0 10px!important;
+  font-size:1.15rem!important;
+}
+
 @media (min-width:821px){
-  /* Keep the opening hero compact while preserving its existing hierarchy. */
   .cp-knowledge-page .cp-library-hero{
     padding:38px 0 32px!important;
   }
@@ -41,7 +86,6 @@
     margin-top:20px!important;
   }
 
-  /* Restrain Brutus-scale section titles without flattening the hierarchy. */
   .cp-knowledge-page .section > .wrap > h2{
     max-width:980px!important;
     margin:0 0 12px!important;
@@ -50,9 +94,8 @@
     letter-spacing:-.025em!important;
   }
 
-  /* Tighten the long-scroll rhythm between technical sections. */
   .cp-knowledge-page .section{
-    padding:42px 0!important;
+    padding:40px 0!important;
   }
 
   .cp-knowledge-page .section > .wrap > .kicker{
@@ -66,12 +109,6 @@
     line-height:1.58!important;
   }
 
-  .cp-knowledge-page .data-flow{
-    margin-top:22px!important;
-    padding:16px 0!important;
-  }
-
-  .cp-knowledge-page .content-grid,
   .cp-knowledge-page .grid-2,
   .cp-knowledge-page .grid-3{
     margin-top:24px!important;
@@ -84,5 +121,34 @@
 
   .cp-knowledge-page .link-row{
     margin-top:22px!important;
+  }
+}
+
+@media(max-width:900px){
+  .cp-knowledge-page .cp-knowledge-index{
+    grid-template-columns:1fr 1fr!important;
+  }
+
+  .cp-knowledge-page .cp-knowledge-index a{
+    border-left:0!important;
+    border-top:1px solid rgba(20,70,78,.1)!important;
+  }
+
+  .cp-knowledge-page .cp-knowledge-index a:nth-child(-n+2){
+    border-top:0!important;
+  }
+}
+
+@media(max-width:560px){
+  .cp-knowledge-page .cp-knowledge-index{
+    grid-template-columns:1fr!important;
+  }
+
+  .cp-knowledge-page .cp-knowledge-index a{
+    padding:9px 4px!important;
+  }
+
+  .cp-knowledge-page .cp-knowledge-index a:nth-child(2){
+    border-top:1px solid rgba(20,70,78,.1)!important;
   }
 }
