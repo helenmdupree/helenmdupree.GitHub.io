@@ -31,3 +31,23 @@
     padding-top:18px!important;
   }
 }
+
+/* V2.01 — AIM hierarchy cleanup: stronger section eyebrows and wider hero title. */
+.aim-page .kicker{
+  font-size:.92rem!important;
+  font-weight:900!important;
+  letter-spacing:.16em!important;
+  line-height:1.2!important;
+}
+
+@media(min-width:901px){
+  .aim-page .page-hero h1{
+    max-width:1180px!important;
+  }
+}
+
+@media(max-width:900px){
+  .aim-page .kicker{
+    font-size:.84rem!important;
+  }
+}
