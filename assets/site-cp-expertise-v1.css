@@ -1,201 +1,206 @@
 /* Corrosion & Cathodic Protection expertise page refinement.
-   V2 removes the remaining oversized "Brutus" typography and excess vertical space.
-   Scoped to this page only. */
+   V6 aligns the discovery and technical sections into one editorial grid. */
+
+body.cp-expertise-page .cp-hero{
+  padding:34px 0 30px!important;
+}
+
+body.cp-expertise-page .cp-hero h1{
+  max-width:none!important;
+  margin:8px 0 10px!important;
+  font-size:clamp(2.5rem,4vw,4.1rem)!important;
+  line-height:1.02!important;
+  letter-spacing:-.035em!important;
+  white-space:nowrap!important;
+}
+
+body.cp-expertise-page .cp-hero > .wrap > p:not(.kicker){
+  max-width:900px!important;
+  margin:0!important;
+  font-size:1.08rem!important;
+  line-height:1.5!important;
+}
+
+body.cp-expertise-page .cp-hero .actions{
+  margin-top:18px!important;
+}
 
 body.cp-expertise-page main .section{
-  padding:36px 0!important;
+  padding:28px 0!important;
 }
 
 body.cp-expertise-page main .section .kicker{
-  margin:0 0 8px!important;
-  font-size:.72rem!important;
+  margin:0 0 7px!important;
+  font-size:.75rem!important;
   line-height:1.2!important;
-  letter-spacing:.15em!important;
+  letter-spacing:.14em!important;
 }
 
 body.cp-expertise-page main .section h2{
   max-width:920px!important;
   margin:0!important;
   font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;
-  font-size:clamp(1.65rem,2.35vw,2.15rem)!important;
+  font-size:clamp(1.6rem,2.15vw,2rem)!important;
   font-weight:700!important;
   line-height:1.12!important;
-  letter-spacing:-.022em!important;
+  letter-spacing:-.02em!important;
 }
 
 body.cp-expertise-page main .section h3{
-  font-size:1.08rem!important;
-  line-height:1.25!important;
+  font-size:1.05rem!important;
+  line-height:1.24!important;
 }
 
-body.cp-expertise-page main .section p,
-body.cp-expertise-page main .section-intro,
-body.cp-expertise-page main .lead-copy{
+body.cp-expertise-page main .section p{
   font-size:.98rem!important;
-  line-height:1.56!important;
+  line-height:1.55!important;
 }
 
-body.cp-expertise-page main .section-intro{
-  max-width:900px!important;
-  margin:12px 0 16px!important;
-  color:#4d626a!important;
+/* Keep the opening explanation and the technical sections on the same visual grid. */
+body.cp-expertise-page main .cp-reading-width,
+body.cp-expertise-page main .cp-visual-section > .wrap{
+  width:min(calc(100% - 64px),1220px)!important;
+  max-width:1220px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
 }
 
-body.cp-expertise-page main .cp-intro{
-  grid-template-columns:minmax(280px,.72fr) minmax(0,1.28fr)!important;
-  column-gap:38px!important;
-  row-gap:18px!important;
-  align-items:start!important;
+body.cp-expertise-page main .cp-discovery{
+  padding:24px 0 22px!important;
 }
 
-body.cp-expertise-page main .cp-intro h2{
-  max-width:500px!important;
-  font-size:clamp(1.7rem,2.3vw,2.1rem)!important;
+body.cp-expertise-page main .cp-discovery p{
+  margin:0 0 10px!important;
+  max-width:1140px!important;
 }
 
-body.cp-expertise-page main .cp-intro p{
-  margin-top:0!important;
+body.cp-expertise-page main .cp-discovery p:last-child{
+  margin-bottom:0!important;
 }
 
-body.cp-expertise-page main .cp-intro p + p{
-  margin-top:14px!important;
+body.cp-expertise-page main .cp-discovery-callout{
+  margin:12px 0!important;
+  max-width:1180px!important;
+  font-size:1.12rem!important;
+  font-weight:700!important;
+  color:#173f4b!important;
+}
+
+body.cp-expertise-page main .cp-accent-term{
+  color:#0b7f8c!important;
+  font-weight:800!important;
+  letter-spacing:.025em!important;
+}
+
+body.cp-expertise-page main .cp-visual-section{
+  padding:22px 0 24px!important;
+}
+
+body.cp-expertise-page main .cp-visual-copy{
+  max-width:1080px!important;
+  margin:8px 0 0!important;
+}
+
+body.cp-expertise-page main .cp-technical-figure{
+  width:min(68vw,820px)!important;
+  margin:12px auto 0!important;
+}
+
+body.cp-expertise-page main .cp-technical-figure img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  border-radius:10px!important;
+  box-shadow:0 10px 26px rgba(20,43,50,.11)!important;
+}
+
+body.cp-expertise-page main .cp-technical-figure-light img{
+  border:1px solid rgba(19,70,78,.12)!important;
 }
 
 body.cp-expertise-page main .cp-four{
-  margin-top:20px!important;
-  gap:14px!important;
+  margin-top:16px!important;
+  gap:12px!important;
 }
 
 body.cp-expertise-page main .cp-four article{
-  padding:18px!important;
+  padding:15px!important;
 }
 
 body.cp-expertise-page main .cp-four article span{
-  margin-bottom:6px!important;
+  margin-bottom:5px!important;
 }
 
 body.cp-expertise-page main .cp-four article h3{
-  margin:0 0 6px!important;
+  margin:0 0 5px!important;
 }
 
 body.cp-expertise-page main .cp-four article p{
   margin:0!important;
-  font-size:.94rem!important;
-  line-height:1.5!important;
-}
-
-body.cp-expertise-page main .cp-system h2,
-body.cp-expertise-page main .growth-cta h2{
-  max-width:840px!important;
-}
-
-body.cp-expertise-page main .cp-flow{
-  margin:18px 0 14px!important;
-  padding:16px 0!important;
-  gap:8px 12px!important;
-}
-
-body.cp-expertise-page main .cp-flow span{
   font-size:.92rem!important;
-  line-height:1.3!important;
+  line-height:1.45!important;
 }
 
-body.cp-expertise-page main .cp-system-note{
-  max-width:860px!important;
-  margin:12px 0 0!important;
+body.cp-expertise-page main .cp-closing .wrap{
+  max-width:980px!important;
 }
 
-body.cp-expertise-page main .filter-row{
-  margin:12px 0 6px!important;
-  gap:6px 12px!important;
+body.cp-expertise-page main .cp-closing p{
+  max-width:880px!important;
+  margin:10px 0 6px!important;
 }
 
-body.cp-expertise-page main .filter-row a{
-  font-size:.92rem!important;
-  line-height:1.3!important;
-}
-
-body.cp-expertise-page main .text-link{
+body.cp-expertise-page main .cp-closing .text-link{
+  color:#73d6db!important;
   display:inline-block!important;
   margin-top:6px!important;
-  font-size:.94rem!important;
+  font-size:.96rem!important;
+  font-weight:700!important;
 }
 
-body.cp-expertise-page main .integrity-data .section-intro{
-  margin-bottom:14px!important;
-}
-
-body.cp-expertise-page main .library-bridge,
-body.cp-expertise-page main .cp-proof{
-  gap:28px!important;
-  align-items:start!important;
-}
-
-body.cp-expertise-page main .library-bridge p,
-body.cp-expertise-page main .cp-proof p{
-  max-width:860px!important;
-}
-
-body.cp-expertise-page main .library-rule{
-  margin-top:14px!important;
-  padding:14px 16px!important;
-}
-
-body.cp-expertise-page main .library-links{
-  gap:8px!important;
-}
-
-body.cp-expertise-page main .library-links a{
-  padding:12px 0!important;
-}
-
-body.cp-expertise-page main .library-links strong{
-  font-size:1rem!important;
-}
-
-body.cp-expertise-page main .source-box{
-  padding:18px!important;
-  margin-top:0!important;
-}
-
-body.cp-expertise-page main .growth-cta .actions{
-  margin-top:18px!important;
+@media(max-width:1100px){
+  body.cp-expertise-page .cp-hero h1{
+    white-space:normal!important;
+  }
 }
 
 @media(max-width:900px){
-  body.cp-expertise-page main .cp-intro,
-  body.cp-expertise-page main .library-bridge,
-  body.cp-expertise-page main .cp-proof{
-    grid-template-columns:1fr!important;
-    gap:18px!important;
+  body.cp-expertise-page main .cp-reading-width,
+  body.cp-expertise-page main .cp-visual-section > .wrap{
+    width:min(calc(100% - 40px),1220px)!important;
   }
 
-  body.cp-expertise-page main .cp-intro h2{
-    max-width:760px!important;
+  body.cp-expertise-page main .cp-technical-figure{
+    width:min(86vw,760px)!important;
   }
 }
 
 @media(max-width:760px){
-  body.cp-expertise-page main .section{
-    padding:30px 0!important;
+  body.cp-expertise-page .cp-hero{
+    padding:28px 0 26px!important;
   }
 
-  body.cp-expertise-page main .section h2,
-  body.cp-expertise-page main .cp-intro h2{
-    font-size:clamp(1.55rem,6.6vw,1.95rem)!important;
-    line-height:1.12!important;
+  body.cp-expertise-page .cp-hero h1{
+    font-size:clamp(2rem,10vw,3rem)!important;
+    line-height:1.04!important;
   }
 
-  body.cp-expertise-page main .cp-four{
-    gap:12px!important;
+  body.cp-expertise-page main .section,
+  body.cp-expertise-page main .cp-visual-section{
+    padding:22px 0!important;
   }
 
-  body.cp-expertise-page main .cp-four article{
-    padding:15px!important;
+  body.cp-expertise-page main .section h2{
+    font-size:clamp(1.45rem,6.2vw,1.85rem)!important;
   }
 
-  body.cp-expertise-page main .cp-flow{
-    margin-top:16px!important;
-    padding:14px 0!important;
+  body.cp-expertise-page main .cp-reading-width,
+  body.cp-expertise-page main .cp-visual-section > .wrap{
+    width:min(calc(100% - 32px),1220px)!important;
+  }
+
+  body.cp-expertise-page main .cp-technical-figure{
+    width:100%!important;
+    margin-top:12px!important;
   }
 }

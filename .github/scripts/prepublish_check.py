@@ -6,7 +6,7 @@ import sys
 import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[2]
 errors: list[str] = []
@@ -30,7 +30,7 @@ def route_for_index(path: Path) -> str:
 
 
 def internal_target_exists(target: str) -> bool:
-    clean = urlsplit(target).path
+    clean = unquote(urlsplit(target).path)
     if clean == "/":
         return (ROOT / "index.html").exists()
     rel = clean.lstrip("/")
