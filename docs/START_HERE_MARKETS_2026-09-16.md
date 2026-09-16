@@ -10,8 +10,10 @@ Repository truth is authoritative. Do not reconstruct the Markets workstream fro
 ## Frozen backup branch
 `backup/markets-workstream-2026-09-16`
 
-## Exact frozen checkpoint
-`__CHECKPOINT_COMMIT__`
+## Content checkpoint commit
+`d163ee62cb5c2b16b228e50ac6ca5b2d210899d0`
+
+This commit contains the completed Markets and Utilities/Industrial build before this recovery note was finalized. The frozen backup branch named above is the authoritative final handoff state.
 
 ## Work completed in this checkpoint
 - Created new `/markets/` landing page.
