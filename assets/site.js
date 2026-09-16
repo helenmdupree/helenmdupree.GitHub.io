@@ -4,6 +4,7 @@
   document.querySelectorAll('[data-current-year]').forEach(el => el.textContent = currentYear);
 
   const marketsLinks=[
+    ['/markets/','Markets Overview'],
     ['/markets/midstream-pipelines/','Midstream & Pipelines'],
     ['/markets/downstream-refining/','Downstream & Refining'],
     ['/markets/utilities-industrial-infrastructure/','Utilities & Industrial Infrastructure']
