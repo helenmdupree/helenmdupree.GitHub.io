@@ -107,3 +107,87 @@
   script.dataset.soubelGlobalSearch='true';
   document.head.appendChild(script);
 })();
+
+/* SOUBEL Knowledge dropdown — two-column desktop layout with Resource subcategories */
+(function(){
+  function refineKnowledgeMenu(){
+    const panel=document.querySelector('.desktop-nav .knowledge-dropdown .dropdown-panel');
+    if(!panel) return;
+
+    const links=[...panel.querySelectorAll(':scope > a')];
+    links.forEach(a=>{
+      const href=a.getAttribute('href')||'';
+      if(href.startsWith('/resources/') && href!=='/resources/'){
+        a.classList.add('knowledge-resource-subitem');
+      }
+      if(href==='/resources/') a.classList.add('knowledge-resources-parent');
+    });
+
+    if(!document.querySelector('#knowledge-dropdown-reconcile-style')){
+      const style=document.createElement('style');
+      style.id='knowledge-dropdown-reconcile-style';
+      style.textContent=`
+.desktop-nav .knowledge-dropdown{position:relative}
+.desktop-nav .knowledge-dropdown .dropdown-panel{
+  left:50%!important;
+  right:auto!important;
+  transform:translateX(-68%)!important;
+  width:min(720px,calc(100vw - 36px))!important;
+  min-width:640px!important;
+  max-width:720px!important;
+  display:grid!important;
+  grid-auto-flow:column!important;
+  grid-template-rows:repeat(7,auto)!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  column-gap:22px!important;
+  padding:18px!important;
+}
+.desktop-nav .knowledge-dropdown .dropdown-panel>a{
+  min-width:0!important;
+  white-space:normal!important;
+}
+.desktop-nav .knowledge-dropdown .knowledge-resources-parent{
+  margin-top:2px!important;
+  font-weight:800!important;
+}
+.desktop-nav .knowledge-dropdown .knowledge-resource-subitem{
+  position:relative!important;
+  padding-left:34px!important;
+  font-size:.9em!important;
+  line-height:1.28!important;
+  color:#9fc1c7!important;
+}
+.desktop-nav .knowledge-dropdown .knowledge-resource-subitem::before{
+  content:"↳";
+  position:absolute;
+  left:16px;
+  color:#4fb2b7;
+}
+@media(max-width:1180px){
+  .desktop-nav .knowledge-dropdown .dropdown-panel{
+    transform:translateX(-73%)!important;
+    width:min(660px,calc(100vw - 28px))!important;
+    min-width:600px!important;
+  }
+}
+`;
+      document.head.appendChild(style);
+    }
+  }
+
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',()=>setTimeout(refineKnowledgeMenu,0),{once:true});
+  }else{
+    setTimeout(refineKnowledgeMenu,0);
+  }
+})();
+
+/* SOUBEL Knowledge dropdown close behavior */
+(function(){
+  if(document.querySelector('script[data-soubel-knowledge-dropdown-fix]')) return;
+  const script=document.createElement('script');
+  script.src='/assets/knowledge-dropdown-fix.js?v=1';
+  script.defer=true;
+  script.dataset.soubelKnowledgeDropdownFix='true';
+  document.head.appendChild(script);
+})();
