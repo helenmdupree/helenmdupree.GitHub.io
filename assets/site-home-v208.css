@@ -5,8 +5,8 @@
    create curiosity, and route visitors into the deeper SOUBEL architecture. */
 
 body > main > .hero{
-  padding-top:42px!important;
-  padding-bottom:30px!important;
+  padding-top:18px!important;
+  padding-bottom:24px!important;
 }
 
 body > main > .hero .hero-inner{
@@ -15,11 +15,12 @@ body > main > .hero .hero-inner{
 
 body > main > .hero .eyebrow{
   margin-top:0!important;
-  margin-bottom:18px!important;
+  margin-bottom:10px!important;
 }
 
 body > main > .hero h1{
   max-width:900px!important;
+  margin-bottom:14px!important;
   font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;
   font-size:clamp(2.55rem,4.6vw,4.25rem)!important;
   font-weight:700!important;
@@ -28,12 +29,14 @@ body > main > .hero h1{
 }
 
 body > main > .hero .hero-lead{
-  max-width:900px!important;
-  line-height:1.55!important;
+  max-width:980px!important;
+  margin-top:0!important;
+  margin-bottom:0!important;
+  line-height:1.48!important;
 }
 
 body > main > .hero .actions{
-  margin-top:24px!important;
+  margin-top:18px!important;
 }
 
 /* V2.09 — three editorial gateways replace the former Markets + Expertise catalog. */
