@@ -1,154 +1,35 @@
-/* V2.05 — Corrosion & Cathodic Protection Knowledge page visual refinement.
-   Updated to add a compact top index and remove the buried sidebar pattern. */
-
-.cp-knowledge-page .cp-library-hero .hero-lead{
-  color:#3f535b!important;
-  opacity:1!important;
-}
-
-.cp-knowledge-page .section:not(.dark) .section-intro{
-  color:#435961!important;
-  opacity:1!important;
-}
-
-.cp-knowledge-page .trust-note{
-  color:#324a52!important;
-  background:#eef4f3!important;
-  border-left:3px solid #168a90!important;
-  opacity:1!important;
-}
-
-.cp-knowledge-page .trust-note strong{
-  color:#18343d!important;
-}
-
-.cp-knowledge-page .cp-index-section{
-  padding:18px 0!important;
-  background:#f4f8f7!important;
-  border-top:1px solid rgba(20,70,78,.08)!important;
-  border-bottom:1px solid rgba(20,70,78,.08)!important;
-}
-
-.cp-knowledge-page .cp-knowledge-index{
-  display:grid!important;
-  grid-template-columns:repeat(5,minmax(0,1fr))!important;
-  gap:0!important;
-}
-
-.cp-knowledge-page .cp-knowledge-index a{
-  display:flex!important;
-  align-items:center!important;
-  gap:10px!important;
-  padding:10px 16px!important;
-  color:#18343d!important;
-  text-decoration:none!important;
-  border-left:1px solid rgba(20,70,78,.12)!important;
-}
-
-.cp-knowledge-page .cp-knowledge-index a:first-child{
-  border-left:0!important;
-}
-
-.cp-knowledge-page .cp-knowledge-index span{
-  color:#168a90!important;
-  font-size:.72rem!important;
-  letter-spacing:.08em!important;
-}
-
-.cp-knowledge-page .cp-knowledge-index strong{
-  font-size:.92rem!important;
-  line-height:1.25!important;
-}
-
-.cp-knowledge-page .cp-foundation-prose{
-  max-width:900px!important;
-  margin-top:22px!important;
-}
-
-.cp-knowledge-page .cp-foundation-prose h3{
-  margin:0 0 10px!important;
-  font-size:1.15rem!important;
-}
-
-@media (min-width:821px){
-  .cp-knowledge-page .cp-library-hero{
-    padding:38px 0 32px!important;
-  }
-
-  .cp-knowledge-page .cp-library-hero .hero-lead{
-    max-width:920px!important;
-    margin-top:14px!important;
-    font-size:1rem!important;
-    line-height:1.58!important;
-  }
-
-  .cp-knowledge-page .cp-library-hero .actions{
-    margin-top:20px!important;
-  }
-
-  .cp-knowledge-page .section > .wrap > h2{
-    max-width:980px!important;
-    margin:0 0 12px!important;
-    font-size:clamp(1.85rem,2.8vw,2.85rem)!important;
-    line-height:1.08!important;
-    letter-spacing:-.025em!important;
-  }
-
-  .cp-knowledge-page .section{
-    padding:40px 0!important;
-  }
-
-  .cp-knowledge-page .section > .wrap > .kicker{
-    margin-bottom:9px!important;
-  }
-
-  .cp-knowledge-page .section > .wrap > .section-intro{
-    max-width:1000px!important;
-    margin:0!important;
-    font-size:1rem!important;
-    line-height:1.58!important;
-  }
-
-  .cp-knowledge-page .grid-2,
-  .cp-knowledge-page .grid-3{
-    margin-top:24px!important;
-  }
-
-  .cp-knowledge-page .trust-note{
-    margin-top:22px!important;
-    padding:14px 18px!important;
-  }
-
-  .cp-knowledge-page .link-row{
-    margin-top:22px!important;
-  }
-}
-
-@media(max-width:900px){
-  .cp-knowledge-page .cp-knowledge-index{
-    grid-template-columns:1fr 1fr!important;
-  }
-
-  .cp-knowledge-page .cp-knowledge-index a{
-    border-left:0!important;
-    border-top:1px solid rgba(20,70,78,.1)!important;
-  }
-
-  .cp-knowledge-page .cp-knowledge-index a:nth-child(-n+2){
-    border-top:0!important;
-  }
-}
-
-@media(max-width:560px){
-  .cp-knowledge-page .cp-knowledge-index{
-    grid-template-columns:1fr!important;
-  }
-
-  .cp-knowledge-page .cp-knowledge-index a{
-    padding:9px 4px!important;
-  }
-
-  .cp-knowledge-page .cp-knowledge-index a:nth-child(2){
-    border-top:1px solid rgba(20,70,78,.1)!important;
-  }
-}
+/* Corrosion & Cathodic Protection Knowledge — technical journal layout */
+.cp-knowledge-page .cp-library-hero{padding:34px 0 28px!important;}
+.cp-knowledge-page .cp-library-hero .hero-lead{max-width:860px!important;margin-top:12px!important;color:#3f535b!important;font-size:1rem!important;line-height:1.55!important;}
+.cp-knowledge-page .cp-library-hero .actions{margin-top:16px!important;}
+.cp-knowledge-page .cp-guide-index{padding:24px 0 14px!important;border-bottom:1px solid rgba(20,70,78,.15)!important;background:#fff!important;}
+.cp-knowledge-page .cp-index-label{margin:0 0 10px!important;color:#168a90!important;font-size:.74rem!important;font-weight:700!important;letter-spacing:.15em!important;}
+.cp-knowledge-page .cp-journal-index{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;border-top:1px solid rgba(20,70,78,.18)!important;}
+.cp-knowledge-page .cp-journal-index a{display:grid!important;grid-template-rows:auto auto 1fr!important;gap:5px!important;padding:14px 18px 14px 0!important;margin-right:18px!important;color:#18343d!important;text-decoration:none!important;border-top:3px solid transparent!important;}
+.cp-knowledge-page .cp-journal-index a:hover{border-top-color:#168a90!important;}
+.cp-knowledge-page .cp-journal-index span{color:#168a90!important;font-size:.72rem!important;letter-spacing:.08em!important;}
+.cp-knowledge-page .cp-journal-index strong{font-size:1rem!important;line-height:1.2!important;}
+.cp-knowledge-page .cp-journal-index em{font-style:normal!important;color:#60737a!important;font-size:.84rem!important;line-height:1.35!important;}
+.cp-knowledge-page .cp-chapter{padding:34px 0!important;background:#fff!important;scroll-margin-top:92px!important;}
+.cp-knowledge-page .cp-chapter + .cp-chapter{border-top:1px solid rgba(20,70,78,.15)!important;}
+.cp-knowledge-page .cp-chapter-grid{display:grid!important;grid-template-columns:minmax(270px,.82fr) minmax(0,1.18fr)!important;gap:56px!important;align-items:start!important;}
+.cp-knowledge-page .cp-chapter-head{position:relative!important;}
+.cp-knowledge-page .cp-chapter-head>span{display:block!important;margin:0 0 5px!important;color:#168a90!important;font-size:1.05rem!important;font-weight:700!important;letter-spacing:.08em!important;}
+.cp-knowledge-page .cp-chapter-head>p:first-of-type{margin:0 0 10px!important;color:#18343d!important;font-size:.74rem!important;font-weight:700!important;letter-spacing:.15em!important;}
+.cp-knowledge-page .cp-chapter-head h2{margin:0 0 12px!important;font-size:clamp(1.55rem,2.2vw,2.15rem)!important;line-height:1.12!important;letter-spacing:-.02em!important;}
+.cp-knowledge-page .cp-chapter-head p:last-child{margin:0!important;max-width:470px!important;color:#52676e!important;font-size:.96rem!important;line-height:1.58!important;}
+.cp-knowledge-page .cp-topic-list{border-top:1px solid rgba(20,70,78,.18)!important;}
+.cp-knowledge-page .cp-topic-list article{padding:15px 0!important;border-bottom:1px solid rgba(20,70,78,.12)!important;}
+.cp-knowledge-page .cp-topic-list h3{margin:0 0 6px!important;color:#17363e!important;font-size:1.06rem!important;line-height:1.3!important;}
+.cp-knowledge-page .cp-topic-list p{margin:0!important;color:#465d64!important;font-size:.94rem!important;line-height:1.54!important;}
+.cp-knowledge-page .cp-topic-list strong{color:#203b43!important;}
+.cp-knowledge-page .cp-source-link{display:inline-block!important;margin-top:14px!important;color:#137d83!important;font-size:.9rem!important;font-weight:700!important;text-decoration:none!important;}
+.cp-knowledge-page .cp-field-standard{margin:14px 0 0!important;padding:10px 0 0!important;color:#304d54!important;font-size:.9rem!important;line-height:1.45!important;}
+.cp-knowledge-page .cp-source-discipline{padding:30px 0!important;background:#173740!important;color:#fff!important;}
+.cp-knowledge-page .cp-source-discipline .wrap{max-width:980px!important;}
+.cp-knowledge-page .cp-source-discipline .kicker{margin:0 0 8px!important;color:#73d6db!important;}
+.cp-knowledge-page .cp-source-discipline h2{margin:0!important;max-width:780px!important;color:#fff!important;font-size:clamp(1.55rem,2.2vw,2.05rem)!important;line-height:1.12!important;}
+.cp-knowledge-page .cp-source-discipline p{max-width:850px!important;margin:11px 0 0!important;color:#d8e4e6!important;font-size:.95rem!important;line-height:1.55!important;}
+.cp-knowledge-page .cp-source-discipline .actions{margin-top:16px!important;}
+@media(max-width:1000px){.cp-knowledge-page .cp-journal-index{grid-template-columns:repeat(2,minmax(0,1fr))!important;}.cp-knowledge-page .cp-journal-index a{margin-right:24px!important;}.cp-knowledge-page .cp-chapter-grid{grid-template-columns:1fr!important;gap:22px!important;}.cp-knowledge-page .cp-chapter-head p:last-child{max-width:800px!important;}}
+@media(max-width:640px){.cp-knowledge-page .cp-library-hero{padding:28px 0 24px!important;}.cp-knowledge-page .cp-journal-index{grid-template-columns:1fr!important;}.cp-knowledge-page .cp-journal-index a{margin-right:0!important;padding:11px 0!important;border-bottom:1px solid rgba(20,70,78,.1)!important;}.cp-knowledge-page .cp-chapter{padding:28px 0!important;}.cp-knowledge-page .cp-topic-list article{padding:13px 0!important;}}
