@@ -6,7 +6,7 @@
 
 body > main > .hero{
   padding-top:42px!important;
-  padding-bottom:56px!important;
+  padding-bottom:30px!important;
 }
 
 body > main > .hero .hero-inner{
@@ -38,7 +38,7 @@ body > main > .hero .actions{
 
 /* V2.09 — three editorial gateways replace the former Markets + Expertise catalog. */
 .home-pathways{
-  padding:58px 0 62px!important;
+  padding:36px 0 62px!important;
 }
 
 .home-pathways .pathway-heading{
