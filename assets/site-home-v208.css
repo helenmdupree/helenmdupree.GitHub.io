@@ -392,3 +392,40 @@ body > main > .hero .actions{
     gap:4px;
   }
 }
+
+/* V2.12 - Operational Trust centered thesis statement */
+.home-trust{
+  padding:42px 0 44px!important;
+}
+.home-trust .home-trust-inner{
+  display:block!important;
+  max-width:900px!important;
+  margin:0 auto!important;
+  text-align:center!important;
+}
+.home-trust .eyebrow{
+  margin:0 0 10px!important;
+  text-align:center!important;
+}
+.home-trust h2{
+  max-width:760px!important;
+  margin:0 auto!important;
+  text-align:center!important;
+}
+.home-trust .home-trust-copy{
+  max-width:820px!important;
+  margin:18px auto 0!important;
+  text-align:center!important;
+}
+.home-trust .home-trust-copy p{
+  margin:0!important;
+  line-height:1.55!important;
+}
+
+/* V2.13 - Prevent orphaned final word in Operational Trust statement */
+.home-trust .home-trust-inner{
+  max-width:1120px!important;
+}
+.home-trust .home-trust-copy{
+  max-width:1100px!important;
+}
