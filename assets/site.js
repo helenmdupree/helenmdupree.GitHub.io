@@ -32,7 +32,6 @@
     ['/knowledge-library/corrosion-cathodic-protection/','Corrosion & Cathodic Protection',false],
     ['/knowledge-library/asset-performance/','Asset Performance',false],
     ['/knowledge-library/digital-transformation-ai/','Digital & AI Knowledge',false],
-    ['/industry-intelligence/','Industry Intelligence',false],
     ['/analysis-perspectives/','Analysis & Perspectives',false]
   ];
 
