@@ -1,5 +1,5 @@
 /* Corrosion & Cathodic Protection expertise page refinement.
-   V3 reduces duplication, introduces technical visuals, and keeps the page compact. */
+   V4 constrains technical figures and consolidates the page close. */
 
 body.cp-expertise-page main .section{
   padding:34px 0!important;
@@ -80,7 +80,8 @@ body.cp-expertise-page main .cp-visual-section{
 }
 
 body.cp-expertise-page main .cp-technical-figure{
-  margin:16px 0 0!important;
+  width:min(100%,1120px)!important;
+  margin:18px auto 0!important;
 }
 
 body.cp-expertise-page main .cp-technical-figure img{
@@ -95,37 +96,35 @@ body.cp-expertise-page main .cp-technical-figure-light img{
   border:1px solid rgba(19,70,78,.12)!important;
 }
 
-body.cp-expertise-page main .cp-library-bridge-simple .wrap{
-  max-width:920px!important;
+body.cp-expertise-page main .cp-closing .wrap{
+  max-width:980px!important;
 }
 
-body.cp-expertise-page main .cp-library-bridge-simple p{
-  max-width:820px!important;
-  margin:12px 0 6px!important;
-}
-
-body.cp-expertise-page main .text-link{
-  display:inline-block!important;
-  margin-top:6px!important;
-  font-size:.95rem!important;
-}
-
-body.cp-expertise-page main .growth-cta h2{
+body.cp-expertise-page main .cp-closing h2{
   max-width:840px!important;
 }
 
-body.cp-expertise-page main .growth-cta p{
-  max-width:860px!important;
+body.cp-expertise-page main .cp-closing p{
+  max-width:880px!important;
+  margin:12px 0 8px!important;
 }
 
-body.cp-expertise-page main .growth-cta .actions{
-  margin-top:18px!important;
+body.cp-expertise-page main .cp-closing .text-link{
+  color:#73d6db!important;
+  display:inline-block!important;
+  margin-top:8px!important;
+  font-size:.96rem!important;
+  font-weight:700!important;
 }
 
 @media(max-width:900px){
   body.cp-expertise-page main .cp-intro{
     grid-template-columns:1fr!important;
     gap:18px!important;
+  }
+
+  body.cp-expertise-page main .cp-technical-figure{
+    width:min(100%,860px)!important;
   }
 }
 
@@ -149,6 +148,7 @@ body.cp-expertise-page main .growth-cta .actions{
   }
 
   body.cp-expertise-page main .cp-technical-figure{
+    width:100%!important;
     margin-top:14px!important;
   }
 }
