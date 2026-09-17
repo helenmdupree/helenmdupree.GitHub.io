@@ -1,0 +1,88 @@
+/* SOUBEL content-family hero standard — Resources, Analysis, Knowledge hubs */
+.resources-system .site-header::before,
+.analysis-page .site-header::before,
+.cp-knowledge-page .site-header::before,
+.aim-knowledge-hub .site-header::before{
+  display:block!important;
+}
+
+.resources-system .page-hero,
+.analysis-page .analysis-hero,
+.cp-knowledge-page .cp-library-hero,
+.aim-knowledge-hub .page-hero{
+  padding:42px 0 36px!important;
+  background:#fff!important;
+  color:#071016!important;
+}
+
+.resources-system .page-hero>.wrap,
+.analysis-page .analysis-hero-inner,
+.cp-knowledge-page .cp-library-hero>.wrap,
+.aim-knowledge-hub .page-hero>.wrap{
+  max-width:1120px!important;
+}
+
+.resources-system .page-hero .kicker,
+.analysis-page .analysis-hero .eyebrow,
+.cp-knowledge-page .cp-library-hero .eyebrow,
+.aim-knowledge-hub .page-hero .kicker{
+  margin:0 0 12px!important;
+  color:#11858b!important;
+  font-size:.88rem!important;
+  font-weight:800!important;
+  letter-spacing:.15em!important;
+  text-transform:uppercase!important;
+}
+
+.resources-system .page-hero h1,
+.analysis-page .analysis-hero h1,
+.cp-knowledge-page .cp-library-hero h1,
+.aim-knowledge-hub .page-hero h1{
+  max-width:980px!important;
+  margin:0!important;
+  color:#071016!important;
+  font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;
+  font-size:clamp(2.2rem,3.15vw,3.05rem)!important;
+  font-weight:700!important;
+  line-height:1.05!important;
+  letter-spacing:-.032em!important;
+}
+
+.resources-system .page-hero p:not(.kicker):not(.crumb),
+.analysis-page .analysis-hero .hero-lead,
+.cp-knowledge-page .cp-library-hero .hero-lead,
+.aim-knowledge-hub .page-hero p:not(.kicker):not(.crumb){
+  max-width:960px!important;
+  margin:18px 0 0!important;
+  color:#526970!important;
+  font-size:1.03rem!important;
+  line-height:1.58!important;
+}
+
+.resources-system .page-hero .crumb,
+.aim-knowledge-hub .page-hero .crumb{
+  margin:0 0 18px!important;
+  color:#137d83!important;
+  font-size:.9rem!important;
+}
+
+@media(max-width:700px){
+  .resources-system .page-hero,
+  .analysis-page .analysis-hero,
+  .cp-knowledge-page .cp-library-hero,
+  .aim-knowledge-hub .page-hero{
+    padding:32px 0 28px!important;
+  }
+  .resources-system .page-hero h1,
+  .analysis-page .analysis-hero h1,
+  .cp-knowledge-page .cp-library-hero h1,
+  .aim-knowledge-hub .page-hero h1{
+    font-size:clamp(2rem,8.5vw,2.55rem)!important;
+  }
+  .resources-system .page-hero .kicker,
+  .analysis-page .analysis-hero .eyebrow,
+  .cp-knowledge-page .cp-library-hero .eyebrow,
+  .aim-knowledge-hub .page-hero .kicker{
+    font-size:.82rem!important;
+  }
+}
