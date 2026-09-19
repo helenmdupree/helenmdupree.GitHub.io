@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ICCP Interactive Experience v1 | SOUBEL</title>
+<style>
+:root{--bg:#061a20;--panel:#0b252c;--line:#28505a;--ink:#eaf4f3;--muted:#9db6ba;--cyan:#33c2cf;--cyan2:#72e1df;--red:#eb5257;--blue:#58a9ff;--gold:#e7b75c}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif}button{font:inherit}
+.page{max-width:1540px;margin:auto;padding:20px 24px 34px}.topbar{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #173840;padding:4px 2px 14px}
+.brand{display:flex;align-items:center;gap:16px}.brand img{width:148px;height:auto}.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#6fcbd1;font-weight:800}.tag{font-size:10px;letter-spacing:.14em;text-transform:uppercase;border:1px solid #2c5058;border-radius:999px;padding:8px 11px;color:#8ea9ae}
+.hero{padding:22px 2px 14px}.hero h1{margin:5px 0 7px;font-size:clamp(34px,4vw,58px);line-height:.98;letter-spacing:-.045em}.hero p{max-width:910px;margin:0;color:#a7bec1;font-size:15px;line-height:1.55}
+.scene{position:relative;aspect-ratio:16/9;overflow:hidden;border:1px solid #31535b;border-radius:20px;background:#0c242a;box-shadow:0 28px 80px rgba(0,0,0,.3)}
+.scene>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,15,18,.08),transparent 23%,transparent 76%,rgba(3,15,18,.18));pointer-events:none}
+.flow{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.flow .layer{opacity:0;transition:opacity .32s}.flow .layer.on{opacity:1}.flow path{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.dash{stroke-dasharray:16 16;animation:move 1.15s linear infinite}@keyframes move{to{stroke-dashoffset:-64}}.glow{filter:drop-shadow(0 0 7px currentColor)}
+.callout{position:absolute;z-index:4;border:1px solid rgba(186,232,235,.42);background:rgba(5,25,30,.82);backdrop-filter:blur(8px);color:#f4fbfb;border-radius:11px;padding:8px 10px;min-width:128px;box-shadow:0 9px 28px rgba(0,0,0,.26);opacity:0;transform:translateY(6px);pointer-events:none;transition:.25s}
+.callout.on{opacity:1;transform:none}.callout b{display:block;font-size:12px}.callout span{font-size:10px;color:#a8c5c8}.c1{left:20%;top:15%}.c2{left:37%;top:38%}.c3{right:7%;top:46%}.c4{left:28%;bottom:12%}.c5{left:43%;top:27%}
+.hotspot{position:absolute;z-index:5;width:34px;height:34px;border-radius:50%;border:2px solid rgba(255,255,255,.86);background:#087f8b;color:#fff;font-weight:800;cursor:pointer;box-shadow:0 5px 22px rgba(0,0,0,.32)}.hotspot:hover,.hotspot:focus-visible{transform:scale(1.08);outline:3px solid rgba(114,225,223,.35)}
+.h-rect{left:25.6%;top:24%}.h-test{left:43%;top:33%}.h-anode{left:76.8%;top:56%}.h-pipe{left:28%;top:76%}
+.controls{margin-top:14px;border:1px solid #21454e;border-radius:16px;background:#082129;padding:14px}.control-top{display:flex;align-items:center;gap:10px;margin-bottom:12px}.play{border:0;border-radius:10px;background:#1596a1;color:#fff;font-weight:800;padding:11px 18px;cursor:pointer}.reset{width:42px;height:42px;border:1px solid #315861;border-radius:10px;background:#0c2c34;color:#d9eeee;cursor:pointer}.status{margin-left:auto;color:#95b3b8;font-size:12px}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.step{border:1px solid #28515a;border-radius:11px;background:#0a2a32;color:#e7f4f4;text-align:left;padding:10px 10px;cursor:pointer;min-height:69px}.step small{display:block;color:#77a4aa;font-size:10px;margin-bottom:3px}.step b{font-size:12px;line-height:1.15}.step.active{border-color:#4ed8df;background:#103841;box-shadow:inset 0 0 0 1px rgba(78,216,223,.15)}
+.narrative{margin-top:10px;padding:11px 13px;border-radius:10px;background:#061b21;color:#a9c2c5;font-size:12px;line-height:1.45}.foot{display:flex;justify-content:space-between;gap:16px;color:#698a8f;font-size:10px;margin-top:9px;padding:0 3px}
+@media(max-width:900px){.page{padding:14px}.steps{grid-template-columns:1fr 1fr}.status{display:none}.scene{border-radius:14px}.callout{display:none}}@media(max-width:560px){.brand img{width:120px}.tag{display:none}.steps{grid-template-columns:1fr}.hero h1{font-size:34px}}
+</style>
+</head><body>
+<main class="page">
+<header class="topbar"><div class="brand"><img src="/assets/soubel-logo-horizontal.png" alt="SOUBEL"><span class="eyebrow">Technical Explainer / Fresh Build</span></div><span class="tag">Interactive concept</span></header>
+<section class="hero"><span class="eyebrow">Corrosion protection</span><h1>Impressed Current Cathodic Protection</h1><p>A field-based explanation of how impressed current cathodic protection delivers controlled DC current from a rectifier and groundbed to a buried steel pipeline. Select a stage or play the sequence.</p></section>
+<section class="scene" id="scene" aria-label="Field view of a conceptual ICCP installation">
+<img src="/assets/iccp-field-base-v1.png" alt="Conceptual field scene with utility pole, pole-mounted rectifier, technician, test station, buried pipeline and anode bed">
+<div class="shade"></div>
+<svg class="flow" viewBox="0 0 2048 1152" aria-hidden="true">
+<defs><marker id="aRed" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0 0L11 5.5L0 11Z" fill="#eb5257"/></marker><marker id="aCyan" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0 0L11 5.5L0 11Z" fill="#33c2cf"/></marker><marker id="aBlue" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0 0L11 5.5L0 11Z" fill="#58a9ff"/></marker></defs>
+<g class="layer" data-layer="1"><circle cx="510" cy="270" r="115" fill="none" stroke="#e7b75c" stroke-width="8" opacity=".65" class="glow"/><path d="M385 115V250" stroke="#e7b75c" stroke-width="6" class="dash glow"/></g>
+<g class="layer" data-layer="2"><path d="M535 402C730 407 955 409 1160 429C1330 446 1430 472 1500 510" stroke="#eb5257" stroke-width="8" class="dash glow" marker-end="url(#aRed)"/></g>
+<g class="layer" data-layer="3"><path d="M1498 694C1425 753 1356 790 1235 824" stroke="#33c2cf" stroke-width="7" class="dash glow" marker-end="url(#aCyan)"/><path d="M1635 688C1555 765 1465 811 1320 842" stroke="#33c2cf" stroke-width="7" class="dash glow" marker-end="url(#aCyan)"/><path d="M1775 691C1680 784 1575 832 1420 855" stroke="#33c2cf" stroke-width="7" class="dash glow" marker-end="url(#aCyan)"/></g>
+<g class="layer" data-layer="4"><path d="M1180 846C1000 885 770 900 500 900" stroke="#33c2cf" stroke-width="9" class="dash glow" marker-end="url(#aCyan)"/></g>
+<g class="layer" data-layer="5"><path d="M575 855C552 792 536 703 533 592C530 515 529 455 530 402" stroke="#58a9ff" stroke-width="8" class="dash glow" marker-end="url(#aBlue)"/><circle cx="872" cy="352" r="70" fill="none" stroke="#72e1df" stroke-width="7" opacity=".72" class="glow"/></g>
+</svg>
+<div class="callout c1" data-callout="1"><b>Power &amp; conversion</b><span>Utility AC feeds the rectifier.</span></div>
+<div class="callout c2" data-callout="2"><b>Positive circuit</b><span>Controlled DC travels to the anode bed.</span></div>
+<div class="callout c3" data-callout="3"><b>Electrolyte path</b><span>Current moves through the surrounding soil.</span></div>
+<div class="callout c4" data-callout="4"><b>Protected structure</b><span>The steel pipeline receives protective current.</span></div>
+<div class="callout c5" data-callout="5"><b>Return &amp; monitoring</b><span>The circuit returns to the rectifier; test points support verification.</span></div>
+<button class="hotspot h-rect" data-tip="Pole-mounted rectifier: converts incoming AC power to controlled DC output." aria-label="Rectifier details">1</button>
+<button class="hotspot h-test" data-tip="Test station: field access point for electrical measurement and system verification." aria-label="Test station details">2</button>
+<button class="hotspot h-anode" data-tip="Groundbed: external anodes discharge current into the surrounding electrolyte." aria-label="Anode bed details">3</button>
+<button class="hotspot h-pipe" data-tip="Protected steel pipeline: receives protective current and is driven cathodic relative to the environment." aria-label="Pipeline details">4</button>
+</section><section class="controls" aria-label="ICCP sequence controls">
+<div class="control-top"><button class="play" id="play" type="button">Play sequence</button><button class="reset" id="reset" type="button" aria-label="Reset">↺</button><span class="status" id="status">Select a stage or play the full sequence.</span></div>
+<div class="steps">
+<button class="step" type="button" data-step="1"><small>01</small><b>Power &amp; conversion</b></button>
+<button class="step" type="button" data-step="2"><small>02</small><b>Positive circuit</b></button>
+<button class="step" type="button" data-step="3"><small>03</small><b>Electrolyte path</b></button>
+<button class="step" type="button" data-step="4"><small>04</small><b>Protected structure</b></button>
+<button class="step" type="button" data-step="5"><small>05</small><b>Return &amp; monitoring</b></button>
+</div>
+<div class="narrative" id="narrative">Start with the field installation, then follow the electrical path through the system.</div>
+<div class="foot"><span>Conceptual system · not a design drawing · representative field arrangement</span><span>SOUBEL interactive prototype v1</span></div>
+</section>
+</main>
+<div id="tip" style="position:fixed;z-index:30;display:none;max-width:280px;padding:10px 12px;border-radius:10px;background:#e9f6f5;color:#092329;font:12px/1.45 Inter,Arial,sans-serif;box-shadow:0 14px 40px rgba(0,0,0,.35);pointer-events:none"></div>
+<script>
+(()=>{const scene=document.getElementById('scene'),steps=[...document.querySelectorAll('.step')],layers=[...document.querySelectorAll('.layer')],calls=[...document.querySelectorAll('.callout')],status=document.getElementById('status'),narr=document.getElementById('narrative'),play=document.getElementById('play'),reset=document.getElementById('reset'),tip=document.getElementById('tip');
+const copy={1:['Power & conversion','Utility AC feeds the pole-mounted rectifier, where it is converted to controlled DC output.'],2:['Positive circuit','The positive circuit carries controlled DC output from the rectifier toward the external anode groundbed.'],3:['Electrolyte path','Current leaves the groundbed anodes and moves through the surrounding electrolyte toward the buried structure.'],4:['Protected structure','The buried steel pipeline receives protective current and is driven cathodic relative to its environment.'],5:['Return & monitoring','Current returns through the negative connection to complete the circuit. Test points support measurement and verification.']};
+let current=0,timer=null,playing=false;
+function stop(){if(timer){clearInterval(timer);timer=null}playing=false;play.textContent='Play sequence'}
+function show(n){current=n;layers.forEach(x=>x.classList.toggle('on',Number(x.dataset.layer)<=n));calls.forEach(x=>x.classList.toggle('on',Number(x.dataset.callout)===n));steps.forEach(x=>x.classList.toggle('active',Number(x.dataset.step)===n));if(n){status.textContent=copy[n][0];narr.textContent=copy[n][1]}else{status.textContent='Select a stage or play the full sequence.';narr.textContent='Start with the field installation, then follow the electrical path through the system.'}}
+steps.forEach(b=>b.addEventListener('click',()=>{stop();show(Number(b.dataset.step))}));
+play.addEventListener('click',()=>{if(playing){stop();return}playing=true;play.textContent='Pause';show(current>=5?1:Math.max(1,current));timer=setInterval(()=>{if(current>=5){stop();return}show(current+1)},2300)});
+reset.addEventListener('click',()=>{stop();show(0)});
+document.querySelectorAll('.hotspot').forEach(b=>{const showTip=e=>{tip.textContent=b.dataset.tip;tip.style.display='block';const r=b.getBoundingClientRect();tip.style.left=Math.min(window.innerWidth-300,r.right+10)+'px';tip.style.top=Math.max(10,r.top-8)+'px'};b.addEventListener('mouseenter',showTip);b.addEventListener('focus',showTip);b.addEventListener('click',showTip);b.addEventListener('mouseleave',()=>tip.style.display='none');b.addEventListener('blur',()=>tip.style.display='none')});
+show(0);
+})();
+</script>
+</body>
+</html>
