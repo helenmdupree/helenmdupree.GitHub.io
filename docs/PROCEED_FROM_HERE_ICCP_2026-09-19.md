@@ -197,3 +197,59 @@ Repository truth beats chat memory.
 Read this file first in the next chat.
 Then inspect git status/log before making changes.
 No reset, force push, destructive clean, merge, deploy, or publish without explicit approval.
+
+## LATE-NIGHT STOP POINT — 2026-09-19
+
+The ICCP browser architecture is now substantially proven in:
+- prototypes/iccp-interactive-experience-v1.1.html — approved overall architecture/direction
+- prototypes/iccp-interactive-experience-v1.2.html — WIP technical-overlay cleanup; NOT final
+
+User reaction to the v1.1 browser experience: "holy crap you did it. wow."
+Key approved page architecture:
+- realistic field scene dominates left side
+- compact ICCP sequence/control panel on the RIGHT
+- controls visible above the fold
+- Play Sequence + five selectable stages
+- live browser overlays, not baked explanatory graphics
+- no floating explanatory dialog covering the field scene; explanation belongs in right panel
+
+CRITICAL: FINAL BASE IMAGE IS NOT YET LOCKED.
+Do not pretend otherwise. Several later image-render candidates were rejected because each correction introduced new technical errors.
+
+LATEST REQUIRED PHYSICAL SCENE / TECHNICAL RULES:
+1. Rural pipeline ROW / field context, with technician in hardhat/PPE and pickup truck retained.
+2. Green-coated buried steel pipeline.
+3. Utility/power pole may appear as AC supply context, BUT the cathodic-protection rectifier MUST NOT be mounted on the electric utility company's pole.
+4. Rectifier must be mounted on a separate operator-owned pole/post/support nearby, at technician-access/service height, with believable cabinet scale (roughly the previously accepted ~22 x 18 x 30 in neighborhood; not "small car" scale).
+5. Rectifier negative/structure cable gets its OWN separate connection to the pipeline.
+6. Test-station structure/pipe lead gets its OWN separate connection to the pipeline. Do NOT merge it with the rectifier negative lead into a common fitting.
+7. Pipe cable attachment must look like a realistically small insulated conductor lying flat/tangentially along the pipe into a compact exothermic-weld / pin-braze attachment area protected by a weld cap / mastic / coating repair. No giant plumbing fitting or copper-tube-looking object.
+8. Test station must visibly have separate buried measurement conductors:
+   - structure/pipe lead -> its own pipeline attachment
+   - reference-electrode lead -> buried permanent reference electrode beside the pipeline
+   The reference electrode is NOT bonded to the pipe.
+9. Anode bed must show every anode lead connected; no missing far-right lead.
+10. Positive rectifier circuit -> anode bed; protective current shown through soil -> pipeline; pipeline -> rectifier negative completes the DC power circuit.
+11. Test station is measurement/verification, not the main DC return path.
+12. NO baked-in text, labels, numbered badges, arrows, legends, dialog boxes, or SOUBEL branding in the base image. Those are live HTML/SVG overlays.
+
+RESEARCH CONFIRMATION USED DURING THIS SESSION:
+- Farwest standard drawings list 2-wire CP test stations with copper-sulfate reference electrodes.
+- Published CP design guidance shows stationary reference electrodes near the pipeline, with separate test leads terminating in the test station.
+- The web explainer should therefore visually distinguish power-circuit wiring from measurement/reference wiring.
+
+STOP RULE FOR NEXT SESSION:
+Do NOT redesign the website again.
+Do NOT resume overlay coordinate polishing before the final clean base image is locked.
+First finish/correct the base image while preserving the accepted field composition. Then replace the image asset in the existing v1.1/v1.2 architecture and retune overlay coordinates.
+
+Tonight's rejected render problems:
+- oversized rectifier
+- rectifier incorrectly mounted on utility company's power pole
+- rectifier negative and test-station structure lead visually merged into a common pipeline connection
+- cable/connection rendered like oversized copper tubing/plumbing
+- some renders omitted the reference electrode or its test-station lead
+- some renders omitted an anode lead
+- some renders baked labels/callouts into the image
+
+No public integration, PR, merge, deploy, or publish has been authorized for this ICCP build.
