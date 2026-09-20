@@ -3,7 +3,7 @@ import fs from 'node:fs';
 const pagePath='C:/GitHub/soubel-iccp-v5-cleanstart/expertise/corrosion-cathodic-protection/index.html';
 let html=fs.readFileSync(pagePath,'utf8');
 
-const cssLink='<link href="/assets/site-cp-cinematic-v1.css?v=2" rel="stylesheet"/>';
+const cssLink='<link href="/assets/site-cp-cinematic-v1.css?v=6" rel="stylesheet"/>';
 if(!html.includes(cssLink)){
   html=html.replace('</head>',cssLink+'</head>');
 }
@@ -29,17 +29,17 @@ const moduleMarkup=`
     <div class="cp-film-status" data-film-status>Stage 1 of 5</div>
   </div>
   <div class="cp-film-steps">
-    <button class="cp-film-step" type="button" data-film-stage data-start="0" data-end="7.92" data-title="Power &amp; conversion" data-body="Utility AC supply feeds the separately mounted rectifier, where it is converted to controlled DC output."><small>01</small><b>Power &amp; conversion</b></button>
-    <button class="cp-film-step" type="button" data-film-stage data-start="7.92" data-end="13.75" data-title="Positive circuit" data-body="Rectifier positive output travels through the positive cable and header to the external anode groundbed and individual anode leads."><small>02</small><b>Positive circuit</b></button>
-    <button class="cp-film-step" type="button" data-film-stage data-start="13.75" data-end="17.5" data-title="Electrolyte path" data-body="Current leaves the anodes and travels through the surrounding soil or electrolyte toward the coated steel pipeline."><small>03</small><b>Electrolyte path</b></button>
-    <button class="cp-film-step" type="button" data-film-stage data-start="17.5" data-end="20.5" data-title="Protected structure" data-body="Protective current reaches the pipeline surface and shifts the structure cathodic relative to its environment."><small>04</small><b>Protected structure</b></button>
-    <button class="cp-film-step" type="button" data-film-stage data-start="20.5" data-end="26" data-title="Return &amp; monitoring" data-body="Conventional current returns from the pipeline through the negative connection to the rectifier. The test station and permanent reference electrode support measurement and verification, not the main return circuit."><small>05</small><b>Return &amp; monitoring</b></button>
+    <button class="cp-film-step" type="button" data-film-stage data-start="0" data-end="7.92" data-title="Power &amp; conversion" data-body="Utility AC is converted by the separately mounted rectifier into controlled DC output."><small>01</small><b>Power &amp; conversion</b></button>
+    <button class="cp-film-step" type="button" data-film-stage data-start="7.92" data-end="13.75" data-title="Positive circuit" data-body="Positive DC travels from the rectifier to the groundbed and its five anode leads."><small>02</small><b>Positive circuit</b></button>
+    <button class="cp-film-step" type="button" data-film-stage data-start="13.75" data-end="17.5" data-title="Electrolyte path" data-body="Current leaves the anodes and moves through the surrounding soil toward the coated pipeline."><small>03</small><b>Electrolyte path</b></button>
+    <button class="cp-film-step" type="button" data-film-stage data-start="17.5" data-end="20.5" data-title="Protected structure" data-body="Protective current reaches the pipeline, shifting the steel cathodic relative to its environment."><small>04</small><b>Protected structure</b></button>
+    <button class="cp-film-step" type="button" data-film-stage data-start="20.5" data-end="26" data-title="Return &amp; monitoring" data-body="Current returns from the pipeline through the negative lead to the rectifier. Test-station and reference-electrode leads are for measurement only."><small>05</small><b>Return &amp; monitoring</b></button>
   </div>
   <div class="cp-film-narrative">
     <strong data-film-title>Power &amp; conversion</strong>
-    <span data-film-body>Utility AC supply feeds the separately mounted rectifier, where it is converted to controlled DC output.</span>
+    <span data-film-body>Utility AC is converted by the separately mounted rectifier into controlled DC output.</span>
   </div>
-  <p class="cp-film-note">Conceptual system · representative field arrangement · conventional current shown · not a design drawing</p>
+  <div class="cp-film-note">Conceptual system · representative field arrangement · conventional current shown · not a design drawing</div>
   </aside>
 </div>`;
 if(!html.includes(oldFigure)){
