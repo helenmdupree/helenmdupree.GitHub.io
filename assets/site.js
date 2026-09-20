@@ -104,6 +104,7 @@
       nav.appendChild(makeDropdown('Expertise',expertiseLinks,'expertise-dropdown'));
       nav.appendChild(makeAnchor('/industry-intelligence/oil-gas-ai-lab/','Oil & Gas AI Lab'));
       nav.appendChild(makeAnchor('/ask-soubel/','Ask SOUBEL'));
+      nav.appendChild(makeAnchor('/whoqual-iq/','WhoQual-IQ'));
       nav.appendChild(makeDropdown('Knowledge',knowledgeLinks,'knowledge-dropdown'));
       nav.appendChild(makeDropdown('About',aboutLinks));
     });
@@ -149,6 +150,7 @@
     menu.appendChild(buildMobileGroup('Expertise',expertiseLinks));
     menu.appendChild(buildMobileLink('/industry-intelligence/oil-gas-ai-lab/','Oil & Gas AI Lab'));
     menu.appendChild(buildMobileLink('/ask-soubel/','Ask SOUBEL'));
+    menu.appendChild(buildMobileLink('/whoqual-iq/','WhoQual-IQ'));
     menu.appendChild(buildMobileGroup('Knowledge',knowledgeLinks));
     menu.appendChild(buildMobileGroup('About',aboutLinks));
     header.insertAdjacentElement('afterend',menu);
