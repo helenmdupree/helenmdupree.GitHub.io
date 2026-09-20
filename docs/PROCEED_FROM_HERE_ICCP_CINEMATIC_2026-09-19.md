@@ -300,3 +300,28 @@ Current live snapshot when this handoff was finalized:
 - Do not publish to the live site without Helen's explicit approval.
 
 This handoff is designed so the next chat can continue without asking Helen to reconstruct today's decisions.
+## 14. POST-HANDOFF ADDENDUM — BRANDING PIPELINE
+
+New protected commit after the original handoff:
+- 42ee353 — Add reversible SOUBEL branding overlays for ICCP film.
+
+New files:
+- blender/branding_overlays/overlay_soubel_url.png
+- blender/branding_overlays/overlay_soubel_logo_url.png
+- blender/encode_v10_branded_variants.py
+
+Both overlay treatments were successfully test-encoded against the first 24 v10 production frames.
+They are post-production overlays only; they do not modify the Blender 3D master or production PNG frames.
+
+Automatic completion processes currently established:
+- Production Blender render writes frame_0001.png through frame_0624.png.
+- Encode watcher waits for the production Blender process to finish, verifies exactly 624 frames, then runs encode_v10_production.py.
+- Branding watcher waits for the unbranded encode watcher to finish, verifies 624 frames, then runs encode_v10_branded_variants.py.
+
+Expected full outputs after successful completion:
+- blender/iccp_cinematic_v10_production_720p24.mp4
+- blender/iccp_cinematic_v10_SOUBEL_url_720p24.mp4
+- blender/iccp_cinematic_v10_SOUBEL_logo_url_720p24.mp4
+
+Recovery rule:
+If a chat crash occurs, do NOT start new render/encoder processes blindly. First inspect existing Blender, watcher, and encoder processes and count completed PNG frames.
