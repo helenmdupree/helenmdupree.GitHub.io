@@ -325,3 +325,37 @@ Expected full outputs after successful completion:
 
 Recovery rule:
 If a chat crash occurs, do NOT start new render/encoder processes blindly. First inspect existing Blender, watcher, and encoder processes and count completed PNG frames.
+## 15. WEBSITE INTEGRATION CHECKPOINT
+
+Protected website integration commit:
+- 4e9f691 — Integrate protected ICCP cinematic into expertise page.
+
+Local preview worktree:
+C:\GitHub\soubel-iccp-v5-cleanstart
+
+Local preview server for THIS worktree:
+http://127.0.0.1:8016/
+
+Integrated page:
+http://127.0.0.1:8016/expertise/corrosion-cathodic-protection/
+
+The existing static ICCP figure on the Corrosion & Cathodic Protection expertise page was replaced locally with the finished protected cinematic and the approved five-stage right-side browser control architecture.
+
+New web-delivery assets:
+- assets/iccp-cinematic-protected-v10.mp4
+- assets/iccp-cinematic-poster-v10.jpg
+- assets/iccp-cinematic-v1.js
+- assets/site-cp-cinematic-v1.css
+
+Build/support scripts:
+- tools/integrate_iccp_cinematic_v10.js
+- tools/make_mp4_faststart.js
+
+The website MP4 is a no-reencode fast-start copy of the approved protected v10 film.
+Verified MP4 top-level order:
+ftyp, free, moov, mdat
+
+Verified first media chunk offset after relocation:
+3605 bytes.
+
+The media payload is byte-for-byte unchanged from the approved protected Blender encode; only MP4 metadata placement/chunk offsets were rewritten for progressive browser playback.
