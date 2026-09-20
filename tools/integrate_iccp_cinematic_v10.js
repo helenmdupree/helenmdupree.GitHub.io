@@ -3,7 +3,7 @@ import fs from 'node:fs';
 const pagePath='C:/GitHub/soubel-iccp-v5-cleanstart/expertise/corrosion-cathodic-protection/index.html';
 let html=fs.readFileSync(pagePath,'utf8');
 
-const cssLink='<link href="/assets/site-cp-cinematic-v1.css?v=1" rel="stylesheet"/>';
+const cssLink='<link href="/assets/site-cp-cinematic-v1.css?v=2" rel="stylesheet"/>';
 if(!html.includes(cssLink)){
   html=html.replace('</head>',cssLink+'</head>');
 }
