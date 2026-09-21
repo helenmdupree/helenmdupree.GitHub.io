@@ -398,3 +398,34 @@ body.wq-screen-page.wq-stack-page:after{
   .wq-build{position:static;transform:none;width:190px;height:auto;margin-left:auto;text-align:left;border-left:2px solid rgba(53,212,223,.78);border-radius:10px;background:rgba(7,42,50,.90)}
   .wq-card-deck{right:34px}
 }
+
+/* WhoQual-IQ public-preview return path — matched to Ask SOUBEL */
+.soubel-back-home{
+  margin-left:auto;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:36px;
+  padding:0 14px;
+  border:1px solid rgba(102,199,203,.28);
+  border-radius:999px;
+  background:rgba(4,13,17,.58);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  color:rgba(224,241,243,.86);
+  text-decoration:none;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  white-space:nowrap;
+  transition:border-color .18s ease,color .18s ease,background .18s ease;
+}
+.soubel-back-home:hover{border-color:rgba(102,199,203,.56);color:#fff;background:rgba(7,21,27,.78)}
+.soubel-back-home:focus-visible{outline:2px solid rgba(102,199,203,.9);outline-offset:3px}
+@media(max-height:800px) and (min-width:901px){
+  .soubel-back-home{min-height:32px;padding:0 12px;font-size:9px;letter-spacing:.12em}
+}
+@media(max-width:640px){
+  .soubel-back-home{min-height:32px;padding:0 11px;font-size:9px;letter-spacing:.12em}
+}
