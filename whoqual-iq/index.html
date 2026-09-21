@@ -2,93 +2,150 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>WhoQual-IQ™ Public Preview | SOUBEL</title>
-<meta content="Public preview of WhoQual-IQ™, a governed qualification workflow being developed by SOUBEL to structure work context, verification, jurisdiction, and qualification decisions without forcing users to guess." name="description"/>
-<link href="https://soubel.com/whoqual-iq/" rel="canonical"/>
-<meta content="noindex,nofollow" name="robots"/>
+<meta name="description" content="A one-screen public preview of WhoQual-IQ™, SOUBEL's qualification intelligence platform for regulated field work."/>
+<link rel="canonical" href="https://soubel.com/whoqual-iq/"/>
+<meta name="robots" content="noindex,nofollow"/>
 <link href="/assets/site.css" rel="stylesheet"/>
-<link href="/assets/site-whoqual-preview-v1.css?v=1" rel="stylesheet"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link href="/assets/site-whoqual-preview-v2.css?v=3" rel="stylesheet"/>
 </head>
-<body class="whoqual-preview-page">
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a aria-label="SOUBEL home" class="brand-logo" href="/"><img alt="SOUBEL — Operational Trust" src="/assets/soubel-logo-horizontal.png"/></a>
-    <nav aria-label="Primary navigation" class="desktop-nav"><a href="/">Home</a><a href="/ask-soubel/">Ask SOUBEL</a></nav>
-    <button aria-expanded="false" aria-label="Open menu" class="menu-toggle"><span></span><span></span><span></span></button>
-  </div>
+<body class="wq-screen-page wq-stack-page">
+<header class="wq-topbar">
+  <a class="wq-brand" href="/" aria-label="SOUBEL home"><img src="/assets/soubel-logo-horizontal.png" alt="SOUBEL"/></a>
 </header>
-<main><section class="wq-hero">
-  <div class="wrap wq-hero-grid">
-    <div class="wq-hero-copy">
-      <p class="wq-eyebrow">COMING SOON · PUBLIC PREVIEW</p>
-      <h1>WhoQual-IQ™</h1>
-      <p class="wq-hero-lead">Qualification decisions need more than a checkbox.</p>
-      <p class="wq-hero-text">WhoQual-IQ™ is being developed to structure the information behind work qualification decisions — what work is being performed, what is known, what remains unknown, what requires verification, and which governing requirements may apply.</p>
-      <p class="wq-hero-text">The goal is simple: make uncertainty visible before it becomes a decision.</p>
-      <div class="wq-status-line"><span>Coming Soon</span><strong>Private pilot · protected access · active development</strong></div>
+<main class="wq-stage-shell">
+<section class="wq-title-row">
+  <div><div class="wq-product-name">WhoQual-<span>IQ</span><sup>™</sup></div><div class="wq-product-sub">Qualification Intelligence for Regulated Field Work.</div></div>
+  <div class="wq-build"><i></i><span class="wq-build-label">PUBLIC PREVIEW</span><strong>Private Development Underway</strong><small>Interactive release · not yet available</small></div>
+</section><section class="wq-stack-workspace wq-no-rail">
+  <section class="wq-card-stage" aria-label="Private preview screen deck">
+    <div class="wq-card-copy">
+      <span class="wq-card-kicker">INSIDE THE PRIVATE PREVIEW</span>
+      <strong>One project. Multiple qualification decisions.</strong>
+      <p>A project-scoped view of authority, evidence, and readiness.</p>
     </div>
-    <aside class="wq-hero-panel" aria-label="WhoQual-IQ preview principles">
-      <p class="wq-panel-kicker">BUILT AROUND CLEAR BOUNDARIES</p>
-      <div class="wq-principle"><span>01</span><p>User-stated information stays user-stated until verified.</p></div>
-      <div class="wq-principle"><span>02</span><p>Unknown is an acceptable answer. Guessing is not required.</p></div>
-      <div class="wq-principle"><span>03</span><p>Location alone does not establish jurisdiction.</p></div>
-      <div class="wq-principle"><span>04</span><p>Routing a project is not the same as qualifying a person.</p></div>
-    </aside>
-  </div>
-</section><section class="wq-section wq-flow-section">
-  <div class="wrap">
-    <p class="wq-kicker">HOW THE PRIVATE PILOT WORKS</p>
-    <h2>A governed path from project description to qualified next step.</h2>
-    <p class="wq-section-intro">The current private pilot moves through six deliberate stages. Each stage preserves the distinction between what the user says, what the system understands, what still needs verification, and what may be concluded.</p>
-    <div class="wq-flow" aria-label="Six-stage WhoQual-IQ workflow">
-      <div class="wq-flow-step"><span>01</span><strong>Tell Us About the Work</strong><p>Describe the work in plain language and add only what is known.</p></div>
-      <div class="wq-flow-step"><span>02</span><strong>Confirm Understanding</strong><p>Review the project record before consequential interpretation begins.</p></div>
-      <div class="wq-flow-step"><span>03</span><strong>Clarify What Matters</strong><p>Answer only questions that may materially affect the governed review.</p></div>
-      <div class="wq-flow-step"><span>04</span><strong>Review the Project</strong><p>See confirmed, unknown, and requires-verification items together.</p></div>
-      <div class="wq-flow-step"><span>05</span><strong>WhoQual Results</strong><p>Receive the governed result with verification boundaries still visible.</p></div>
-      <div class="wq-flow-step"><span>06</span><strong>Continue the Project</strong><p>Move forward without silently promoting unresolved information to fact.</p></div>
+
+    <div class="wq-card-deck" id="wqCardDeck">
+      <article class="wq-preview-card card-project is-front" data-card="0">
+        <div class="wq-card-edge"></div>
+        <div class="wq-card-screen">
+          <div class="mini-top"><b>WhoQual-<span>IQ</span><sup>™</sup></b><small>PROJECT INTELLIGENCE</small></div>
+          <div class="mini-project-head"><small>PROJECT CONTEXT</small><strong>Replacing 2,400 feet of pipe in Houston.</strong></div>
+          <div class="mini-project-grid">
+            <div class="mini-map-real">
+              <div id="wqMiniMap" class="mini-leaflet-map" aria-label="Public Houston energy context map"></div>
+              <div class="mini-map-caption">Public Houston energy context · not for field locating</div>
+            </div>
+            <div class="mini-facts"><span>Project facts <b>6 captured</b></span><span>Candidate authority <b>Texas Authority IQ</b></span><span>Jurisdiction <b>Requires verification</b></span></div>
+          </div>
+        </div>
+        <div class="wq-card-label"><span>01</span><strong>Project Intelligence</strong><small>Context · location · public infrastructure</small></div>
+      </article>      <article class="wq-preview-card card-authority" data-card="1">
+        <div class="wq-card-edge"></div>
+        <div class="wq-card-screen">
+          <div class="mini-top"><b>WhoQual-<span>IQ</span><sup>™</sup></b><small>AUTHORITY STACK</small></div>
+          <div class="mini-authority-head"><small>QUALIFICATION AUTHORITY STACK</small><strong>Six layers. One governed project view.</strong></div>
+          <div class="mini-stack">
+            <span><b>01</b> Federal Regulatory Authority <em>Conditional baseline</em></span>
+            <span><b>02</b> State Authority <em>Texas Authority IQ</em></span>
+            <span><b>03</b> Owner / Operator <em>Confirmation required</em></span>
+            <span><b>04</b> Employer / Site <em>Project specific</em></span>
+            <span><b>05</b> Technical Qualification <em>Task dependent</em></span>
+            <span><b>06</b> Evidence Required <em>Project scoped</em></span>
+          </div>
+        </div>
+        <div class="wq-card-label"><span>02</span><strong>Authority Stack</strong><small>Federal · state · operator · site</small></div>
+      </article>
+
+      <article class="wq-preview-card card-readiness" data-card="2">
+        <div class="wq-card-edge"></div>
+        <div class="wq-card-screen">
+          <div class="mini-top"><b>WhoQual-<span>IQ</span><sup>™</sup></b><small>VERIFICATION & READINESS</small></div>
+          <div class="mini-readiness">
+            <div><small>USER STATED</small><b>Project location</b><span>Houston, Texas</span></div>
+            <div><small>SUPPLIED</small><b>Operator requirement</b><span>Requires verification</span></div>
+            <div><small>UNRESOLVED</small><b>Jurisdiction</b><span>Not inferred from location</span></div>
+            <div><small>MISSING</small><b>Qualification evidence</b><span>Evidence plan generated</span></div>
+          </div>
+          <div class="mini-ready-result"><small>PROJECT READINESS</small><strong>Not yet established</strong><span>No named worker is declared qualified.</span></div>
+        </div>
+        <div class="wq-card-label"><span>03</span><strong>Verification & Readiness</strong><small>Known · unknown · evidence</small></div>
+      </article>      <article class="wq-preview-card card-document" data-card="3">
+        <div class="wq-card-edge"></div>
+        <div class="wq-card-screen">
+          <div class="mini-top"><b>WhoQual-<span>IQ</span><sup>™</sup></b><small>PROJECT DOCUMENT ANALYSIS</small></div>
+          <div class="mini-doc-grid">
+            <div class="mini-doc">
+              <span class="doc-line long"></span><span class="doc-line"></span><span class="doc-line med"></span>
+              <span class="doc-highlight">Covered-task requirement identified</span>
+              <span class="doc-line long"></span><span class="doc-line med"></span>
+              <span class="doc-highlight alt">Operator-specific evidence required</span>
+            </div>
+            <div class="mini-doc-result">
+              <small>AUTHORIZED PROJECT REQUIREMENT</small>
+              <b>Supplied / Requires Verification</b>
+              <span>Project scoped</span><span>No global operator profile created</span><span>No personnel records retained</span>
+            </div>
+          </div>
+        </div>
+        <div class="wq-card-label"><span>04</span><strong>Project Document Analysis</strong><small>Authorized requirements · project scoped</small></div>
+      </article>
     </div>
-  </div>
-</section><section class="wq-section wq-why-section">
-  <div class="wrap wq-two-col">
-    <div>
-      <p class="wq-kicker">THE PROBLEM</p>
-      <h2>Qualification breaks down when assumptions hide inside the workflow.</h2>
+
+    <div class="wq-card-controls">
+      <button id="wqPrevCard" aria-label="Previous preview">←</button>
+      <div class="wq-card-dots" id="wqCardDots"><button class="active" data-go="0"></button><button data-go="1"></button><button data-go="2"></button><button data-go="3"></button></div>
+      <button id="wqNextCard" aria-label="Next preview">→</button>
     </div>
-    <div class="wq-body-copy">
-      <p>A project description may sound complete while still leaving material questions unresolved. A location may be known while jurisdiction is not. A worker may hold credentials without yet being qualified for the specific work, operator, covered task, site, or governing requirement.</p>
-      <p>WhoQual-IQ™ is being designed to keep those distinctions visible instead of collapsing them into a single yes-or-no answer.</p>
-    </div>
-  </div>
+  </section>  <aside class="wq-status-rail">
+    <div class="wq-status-card amber"><span>JURISDICTION</span><strong>Requires Verification</strong><p>Location alone does not establish governing authority.</p></div>
+    <div class="wq-status-card green"><span>OWNER / OPERATOR</span><strong>Confirmation Required</strong><p>Operator-specific requirements remain project scoped.</p></div>
+    <div class="wq-status-card blue"><span>EVIDENCE</span><strong>Project Scoped</strong><p>Assertion and supplied material remain distinct from verification.</p></div>
+  </aside>
 </section>
-<section class="wq-section wq-boundary-section">
-  <div class="wrap">
-    <p class="wq-kicker">WHAT THE PREVIEW IS DESIGNED TO PROTECT</p>
-    <div class="wq-boundary-list">
-      <div><strong>Assertion ≠ evidence</strong><span>A user entry is not automatically treated as a verified fact.</span></div>
-      <div><strong>Locale ≠ jurisdiction</strong><span>Where work occurs does not, by itself, establish governing authority.</span></div>
-      <div><strong>Access ≠ qualification</strong><span>Signing in does not grant qualification authority.</span></div>
-      <div><strong>Routing ≠ completion</strong><span>Reaching a workflow result does not make unresolved requirements disappear.</span></div>
-    </div>
-  </div>
-</section><section class="wq-section wq-access-section">
-  <div class="wrap wq-access-grid">
-    <div>
-      <p class="wq-kicker">PRIVATE PILOT ACCESS</p>
-      <h2>The public preview is visible. The working engine remains protected.</h2>
-      <p class="wq-section-intro">WhoQual-IQ™ is still in active development. Private pilot access is limited while authentication, governed workflow logic, session behavior, and qualification boundaries are being validated.</p>
-    </div>
-    <div class="wq-access-card">
-      <span class="wq-access-state">COMING SOON</span>
-      <strong>Front door open. Engine protected.</strong>
-      <p>Public-facing design and explanatory content can be explored without exposing private workflow data or development controls.</p>
-      <a class="wq-text-link" href="/" aria-label="Return to SOUBEL home">Back to SOUBEL →</a>
-    </div>
-  </div>
+<section class="wq-stack-footer">
+  <div><strong>PRIVATE PREVIEW</strong><span>Development build · not yet released.</span></div>
 </section>
 </main>
-<footer><div class="wrap footer-inner"><div><div class="footer-brand">SOUBEL · Operational Trust</div><div class="footer-small">© <span data-copyright-start="">2022</span>–<span data-current-year="">2026</span> SOUBEL. All Rights Reserved.</div></div><div class="footer-small">Houston, Texas</div></div></footer>
-<script src="/assets/analytics.js"></script><script src="/assets/site.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(()=>{
+  const map=L.map('wqMiniMap',{zoomControl:false,attributionControl:false,dragging:false,scrollWheelZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,tap:false}).setView([29.76,-95.36],9.55);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,crossOrigin:'anonymous'}).addTo(map);
+  const markerSpec={gas_compressor_station:['C','#187bb8'],lng_terminal:['L','#a446c8'],petroleum_terminal:['T','#d68b1e']};
+  const points=[
+    ['petroleum_terminal',29.793597,-95.349794],['petroleum_terminal',29.81348,-95.418655],['petroleum_terminal',29.74709,-95.293096],['petroleum_terminal',29.788594,-95.286183],['petroleum_terminal',29.669619,-95.396689],
+    ['gas_compressor_station',29.96776,-95.484721],['gas_compressor_station',29.989141,-95.658363],['gas_compressor_station',30.203023538,-95.255284466],['gas_compressor_station',29.816416124,-94.825268741],
+    ['lng_terminal',28.933193466,-95.316743756],['lng_terminal',28.927254246,-95.323083795]
+  ];
+  points.forEach(([cat,lat,lon])=>{const [label,color]=markerSpec[cat];L.circleMarker([lat,lon],{radius:5.5,color:'#efffff',weight:1,fillColor:color,fillOpacity:.95}).bindTooltip(label,{permanent:true,direction:'center',className:'mini-map-tooltip'}).addTo(map);});
+  const query=new URLSearchParams({where:'1=1',geometry:JSON.stringify({xmin:-96.0,ymin:29.1,xmax:-94.7,ymax:30.35,spatialReference:{wkid:4326}}),geometryType:'esriGeometryEnvelope',inSR:'4326',spatialRel:'esriSpatialRelIntersects',outFields:'operator,typepipe',returnGeometry:'true',outSR:'4326',f:'geojson'});
+  fetch('https://arcgis.netl.doe.gov/server/rest/services/Hosted/EIA_pipeline_data/FeatureServer/3/query?'+query.toString()).then(r=>r.json()).then(g=>L.geoJSON(g,{style:{color:'#19bfd0',weight:1.7,opacity:.5,dashArray:'5 4'}}).addTo(map)).catch(()=>{});
+  setTimeout(()=>map.invalidateSize(),150);
+
+  const cards=[...document.querySelectorAll('.wq-preview-card')];
+  const dots=[...document.querySelectorAll('#wqCardDots button')];
+  let front=0;
+  const render=()=>{
+    cards.forEach((card,i)=>{
+      const rel=(i-front+cards.length)%cards.length;
+      card.classList.toggle('is-front',rel===0);
+      card.style.setProperty('--deck-index',rel);
+      card.style.zIndex=cards.length-rel;
+    });
+    dots.forEach((d,i)=>d.classList.toggle('active',i===front));
+  };
+  const go=n=>{front=(n+cards.length)%cards.length;render();};
+  document.getElementById('wqNextCard').addEventListener('click',()=>go(front+1));
+  document.getElementById('wqPrevCard').addEventListener('click',()=>go(front-1));
+  dots.forEach(d=>d.addEventListener('click',()=>go(Number(d.dataset.go))));
+  cards.forEach(c=>c.addEventListener('click',()=>{if(!c.classList.contains('is-front'))go(Number(c.dataset.card));}));
+  render();
+  let timer=setInterval(()=>go(front+1),7000);
+  document.getElementById('wqCardDeck').addEventListener('mouseenter',()=>clearInterval(timer),{once:true});
+})();
+</script>
 </body>
 </html>
