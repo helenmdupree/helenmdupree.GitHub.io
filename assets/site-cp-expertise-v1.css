@@ -204,3 +204,22 @@ body.cp-expertise-page main .cp-closing .text-link{
     margin-top:12px!important;
   }
 }
+/* Sacrificial / galvanic cathodic protection */
+.cp-galvanic-section{background:#fff;padding-top:58px;padding-bottom:64px}
+.cp-galvanic-section .wrap{max-width:1320px}
+.cp-galvanic-section h2{max-width:980px;margin-bottom:18px}
+.cp-galvanic-copy{display:grid;grid-template-columns:1fr 1fr;gap:34px;max-width:1180px;margin-bottom:28px}
+.cp-galvanic-copy p{margin:0;color:#314c58;font-size:1.08rem;line-height:1.65}
+.cp-galvanic-figure{margin:0 auto;max-width:910px;border:1px solid rgba(10,52,61,.14);border-radius:20px;overflow:hidden;background:#f7faf9;box-shadow:0 18px 44px rgba(5,35,42,.08)}
+.cp-galvanic-figure img{display:block;width:100%;height:auto}
+.cp-galvanic-figure figcaption{padding:13px 18px 15px;color:#55707a;font-size:.86rem;line-height:1.45;background:#f7faf9}
+@media(max-width:760px){.cp-galvanic-section{padding-top:42px;padding-bottom:48px}.cp-galvanic-copy{grid-template-columns:1fr;gap:16px;margin-bottom:22px}.cp-galvanic-copy p{font-size:1rem;line-height:1.58}.cp-galvanic-figure{border-radius:14px}.cp-galvanic-figure figcaption{font-size:.78rem;padding:11px 13px}}
+/* Galvanic image branding protection */
+.cp-galvanic-image-wrap{position:relative;overflow:hidden;background:#10252b}
+.cp-galvanic-art{display:block;width:100%;height:auto}
+.cp-galvanic-brand{position:absolute;z-index:3;left:1.7%;bottom:2.0%;width:15%;max-width:170px;height:auto;object-fit:contain;filter:drop-shadow(0 1px 3px rgba(0,0,0,.45));pointer-events:none;user-select:none}
+.cp-galvanic-url{position:absolute;z-index:3;right:1.8%;bottom:2.1%;color:rgba(255,255,255,.92);font:500 clamp(11px,1.15vw,17px)/1 Inter,"Segoe UI",Arial,sans-serif;letter-spacing:.025em;text-shadow:0 1px 4px rgba(0,0,0,.62);pointer-events:none;user-select:none}
+.cp-galvanic-watermark{position:absolute;z-index:2;left:18%;top:54%;color:rgba(255,255,255,.13);font:400 clamp(13px,1.55vw,20px)/1 Inter,"Segoe UI",Arial,sans-serif;letter-spacing:.10em;text-shadow:0 1px 3px rgba(0,0,0,.26);white-space:nowrap;pointer-events:none;user-select:none;animation:cpGalvanicWatermarkDrift 54s ease-in-out infinite alternate}
+@keyframes cpGalvanicWatermarkDrift{0%{left:18%;top:54%;transform:rotate(-3deg)}20%{left:63%;top:72%;transform:rotate(2deg)}40%{left:73%;top:45%;transform:rotate(-2deg)}60%{left:26%;top:76%;transform:rotate(3deg)}80%{left:12%;top:38%;transform:rotate(-2deg)}100%{left:66%;top:62%;transform:rotate(2deg)}}
+@media(max-width:760px){.cp-galvanic-brand{width:22%;left:2%;bottom:2.2%}.cp-galvanic-url{right:2%;bottom:2.2%;font-size:10px}.cp-galvanic-watermark{font-size:11px;letter-spacing:.08em}}
+@media(prefers-reduced-motion:reduce){.cp-galvanic-watermark{animation:none;left:48%;top:68%}}
