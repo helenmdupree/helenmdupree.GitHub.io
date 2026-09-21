@@ -366,3 +366,35 @@ body.wq-screen-page.wq-stack-page:after{
 @media(max-width:1350px){
   .wq-stack-workspace.wq-no-rail{grid-template-columns:minmax(0,1fr) 210px}
 }
+
+/* v0.52 text cleanup + preserve pre-rail card geometry */
+.wq-title-row{position:relative}
+.wq-build{position:absolute;left:50%;transform:translateX(-50%);margin:0;width:min(680px,46vw);height:58px;display:grid;grid-template-columns:14px 1fr;grid-template-rows:auto auto auto;align-content:center;column-gap:14px;padding:8px 26px 9px;border-top:1px solid rgba(73,213,223,.52);border-bottom:1px solid rgba(73,213,223,.30);border-left:0;border-right:0;border-radius:0;background:linear-gradient(90deg,rgba(4,25,32,0),rgba(7,48,57,.76) 18%,rgba(7,48,57,.76) 82%,rgba(4,25,32,0));box-shadow:0 12px 30px rgba(0,0,0,.14),inset 0 1px 0 rgba(255,255,255,.02);text-align:center}
+.wq-build i{grid-row:1/4;width:10px;height:10px;align-self:center;border-radius:50%;background:#43df9a;box-shadow:0 0 17px rgba(67,223,154,.85)}
+.wq-build .wq-build-label{font-size:7px;line-height:1.15;letter-spacing:.24em;color:#66d0d8;font-weight:700;text-transform:uppercase}
+.wq-build strong{font-size:13px;line-height:1.2;letter-spacing:.035em;color:#f4ffff;font-weight:720}
+.wq-build small{font-size:8px;line-height:1.2;letter-spacing:.10em;color:#8bc2c7}
+@media(max-width:1500px) and (min-width:901px){
+  .wq-build{left:55%;width:44vw}
+}
+@media(max-height:800px) and (min-width:901px){
+  .wq-build{height:50px;padding:6px 18px 7px}
+  .wq-build strong{font-size:12px}
+}
+.wq-card-copy:after{display:none}
+.wq-card-deck{right:320px}
+.wq-preview-card{top:1.5%;bottom:1.5%}
+.wq-card-screen{bottom:38px}
+.mini-project-grid{height:calc(100% - 102px)}
+.card-authority .wq-card-screen{display:grid;grid-template-rows:34px auto minmax(0,1fr)}
+.card-authority .mini-stack{height:auto;min-height:0;padding:0 14px 18px;grid-template-rows:repeat(3,minmax(0,1fr))}
+.card-authority .mini-stack span{min-height:0;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:4px;padding:10px 36px}
+.card-authority .mini-stack b{position:absolute;left:14px;top:50%;transform:translateY(-50%);margin:0;text-align:left}
+.card-authority .mini-stack em{margin:0;text-align:center}
+@media(max-width:1350px){
+  .wq-card-deck{right:179px}
+}
+@media(max-width:900px){
+  .wq-build{position:static;transform:none;width:190px;height:auto;margin-left:auto;text-align:left;border-left:2px solid rgba(53,212,223,.78);border-radius:10px;background:rgba(7,42,50,.90)}
+  .wq-card-deck{right:34px}
+}
