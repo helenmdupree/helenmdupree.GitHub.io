@@ -212,3 +212,55 @@
   .midstream-map-stage .midstream-market-video{display:none}
   .midstream-map-stage::before{content:"";display:block;width:100%;aspect-ratio:16/9;background:url("/assets/midstream_market_image_Final.png") center/contain no-repeat}
 }
+
+/* V2.06 - Keep animated Midstream map inside the established figure margins */
+.midstream-page .midstream-market-figure{width:100%!important;}
+.midstream-page .midstream-map-stage{width:100%!important;max-width:100%!important;overflow:hidden!important;border:1px solid rgba(20,70,78,.16)!important;border-radius:16px!important;background:#fff!important;box-shadow:0 14px 34px rgba(7,20,27,.07)!important;}
+.midstream-page .midstream-map-stage .midstream-market-video{display:block!important;width:100%!important;max-width:100%!important;height:auto!important;margin:0!important;}
+
+
+/* V2.07 - Reposition Midstream definition markers clear of embedded labels */
+.midstream-page .midstream-hotspot:nth-of-type(1){--x:16%!important;--y:35%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(2){--x:35%!important;--y:38%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(3){--x:52%!important;--y:38%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(4){--x:60.5%!important;--y:29%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(5){--x:70%!important;--y:37%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(6){--x:86.5%!important;--y:20%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(7){--x:85.5%!important;--y:34%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(8){--x:16%!important;--y:75%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(9){--x:38%!important;--y:70%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(10){--x:52%!important;--y:59%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(11){--x:59%!important;--y:69%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(12){--x:70%!important;--y:66%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(13){--x:88%!important;--y:68%!important;}
+
+
+/* V2.08 - Final asset-anchored hotspot placement; keep markers off embedded labels */
+.midstream-page .midstream-hotspot:nth-of-type(1){--x:14.5%!important;--y:34.5%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(2){--x:35%!important;--y:38%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(3){--x:52%!important;--y:38%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(4){--x:58.5%!important;--y:35.5%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(5){--x:73%!important;--y:34.5%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(6){--x:86%!important;--y:20%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(7){--x:85%!important;--y:34%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(8){--x:14.5%!important;--y:75%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(9){--x:38%!important;--y:70%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(10){--x:47%!important;--y:70%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(11){--x:59%!important;--y:69%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(12){--x:70%!important;--y:66%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(13){--x:86%!important;--y:67%!important;}
+
+/* V2.09 - Precision hotspot placement: markers docked consistently at label edges */
+.midstream-page .midstream-hotspot:nth-of-type(1){--x:14.7%!important;--y:43.2%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(2){--x:37.2%!important;--y:41.8%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(3){--x:53.7%!important;--y:41.8%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(4){--x:64.5%!important;--y:25.9%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(5){--x:71.7%!important;--y:36.0%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(6){--x:85.2%!important;--y:28.2%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(7){--x:84.9%!important;--y:48.8%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(8){--x:12.0%!important;--y:81.2%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(9){--x:39.8%!important;--y:78.3%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(10){--x:53.5%!important;--y:60.9%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(11){--x:60.6%!important;--y:72.7%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(12){--x:75.2%!important;--y:72.1%!important;}
+.midstream-page .midstream-hotspot:nth-of-type(13){--x:85.8%!important;--y:81.0%!important;}
