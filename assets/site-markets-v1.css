@@ -1,8 +1,8 @@
 /* Markets landing page v1 — overview, orientation, and market pathways. */
 .markets-page .markets-hero{color:#fff;background:radial-gradient(circle at 82% 18%,rgba(17,133,139,.27),transparent 31rem),linear-gradient(135deg,#050c11,#071820 58%,#0b222b);border-bottom:1px solid rgba(255,255,255,.08)}
-.markets-page .markets-hero-inner{padding:54px 0 50px;max-width:1060px}
-.markets-page .markets-hero .eyebrow{margin:0 0 10px;color:#7cd0d2;font-size:.76rem;letter-spacing:.18em}
-.markets-page .markets-hero h1{max-width:970px;margin:0;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:clamp(2.35rem,4.25vw,4rem);font-weight:700;line-height:1.03;letter-spacing:-.035em}
+.markets-page .markets-hero-inner{padding:44px 0 40px;max-width:1060px}
+.markets-page .markets-hero .eyebrow{margin:0 0 10px;color:#7cd0d2;font-size:.82rem;letter-spacing:.16em}
+.markets-page .markets-hero h1{max-width:970px;margin:0;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:clamp(2.35rem,3.7vw,3.55rem);font-weight:700;line-height:1.03;letter-spacing:-.035em}
 .markets-page .markets-hero-copy{max-width:920px;margin-top:22px;color:#d2dee1;font-size:1.02rem;line-height:1.62}
 .markets-page .markets-hero-copy p{margin:0 0 12px}
 .markets-page .markets-hero-copy p:last-child{margin-bottom:0;color:#edf4f5}

@@ -1,0 +1,49 @@
+/* About V2.10 — tighter executive hierarchy, restrained type, narrower learning matrix */
+.about-platform .page-hero{padding:30px 0 30px!important}
+.about-platform .page-hero>.wrap{max-width:1180px!important}
+.about-platform .page-hero .crumb{margin-bottom:12px!important;color:#8fd8da!important;font-size:.86rem!important}
+.about-platform .page-hero h1{margin:0 0 22px!important;font-size:clamp(2.55rem,4vw,3.35rem)!important;line-height:1!important}
+.about-platform .about-hero-grid{grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr)!important;gap:48px!important;align-items:start!important}
+.about-platform .about-hero-copy{max-width:780px!important}
+.about-platform .about-hero-copy .about-lede{max-width:760px!important;margin-bottom:16px!important;font-size:1.08rem!important;line-height:1.5!important}
+.about-platform .about-hero-copy p:not(.about-lede){max-width:780px!important;color:#d7e2e4!important;font-size:.98rem!important;line-height:1.6!important}
+.about-platform .about-eval-card{margin:0!important;padding:22px 24px!important;border:1px solid rgba(255,255,255,.18)!important;border-radius:10px!important;background:rgba(255,255,255,.035)!important}
+.about-platform .about-eval-label{margin-bottom:10px!important;font-size:.82rem!important;letter-spacing:.14em!important}
+.about-platform .about-eval-card p{font-size:.92rem!important;line-height:1.55!important}
+.about-platform .about-eval-card .btn{width:auto!important;padding:12px 18px!important}
+.about-platform .about-credo{max-width:960px!important;margin:28px auto 0!important;padding:20px 24px 18px!important;transform:none!important}
+.about-platform .about-credo-lines{font-size:clamp(1.08rem,1.55vw,1.34rem)!important;line-height:1.45!important}
+
+.about-platform main>.section>.wrap{max-width:1180px!important}
+.about-platform .founder{grid-template-columns:minmax(220px,.7fr) minmax(0,1.3fr)!important;gap:44px!important}
+.about-platform .founder h3{font-size:1.7rem!important;line-height:1.12!important}
+.about-platform .founder-role{font-size:.92rem!important;line-height:1.45!important}
+.about-platform .founder .section-intro{max-width:780px!important}
+
+.about-platform .about-development{padding-top:46px!important;padding-bottom:50px!important}
+.about-platform .about-development>.wrap{max-width:1120px!important}
+.about-platform .about-development .kicker{font-size:.84rem!important;letter-spacing:.14em!important}
+.about-platform .about-development h2{max-width:760px!important;margin:0 0 12px!important;font-size:clamp(1.9rem,2.8vw,2.55rem)!important;line-height:1.08!important;letter-spacing:-.025em!important}
+.about-platform .about-development .section-intro{max-width:820px!important;margin-bottom:22px!important;font-size:.98rem!important;line-height:1.58!important}
+.about-platform .development-stack{gap:14px!important;margin-top:20px!important}
+.about-platform .development-card{border-radius:10px!important}
+.about-platform .development-card h3{padding:13px 18px!important;font-size:1rem!important}
+.about-platform .development-list{gap:0 28px!important;padding:10px 18px 13px!important}
+.about-platform .development-list li{padding:7px 0!important;font-size:.88rem!important;line-height:1.35!important}
+.about-platform .development-closing{max-width:820px!important;margin-top:16px!important}
+
+.about-platform .social-callout>.wrap{max-width:1000px!important}
+.about-platform .social-callout h2{font-size:clamp(1.8rem,2.7vw,2.4rem)!important;line-height:1.08!important}
+.about-platform .social-callout .section-intro{max-width:760px!important}
+
+@media(max-width:900px){
+  .about-platform .about-hero-grid,.about-platform .founder{grid-template-columns:1fr!important;gap:24px!important}
+  .about-platform .about-eval-card{max-width:520px!important}
+  .about-platform .about-development>.wrap{max-width:92%!important}
+}
+@media(max-width:760px){
+  .about-platform .page-hero{padding:24px 0 24px!important}
+  .about-platform .page-hero h1{font-size:clamp(2.35rem,12vw,3rem)!important}
+  .about-platform .about-credo{margin-top:22px!important;padding:17px 10px 15px!important}
+  .about-platform .about-development{padding-top:38px!important;padding-bottom:42px!important}
+}

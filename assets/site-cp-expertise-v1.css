@@ -31,7 +31,7 @@ body.cp-expertise-page main .section{
 
 body.cp-expertise-page main .section .kicker{
   margin:0 0 7px!important;
-  font-size:.75rem!important;
+  font-size:1.05rem!important;
   line-height:1.2!important;
   letter-spacing:.14em!important;
 }
@@ -204,3 +204,79 @@ body.cp-expertise-page main .cp-closing .text-link{
     margin-top:12px!important;
   }
 }
+/* Sacrificial / galvanic cathodic protection */
+.cp-galvanic-section{background:#fff;padding-top:58px;padding-bottom:64px}
+.cp-galvanic-section .wrap{max-width:1320px}
+.cp-galvanic-section h2{max-width:980px;margin-bottom:18px}
+.cp-galvanic-copy{display:grid;grid-template-columns:1fr 1fr;gap:34px;max-width:1180px;margin-bottom:28px}
+.cp-galvanic-copy p{margin:0;color:#314c58;font-size:1.08rem;line-height:1.65}
+.cp-galvanic-figure{margin:0 auto;max-width:910px;border:1px solid rgba(10,52,61,.14);border-radius:20px;overflow:hidden;background:#f7faf9;box-shadow:0 18px 44px rgba(5,35,42,.08)}
+.cp-galvanic-figure img{display:block;width:100%;height:auto}
+.cp-galvanic-figure figcaption{padding:13px 18px 15px;color:#55707a;font-size:.86rem;line-height:1.45;background:#f7faf9}
+@media(max-width:760px){.cp-galvanic-section{padding-top:42px;padding-bottom:48px}.cp-galvanic-copy{grid-template-columns:1fr;gap:16px;margin-bottom:22px}.cp-galvanic-copy p{font-size:1rem;line-height:1.58}.cp-galvanic-figure{border-radius:14px}.cp-galvanic-figure figcaption{font-size:.78rem;padding:11px 13px}}
+/* Galvanic image branding protection */
+.cp-galvanic-image-wrap{position:relative;overflow:hidden;background:#10252b}
+.cp-galvanic-art{display:block;width:100%;height:auto}
+.cp-galvanic-brand{position:absolute;z-index:3;left:1.7%;bottom:2.0%;width:15%;max-width:170px;height:auto;object-fit:contain;filter:drop-shadow(0 1px 3px rgba(0,0,0,.45));pointer-events:none;user-select:none}
+.cp-galvanic-url{position:absolute;z-index:3;right:1.8%;bottom:2.1%;color:rgba(255,255,255,.92);font:500 clamp(11px,1.15vw,17px)/1 Inter,"Segoe UI",Arial,sans-serif;letter-spacing:.025em;text-shadow:0 1px 4px rgba(0,0,0,.62);pointer-events:none;user-select:none}
+.cp-galvanic-watermark{position:absolute;z-index:2;left:18%;top:54%;color:rgba(255,255,255,.13);font:400 clamp(13px,1.55vw,20px)/1 Inter,"Segoe UI",Arial,sans-serif;letter-spacing:.10em;text-shadow:0 1px 3px rgba(0,0,0,.26);white-space:nowrap;pointer-events:none;user-select:none;animation:cpGalvanicWatermarkDrift 54s ease-in-out infinite alternate}
+@keyframes cpGalvanicWatermarkDrift{0%{left:18%;top:54%;transform:rotate(-3deg)}20%{left:63%;top:72%;transform:rotate(2deg)}40%{left:73%;top:45%;transform:rotate(-2deg)}60%{left:26%;top:76%;transform:rotate(3deg)}80%{left:12%;top:38%;transform:rotate(-2deg)}100%{left:66%;top:62%;transform:rotate(2deg)}}
+@media(max-width:760px){.cp-galvanic-brand{width:22%;left:2%;bottom:2.2%}.cp-galvanic-url{right:2%;bottom:2.2%;font-size:10px}.cp-galvanic-watermark{font-size:11px;letter-spacing:.08em}}
+@media(prefers-reduced-motion:reduce){.cp-galvanic-watermark{animation:none;left:48%;top:68%}}
+/* CP architecture navigation — 2026-09-21 */
+body.cp-expertise-page .cp-hub-section{padding:34px 0 40px!important}
+body.cp-expertise-page .cp-hub-section h2{margin-bottom:20px!important}
+body.cp-expertise-page .cp-hub-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+body.cp-expertise-page .cp-hub-card{display:block;min-height:176px;padding:24px;border:1px solid rgba(22,72,79,.18);border-radius:12px;background:#fff;color:#18343d;text-decoration:none;box-shadow:0 8px 24px rgba(17,48,55,.055);transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+body.cp-expertise-page .cp-hub-card:hover{transform:translateY(-2px);border-color:rgba(22,110,119,.42);box-shadow:0 12px 30px rgba(17,48,55,.09)}
+body.cp-expertise-page .cp-hub-card span{display:block;margin-bottom:22px;color:#168a90;font-size:.72rem;font-weight:800;letter-spacing:.14em}
+body.cp-expertise-page .cp-hub-card h3{margin:0 0 8px!important;font-size:1.18rem!important}
+body.cp-expertise-page .cp-hub-card p{margin:0!important;color:#56666b;font-size:.92rem!important;line-height:1.48!important}
+body.cp-expertise-page .crumb a{color:inherit;text-decoration:none}
+@media(max-width:820px){body.cp-expertise-page .cp-hub-grid{grid-template-columns:1fr}body.cp-expertise-page .cp-hub-card{min-height:0}}
+
+
+/* CP subpage editorial refinement */
+body.cp-expertise-page .cp-component-section{padding:34px 0 40px!important}
+body.cp-expertise-page .cp-component-section .cp-four{grid-template-columns:repeat(4,minmax(0,1fr))}
+body.cp-expertise-page .cp-component-section .cp-four article{min-height:170px;border-top:2px solid rgba(16,126,136,.55)}
+body.cp-expertise-page .cp-closing{padding:22px 0!important}
+body.cp-expertise-page .cp-closing .wrap{width:min(calc(100% - 64px),1220px)!important;max-width:1220px!important}
+body.cp-expertise-page .cp-closing:has(.text-link:only-child){padding:18px 0!important}
+body.cp-expertise-page .cp-closing:has(.text-link:only-child) .text-link{margin:0!important}
+@media(max-width:980px){body.cp-expertise-page .cp-component-section .cp-four{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){body.cp-expertise-page .cp-component-section .cp-four{grid-template-columns:1fr}body.cp-expertise-page .cp-closing .wrap{width:min(calc(100% - 32px),1220px)!important}}
+
+
+/* Equal visual hierarchy for the two CP system types */
+body.cp-expertise-page .cp-system-intro{display:grid;grid-template-columns:1fr 1fr;gap:34px;max-width:1180px;margin:10px 0 24px}
+body.cp-expertise-page .cp-system-intro p{margin:0!important;color:#314c58;font-size:1.02rem!important;line-height:1.6!important}
+body.cp-expertise-page .cp-galvanic-section .cp-system-intro{margin-bottom:28px}
+@media(max-width:760px){body.cp-expertise-page .cp-system-intro{grid-template-columns:1fr;gap:12px;margin-bottom:20px}body.cp-expertise-page .cp-system-intro p{font-size:.98rem!important;line-height:1.55!important}}
+
+
+/* CP anode comparison */
+.cp-anode-comparison{background:#f7fafb}
+.cp-anode-comparison h2{margin-bottom:28px}
+.cp-anode-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.cp-anode-grid article{background:#fff;border:1px solid #d8e3e8;border-radius:10px;overflow:hidden}
+.cp-anode-grid article>h3{margin:0;padding:18px 20px 4px;font:700 24px/1.2 "Segoe UI",Arial,sans-serif;color:#0c4d66}
+.cp-anode-subhead{margin:0;padding:0 20px 16px;color:#52666f}
+.cp-activity-scale{margin:0 20px 16px;padding:10px 0 8px;border-bottom:6px solid #3b9fb4;display:flex;justify-content:space-between;gap:20px;font-weight:700;color:#183e50}
+.cp-anode-table-wrap{overflow-x:auto}
+.cp-anode-table{width:100%;border-collapse:collapse;min-width:620px;font-size:14px;line-height:1.35}
+.cp-anode-table th,.cp-anode-table td{padding:13px 11px;border-top:1px solid #d8e3e8;border-right:1px solid #e3eaed;text-align:center;vertical-align:middle}
+.cp-anode-table th:first-child{text-align:left;width:19%;color:#173f52}
+.cp-anode-table thead th{background:#edf6f8;color:#103f53;font-weight:700}
+.cp-anode-table td:last-child,.cp-anode-table th:last-child{border-right:0}
+.cp-technical-notes{max-width:980px;margin:28px auto 0;padding:22px 26px;border-left:3px solid #2b879d;background:#fff}
+.cp-technical-notes h3{margin:0 0 12px;font:700 20px/1.2 "Segoe UI",Arial,sans-serif;color:#173f52}
+.cp-technical-notes p{margin:8px 0;color:#42555e;font-size:15px;line-height:1.55}
+@media(max-width:980px){.cp-anode-grid{grid-template-columns:1fr}.cp-anode-table{min-width:600px}}
+@media(max-width:640px){.cp-anode-grid article>h3{font-size:21px}.cp-technical-notes{padding:18px}.cp-anode-table{font-size:13px}}
+
+.cp-section-nav{display:flex;align-items:center;justify-content:space-between;gap:28px}.cp-next-link{text-align:right}@media(max-width:700px){.cp-section-nav{flex-direction:column;align-items:flex-start}.cp-next-link{text-align:left}}
+
+.cp-anode-comparison-figure{margin:0 auto;max-width:920px;background:#fff;border:1px solid #d8e3e8;border-radius:10px;overflow:hidden}
+.cp-anode-comparison-figure img{display:block;width:100%;height:auto}
+@media(max-width:700px){.cp-anode-comparison-figure{overflow-x:auto}.cp-anode-comparison-figure img{width:1000px;max-width:none}}
