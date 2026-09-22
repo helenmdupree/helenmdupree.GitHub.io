@@ -205,3 +205,10 @@
 .midstream-page .midstream-hotspot.edge-right:hover .hotspot-tip,.midstream-page .midstream-hotspot.edge-right:focus .hotspot-tip{transform:translate(0,0)!important;}
 .midstream-page .midstream-market-figure figcaption{margin-top:10px!important;color:#61767d!important;font-size:.8rem!important;text-align:center!important;}
 @media(max-width:760px){.midstream-page .midstream-hotspot{width:22px!important;height:22px!important;}.midstream-page .midstream-hotspot::before{font-size:14px!important;line-height:18px!important;}.midstream-page .hotspot-tip{width:220px!important;}}
+
+/* Midstream animated market map */
+.midstream-map-stage .midstream-market-video{display:block;width:100%;height:auto}
+@media (prefers-reduced-motion: reduce){
+  .midstream-map-stage .midstream-market-video{display:none}
+  .midstream-map-stage::before{content:"";display:block;width:100%;aspect-ratio:16/9;background:url("/assets/midstream_market_image_Final.png") center/contain no-repeat}
+}
