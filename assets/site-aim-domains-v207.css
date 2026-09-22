@@ -2,6 +2,8 @@
    The two-column domain rows should read as matched components even when the
    right-hand item is a link into deeper knowledge or connected expertise. */
 
+.aim-domain-page main .section > .wrap > .kicker{font-size:1.05rem;line-height:1.2;letter-spacing:.12em;font-weight:800;margin-bottom:.65rem}
+
 .aim-domain-page .grid-2{
   align-items:stretch;
 }
@@ -68,4 +70,64 @@
   .aim-domain-page .grid-2 > .knowledge-card{
     padding:24px;
   }
+}
+/* V2.08 — domain separation and contrast refinement */
+.aim-domain-page .domain-section{
+  position:relative;
+  padding-top:64px;
+  padding-bottom:64px;
+  border-top:4px solid #0b7f8c;
+}
+.aim-domain-page .domain-section.alt{
+  background:#eef5f4;
+}
+.aim-domain-page .domain-section:not(.alt){
+  background:#ffffff;
+}
+.aim-domain-page .domain-section .kicker{
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+}
+.aim-domain-page .domain-number{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:2.15rem;
+  height:2.15rem;
+  padding:0 .5rem;
+  border-radius:999px;
+  background:#0b7f8c;
+  color:#fff;
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:.04em;
+}
+.aim-domain-page .domain-section .grid-2{
+  margin-top:28px;
+}
+.aim-domain-page .section:not(.dark) .btn.primary{
+  background:#0b6571;
+  border-color:#0b6571;
+  color:#fff;
+}
+.aim-domain-page .section:not(.dark) .btn.secondary{
+  background:#fff;
+  border-color:#9cb9bd;
+  color:#123845;
+}
+.aim-domain-page .section:not(.dark) .btn.secondary:hover{
+  border-color:#0b7f8c;
+  color:#0b6571;
+}
+.aim-domain-page .section:not(.dark) .btn[aria-disabled="true"],
+.aim-domain-page .section:not(.dark) .btn.disabled{
+  background:#edf2f2;
+  border-color:#c8d5d7;
+  color:#4f686f;
+  opacity:1;
+}
+@media(max-width:760px){
+  .aim-domain-page .domain-section{padding-top:46px;padding-bottom:46px}
+  .aim-domain-page .domain-section .kicker{align-items:flex-start}
 }
