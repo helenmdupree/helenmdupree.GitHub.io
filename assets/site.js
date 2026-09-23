@@ -12,7 +12,6 @@
 
   const expertiseLinks=[
     ['/expertise/commercial-growth-strategic-accounts/','Commercial Growth & Strategic Accounts'],
-    ['/expertise/commercial-growth-strategic-accounts/playbook-system/','Commercial Growth Playbook System',true],
     ['/expertise/commercial-growth-strategic-accounts/revenue-strategy/','Revenue Strategy',true],
     ['/expertise/commercial-growth-strategic-accounts/strategic-accounts/','Strategic Accounts',true],
     ['/expertise/commercial-growth-strategic-accounts/channel-strategy-partner-management/','Channel Strategy & Partner Management',true],
