@@ -28,7 +28,7 @@
     ['/knowledge-library/asset-integrity-management/','Asset Integrity Management',false],
     ['/knowledge-library/pipeline-asset-integrity/','Pipeline Integrity',false],
     ['/knowledge-library/tank-terminal-integrity/','Tank & Terminal Integrity',false],
-    ['/knowledge-library/corrosion-cathodic-protection/','Corrosion & Cathodic Protection',false],
+    ['/expertise/corrosion-cathodic-protection/','Corrosion & Cathodic Protection',false],
     ['/knowledge-library/asset-performance/','Asset Performance',false],
     ['/knowledge-library/digital-transformation-ai/','Digital & AI Knowledge',false],
     ['/analysis-perspectives/','Analysis & Perspectives',false]
@@ -102,7 +102,7 @@
       nav.appendChild(makeDropdown('Markets',marketsLinks));
       nav.appendChild(makeDropdown('Expertise',expertiseLinks,'expertise-dropdown'));
       nav.appendChild(makeAnchor('/industry-intelligence/oil-gas-ai-lab/','Oil & Gas AI Lab'));
-      nav.appendChild(makeAnchor('/whoqual-iq/','WhoQual-IQ™'));
+      nav.appendChild(makeAnchor('/whoqual-iq/','WhoQual-IQâ„¢'));
       nav.appendChild(makeAnchor('/ask-soubel/','Ask SOUBEL'));
       nav.appendChild(makeDropdown('Knowledge',knowledgeLinks,'knowledge-dropdown'));
       nav.appendChild(makeDropdown('About',aboutLinks));
@@ -148,7 +148,7 @@
     menu.appendChild(buildMobileGroup('Markets',marketsLinks));
     menu.appendChild(buildMobileGroup('Expertise',expertiseLinks));
     menu.appendChild(buildMobileLink('/industry-intelligence/oil-gas-ai-lab/','Oil & Gas AI Lab'));
-    menu.appendChild(buildMobileLink('/whoqual-iq/','WhoQual-IQ™'));
+    menu.appendChild(buildMobileLink('/whoqual-iq/','WhoQual-IQâ„¢'));
     menu.appendChild(buildMobileLink('/ask-soubel/','Ask SOUBEL'));
     menu.appendChild(buildMobileGroup('Knowledge',knowledgeLinks));
     menu.appendChild(buildMobileGroup('About',aboutLinks));
