@@ -1,9 +1,9 @@
 /* Markets landing page v1 — overview, orientation, and market pathways. */
 .markets-page .markets-hero{color:#fff;background:radial-gradient(circle at 82% 18%,rgba(17,133,139,.27),transparent 31rem),linear-gradient(135deg,#050c11,#071820 58%,#0b222b);border-bottom:1px solid rgba(255,255,255,.08)}
-.markets-page .markets-hero-inner{padding:54px 0 50px;max-width:1060px}
+.markets-page .markets-hero-inner{padding:34px 0 30px;max-width:1040px}
 .markets-page .markets-hero .eyebrow{margin:0 0 10px;color:#7cd0d2;font-size:.76rem;letter-spacing:.18em}
-.markets-page .markets-hero h1{max-width:970px;margin:0;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:clamp(2.35rem,4.25vw,4rem);font-weight:700;line-height:1.03;letter-spacing:-.035em}
-.markets-page .markets-hero-copy{max-width:920px;margin-top:22px;color:#d2dee1;font-size:1.02rem;line-height:1.62}
+.markets-page .markets-hero h1{max-width:1040px;margin:0;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:clamp(2rem,3.35vw,3.2rem);font-weight:700;line-height:1.04;letter-spacing:-.03em}
+.markets-page .markets-hero-subhead{margin:9px 0 0;color:#7cd0d2;font-size:.94rem;font-weight:700;letter-spacing:.035em}.markets-page .markets-hero-copy{max-width:920px;margin-top:22px;color:#d2dee1;font-size:1.02rem;line-height:1.62}
 .markets-page .markets-hero-copy p{margin:0 0 12px}
 .markets-page .markets-hero-copy p:last-child{margin-bottom:0;color:#edf4f5}
 .markets-page .markets-section{padding:54px 0}
@@ -25,6 +25,27 @@
 .markets-page .market-focus-panel h3{grid-column:2;margin:0 0 9px;font-size:clamp(1.35rem,2vw,1.8rem);line-height:1.15;letter-spacing:-.02em}
 .markets-page .market-focus-panel p{grid-column:2;margin:0 0 9px;color:#4f646c;font-size:.96rem;line-height:1.58}
 .markets-page .market-focus-panel span{grid-column:2;margin-top:5px;color:#0b777c;font-size:.92rem;font-weight:800}
+.markets-page .buying-map-section{background:#fff;border-top:1px solid #edf2f2}
+.markets-page .buying-map-section .section-intro{max-width:760px;color:#526870;font-size:1rem;line-height:1.6}
+.markets-page .buying-map-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:28px;border-top:1px solid #d5e0e1;border-bottom:1px solid #d5e0e1}
+.markets-page .buying-map-item{padding:24px 22px 26px;border-right:1px solid #d5e0e1}
+.markets-page .buying-map-item:first-child{padding-left:0}
+.markets-page .buying-map-item:last-child{border-right:0;padding-right:0}
+.markets-page .buying-map-item span{display:block;margin-bottom:10px;color:#11858b;font-size:.72rem;font-weight:900;letter-spacing:.16em}
+.markets-page .buying-map-item h3{margin:0 0 8px;color:#17343c;font-size:1.03rem;line-height:1.25}
+.markets-page .buying-map-item p{margin:0;color:#526870;font-size:.9rem;line-height:1.55}
+.markets-page .evergreen-flow{margin-top:20px;text-align:center}
+.markets-page .evergreen-arrow{color:#11858b;font-size:1.35rem;line-height:1;margin-bottom:7px}
+.markets-page .evergreen-box{max-width:1120px;margin:0 auto;padding:18px 22px 20px;border:1px solid #b8ced0;border-radius:12px;background:#f4f8f8;text-align:left;box-shadow:0 8px 20px rgba(7,20,27,.04)}
+.markets-page .evergreen-label{margin:0 0 4px;color:#11858b;font-size:.7rem;font-weight:900;letter-spacing:.15em}
+.markets-page .evergreen-box h3{margin:0;color:#17343c;font-size:1.15rem;line-height:1.2}
+.markets-page .evergreen-heading{padding-bottom:12px}
+.markets-page .evergreen-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid #cfddde}
+.markets-page .evergreen-steps>div{padding:12px 18px 0;border-right:1px solid #cfddde}
+.markets-page .evergreen-steps>div:first-child{padding-left:0}
+.markets-page .evergreen-steps>div:last-child{border-right:0;padding-right:0}
+.markets-page .evergreen-steps strong{display:block;margin-bottom:3px;color:#17343c;font-size:.96rem}
+.markets-page .evergreen-steps span{display:block;color:#60737a;font-size:.84rem;line-height:1.38}
 .markets-page .across-system-section{background:#fff;border-top:1px solid #edf2f2}
 .markets-page .across-system-grid{display:grid;grid-template-columns:minmax(240px,.38fr) minmax(0,.62fr);gap:54px;align-items:start}
 .markets-page .across-system-grid h2{margin-bottom:0}
@@ -41,16 +62,21 @@
 .markets-page .explore-market-links a:hover{color:#fff}
 
 @media(max-width:900px){
-  .markets-page .markets-hero-inner{padding:46px 0 42px}
+  .markets-page .markets-hero-inner{padding:30px 0 28px}
   .markets-page .markets-section{padding:46px 0}
   .markets-page .market-focus-panel{grid-template-columns:150px minmax(0,1fr);column-gap:26px}
+  .markets-page .buying-map-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .markets-page .buying-map-item{border-bottom:1px solid #d5e0e1}
+  .markets-page .buying-map-item:nth-child(2n){border-right:0}
+  .markets-page .buying-map-item:first-child{padding-left:22px}
+  .markets-page .buying-map-item:last-child{padding-right:22px;border-bottom:0}
   .markets-page .across-system-grid{grid-template-columns:1fr;gap:20px}
   .markets-page .explore-market-links{grid-template-columns:1fr}
   .markets-page .explore-market-links a:not(:last-child){margin-right:0}
 }
 @media(max-width:650px){
-  .markets-page .markets-hero-inner{padding:38px 0 34px}
-  .markets-page .markets-hero h1{font-size:clamp(2rem,9vw,2.75rem)}
+  .markets-page .markets-hero-inner{padding:26px 0 24px}
+  .markets-page .markets-hero h1{font-size:clamp(1.85rem,8vw,2.5rem)}
   .markets-page .markets-hero-copy{margin-top:18px;font-size:.96rem;line-height:1.56}
   .markets-page .markets-section{padding:38px 0}
   .markets-page .markets-section h2{font-size:clamp(1.65rem,7vw,2.1rem)}
@@ -58,6 +84,14 @@
   .markets-page .markets-figure{margin-top:22px}
   .markets-page .markets-figure img{border-radius:10px}
   .markets-page .market-focus-panel{display:block;padding:23px 0}
+  .markets-page .buying-map-grid{grid-template-columns:1fr}
+  .markets-page .buying-map-item{padding:20px 0;border-right:0;border-bottom:1px solid #d5e0e1}
+  .markets-page .buying-map-item:first-child{padding-left:0}
+  .markets-page .buying-map-item:last-child{padding-right:0}
+  .markets-page .evergreen-box{padding:18px 16px 20px}
+  .markets-page .evergreen-steps{grid-template-columns:1fr}
+  .markets-page .evergreen-steps>div{padding:14px 0;border-right:0;border-bottom:1px solid #cfddde}
+  .markets-page .evergreen-steps>div:last-child{border-bottom:0}
   .markets-page .market-focus-panel:hover{padding-left:0;padding-right:0;background:transparent}
   .markets-page .market-focus-label{margin-bottom:8px}
   .markets-page .market-focus-panel h3{font-size:1.35rem}
@@ -68,3 +102,1372 @@
 @media(min-width:1100px){
   .markets-page .market-focus-section h2{max-width:none;font-size:2.15rem;white-space:nowrap}
 }
+
+
+/* Dimensional opportunity development treatment */
+.markets-page .buying-map-section{
+  position:relative;
+  overflow:hidden;
+  color:#eef5f7;
+  background:
+    radial-gradient(circle at 14% 8%,rgba(20,140,146,.15),transparent 24rem),
+    radial-gradient(circle at 82% 18%,rgba(32,82,154,.12),transparent 24rem),
+    linear-gradient(180deg,#061219 0%,#081a22 58%,#0a2029 100%);
+  border-top:1px solid rgba(255,255,255,.06);
+}
+.markets-page .buying-map-section .kicker{color:#77d0d2}
+.markets-page .buying-map-section h2{color:#f4f7f8}
+.markets-page .buying-map-section .section-intro{
+  max-width:820px;
+  color:rgba(229,238,240,.86);
+}
+.markets-page .buying-map-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+  margin-top:24px;
+  border:0;
+}
+.markets-page .buying-map-item{
+  padding:0;
+  border:0;
+}
+.markets-page .opportunity-card{
+  position:relative;
+  min-height:286px;
+  padding:25px 24px 24px;
+  border-radius:17px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.13);
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.30),
+    0 5px 14px rgba(0,0,0,.20),
+    inset 0 1px 0 rgba(255,255,255,.06);
+  transform:translateY(0);
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+}
+.markets-page .opportunity-card:hover{
+  transform:translateY(-4px);
+  box-shadow:
+    0 26px 48px rgba(0,0,0,.34),
+    0 7px 18px rgba(0,0,0,.24),
+    inset 0 1px 0 rgba(255,255,255,.07);
+}
+.markets-page .opportunity-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,0) 24%),
+    radial-gradient(circle at 14% 10%,rgba(255,255,255,.08),transparent 28%);
+  pointer-events:none;
+}
+.markets-page .opportunity-card::after{
+  content:"";
+  position:absolute;
+  left:18px;
+  right:18px;
+  bottom:0;
+  height:3px;
+  border-radius:999px;
+}
+.markets-page .opportunity-card span{
+  position:relative;
+  z-index:1;
+  margin-bottom:12px;
+  font-size:.9rem;
+  font-weight:850;
+  letter-spacing:.12em;
+}
+.markets-page .opportunity-card h3{
+  position:relative;
+  z-index:1;
+  margin:0 0 12px;
+  color:#f7fbfc;
+  font-size:1.45rem;
+  line-height:1.12;
+  letter-spacing:-.02em;
+}
+.markets-page .opportunity-card p{
+  position:relative;
+  z-index:1;
+  margin:0;
+  color:rgba(234,241,243,.88);
+  font-size:.96rem;
+  line-height:1.62;
+}
+.markets-page .card-recognized{
+  background:
+    radial-gradient(circle at 18% 18%,rgba(35,191,197,.16),transparent 32%),
+    linear-gradient(135deg,#08222b 0%,#0b343a 48%,#0b2028 100%);
+}
+.markets-page .card-recognized span{color:#57d7da}
+.markets-page .card-recognized::after{background:linear-gradient(90deg,#57d7da,rgba(87,215,218,.08))}
+.markets-page .card-emerging{
+  background:
+    radial-gradient(circle at 20% 16%,rgba(93,158,245,.17),transparent 34%),
+    linear-gradient(135deg,#0b1c3a 0%,#123b6c 48%,#0a1a31 100%);
+}
+.markets-page .card-emerging span{color:#73b8ff}
+.markets-page .card-emerging::after{background:linear-gradient(90deg,#73b8ff,rgba(115,184,255,.08))}
+.markets-page .card-future{
+  background:
+    radial-gradient(circle at 18% 16%,rgba(218,183,104,.15),transparent 34%),
+    linear-gradient(135deg,#171c21 0%,#282f35 48%,#151a20 100%);
+}
+.markets-page .card-future span{color:#deb968}
+.markets-page .card-future::after{background:linear-gradient(90deg,#deb968,rgba(222,185,104,.08))}
+
+.markets-page .evergreen-flow{
+  margin-top:18px;
+  position:relative;
+  z-index:2;
+}
+.markets-page .evergreen-arrow{
+  color:#70d0d2;
+  font-size:1.15rem;
+  margin-bottom:7px;
+}
+.markets-page .evergreen-box{
+  max-width:1120px;
+  margin:0 auto;
+  padding:16px 20px 18px;
+  border-radius:15px;
+  border:1px solid rgba(113,200,203,.22);
+  color:#edf4f5;
+  background:
+    radial-gradient(circle at 12% 10%,rgba(30,126,132,.11),transparent 30%),
+    linear-gradient(180deg,rgba(12,29,37,.96),rgba(9,23,30,.98));
+  box-shadow:
+    0 16px 32px rgba(0,0,0,.24),
+    inset 0 1px 0 rgba(255,255,255,.05);
+}
+.markets-page .evergreen-heading{padding-bottom:10px}
+.markets-page .evergreen-label{
+  color:#77d0d2;
+  margin:0 0 3px;
+}
+.markets-page .evergreen-box h3{
+  color:#f3f8f8;
+  font-size:1.08rem;
+}
+.markets-page .evergreen-steps{
+  margin-top:0;
+  border-top:1px solid rgba(255,255,255,.09);
+}
+.markets-page .evergreen-steps>div{
+  padding:10px 16px 0;
+  border-right:1px solid rgba(255,255,255,.09);
+}
+.markets-page .evergreen-steps strong{color:#f4f8f9}
+.markets-page .evergreen-steps span{color:rgba(222,233,235,.80)}
+
+.markets-page .value-chain-section{
+  background:linear-gradient(180deg,#f7fafb 0%,#fff 100%);
+}
+.markets-page .markets-figure img{
+  border-radius:16px;
+  box-shadow:0 18px 34px rgba(8,20,28,.12),0 4px 10px rgba(8,20,28,.08);
+}
+
+@media(max-width:900px){
+  .markets-page .buying-map-grid{grid-template-columns:1fr;gap:18px}
+  .markets-page .opportunity-card{min-height:auto}
+}
+
+
+/* Compact opportunity framework pass */
+.markets-page .buying-map-section{
+  padding:34px 0 36px;
+}
+.markets-page .buying-map-section h2{
+  font-size:clamp(1.75rem,2.4vw,2.3rem);
+  margin-bottom:.45rem;
+}
+.markets-page .buying-map-section .section-intro{
+  max-width:760px;
+  font-size:.93rem;
+  line-height:1.5;
+  margin-bottom:1.1rem;
+}
+.markets-page .buying-map-grid{
+  gap:16px;
+  margin-top:16px;
+}
+.markets-page .opportunity-card{
+  min-height:220px;
+  padding:18px 18px 18px;
+  border-radius:14px;
+}
+.markets-page .opportunity-card span{
+  margin-bottom:8px;
+  font-size:.78rem;
+}
+.markets-page .opportunity-card h3{
+  margin-bottom:9px;
+  font-size:1.18rem;
+  line-height:1.12;
+}
+.markets-page .opportunity-card p{
+  font-size:.86rem;
+  line-height:1.48;
+}
+.markets-page .evergreen-flow{
+  margin-top:14px;
+}
+.markets-page .evergreen-arrow{
+  font-size:1rem;
+  margin-bottom:5px;
+}
+.markets-page .evergreen-box{
+  padding:12px 16px 14px;
+  border-radius:13px;
+}
+.markets-page .evergreen-heading{
+  padding-bottom:8px;
+}
+.markets-page .evergreen-label{
+  font-size:.64rem;
+}
+.markets-page .evergreen-box h3{
+  font-size:.98rem;
+}
+.markets-page .evergreen-steps>div{
+  padding:8px 12px 0;
+}
+.markets-page .evergreen-steps strong{
+  font-size:.88rem;
+}
+.markets-page .evergreen-steps span{
+  font-size:.77rem;
+  line-height:1.3;
+}
+
+@media(max-width:900px){
+  .markets-page .buying-map-section{padding:30px 0 32px}
+  .markets-page .opportunity-card{min-height:auto}
+}
+
+
+/* Center box title treatments while keeping body copy readable */
+.markets-page .opportunity-card span{
+  text-align:center;
+}
+.markets-page .opportunity-card h3{
+  text-align:center;
+}
+.markets-page .evergreen-heading{
+  text-align:center;
+}
+
+
+/* Evergreen card — same visual family as the opportunity cards */
+.markets-page .evergreen-box{
+  position:relative;
+  overflow:hidden;
+  max-width:1120px;
+  margin:0 auto;
+  padding:18px 20px 18px;
+  border-radius:16px;
+  border:1px solid rgba(87,215,218,.24);
+  background:
+    radial-gradient(circle at 16% 14%,rgba(42,184,190,.14),transparent 28%),
+    radial-gradient(circle at 82% 12%,rgba(66,121,186,.10),transparent 30%),
+    linear-gradient(135deg,#0a2028 0%,#0d2b34 46%,#0b1d25 100%);
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.28),
+    0 5px 14px rgba(0,0,0,.18),
+    inset 0 1px 0 rgba(255,255,255,.06);
+}
+.markets-page .evergreen-box::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,0) 24%),
+    radial-gradient(circle at 12% 10%,rgba(255,255,255,.05),transparent 26%);
+  pointer-events:none;
+}
+.markets-page .evergreen-box::after{
+  content:"";
+  position:absolute;
+  left:28px;
+  right:28px;
+  bottom:0;
+  height:3px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#57d7da 0%,#73b8ff 50%,#deb968 100%);
+  opacity:.9;
+}
+.markets-page .evergreen-heading{
+  position:relative;
+  z-index:1;
+  text-align:center;
+  padding-bottom:10px;
+}
+.markets-page .evergreen-label{
+  color:#72d7d9;
+  font-size:.69rem;
+  letter-spacing:.16em;
+}
+.markets-page .evergreen-box h3{
+  color:#f7fbfc;
+  font-size:1.08rem;
+  margin:2px 0 0;
+}
+.markets-page .evergreen-steps{
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  margin-top:0;
+  padding-top:10px;
+  border-top:1px solid rgba(255,255,255,.10);
+}
+.markets-page .evergreen-steps>div{
+  min-height:68px;
+  padding:10px 14px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:10px;
+  background:rgba(255,255,255,.025);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.025);
+}
+.markets-page .evergreen-steps>div:first-child{padding-left:14px}
+.markets-page .evergreen-steps>div:last-child{padding-right:14px;border-right:1px solid rgba(255,255,255,.08)}
+.markets-page .evergreen-steps strong{
+  display:block;
+  margin-bottom:3px;
+  color:#f7fbfc;
+  font-size:.9rem;
+}
+.markets-page .evergreen-steps span{
+  color:rgba(226,236,238,.82);
+  font-size:.78rem;
+  line-height:1.34;
+}
+
+@media(max-width:900px){
+  .markets-page .evergreen-steps{grid-template-columns:1fr}
+}
+
+
+/* Match Evergreen text scale to opportunity cards */
+.markets-page .evergreen-steps strong{
+  font-size:.96rem;
+}
+.markets-page .evergreen-steps span{
+  font-size:.86rem;
+  line-height:1.48;
+}
+
+
+/* Center Evergreen step titles; keep descriptions left-aligned */
+.markets-page .evergreen-steps strong{
+  text-align:center;
+}
+
+
+/* Center all content inside opportunity and evergreen cards */
+.markets-page .opportunity-card{
+  text-align:center;
+}
+.markets-page .opportunity-card span,
+.markets-page .opportunity-card h3,
+.markets-page .opportunity-card p{
+  text-align:center;
+}
+.markets-page .opportunity-card p{
+  max-width:34ch;
+  margin-left:auto;
+  margin-right:auto;
+}
+.markets-page .evergreen-heading{
+  text-align:center;
+}
+.markets-page .evergreen-steps>div,
+.markets-page .evergreen-steps strong,
+.markets-page .evergreen-steps span{
+  text-align:center;
+}
+.markets-page .evergreen-steps span{
+  max-width:34ch;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+/* From Opportunity to Decision */
+.markets-page .decision-path-section{
+  background:linear-gradient(180deg,#f7fafb 0%,#ffffff 100%);
+  border-top:1px solid #dbe5e6;
+  color:#17343c;
+}
+.markets-page .decision-path-section .section-intro{
+  max-width:820px;
+  color:#526870;
+  font-size:.96rem;
+  line-height:1.55;
+}
+.markets-page .decision-path{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr);
+  gap:12px;
+  align-items:stretch;
+  margin-top:24px;
+}
+.markets-page .decision-step{
+  position:relative;
+  min-height:210px;
+  padding:20px 18px 18px;
+  border:1px solid #d5e1e2;
+  border-radius:14px;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.98),rgba(246,249,250,.98));
+  box-shadow:0 10px 24px rgba(8,24,32,.07),inset 0 1px 0 rgba(255,255,255,.8);
+}
+.markets-page .decision-step::after{
+  content:"";
+  position:absolute;
+  left:16px;
+  right:16px;
+  bottom:0;
+  height:2px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#11858b,#73b8ff);
+  opacity:.7;
+}
+.markets-page .decision-key{
+  display:block;
+  margin-bottom:8px;
+  color:#11858b;
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.16em;
+}
+.markets-page .decision-step h3{
+  margin:0 0 8px;
+  color:#17343c;
+  font-size:1.03rem;
+  line-height:1.2;
+}
+.markets-page .decision-step p{
+  margin:0;
+  color:#5a6f76;
+  font-size:.84rem;
+  line-height:1.5;
+}
+.markets-page .decision-arrow{
+  align-self:center;
+  color:#11858b;
+  font-size:1.3rem;
+  font-weight:700;
+  opacity:.75;
+}
+@media(max-width:1050px){
+  .markets-page .decision-path{
+    grid-template-columns:1fr;
+  }
+  .markets-page .decision-arrow{
+    transform:rotate(90deg);
+    justify-self:center;
+  }
+  .markets-page .decision-step{
+    min-height:auto;
+  }
+}
+
+
+/* Unified desktop content rail for Markets page */
+.markets-page .markets-hero-inner,
+.markets-page .markets-section > .wrap{
+  width:auto;
+  max-width:none;
+  margin-left:64px;
+  margin-right:64px;
+}
+
+@media(max-width:1200px){
+  .markets-page .markets-hero-inner,
+  .markets-page .markets-section > .wrap{
+    margin-left:44px;
+    margin-right:44px;
+  }
+}
+
+@media(max-width:900px){
+  .markets-page .markets-hero-inner,
+  .markets-page .markets-section > .wrap{
+    margin-left:28px;
+    margin-right:28px;
+  }
+}
+
+@media(max-width:650px){
+  .markets-page .markets-hero-inner,
+  .markets-page .markets-section > .wrap{
+    margin-left:20px;
+    margin-right:20px;
+  }
+}
+
+
+/* Refine From Opportunity to Decision into a connected pathway */
+.markets-page .decision-path-section{
+  padding:42px 0 46px;
+  background:
+    linear-gradient(180deg,#f7fafb 0%,#ffffff 100%);
+  border-top:1px solid #dbe5e6;
+}
+.markets-page .decision-path-section h2{
+  margin-bottom:.45rem;
+}
+.markets-page .decision-path-section .section-intro{
+  max-width:820px;
+  margin-bottom:0;
+}
+.markets-page .decision-path{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:0;
+  margin-top:30px;
+  padding-top:22px;
+  border-top:1px solid #cfdcde;
+}
+.markets-page .decision-path::before{
+  content:"";
+  position:absolute;
+  top:-2px;
+  left:0;
+  width:20%;
+  height:3px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#11858b,#73b8ff);
+}
+.markets-page .decision-step{
+  min-height:0;
+  padding:20px 22px 6px;
+  border:0;
+  border-right:1px solid #d8e2e3;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+}
+.markets-page .decision-step:last-of-type{
+  border-right:0;
+}
+.markets-page .decision-step::after{
+  display:none;
+}
+.markets-page .decision-key{
+  display:inline-block;
+  margin-bottom:10px;
+  padding:5px 9px 4px;
+  border-radius:999px;
+  color:#0b777c;
+  background:#e7f4f4;
+  font-size:.68rem;
+  font-weight:900;
+  letter-spacing:.15em;
+}
+.markets-page .decision-step h3{
+  margin:0 0 8px;
+  color:#17343c;
+  font-size:1rem;
+  line-height:1.22;
+}
+.markets-page .decision-step p{
+  margin:0;
+  color:#5c7077;
+  font-size:.82rem;
+  line-height:1.5;
+}
+.markets-page .decision-arrow{
+  display:none;
+}
+
+@media(max-width:1050px){
+  .markets-page .decision-path{
+    grid-template-columns:1fr 1fr;
+    padding-top:12px;
+  }
+  .markets-page .decision-step{
+    padding:18px 18px 20px;
+    border-right:0;
+    border-bottom:1px solid #d8e2e3;
+  }
+  .markets-page .decision-step:last-of-type{
+    border-bottom:0;
+  }
+}
+@media(max-width:650px){
+  .markets-page .decision-path{
+    grid-template-columns:1fr;
+  }
+}
+
+
+/* Market-specific commercial path */
+.markets-page .market-path-panel{
+  display:block;
+  padding:26px 0 28px;
+}
+.markets-page .market-path-panel h3{
+  margin:4px 0 18px;
+}
+.markets-page .market-path-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:0;
+  margin-top:8px;
+  border-top:1px solid #d7e1e2;
+  border-bottom:1px solid #d7e1e2;
+}
+.markets-page .market-path-grid>div{
+  padding:16px 18px 18px;
+  border-right:1px solid #d7e1e2;
+}
+.markets-page .market-path-grid>div:first-child{padding-left:0}
+.markets-page .market-path-grid>div:last-child{border-right:0;padding-right:0}
+.markets-page .market-path-grid strong{
+  display:block;
+  margin-bottom:6px;
+  color:#0b777c;
+  font-size:.74rem;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.markets-page .market-path-grid p{
+  margin:0;
+  color:#566c73;
+  font-size:.84rem;
+  line-height:1.5;
+}
+.markets-page .market-path-panel>span{
+  display:block;
+  margin-top:14px;
+  color:#0b777c;
+  font-size:.9rem;
+  font-weight:800;
+}
+@media(max-width:1050px){
+  .markets-page .market-path-grid{
+    grid-template-columns:1fr 1fr;
+  }
+  .markets-page .market-path-grid>div{
+    border-bottom:1px solid #d7e1e2;
+  }
+}
+@media(max-width:650px){
+  .markets-page .market-path-grid{
+    grid-template-columns:1fr;
+  }
+  .markets-page .market-path-grid>div{
+    padding:14px 0;
+    border-right:0;
+  }
+}
+
+
+/* Six-part market development framework */
+.markets-page .market-path-grid{
+  grid-template-columns:repeat(6,minmax(0,1fr));
+}
+.markets-page .market-path-grid>div{
+  padding:15px 14px 17px;
+}
+.markets-page .market-path-grid p{
+  font-size:.8rem;
+  line-height:1.46;
+}
+.markets-page .market-path-grid strong{
+  font-size:.7rem;
+}
+@media(max-width:1200px){
+  .markets-page .market-path-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+@media(max-width:780px){
+  .markets-page .market-path-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+
+/* Digital transformation as a cross-cutting commercial lens */
+.markets-page .digital-lens{
+  display:grid;
+  grid-template-columns:220px 1fr;
+  gap:28px;
+  margin:28px 0 34px;
+  padding:26px 28px;
+  border:1px solid #d7e4e5;
+  border-radius:18px;
+  background:
+    linear-gradient(135deg,rgba(9,105,112,.06),rgba(55,101,164,.05) 56%,rgba(255,255,255,.92));
+  box-shadow:0 14px 30px rgba(26,55,67,.07);
+}
+.markets-page .digital-lens-label{
+  align-self:start;
+  padding-top:3px;
+  color:#0a767b;
+  font-size:.74rem;
+  font-weight:900;
+  letter-spacing:.16em;
+  line-height:1.45;
+}
+.markets-page .digital-lens-copy h3{
+  margin:0 0 8px;
+  color:#17343c;
+  font-size:1.08rem;
+}
+.markets-page .digital-lens-copy>p{
+  margin:0;
+  max-width:920px;
+  color:#566b72;
+  line-height:1.58;
+}
+.markets-page .digital-lens-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:0;
+  margin-top:20px;
+  border-top:1px solid #d5e1e3;
+}
+.markets-page .digital-lens-grid>div{
+  padding:14px 16px 0;
+  border-right:1px solid #d5e1e3;
+}
+.markets-page .digital-lens-grid>div:first-child{padding-left:0}
+.markets-page .digital-lens-grid>div:last-child{border-right:0;padding-right:0}
+.markets-page .digital-lens-grid strong{
+  display:block;
+  margin-bottom:5px;
+  color:#0a767b;
+  font-size:.7rem;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.markets-page .digital-lens-grid span{
+  display:block;
+  color:#61747a;
+  font-size:.8rem;
+  line-height:1.45;
+}
+@media(max-width:1050px){
+  .markets-page .digital-lens{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+}
+@media(max-width:780px){
+  .markets-page .digital-lens-grid{
+    grid-template-columns:1fr 1fr;
+  }
+  .markets-page .digital-lens-grid>div{
+    padding:12px 10px;
+    border-bottom:1px solid #d5e1e3;
+  }
+}
+@media(max-width:560px){
+  .markets-page .digital-lens-grid{
+    grid-template-columns:1fr;
+  }
+  .markets-page .digital-lens-grid>div{
+    border-right:0;
+  }
+}
+
+
+/* Keep midstream commercially broad while preserving technical depth */
+.markets-page .market-domain-note{
+  margin-top:14px;
+  padding:12px 14px;
+  border-left:3px solid #0b777c;
+  background:#f3f8f8;
+  color:#556b72;
+  font-size:.82rem;
+  line-height:1.5;
+}
+.markets-page .market-domain-note strong{
+  color:#17343c;
+}
+
+
+/* Tighten transition between decision path and market context */
+.markets-page .decision-path-section{
+  padding-bottom:26px;
+}
+.markets-page .value-chain-section{
+  position:relative;
+  padding-top:30px;
+}
+.markets-page .value-chain-section::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:64px;
+  right:64px;
+  height:1px;
+  background:linear-gradient(90deg,rgba(11,119,124,.9),rgba(94,157,188,.45),rgba(11,119,124,0));
+}
+@media(max-width:1200px){
+  .markets-page .value-chain-section::before{
+    left:44px;
+    right:44px;
+  }
+}
+@media(max-width:900px){
+  .markets-page .value-chain-section::before{
+    left:28px;
+    right:28px;
+  }
+}
+@media(max-width:650px){
+  .markets-page .value-chain-section::before{
+    left:20px;
+    right:20px;
+  }
+}
+
+
+/* Personal closing note */
+.markets-page .personal-note-section{
+  padding:46px 0 52px;
+  background:linear-gradient(180deg,#f5f8f8 0%,#edf3f3 100%);
+}
+.markets-page .personal-note-card{
+  position:relative;
+  overflow:hidden;
+  max-width:1180px;
+  margin:0 auto;
+  border:1px solid #d6e0df;
+  border-radius:18px;
+  background:
+    linear-gradient(90deg,transparent 0 72px,rgba(14,122,126,.22) 72px 74px,transparent 74px),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,.97) 0,
+      rgba(255,255,255,.97) 35px,
+      rgba(93,126,137,.10) 35px,
+      rgba(93,126,137,.10) 36px
+    );
+  box-shadow:0 22px 46px rgba(23,52,60,.12);
+}
+.markets-page .personal-note-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(135deg,rgba(10,118,123,.045),transparent 38%,rgba(25,63,91,.025));
+}
+.markets-page .personal-note-inner{
+  position:relative;
+  z-index:1;
+  max-width:900px;
+  margin:0 auto;
+  padding:48px 72px 44px 104px;
+}
+.markets-page .personal-note-kicker{
+  margin:0 0 14px;
+  color:#0a7a7f;
+  font-size:.76rem;
+  font-weight:900;
+  letter-spacing:.18em;
+}
+.markets-page .personal-note-card h2{
+  margin:0 0 24px;
+  color:#10262d;
+  font-size:clamp(1.75rem,2.6vw,2.75rem);
+  line-height:1.12;
+  letter-spacing:-.02em;
+}
+.markets-page .personal-note-copy{
+  max-width:790px;
+}
+.markets-page .personal-note-copy p{
+  margin:0 0 18px;
+  color:#445d65;
+  font-size:1rem;
+  line-height:1.72;
+}
+.markets-page .personal-note-signoff{
+  margin-top:30px;
+  padding-top:18px;
+  border-top:1px solid rgba(13,118,123,.22);
+}
+.markets-page .personal-note-signoff strong{
+  display:block;
+  color:#10262d;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:1.45rem;
+  font-weight:600;
+}
+.markets-page .personal-note-signoff span{
+  display:block;
+  margin-top:3px;
+  color:#6b7c82;
+  font-size:.84rem;
+  letter-spacing:.04em;
+}
+@media(max-width:800px){
+  .markets-page .personal-note-card{
+    background:
+      linear-gradient(90deg,transparent 0 42px,rgba(14,122,126,.18) 42px 44px,transparent 44px),
+      repeating-linear-gradient(to bottom,rgba(255,255,255,.97) 0,rgba(255,255,255,.97) 35px,rgba(93,126,137,.10) 35px,rgba(93,126,137,.10) 36px);
+  }
+  .markets-page .personal-note-inner{
+    padding:38px 34px 36px 62px;
+  }
+}
+@media(max-width:560px){
+  .markets-page .personal-note-section{
+    padding:34px 0 40px;
+  }
+  .markets-page .personal-note-inner{
+    padding:32px 24px 32px 48px;
+  }
+  .markets-page .personal-note-copy p{
+    font-size:.94rem;
+  }
+}
+
+
+/* Use the same section-divider language between market paths */
+.markets-page .market-focus-panel{
+  position:relative;
+  border-bottom:0 !important;
+}
+.markets-page .market-focus-panel:not(:last-child)::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:1px;
+  background:linear-gradient(90deg,rgba(11,119,124,.9),rgba(94,157,188,.45),rgba(11,119,124,0));
+}
+
+
+/* Refine personal note: small executive note card, not a whiteboard */
+.markets-page .personal-note-section{
+  padding:36px 0 42px;
+  background:linear-gradient(180deg,#f5f8f8 0%,#edf3f3 100%);
+}
+.markets-page .personal-note-card{
+  max-width:820px;
+  margin:0 auto;
+  border-radius:14px;
+  background:
+    linear-gradient(90deg,transparent 0 46px,rgba(14,122,126,.18) 46px 48px,transparent 48px),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,.985) 0,
+      rgba(255,255,255,.985) 29px,
+      rgba(93,126,137,.08) 29px,
+      rgba(93,126,137,.08) 30px
+    );
+  box-shadow:0 14px 30px rgba(23,52,60,.11);
+}
+.markets-page .personal-note-inner{
+  max-width:none;
+  margin:0;
+  padding:30px 42px 30px 68px;
+}
+.markets-page .personal-note-kicker{
+  margin-bottom:10px;
+  font-size:.68rem;
+  letter-spacing:.16em;
+}
+.markets-page .personal-note-card h2{
+  margin-bottom:18px;
+  font-size:clamp(1.35rem,2vw,1.95rem);
+  line-height:1.18;
+}
+.markets-page .personal-note-copy{
+  max-width:100%;
+}
+.markets-page .personal-note-copy p{
+  margin-bottom:12px;
+  font-size:.92rem;
+  line-height:1.58;
+}
+.markets-page .personal-note-signoff{
+  margin-top:20px;
+  padding-top:12px;
+}
+.markets-page .personal-note-signoff strong{
+  font-size:1.2rem;
+}
+.markets-page .personal-note-signoff span{
+  font-size:.78rem;
+}
+@media(max-width:900px){
+  .markets-page .personal-note-card{
+    max-width:760px;
+  }
+}
+@media(max-width:650px){
+  .markets-page .personal-note-section{
+    padding:28px 0 34px;
+  }
+  .markets-page .personal-note-card{
+    max-width:none;
+  }
+  .markets-page .personal-note-inner{
+    padding:28px 24px 28px 54px;
+  }
+}
+
+
+/* Make the personal note behave like actual ruled paper */
+.markets-page .personal-note-card{
+  background:
+    linear-gradient(90deg,transparent 0 46px,rgba(14,122,126,.18) 46px 48px,transparent 48px),
+    #fff;
+}
+.markets-page .personal-note-card h2{
+  margin-bottom:20px;
+}
+.markets-page .personal-note-copy{
+  position:relative;
+  max-width:100%;
+  padding:2px 0 0;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 31px,
+      rgba(93,126,137,.13) 31px,
+      rgba(93,126,137,.13) 32px
+    );
+}
+.markets-page .personal-note-copy p{
+  margin:0 0 32px;
+  font-size:.92rem;
+  line-height:32px;
+}
+.markets-page .personal-note-copy p:last-child{
+  margin-bottom:0;
+}
+.markets-page .personal-note-signoff{
+  margin-top:24px;
+  padding-top:16px;
+  border-top:1px solid rgba(13,118,123,.20);
+  background:#fff;
+}
+
+
+/* Personal sign-off refinement */
+.markets-page .personal-note-signoff strong{
+  font-style:italic;
+}
+
+
+/* Personal note redesign: restrained executive correspondence card */
+.markets-page .personal-note-section{
+  padding:38px 0 44px;
+  background:linear-gradient(180deg,#f4f7f7 0%,#eef3f3 100%);
+}
+.markets-page .personal-note-card{
+  position:relative;
+  max-width:760px;
+  margin:0 auto;
+  overflow:visible;
+  border:1px solid #d7dfdc;
+  border-radius:10px;
+  background:#fffdf8;
+  box-shadow:0 12px 28px rgba(23,52,60,.09);
+}
+.markets-page .personal-note-card::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  height:4px;
+  border-radius:10px 10px 0 0;
+  background:linear-gradient(90deg,#0b777c,#5f9dbc 55%,rgba(95,157,188,0));
+}
+.markets-page .personal-note-inner{
+  max-width:none;
+  margin:0;
+  padding:28px 34px 26px;
+}
+.markets-page .personal-note-kicker{
+  margin:0 0 12px;
+  color:#0a777c;
+  font-size:.67rem;
+  font-weight:900;
+  letter-spacing:.16em;
+}
+.markets-page .personal-note-card h2{
+  margin:0 0 18px;
+  max-width:680px;
+  color:#17343c;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:1.28rem;
+  font-weight:600;
+  font-style:italic;
+  line-height:1.42;
+  letter-spacing:0;
+}
+.markets-page .personal-note-copy{
+  max-width:680px;
+  padding:0;
+  background:none;
+}
+.markets-page .personal-note-copy p{
+  margin:0 0 12px;
+  color:#4e646b;
+  font-size:.93rem;
+  line-height:1.62;
+}
+.markets-page .personal-note-copy p:last-child{
+  margin-bottom:0;
+}
+.markets-page .personal-note-signoff{
+  margin-top:20px;
+  padding-top:0;
+  border-top:0;
+  background:none;
+  text-align:right;
+}
+.markets-page .personal-note-signoff strong{
+  display:inline-block;
+  color:#17343c;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:1.18rem;
+  font-weight:600;
+  font-style:italic;
+}
+.markets-page .personal-note-signoff span{
+  display:none;
+}
+@media(max-width:850px){
+  .markets-page .personal-note-card{
+    max-width:700px;
+  }
+}
+@media(max-width:650px){
+  .markets-page .personal-note-section{
+    padding:30px 0 36px;
+  }
+  .markets-page .personal-note-card{
+    max-width:none;
+  }
+  .markets-page .personal-note-inner{
+    padding:24px 22px 22px;
+  }
+  .markets-page .personal-note-card h2{
+    font-size:1.15rem;
+  }
+}
+
+
+/* Final personal-note treatment: pale teal sheet laid on the page */
+.markets-page .personal-note-section{
+  padding:54px 0 62px;
+  background:linear-gradient(180deg,#f6f8f7 0%,#f1f4f3 100%);
+  overflow:hidden;
+}
+.markets-page .personal-note-stage{
+  display:flex;
+  justify-content:center;
+  padding:18px 0 28px;
+}
+.markets-page .personal-note-sheet{
+  width:min(720px,78vw);
+  padding:54px 62px 46px;
+  background:#dceff1;
+  border:1px solid rgba(41,91,102,.10);
+  box-shadow:18px 22px 32px rgba(24,47,53,.18);
+  transform:rotate(-2.2deg);
+  transform-origin:center;
+}
+.markets-page .personal-note-sheet .personal-note-kicker{
+  margin:0 0 28px;
+  text-align:center;
+  color:#287784;
+  font-size:.68rem;
+  font-weight:800;
+  letter-spacing:.28em;
+}
+.markets-page .personal-note-sheet .personal-note-kicker::after{
+  content:"";
+  display:block;
+  width:48px;
+  height:1px;
+  margin:10px auto 0;
+  background:#4e96a1;
+}
+.markets-page .personal-note-sheet h2{
+  margin:0 0 28px;
+  color:#17313d;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(1.6rem,2.35vw,2.25rem);
+  font-weight:500;
+  font-style:normal;
+  line-height:1.24;
+  letter-spacing:0;
+}
+.markets-page .personal-note-sheet .personal-note-copy{
+  max-width:none;
+  padding:0;
+  background:none;
+}
+.markets-page .personal-note-sheet .personal-note-copy p{
+  margin:0 0 18px;
+  color:#263f48;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:.98rem;
+  line-height:1.62;
+}
+.markets-page .personal-note-sheet .personal-note-signoff{
+  margin-top:28px;
+  padding:0;
+  border:0;
+  background:none;
+  text-align:left;
+}
+.markets-page .personal-note-sheet .personal-note-signoff strong{
+  color:#176274;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:1.75rem;
+  font-weight:500;
+  font-style:italic;
+}
+@media(max-width:760px){
+  .markets-page .personal-note-section{padding:42px 0 48px}
+  .markets-page .personal-note-sheet{
+    width:86vw;
+    padding:38px 34px 34px;
+    transform:rotate(-1.4deg);
+  }
+  .markets-page .personal-note-sheet h2{
+    font-size:1.45rem;
+  }
+  .markets-page .personal-note-sheet .personal-note-copy p{
+    font-size:.92rem;
+  }
+}
+
+
+/* Pull the personal note closer to the market section */
+.markets-page .personal-note-section{
+  padding-top:18px !important;
+}
+.markets-page .personal-note-stage{
+  padding-top:0 !important;
+}
+
+
+/* Tighten Market Focus -> Personal Note transition */
+.markets-page .market-focus-section{
+  padding-bottom:20px !important;
+}
+.markets-page .market-focus-list{
+  margin-bottom:0 !important;
+}
+.markets-page .market-focus-panel:last-child{
+  padding-bottom:14px !important;
+}
+.markets-page .personal-note-section{
+  padding-top:0 !important;
+}
+.markets-page .personal-note-stage{
+  padding-top:0 !important;
+  margin-top:-8px;
+}
+
+
+/* Reduce Market Context visual weight */
+.markets-page .value-chain-section{
+  padding-top:24px !important;
+  padding-bottom:30px !important;
+}
+.markets-page .value-chain-section .kicker{
+  margin-bottom:8px !important;
+}
+.markets-page .value-chain-section h2{
+  margin:0 0 10px !important;
+  font-size:clamp(1.9rem,3vw,3rem) !important;
+  line-height:1.08 !important;
+}
+.markets-page .value-chain-intro{
+  margin-bottom:18px !important;
+}
+.markets-page .value-chain-intro p{
+  margin:0 !important;
+  font-size:.95rem !important;
+  line-height:1.5 !important;
+}
+.markets-page .markets-figure{
+  width:min(1120px,78%) !important;
+  margin:18px auto 0 !important;
+}
+.markets-page .markets-figure img{
+  width:100% !important;
+  border-radius:14px !important;
+  box-shadow:0 12px 28px rgba(7,20,27,.08) !important;
+}
+@media(max-width:1100px){
+  .markets-page .markets-figure{
+    width:86% !important;
+  }
+}
+@media(max-width:760px){
+  .markets-page .markets-figure{
+    width:100% !important;
+  }
+}
+
+
+/* Tighten Market Focus / Digital Transformation spacing */
+.markets-page .market-focus-section{
+  padding-top:30px !important;
+}
+.markets-page .market-focus-section .section-intro{
+  margin-bottom:16px !important;
+}
+.markets-page .digital-lens{
+  margin:18px 0 20px !important;
+  padding:20px 22px !important;
+  gap:22px !important;
+}
+.markets-page .digital-lens-copy h3{
+  margin-bottom:6px !important;
+}
+.markets-page .digital-lens-copy>p{
+  line-height:1.48 !important;
+}
+.markets-page .digital-lens-grid{
+  margin-top:14px !important;
+}
+.markets-page .digital-lens-grid>div{
+  padding-top:10px !important;
+}
+.markets-page .market-focus-list{
+  margin-top:8px !important;
+}
+.markets-page .market-path-panel{
+  padding-top:20px !important;
+}
+
+
+/* Prevent rotated personal note from clipping while keeping it close */
+.markets-page .personal-note-section{
+  padding-top:16px !important;
+  overflow:visible !important;
+}
+.markets-page .personal-note-stage{
+  padding-top:10px !important;
+  margin-top:0 !important;
+  overflow:visible !important;
+}
+
+[executed on device: DESKTOP-MLF8016 (8c688f46-4911-4955-b982-7ed762667fa0)]
