@@ -102,7 +102,7 @@
       nav.appendChild(makeDropdown('Markets',marketsLinks));
       nav.appendChild(makeDropdown('Expertise',expertiseLinks,'expertise-dropdown'));
       nav.appendChild(makeAnchor('/industry-intelligence/oil-gas-ai-lab/','Oil & Gas AI Lab'));
-      nav.appendChild(makeAnchor('/whoqual-iq/','WhoQual-IQâ„¢'));
+      nav.appendChild(makeAnchor('/whoqual-iq/','WhoQual-IQ\u2122'));
       nav.appendChild(makeAnchor('/ask-soubel/','Ask SOUBEL'));
       nav.appendChild(makeDropdown('Knowledge',knowledgeLinks,'knowledge-dropdown'));
       nav.appendChild(makeDropdown('About',aboutLinks));
@@ -148,7 +148,7 @@
     menu.appendChild(buildMobileGroup('Markets',marketsLinks));
     menu.appendChild(buildMobileGroup('Expertise',expertiseLinks));
     menu.appendChild(buildMobileLink('/industry-intelligence/oil-gas-ai-lab/','Oil & Gas AI Lab'));
-    menu.appendChild(buildMobileLink('/whoqual-iq/','WhoQual-IQâ„¢'));
+    menu.appendChild(buildMobileLink('/whoqual-iq/','WhoQual-IQ\u2122'));
     menu.appendChild(buildMobileLink('/ask-soubel/','Ask SOUBEL'));
     menu.appendChild(buildMobileGroup('Knowledge',knowledgeLinks));
     menu.appendChild(buildMobileGroup('About',aboutLinks));
@@ -296,6 +296,21 @@
       if(p) p.textContent='SOUBEL provides practical context and connects evidence across corrosion-control and integrity work. Standards, regulations, company procedures, original technical literature, and qualified engineering judgment govern asset-specific criteria, calculations, and technical decisions.';
     }
   }
+
+  // Close in-page navigation menus after use, outside click, or Escape.
+  document.querySelectorAll('details.hero-page-nav').forEach(nav=>{
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.open=false;}));
+  });
+  document.addEventListener('click',e=>{
+    document.querySelectorAll('details.hero-page-nav[open]').forEach(nav=>{
+      if(!nav.contains(e.target)) nav.open=false;
+    });
+  });
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'){
+      document.querySelectorAll('details.hero-page-nav[open]').forEach(nav=>{nav.open=false;});
+    }
+  });
 
   if(path.startsWith('/insights/integrity-shift/') && path!=='/insights/integrity-shift/' && document.querySelector('.article-hero')){
     document.body.classList.add('integrity-shift-article-audit');
