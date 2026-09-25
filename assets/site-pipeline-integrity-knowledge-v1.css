@@ -222,3 +222,1231 @@
     overflow:auto;
   }
 }
+
+
+/* Compact Pipeline Integrity hero */
+.pipeline-knowledge-page .cp-hero{
+  padding-top:28px !important;
+  padding-bottom:30px !important;
+}
+.pipeline-knowledge-page .cp-hero .crumb{
+  margin-bottom:12px !important;
+}
+.pipeline-knowledge-page .cp-hero .kicker{
+  margin-bottom:10px !important;
+}
+.pipeline-knowledge-page .cp-hero h1{
+  max-width:none !important;
+  margin:0 0 16px !important;
+  font-size:clamp(2.2rem,3.1vw,3.35rem) !important;
+  line-height:1.06 !important;
+  letter-spacing:-.03em !important;
+  white-space:nowrap;
+}
+.pipeline-knowledge-page .cp-hero > .wrap > p:not(.kicker){
+  max-width:1180px !important;
+  margin-bottom:0 !important;
+  font-size:1rem !important;
+  line-height:1.55 !important;
+}
+.pipeline-knowledge-page .cp-hero .actions{
+  margin-top:18px !important;
+}
+@media(max-width:1100px){
+  .pipeline-knowledge-page .cp-hero h1{
+    white-space:normal;
+  }
+}
+@media(max-width:760px){
+  .pipeline-knowledge-page .cp-hero{
+    padding-top:22px !important;
+    padding-bottom:26px !important;
+  }
+}
+
+
+/* Foundation redesign: paired threat + integrity cycle cards */
+.pipeline-knowledge-page #foundation .foundation-pair{
+  align-items:stretch !important;
+}
+.pipeline-knowledge-page #foundation .foundation-threat-card,
+.pipeline-knowledge-page #foundation .foundation-cycle-card{
+  min-height:100%;
+  padding:22px !important;
+}
+.pipeline-knowledge-page #foundation .foundation-threat-card{
+  background:linear-gradient(180deg,#ffffff 0%,#fbfdfd 100%) !important;
+}
+.pipeline-knowledge-page #foundation .foundation-cycle-card{
+  display:flex;
+  background:linear-gradient(180deg,#0c2730 0%,#102f38 100%) !important;
+  border-color:#21444c !important;
+  color:#eef7f7 !important;
+}
+.pipeline-knowledge-page #foundation .foundation-cycle-inner{
+  width:100%;
+  margin:auto 0;
+}
+.pipeline-knowledge-page #foundation .foundation-cycle-card .label{
+  color:#79d1d3 !important;
+}
+.pipeline-knowledge-page #foundation .foundation-cycle-card h3{
+  color:#ffffff !important;
+  font-size:1.22rem !important;
+  line-height:1.28 !important;
+}
+.pipeline-knowledge-page #foundation .cycle-intro{
+  margin:0 0 16px !important;
+  color:#bfd1d5 !important;
+  font-size:.92rem !important;
+  line-height:1.5 !important;
+}
+.pipeline-knowledge-page #foundation .threat-list{
+  margin-top:14px;
+}
+.pipeline-knowledge-page #foundation .threat-item{
+  padding:12px 0;
+  border-top:1px solid #dbe5e5;
+}
+.pipeline-knowledge-page #foundation .threat-item:first-child{
+  border-top:0;
+  padding-top:4px;
+}
+.pipeline-knowledge-page #foundation .threat-item strong{
+  display:block;
+  margin-bottom:3px;
+  color:#173840 !important;
+  font-size:.95rem;
+  line-height:1.32;
+}
+.pipeline-knowledge-page #foundation .threat-item span{
+  display:block;
+  color:#526870;
+  font-size:.88rem;
+  line-height:1.46;
+}
+.pipeline-knowledge-page #foundation .integrity-cycle{
+  margin-top:12px;
+}
+.pipeline-knowledge-page #foundation .cycle-step{
+  display:grid;
+  grid-template-columns:36px 1fr;
+  gap:12px;
+  align-items:start;
+  padding:11px 0;
+  border-top:1px solid rgba(255,255,255,.12);
+}
+.pipeline-knowledge-page #foundation .cycle-step:first-child{
+  border-top:0;
+}
+.pipeline-knowledge-page #foundation .cycle-number{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  background:#0b7f8c;
+  color:#fff;
+  font-size:.68rem;
+  font-weight:900;
+  letter-spacing:.04em;
+}
+.pipeline-knowledge-page #foundation .cycle-step strong{
+  display:block;
+  margin-bottom:2px;
+  color:#ffffff !important;
+  font-size:.96rem;
+  line-height:1.2;
+}
+.pipeline-knowledge-page #foundation .cycle-step small{
+  display:block;
+  color:#bfd1d5;
+  font-size:.82rem;
+  line-height:1.42;
+}
+.pipeline-knowledge-page #foundation .foundation-cycle-card .link-row{
+  margin-top:16px !important;
+}
+.pipeline-knowledge-page #foundation .foundation-cycle-card .link-row a{
+  color:#8bdadc !important;
+}
+@media(max-width:760px){
+  .pipeline-knowledge-page #foundation .foundation-threat-card,
+  .pipeline-knowledge-page #foundation .foundation-cycle-card{
+    padding:18px !important;
+  }
+}
+
+
+/* Unified Foundation framework */
+.pipeline-knowledge-page #foundation .foundation-framework{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  margin-top:22px;
+  overflow:hidden;
+  border:1px solid #cfdddd;
+  border-radius:18px;
+  background:linear-gradient(180deg,#ffffff 0%,#f9fbfb 100%);
+  box-shadow:0 12px 28px rgba(15,38,46,.06);
+}
+.pipeline-knowledge-page #foundation .foundation-column{
+  min-width:0;
+  padding:24px 26px 22px;
+}
+.pipeline-knowledge-page #foundation .foundation-column + .foundation-column{
+  border-left:1px solid #cfdddd;
+}
+.pipeline-knowledge-page #foundation .foundation-column-head{
+  min-height:132px;
+  padding-bottom:16px;
+  border-bottom:1px solid #dbe5e5;
+}
+.pipeline-knowledge-page #foundation .framework-label{
+  display:block;
+  margin-bottom:8px;
+  color:#0b7f8c;
+  font-size:.7rem;
+  font-weight:900;
+  letter-spacing:.15em;
+}
+.pipeline-knowledge-page #foundation .foundation-column-head h3{
+  margin:0 0 7px;
+  color:#173840;
+  font-size:1.22rem;
+  line-height:1.25;
+}
+.pipeline-knowledge-page #foundation .foundation-column-head p{
+  margin:0;
+  color:#5a6f76;
+  font-size:.9rem;
+  line-height:1.45;
+}
+.pipeline-knowledge-page #foundation .threat-list,
+.pipeline-knowledge-page #foundation .integrity-cycle{
+  margin-top:0;
+}
+.pipeline-knowledge-page #foundation .threat-item,
+.pipeline-knowledge-page #foundation .cycle-step{
+  display:grid;
+  grid-template-columns:34px 1fr;
+  gap:12px;
+  align-items:start;
+  padding:13px 0;
+  border-top:1px solid #e1e8e8;
+}
+.pipeline-knowledge-page #foundation .threat-item:first-child,
+.pipeline-knowledge-page #foundation .cycle-step:first-child{
+  border-top:0;
+}
+.pipeline-knowledge-page #foundation .item-number,
+.pipeline-knowledge-page #foundation .cycle-number{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background:#e7f4f4;
+  color:#0b7f8c;
+  font-size:.66rem;
+  font-weight:900;
+  letter-spacing:.03em;
+}
+.pipeline-knowledge-page #foundation .threat-item strong,
+.pipeline-knowledge-page #foundation .cycle-step strong{
+  display:block;
+  margin-bottom:3px;
+  color:#173840 !important;
+  font-size:.94rem;
+  line-height:1.3;
+}
+.pipeline-knowledge-page #foundation .threat-item span:not(.item-number),
+.pipeline-knowledge-page #foundation .cycle-step small{
+  display:block;
+  color:#566b72;
+  font-size:.84rem;
+  line-height:1.44;
+}
+.pipeline-knowledge-page #foundation .response-column .link-row{
+  margin-top:14px !important;
+  padding-top:14px;
+  border-top:1px solid #e1e8e8;
+}
+.pipeline-knowledge-page #foundation .response-column .link-row a{
+  color:#0b7f8c !important;
+}
+@media(max-width:850px){
+  .pipeline-knowledge-page #foundation .foundation-framework{
+    grid-template-columns:1fr;
+  }
+  .pipeline-knowledge-page #foundation .foundation-column + .foundation-column{
+    border-left:0;
+    border-top:1px solid #cfdddd;
+  }
+  .pipeline-knowledge-page #foundation .foundation-column-head{
+    min-height:0;
+  }
+}
+
+
+/* Editorial Foundation treatment — no bubbles, no arrows */
+.pipeline-knowledge-page #foundation .foundation-framework{
+  background:#fff;
+  border:1px solid #cfdcdd;
+  box-shadow:0 16px 34px rgba(13,39,47,.07);
+}
+.pipeline-knowledge-page #foundation .foundation-column{
+  padding:28px 30px 26px;
+}
+.pipeline-knowledge-page #foundation .threat-column{
+  background:linear-gradient(180deg,#f8f8f5 0%,#fbfbf9 100%);
+}
+.pipeline-knowledge-page #foundation .response-column{
+  background:linear-gradient(180deg,#edf6f6 0%,#f5f9f9 100%);
+}
+.pipeline-knowledge-page #foundation .foundation-column + .foundation-column{
+  border-left:1px solid #cfdcdd;
+}
+.pipeline-knowledge-page #foundation .foundation-column-head{
+  min-height:118px;
+  padding-bottom:18px;
+  border-bottom:1px solid #d8e3e3;
+}
+.pipeline-knowledge-page #foundation .framework-label{
+  margin-bottom:10px;
+  font-size:1.05rem;
+  line-height:1;
+  letter-spacing:.18em;
+  font-weight:900;
+  color:#0b7f8c;
+}
+.pipeline-knowledge-page #foundation .foundation-column-head h3{
+  margin:0 0 6px;
+  font-size:1.3rem;
+  line-height:1.2;
+  color:#16343c;
+}
+.pipeline-knowledge-page #foundation .foundation-column-head p{
+  margin:0;
+  max-width:92%;
+  font-size:.9rem;
+  line-height:1.45;
+  color:#62767c;
+}
+.pipeline-knowledge-page #foundation .item-number,
+.pipeline-knowledge-page #foundation .cycle-number{
+  display:none !important;
+}
+.pipeline-knowledge-page #foundation .threat-item,
+.pipeline-knowledge-page #foundation .cycle-step{
+  position:relative;
+  display:block;
+  padding:14px 0 14px 14px;
+  border-top:1px solid #dde6e6;
+}
+.pipeline-knowledge-page #foundation .threat-item:first-child,
+.pipeline-knowledge-page #foundation .cycle-step:first-child{
+  border-top:0;
+}
+.pipeline-knowledge-page #foundation .threat-item::before,
+.pipeline-knowledge-page #foundation .cycle-step::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:15px;
+  bottom:15px;
+  width:3px;
+  border-radius:3px;
+  background:#0b7f8c;
+  opacity:.82;
+}
+.pipeline-knowledge-page #foundation .response-column .cycle-step::before{
+  background:#5b91b4;
+}
+.pipeline-knowledge-page #foundation .threat-item strong,
+.pipeline-knowledge-page #foundation .cycle-step strong{
+  margin-bottom:4px;
+  font-size:.97rem;
+  line-height:1.28;
+  color:#173840 !important;
+}
+.pipeline-knowledge-page #foundation .threat-item span:not(.item-number),
+.pipeline-knowledge-page #foundation .cycle-step small{
+  font-size:.84rem;
+  line-height:1.46;
+  color:#5a6d73;
+}
+.pipeline-knowledge-page #foundation .response-column .link-row{
+  margin-top:16px !important;
+  padding-top:16px;
+  border-top:1px solid #d8e3e3;
+}
+@media(max-width:850px){
+  .pipeline-knowledge-page #foundation .foundation-column{
+    padding:24px 22px;
+  }
+}
+
+
+/* Foundation visual bridge: circular industrial threat collage between columns */
+.pipeline-knowledge-page #foundation .foundation-framework{
+  grid-template-columns:minmax(0,1fr) 270px minmax(0,1fr);
+  align-items:stretch;
+  position:relative;
+}
+.pipeline-knowledge-page #foundation .foundation-visual{
+  align-self:center;
+  justify-self:center;
+  width:250px;
+  height:250px;
+  border-radius:50%;
+  border:8px solid #ffffff;
+  box-shadow:0 18px 36px rgba(13,39,47,.16);
+  background-image:url('/assets/pipeline-integrity-threat-collage.png');
+  background-repeat:no-repeat;
+  background-size:300% auto;
+  background-position:50% 50%;
+  position:relative;
+  z-index:2;
+}
+.pipeline-knowledge-page #foundation .foundation-visual::after{
+  content:"";
+  position:absolute;
+  inset:-15px;
+  border-radius:50%;
+  border:1px solid rgba(11,127,140,.24);
+  pointer-events:none;
+}
+.pipeline-knowledge-page #foundation .foundation-column{
+  position:relative;
+  z-index:1;
+}
+.pipeline-knowledge-page #foundation .threat-column{
+  padding-right:24px;
+}
+.pipeline-knowledge-page #foundation .response-column{
+  padding-left:24px;
+  border-left:0 !important;
+}
+@media(max-width:1080px){
+  .pipeline-knowledge-page #foundation .foundation-framework{
+    grid-template-columns:minmax(0,1fr) 220px minmax(0,1fr);
+  }
+  .pipeline-knowledge-page #foundation .foundation-visual{
+    width:205px;
+    height:205px;
+  }
+}
+@media(max-width:850px){
+  .pipeline-knowledge-page #foundation .foundation-framework{
+    grid-template-columns:1fr;
+  }
+  .pipeline-knowledge-page #foundation .foundation-visual{
+    width:220px;
+    height:220px;
+    margin:4px auto;
+    order:2;
+  }
+  .pipeline-knowledge-page #foundation .threat-column{order:1;padding-right:22px}
+  .pipeline-knowledge-page #foundation .response-column{order:3;padding-left:22px;border-top:1px solid #cfdddd}
+}
+
+
+/* Foundation visual focal point: threats | collage | response */
+.pipeline-knowledge-page #foundation .foundation-framework{
+  grid-template-columns:minmax(0,1fr) minmax(300px,.72fr) minmax(0,1fr) !important;
+  align-items:stretch !important;
+}
+.pipeline-knowledge-page #foundation .foundation-visual{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-width:0;
+  padding:32px 18px;
+  background:linear-gradient(180deg,#f7fbfb 0%,#ffffff 100%);
+  border-left:1px solid #d8e3e3;
+  border-right:1px solid #d8e3e3;
+}
+.pipeline-knowledge-page #foundation .foundation-visual::before{
+  content:"";
+  width:min(100%,390px);
+  aspect-ratio:1;
+  border-radius:50%;
+  background:url("/assets/pipeline-integrity-threat-collage.webp") center/cover no-repeat;
+  box-shadow:0 18px 40px rgba(11,70,80,.16);
+  border:7px solid rgba(255,255,255,.96);
+  outline:1px solid rgba(11,127,140,.18);
+}
+.pipeline-knowledge-page #foundation .foundation-column + .foundation-column{
+  border-left:0 !important;
+}
+@media(max-width:1180px){
+  .pipeline-knowledge-page #foundation .foundation-framework{
+    grid-template-columns:minmax(0,1fr) minmax(240px,.6fr) minmax(0,1fr) !important;
+  }
+  .pipeline-knowledge-page #foundation .foundation-column{
+    padding:24px 22px 22px;
+  }
+  .pipeline-knowledge-page #foundation .foundation-visual{
+    padding:26px 12px;
+  }
+}
+@media(max-width:900px){
+  .pipeline-knowledge-page #foundation .foundation-framework{
+    grid-template-columns:1fr !important;
+  }
+  .pipeline-knowledge-page #foundation .foundation-visual{
+    min-height:340px;
+    border-left:0;
+    border-right:0;
+    border-top:1px solid #d8e3e3;
+    border-bottom:1px solid #d8e3e3;
+  }
+  .pipeline-knowledge-page #foundation .foundation-visual::before{
+    width:min(78vw,360px);
+  }
+}
+
+
+/* Foundation mockup-match refinement */
+.pipeline-knowledge-page #foundation .foundation-framework{
+  grid-template-columns:minmax(0,.86fr) minmax(390px,1.08fr) minmax(0,.86fr) !important;
+  align-items:start !important;
+}
+.pipeline-knowledge-page #foundation .foundation-column{
+  padding:28px 22px 24px !important;
+}
+.pipeline-knowledge-page #foundation .foundation-visual{
+  width:390px !important;
+  height:390px !important;
+  margin-top:74px !important;
+  border:10px solid #fff !important;
+  box-shadow:0 20px 42px rgba(13,39,47,.16) !important;
+}
+.pipeline-knowledge-page #foundation .foundation-visual::after{
+  inset:-18px !important;
+  border-color:rgba(11,127,140,.3) !important;
+}
+.pipeline-knowledge-page #foundation .foundation-column-head{
+  min-height:142px !important;
+  padding-bottom:18px !important;
+}
+.pipeline-knowledge-page #foundation .framework-label{
+  font-size:.82rem !important;
+  letter-spacing:.17em !important;
+}
+.pipeline-knowledge-page #foundation .foundation-column-head h3{
+  font-size:1.28rem !important;
+}
+.pipeline-knowledge-page #foundation .threat-item,
+.pipeline-knowledge-page #foundation .cycle-step{
+  padding:13px 0 13px 14px !important;
+}
+@media(max-width:1220px){
+  .pipeline-knowledge-page #foundation .foundation-framework{
+    grid-template-columns:minmax(0,.9fr) 320px minmax(0,.9fr) !important;
+  }
+  .pipeline-knowledge-page #foundation .foundation-visual{
+    width:305px !important;height:305px !important;margin-top:92px !important;
+  }
+}
+@media(max-width:900px){
+  .pipeline-knowledge-page #foundation .foundation-framework{
+    grid-template-columns:1fr !important;
+  }
+  .pipeline-knowledge-page #foundation .foundation-visual{
+    width:280px !important;height:280px !important;margin:18px auto !important;
+  }
+}
+
+
+/* Foundation final mockup image treatment */
+.pipeline-knowledge-page #foundation .foundation-mockup{
+  margin:22px 0 0;
+}
+.pipeline-knowledge-page #foundation .foundation-mockup img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:18px;
+  box-shadow:0 14px 32px rgba(13,39,47,.08);
+}
+.pipeline-knowledge-page #foundation .foundation-link-row{
+  margin-top:16px !important;
+}
+
+
+/* Assessment references aligned beneath the three assessment cards */
+.pipeline-knowledge-page #assessment .assessment-reference-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+  margin-top:14px;
+}
+.pipeline-knowledge-page #assessment .assessment-reference{
+  padding:14px 16px 12px;
+  border-top:1px solid #cfdcdd;
+}
+.pipeline-knowledge-page #assessment .assessment-reference>span{
+  display:block;
+  margin-bottom:8px;
+  color:#0b7f8c;
+  font-size:.66rem;
+  font-weight:900;
+  letter-spacing:.14em;
+}
+.pipeline-knowledge-page #assessment .assessment-reference a{
+  display:block;
+  margin:5px 0;
+  color:#245b67;
+  font-size:.82rem;
+  line-height:1.35;
+  text-decoration:none;
+}
+.pipeline-knowledge-page #assessment .assessment-reference a:hover{
+  text-decoration:underline;
+}
+@media(max-width:850px){
+  .pipeline-knowledge-page #assessment .assessment-reference-grid{
+    grid-template-columns:1fr;
+    gap:8px;
+  }
+}
+
+
+/* Center each regulatory reference block beneath its corresponding card */
+.pipeline-knowledge-page #assessment .assessment-reference{
+  width:min(92%,520px);
+  margin:0 auto;
+  text-align:left;
+}
+
+
+/* Precisely center standards blocks under each assessment card */
+.pipeline-knowledge-page #assessment .assessment-reference-grid{
+  align-items:start;
+}
+.pipeline-knowledge-page #assessment .assessment-reference{
+  width:max-content;
+  max-width:88%;
+  justify-self:center;
+  margin:0;
+  text-align:left;
+}
+
+
+/* Direct Assessment redesign: executive scan first, technical depth on demand */
+.pipeline-knowledge-page #direct-assessment .direct-assessment-intro{
+  display:flex;
+  gap:10px;
+  align-items:baseline;
+  margin:10px 0 22px;
+  color:#334f57;
+  font-size:.98rem;
+}
+.pipeline-knowledge-page #direct-assessment .direct-assessment-intro strong{
+  color:#173840;
+}
+.pipeline-knowledge-page #direct-assessment .direct-assessment-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
+}
+.pipeline-knowledge-page #direct-assessment .da-card{
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
+  overflow:hidden;
+  border:1px solid #cddcdd;
+  border-radius:20px;
+  background:#fff;
+  box-shadow:0 14px 30px rgba(13,39,47,.05);
+}
+.pipeline-knowledge-page #direct-assessment .da-card-top{
+  padding:24px 24px 20px;
+}
+.pipeline-knowledge-page #direct-assessment .da-card .label{
+  display:block;
+  margin-bottom:12px;
+  color:#0b7f8c;
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.13em;
+}
+.pipeline-knowledge-page #direct-assessment .da-card h3{
+  margin:0 0 12px;
+  color:#132f37;
+  font-size:1.28rem;
+  line-height:1.2;
+}
+.pipeline-knowledge-page #direct-assessment .da-card-top p{
+  margin:0;
+  color:#536a72;
+  font-size:.94rem;
+  line-height:1.52;
+}
+.pipeline-knowledge-page #direct-assessment .da-decision{
+  margin-top:auto;
+  padding:17px 24px 18px;
+  background:linear-gradient(180deg,#edf6f6 0%,#f5f9f9 100%);
+  border-top:1px solid #d7e3e3;
+}
+.pipeline-knowledge-page #direct-assessment .da-decision span{
+  display:block;
+  margin-bottom:6px;
+  color:#0b7f8c;
+  font-size:.66rem;
+  font-weight:900;
+  letter-spacing:.14em;
+}
+.pipeline-knowledge-page #direct-assessment .da-decision strong{
+  display:block;
+  color:#173840;
+  font-size:.91rem;
+  line-height:1.45;
+}
+.pipeline-knowledge-page #direct-assessment .da-details{
+  border-top:1px solid #d7e3e3;
+}
+.pipeline-knowledge-page #direct-assessment .da-details summary{
+  padding:14px 24px;
+  cursor:pointer;
+  color:#245b67;
+  font-size:.86rem;
+  font-weight:800;
+}
+.pipeline-knowledge-page #direct-assessment .da-details-body{
+  padding:0 24px 20px;
+}
+.pipeline-knowledge-page #direct-assessment .da-details-body p{
+  color:#5b6f75;
+  font-size:.86rem;
+  line-height:1.5;
+}
+.pipeline-knowledge-page #direct-assessment .da-details .link-row{
+  margin-top:10px !important;
+}
+.pipeline-knowledge-page #direct-assessment .direct-assessment-distinction{
+  margin-top:22px;
+  padding:18px 22px;
+  border-left:4px solid #0b7f8c;
+  background:#f5f8f8;
+}
+.pipeline-knowledge-page #direct-assessment .direct-assessment-distinction>span{
+  display:block;
+  margin-bottom:7px;
+  color:#0b7f8c;
+  font-size:.68rem;
+  font-weight:900;
+  letter-spacing:.14em;
+}
+.pipeline-knowledge-page #direct-assessment .direct-assessment-distinction p{
+  margin:0 0 8px;
+  color:#405b63;
+  font-size:.92rem;
+  line-height:1.5;
+}
+.pipeline-knowledge-page #direct-assessment .direct-assessment-distinction a{
+  color:#245b67;
+  font-size:.84rem;
+  font-weight:700;
+}
+@media(max-width:950px){
+  .pipeline-knowledge-page #direct-assessment .direct-assessment-grid{
+    grid-template-columns:1fr;
+  }
+  .pipeline-knowledge-page #direct-assessment .direct-assessment-intro{
+    display:block;
+  }
+}
+
+
+/* Direct Assessment acronym hierarchy */
+.pipeline-knowledge-page #direct-assessment .da-acronym{
+  margin:0 0 4px;
+  text-align:center;
+  color:#0b7f8c;
+  font-size:2.2rem;
+  line-height:1;
+  font-weight:900;
+  letter-spacing:.06em;
+}
+.pipeline-knowledge-page #direct-assessment .da-mechanism{
+  margin:0 0 18px;
+  text-align:center;
+  color:#5b6f75;
+  font-size:.78rem;
+  line-height:1.2;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.pipeline-knowledge-page #direct-assessment .da-card h3{
+  text-align:left;
+}
+
+
+/* Center and narrow practical distinction block */
+.pipeline-knowledge-page #direct-assessment .direct-assessment-distinction{
+  width:min(82%,1180px);
+  margin:22px auto 0;
+  padding:18px 28px;
+  text-align:left;
+}
+.pipeline-knowledge-page #direct-assessment .direct-assessment-distinction p{
+  max-width:none;
+}
+@media(max-width:850px){
+  .pipeline-knowledge-page #direct-assessment .direct-assessment-distinction{
+    width:100%;
+    padding:18px 20px;
+  }
+}
+
+
+/* Assessment card visual anchors */
+.pipeline-knowledge-page #assessment .assessment-card-title{
+  margin:0 0 16px;
+  text-align:center;
+  color:#0b7f8c;
+  font-size:1.45rem;
+  line-height:1.1;
+  font-weight:900;
+  letter-spacing:.08em;
+}
+.pipeline-knowledge-page #assessment .assessment-card h3{
+  margin-top:0;
+}
+
+/* Slightly reduce Direct Assessment acronym scale */
+.pipeline-knowledge-page #direct-assessment .da-acronym{
+  font-size:1.9rem;
+}
+.pipeline-knowledge-page #direct-assessment .da-mechanism{
+  font-size:.74rem;
+}
+
+
+/* Refine card title scale and weight */
+.pipeline-knowledge-page #assessment .assessment-card-title{
+  font-size:1.24rem;
+  font-weight:800;
+  letter-spacing:.06em;
+}
+.pipeline-knowledge-page #direct-assessment .da-acronym{
+  font-size:1.68rem;
+  font-weight:800;
+  letter-spacing:.045em;
+}
+.pipeline-knowledge-page #direct-assessment .da-mechanism{
+  font-size:.7rem;
+  font-weight:700;
+  letter-spacing:.1em;
+}
+
+
+/* Practical Distinction final centering refinement */
+.pipeline-knowledge-page #direct-assessment .direct-assessment-distinction{
+  width:min(70%,980px);
+  margin:24px auto 0;
+  padding:20px 30px 22px;
+}
+.pipeline-knowledge-page #direct-assessment .direct-assessment-distinction p{
+  max-width:900px;
+  margin:0 0 10px;
+}
+@media(max-width:1000px){
+  .pipeline-knowledge-page #direct-assessment .direct-assessment-distinction{
+    width:min(86%,900px);
+  }
+}
+@media(max-width:850px){
+  .pipeline-knowledge-page #direct-assessment .direct-assessment-distinction{
+    width:100%;
+    padding:18px 20px;
+  }
+}
+
+
+/* Practical Distinction tighter final width */
+.pipeline-knowledge-page #direct-assessment .direct-assessment-distinction{
+  width:min(62%,860px);
+  margin:24px auto 0;
+  padding:20px 30px 22px;
+}
+.pipeline-knowledge-page #direct-assessment .direct-assessment-distinction p{
+  max-width:800px;
+}
+@media(max-width:1100px){
+  .pipeline-knowledge-page #direct-assessment .direct-assessment-distinction{
+    width:min(76%,860px);
+  }
+}
+@media(max-width:850px){
+  .pipeline-knowledge-page #direct-assessment .direct-assessment-distinction{
+    width:100%;
+  }
+}
+
+
+/* Field Validation card header hierarchy */
+.pipeline-knowledge-page #validation .card .label{
+  display:block;
+  margin-bottom:14px;
+  color:#0b7f8c;
+  font-size:1.18rem;
+  line-height:1.1;
+  font-weight:800;
+  letter-spacing:.07em;
+}
+
+
+/* Field Validation headers — stronger visible treatment */
+.pipeline-knowledge-page #validation .card .label{
+  display:block !important;
+  margin:0 0 16px !important;
+  text-align:center !important;
+  color:#0b7f8c !important;
+  font-size:1.35rem !important;
+  line-height:1.08 !important;
+  font-weight:900 !important;
+  letter-spacing:.08em !important;
+}
+
+
+/* Integrity Evidence card header hierarchy */
+.pipeline-knowledge-page #data .card .label{
+  display:block !important;
+  margin:0 0 16px !important;
+  text-align:center !important;
+  color:#0b7f8c !important;
+  font-size:1.28rem !important;
+  line-height:1.08 !important;
+  font-weight:900 !important;
+  letter-spacing:.08em !important;
+}
+
+
+/* Hero page navigator dividers */
+.pipeline-knowledge-page .hero-page-nav-panel .hero-page-nav-section{
+  position:relative;
+  padding:15px 0;
+}
+.pipeline-knowledge-page .hero-page-nav-panel .hero-page-nav-section + .hero-page-nav-section{
+  border-top:1px solid rgba(91,180,196,.42);
+}
+.pipeline-knowledge-page .hero-page-nav-panel .hero-page-nav-secondary{
+  padding:15px 0 11px;
+}
+.pipeline-knowledge-page .hero-page-nav-panel .hero-page-nav-section + .hero-page-nav-secondary{
+  margin-top:9px;
+  padding-top:20px;
+  border-top:1px solid rgba(91,180,196,.62);
+}
+.pipeline-knowledge-page .hero-page-nav-panel .hero-page-nav-secondary + .hero-page-nav-secondary{
+  padding-top:11px;
+}
+
+
+/* Explicit hero navigator divider elements */
+.pipeline-knowledge-page .hero-page-nav-panel .hero-page-nav-row-divider{
+  height:1px;
+  margin:3px 10px;
+  background:#3f9fb0;
+  opacity:.58;
+}
+.pipeline-knowledge-page .hero-page-nav-panel .hero-page-nav-group-divider{
+  height:1px;
+  margin:10px 10px 7px;
+  background:#5bc2cf;
+  opacity:.82;
+}
+.pipeline-knowledge-page .hero-page-nav-panel .hero-page-nav-section{
+  padding:12px 12px;
+  border-top:0 !important;
+}
+.pipeline-knowledge-page .hero-page-nav-panel .hero-page-nav-secondary{
+  padding:11px 12px;
+  border-top:0 !important;
+  margin-top:0 !important;
+}
+
+
+/* Hero navigator dividers: make the line part of each numbered row */
+.pipeline-knowledge-page .hero-page-nav-panel .hero-page-nav-section{
+  display:block !important;
+  margin:0 6px !important;
+  padding:12px 6px 13px !important;
+  border:0 !important;
+  border-bottom:1px solid rgba(91,194,207,.72) !important;
+  border-radius:0 !important;
+}
+.pipeline-knowledge-page .hero-page-nav-panel .hero-page-nav-section[href="#data"]{
+  border-bottom:2px solid #5bc2cf !important;
+  margin-bottom:8px !important;
+  padding-bottom:15px !important;
+}
+.pipeline-knowledge-page .hero-page-nav-panel .hero-page-nav-secondary{
+  display:block !important;
+  margin:0 6px !important;
+  padding:10px 6px !important;
+  border:0 !important;
+  border-radius:0 !important;
+}
+
+
+/* Major page-section dividers */
+.pipeline-knowledge-page #assessment,
+.pipeline-knowledge-page #direct-assessment,
+.pipeline-knowledge-page #validation,
+.pipeline-knowledge-page #data,
+.pipeline-knowledge-page #decision-test,
+.pipeline-knowledge-page #references{
+  position:relative;
+}
+.pipeline-knowledge-page #assessment::before,
+.pipeline-knowledge-page #direct-assessment::before,
+.pipeline-knowledge-page #validation::before,
+.pipeline-knowledge-page #data::before,
+.pipeline-knowledge-page #decision-test::before,
+.pipeline-knowledge-page #references::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  width:min(94%,1600px);
+  height:2px;
+  transform:translateX(-50%);
+  background:#2aa7b8;
+  box-shadow:0 0 0 1px rgba(42,167,184,.06);
+  z-index:2;
+}
+
+
+/* Decision Test image treatment */
+.pipeline-knowledge-page #decision-test.decision-test-image-section{
+  padding:0 !important;
+  background:#061a23 !important;
+}
+.pipeline-knowledge-page #decision-test.decision-test-image-section::before{
+  display:none !important;
+}
+.pipeline-knowledge-page .decision-test-image-shell{
+  position:relative;
+  width:100%;
+  max-width:1672px;
+  margin:0 auto;
+}
+.pipeline-knowledge-page .decision-test-image-shell img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.pipeline-knowledge-page .decision-test-hotspot{
+  position:absolute;
+  z-index:3;
+  display:block;
+  border-radius:999px;
+}
+.pipeline-knowledge-page .decision-test-hotspot-aim{
+  left:4.5%;
+  top:84.5%;
+  width:22.2%;
+  height:7.4%;
+}
+.pipeline-knowledge-page .decision-test-hotspot-resources{
+  left:27.6%;
+  top:84.5%;
+  width:21.5%;
+  height:7.4%;
+}
+.pipeline-knowledge-page .decision-test-hotspot:focus-visible{
+  outline:3px solid #78dfe5;
+  outline-offset:3px;
+}
+
+
+/* Decision Test — scale the existing image within the teal section */
+.pipeline-knowledge-page #decision-test.decision-test-image-section{
+  padding:34px 28px 38px !important;
+  background:
+    radial-gradient(circle at 78% 20%, rgba(13,113,129,.24), transparent 34%),
+    linear-gradient(135deg,#071a22 0%,#082630 58%,#07323a 100%) !important;
+}
+.pipeline-knowledge-page .decision-test-image-shell{
+  width:min(86%,1480px) !important;
+  max-width:1480px !important;
+  margin:0 auto !important;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 18px 42px rgba(0,0,0,.22);
+}
+@media(max-width:900px){
+  .pipeline-knowledge-page #decision-test.decision-test-image-section{
+    padding:24px 16px 28px !important;
+  }
+  .pipeline-knowledge-page .decision-test-image-shell{
+    width:100% !important;
+  }
+}
+
+
+/* Decision Test — tighter scale and darker integrated surround */
+.pipeline-knowledge-page #decision-test.decision-test-image-section{
+  padding:38px 28px 42px !important;
+  background:#061821 !important;
+}
+.pipeline-knowledge-page .decision-test-image-shell{
+  width:min(78%,1340px) !important;
+  max-width:1340px !important;
+  margin:0 auto !important;
+}
+@media(max-width:900px){
+  .pipeline-knowledge-page .decision-test-image-shell{
+    width:100% !important;
+  }
+}
+
+
+/* 04 Integrity Evidence & Decision Continuity visual */
+.pipeline-knowledge-page #data.data-visual-section{
+  padding:34px 28px 38px !important;
+  background:#eef8fb !important;
+}
+.pipeline-knowledge-page #data.data-visual-section::before{
+  background:#2aa7b8 !important;
+}
+.pipeline-knowledge-page .data-visual-shell{
+  width:min(84%,1460px);
+  margin:0 auto;
+}
+.pipeline-knowledge-page .data-visual-shell img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:18px;
+  box-shadow:0 16px 36px rgba(13,39,47,.08);
+}
+@media(max-width:900px){
+  .pipeline-knowledge-page #data.data-visual-section{
+    padding:24px 16px 28px !important;
+  }
+  .pipeline-knowledge-page .data-visual-shell{
+    width:100%;
+  }
+}
+
+
+/* 04 visual alignment — match the content width of the sections above */
+.pipeline-knowledge-page .data-visual-shell{
+  width:min(94%,1600px) !important;
+  max-width:1600px !important;
+}
+
+
+/* 04 Integrity Evidence — live text + standalone evidence-chain visual */
+.pipeline-knowledge-page #data.data-live-section{
+  padding:36px 0 40px !important;
+  background:#eef8fb !important;
+}
+.pipeline-knowledge-page #data .data-live-intro{
+  max-width:1240px !important;
+  margin-bottom:24px !important;
+}
+.pipeline-knowledge-page #data .data-chain-crop{
+  width:100%;
+  aspect-ratio:5.2/1;
+  margin:24px 0 22px;
+  border-radius:18px;
+  background-image:url('/assets/pipeline-integrity-evidence-continuity.png');
+  background-repeat:no-repeat;
+  background-size:100% auto;
+  background-position:center 45%;
+  box-shadow:0 14px 32px rgba(13,39,47,.08);
+}
+.pipeline-knowledge-page #data .data-support-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin-top:18px;
+}
+.pipeline-knowledge-page #data .data-support-card{
+  padding:18px 22px;
+  border:1px solid rgba(35,115,123,.2);
+  border-radius:14px;
+  background:rgba(255,255,255,.72);
+}
+.pipeline-knowledge-page #data .data-support-card h3{
+  margin:0 0 8px;
+  color:#0b7f8c;
+  font-size:1.2rem;
+  line-height:1.15;
+  letter-spacing:.06em;
+}
+.pipeline-knowledge-page #data .data-support-card p{
+  margin:0;
+  color:#405860;
+  font-size:.98rem;
+  line-height:1.55;
+}
+.pipeline-knowledge-page #data .data-closing{
+  max-width:980px;
+  margin:22px auto 0;
+  color:#203840;
+  font-size:1rem;
+  line-height:1.55;
+  text-align:center;
+}
+@media(max-width:900px){
+  .pipeline-knowledge-page #data .data-chain-crop{
+    aspect-ratio:2.8/1;
+    background-size:auto 100%;
+    background-position:center;
+  }
+  .pipeline-knowledge-page #data .data-support-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+
+/* 04 evidence-chain crop refinement — isolate only the four connected visual cards */
+.pipeline-knowledge-page #data .data-chain-crop{
+  aspect-ratio:4.65/1 !important;
+  background-size:100% auto !important;
+  background-position:center 61.5% !important;
+  border-radius:16px !important;
+}
+
+
+/* 04 evidence-chain crop — remove baked-in support boxes below the four cards */
+.pipeline-knowledge-page #data .data-chain-crop{
+  aspect-ratio:5.35/1 !important;
+  background-position:center 58.5% !important;
+}
+
+
+/* Match 04 evidence-chain visual width to Decision Test visual below */
+.pipeline-knowledge-page #data .data-chain-crop{
+  width:min(78%,1340px) !important;
+  margin:24px auto 22px !important;
+}
+@media(max-width:900px){
+  .pipeline-knowledge-page #data .data-chain-crop{
+    width:100% !important;
+  }
+}
+
+
+/* 04 support cards — align with evidence-chain width above */
+.pipeline-knowledge-page #data .data-support-grid{
+  width:min(78%,1340px) !important;
+  margin:18px auto 0 !important;
+}
+@media(max-width:900px){
+  .pipeline-knowledge-page #data .data-support-grid{
+    width:100% !important;
+  }
+}
