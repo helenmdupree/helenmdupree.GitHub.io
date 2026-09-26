@@ -162,3 +162,28 @@ Research note:
 knowledge-library/digital-transformation-ai/PHYSICS_BASED_DIGITAL_TOOLS_RESEARCH_NOTES_2026-09-26.md
 
 This handoff is the authoritative resume point for the next session.
+
+## PUBLISH / BACKUP COMPLETED
+Published through:
+- Publish branch: publish/digital-transformation-ai-2026-09-26
+- Publish commit: b601adbbc1e2fa1b57f2f35680de2d079cdf2026
+- Pull request: PR #108 — Publish Digital Transformation & AI expertise redesign
+- Live merge commit: a9adae16456a37e919486208e4ba33c6fe244460
+- Pre-Publish Security Check: PASSED
+
+Live verification completed against https://soubel.com/expertise/digital-transformation-ai/:
+- HTTP 200
+- COMMERCIAL POSITIONING present
+- EVERGREEN REVENUE present
+- physics-aware sentence “sophisticated technology still has to work in the real world” present
+- former THE SOUBEL VIEW copy absent
+
+GitHub recovery checkpoint:
+- backup/digital-transformation-ai-2026-09-26
+
+Google Drive backup:
+- SOUBEL Master Library → Website Backups → 2026-09-26 Digital Transformation AI Expertise
+- Folder ID: 151ViKnnrp0JDjXRs6n26t2G7LXzyVQEi
+- Contains the Proceed From Here note, page source snapshot, site.js snapshot, Expertise menu CSS snapshot, and physics-based digital tools research note.
+
+When returning, begin from the LIVE/recovery state above. Do not reopen an older Digital Transformation & AI version or reintroduce the removed SOUBEL View section.
