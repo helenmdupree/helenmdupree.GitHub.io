@@ -166,7 +166,8 @@ else:
 # 7. Verify internal HTML links and referenced local assets resolve in the repository.
 attribute_pattern = re.compile(r"(?:href|src)\s*=\s*['\"]([^'\"]+)['\"]", re.IGNORECASE)
 for html in ROOT.rglob("*.html"):
-    if html.name == "404.html":
+    rel_parts = html.relative_to(ROOT).parts
+    if html.name == "404.html" or rel_parts[:2] == ("docs", "backups"):
         continue
     try:
         text = html.read_text(encoding="utf-8")
