@@ -1,0 +1,22 @@
+/* Local-only Asset Performance revision: AIM-inspired expertise architecture. */
+.asset-performance-page .asset-performance-explore{background:#071f27;border-bottom:1px solid rgba(94,218,220,.28);padding:24px 0 14px}
+.asset-performance-page .asset-performance-explore .kicker{margin:0 0 12px;color:#70dfe2}
+.asset-performance-explore-links{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid rgba(94,218,220,.25);border-bottom:1px solid rgba(94,218,220,.25)}
+.asset-performance-explore-links a{display:flex;position:relative;flex-direction:column;align-items:center;justify-content:flex-start;min-height:118px;padding:18px 14px 14px;text-align:center;color:#f4f1e9;text-decoration:none;border-right:1px solid rgba(94,218,220,.18)}
+.asset-performance-explore-links a:last-child{border-right:0}
+.asset-performance-explore-links a:hover{background:rgba(94,218,220,.10);color:#70dfe2}
+.asset-performance-explore-links strong{font-size:.98rem;line-height:1.25}
+.asset-performance-explore-links a::after{content:attr(data-note);display:block;margin-top:18px;padding-top:13px;width:100%;border-top:1px solid rgba(94,218,220,.28);color:#b8d9dc;font-size:.82rem;font-weight:500;line-height:1.3}
+.asset-performance-page .asset-performance-perspective{padding:38px 0!important}
+.asset-performance-page .perspective-points{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid #c9d8da;border-bottom:1px solid #c9d8da}
+.asset-performance-page .perspective-points>div{padding:28px 34px 30px 0}
+.asset-performance-page .perspective-points>div+div{padding-left:34px;border-left:1px solid #c9d8da}
+.asset-performance-page .perspective-points h2{max-width:520px!important;font-size:clamp(1.55rem,2vw,2rem)!important}
+.asset-performance-page .perspective-points p:not(.kicker){max-width:620px;margin:0;color:#4b626a;font-size:.98rem;line-height:1.6}
+@media(max-width:900px){.asset-performance-explore-links{grid-template-columns:1fr 1fr}.asset-performance-explore-links a{border-bottom:1px solid rgba(94,218,220,.18)}.asset-performance-explore-links a:last-child{grid-column:1/-1}.asset-performance-page .perspective-points{grid-template-columns:1fr}.asset-performance-page .perspective-points>div{padding:24px 0}.asset-performance-page .perspective-points>div+div{padding-left:0;border-left:0;border-top:1px solid #c9d8da}}
+@media(max-width:600px){.asset-performance-explore-links{grid-template-columns:1fr}.asset-performance-explore-links a:last-child{grid-column:auto}.asset-performance-explore-links a{min-height:auto}.asset-performance-page .asset-performance-explore{padding-top:18px}}
+/* Local hero spacing refinement — reduce dead space below global navigation. */
+.asset-performance-page .page-hero{padding-top:18px!important;padding-bottom:28px!important}
+.asset-performance-page .page-hero .crumb{margin-top:0!important;margin-bottom:6px!important}
+.asset-performance-page .page-hero .actions{margin-top:18px!important}
+@media(max-width:760px){.asset-performance-page .page-hero{padding-top:16px!important;padding-bottom:24px!important}}

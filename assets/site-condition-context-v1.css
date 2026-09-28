@@ -29,3 +29,73 @@
 .condition-context-page .growth-cta>.wrap>p:not(.kicker){max-width:900px!important;color:#dfe9eb!important;font-size:1rem!important;line-height:1.58!important;opacity:1!important}
 .condition-context-page .growth-cta .btn.secondary{background:transparent!important;color:#fff!important;border-color:rgba(255,255,255,.55)!important}
 @media(max-width:760px){.condition-context-page .page-hero{padding:34px 0 30px!important}.condition-context-page .section{padding:30px 0!important}.condition-context-page .context-question,.condition-context-page .decision-record>div,.condition-context-page .resource-strip,.condition-context-page .reference-links{grid-template-columns:1fr!important;gap:7px!important}.condition-context-page .section h2{font-size:clamp(1.5rem,6.4vw,1.9rem)!important}}
+@media(min-width:1000px){.condition-context-page #core-question>.wrap{width:calc(100% - 80px)!important;max-width:920px!important;margin-left:auto!important;margin-right:auto!important}.condition-context-page #core-question .section-intro,.condition-context-page #core-question .context-question p{max-width:none!important}.condition-context-page #core-question .resource-strip{width:calc(100vw - 80px)!important;max-width:1580px!important;margin-left:calc((920px - min(1580px, calc(100vw - 80px)))/2)!important;margin-right:calc((920px - min(1580px, calc(100vw - 80px)))/2)!important}}
+
+/* Local compact + designed lower-page treatment. */
+.condition-context-page #core-question{padding-top:26px!important;padding-bottom:26px!important}
+.condition-context-page #core-question .context-questions{margin-top:15px!important}
+.condition-context-page #core-question .context-question{grid-template-columns:34px minmax(0,1fr)!important;gap:12px!important;padding:11px 0 12px!important}
+.condition-context-page #core-question .context-question>span{padding-top:2px!important;font-size:.74rem!important}
+.condition-context-page #core-question .context-question h3{margin:0 0 3px!important;font-size:1.02rem!important;line-height:1.22!important}
+.condition-context-page #core-question .context-question p{font-size:.91rem!important;line-height:1.42!important}
+.condition-context-page #core-question .context-note{margin-top:14px!important;padding:11px 14px!important;line-height:1.45!important}
+.condition-context-page #core-question .resource-strip{margin-top:18px!important;padding:18px 24px!important;background:#f1f6f6!important;border-top:3px solid #2f9da1!important;border-bottom:0!important;box-shadow:0 8px 22px rgba(19,56,64,.08)!important}
+.condition-context-page #core-question .resource-strip h3{font-size:1.22rem!important}
+.condition-context-page #core-question .resource-strip p:not(.kicker){max-width:900px!important}
+.condition-context-page #core-question .resource-strip .btn{white-space:nowrap!important}
+.condition-context-page .reference-basis{padding-top:24px!important;padding-bottom:25px!important;background:#f7f9f9!important;border-top:1px solid #d9e4e5!important}
+.condition-context-page .reference-basis h2{margin-bottom:7px!important;font-size:clamp(1.45rem,2vw,1.85rem)!important}
+.condition-context-page .reference-basis .section-intro{max-width:1120px!important;font-size:.94rem!important;line-height:1.48!important}
+.condition-context-page .reference-links{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:0 22px!important;margin-top:14px!important;border-top:1px solid #ccdadd!important}
+.condition-context-page .reference-links a{padding:12px 0!important;font-size:.79rem!important;line-height:1.35!important;border-bottom:0!important}
+@media(max-width:900px){.condition-context-page .reference-links{grid-template-columns:repeat(2,minmax(0,1fr))!important}.condition-context-page .reference-links a{border-bottom:1px solid #dde6e8!important}}
+@media(max-width:760px){.condition-context-page #core-question .context-question{grid-template-columns:28px minmax(0,1fr)!important;gap:9px!important;padding:10px 0!important}.condition-context-page #core-question .resource-strip{padding:16px!important}.condition-context-page .reference-links{grid-template-columns:1fr!important}}
+
+/* Local lower-section alignment polish. */
+@media(min-width:1000px){
+  .condition-context-page #core-question .resource-strip{
+    padding-left:16px!important;
+    padding-right:42px!important;
+  }
+  .condition-context-page #core-question .resource-strip p:not(.kicker){
+    max-width:1050px!important;
+    text-wrap:balance!important;
+  }
+  .condition-context-page #core-question .resource-strip .btn{
+    margin-right:12px!important;
+  }
+  .condition-context-page .reference-basis>.wrap{
+    max-width:1770px!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+  .condition-context-page .reference-basis .section-intro{
+    max-width:1480px!important;
+    text-wrap:balance!important;
+  }
+}
+
+/* Make external reference destinations visually unmistakable as links. */
+.condition-context-page .reference-links a{
+  color:#1769aa!important;
+  text-decoration-color:rgba(23,105,170,.42)!important;
+  text-underline-offset:3px!important;
+}
+.condition-context-page .reference-links a:hover,
+.condition-context-page .reference-links a:focus-visible{
+  color:#0d4f86!important;
+  text-decoration:underline!important;
+  text-decoration-thickness:2px!important;
+}
+
+/* Pull Practical Resource PDF action inward into the visual gap. */
+@media(min-width:1000px){
+  .condition-context-page #core-question .resource-strip{
+    grid-template-columns:minmax(0,1fr) auto!important;
+  }
+  .condition-context-page #core-question .resource-strip .btn{
+    position:relative!important;
+    right:150px!important;
+    margin-right:0!important;
+  }
+}
