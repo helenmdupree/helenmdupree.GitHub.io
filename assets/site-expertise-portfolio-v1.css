@@ -1,0 +1,51 @@
+/* Quiet portfolio Expertise page */
+.expertise-portfolio-page{background:#fff;color:#102b33}
+.expertise-portfolio-page .site-header{background:#f5f6f4;border-bottom:1px solid #d9e0df}
+.expertise-portfolio-page .header-inner{min-height:70px}
+.portfolio-wordmark{display:flex;align-items:center;text-decoration:none}.portfolio-wordmark img{display:block;width:152px;height:auto}
+.portfolio-nav{display:flex;align-items:center;gap:30px;margin-left:auto}.portfolio-nav a{color:#17343c;text-decoration:none;font-size:.91rem;font-weight:650}.portfolio-nav a:hover,.portfolio-nav a.active{color:#087f86}
+.expertise-portfolio-page .narrow{max-width:940px}
+.expertise-intro{padding:62px 0 40px;background:#fff}.expertise-intro .eyebrow{margin:0 0 12px;color:#087f86;font-size:.78rem;font-weight:800;letter-spacing:.16em}.expertise-intro h1{margin:0;color:#071016;font-family:"Segoe UI",Arial,sans-serif;font-size:clamp(2.25rem,4vw,3.6rem);font-weight:650;line-height:1.05;letter-spacing:-.035em}.expertise-intro .lead{max-width:800px;margin:18px 0 0;color:#526970;font-size:1.08rem;line-height:1.65}
+.expertise-list{background:#fff;padding:0 0 34px}.expertise-list article{display:grid;grid-template-columns:minmax(250px,.38fr) minmax(0,.62fr);column-gap:46px;padding:28px 0;border-top:1px solid #d9e3e4}.expertise-list h2{margin:0;color:#17343c;font-size:1.25rem;line-height:1.25}.expertise-list article>p{margin:0;color:#4d646b;font-size:.97rem;line-height:1.58}.expertise-list .detail{grid-column:2;margin:0;color:#6b7f84;font-size:.83rem;line-height:1.5}
+.expertise-next{padding:34px 0 46px;background:#f5f7f6;border-top:1px solid #d9e3e4}.expertise-next .narrow{display:flex;justify-content:space-between;gap:42px;align-items:center}.expertise-next p{max-width:680px;margin:0;color:#40585f;line-height:1.6}.expertise-next a{white-space:nowrap;color:#087f86;font-weight:750;text-decoration:none}
+@media(max-width:820px){.portfolio-nav{display:none}.expertise-list article{grid-template-columns:1fr;gap:10px}.expertise-list .detail{grid-column:1}.expertise-next .narrow{display:block}.expertise-next a{display:inline-block;margin-top:18px}}
+
+.client-history{padding:44px 0 50px;background:#fff;border-top:1px solid #d9e3e4}
+.client-history .eyebrow{margin:0 0 9px;color:#087f86;font-size:.76rem;font-weight:800;letter-spacing:.15em}
+.client-history h2{margin:0;color:#071016;font-size:clamp(1.8rem,2.8vw,2.45rem);font-weight:650;letter-spacing:-.025em}
+.client-note{max-width:760px;margin:10px 0 26px;color:#6b7f84;font-size:.88rem;line-height:1.5}
+.client-columns{display:grid;grid-template-columns:1fr 1fr;gap:52px}
+.client-columns h3{margin:0 0 16px;padding-bottom:10px;border-bottom:1px solid #d9e3e4;color:#17343c;font-size:1.02rem}
+.client-columns ul{margin:0;padding:0;list-style:none;columns:2;column-gap:26px}
+.client-columns li{break-inside:avoid;margin:0 0 7px;color:#3f575e;font-size:.78rem;line-height:1.38}
+.client-columns li span{color:#788b90;font-size:.72rem}
+@media(max-width:900px){.client-columns{grid-template-columns:1fr;gap:34px}}
+@media(max-width:620px){.client-columns ul{columns:1}.client-history{padding:36px 0 40px}}
+
+/* New portfolio header: neutralize legacy masthead/header rules */
+.expertise-portfolio-page .site-header::before{display:none!important;content:none!important;background:none!important;aspect-ratio:auto!important}
+.expertise-portfolio-page .site-header{background:#f5f6f4!important;border-bottom:1px solid #d9e0df!important}
+.expertise-portfolio-page .header-inner{max-width:none!important;min-height:72px!important;padding:0 34px!important;display:flex!important;align-items:center!important}
+.expertise-portfolio-page .portfolio-wordmark{display:flex!important}
+.expertise-portfolio-page .portfolio-wordmark img{width:152px!important}
+.expertise-portfolio-page .portfolio-nav{display:flex!important}
+@media(max-width:820px){.expertise-portfolio-page .portfolio-nav{display:none!important}.expertise-portfolio-page .portfolio-nav.open{display:flex!important;position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;padding:14px 20px;background:#f5f6f4;border-bottom:1px solid #d9e0df;z-index:50}.expertise-portfolio-page .portfolio-nav.open a{padding:10px 0}}
+
+/* Compact market rows */
+.expertise-intro{padding-bottom:24px!important}
+.expertise-list{padding-bottom:24px!important}
+.expertise-list article{padding:16px 0!important;column-gap:34px!important;align-items:center}
+.expertise-list h2{font-size:1.12rem!important;line-height:1.2!important}
+.expertise-list .detail{font-size:.8rem!important;line-height:1.35!important}
+
+/* Dense portfolio rhythm — 15-second scan */
+.expertise-intro{padding:28px 0 14px!important}
+.expertise-intro .eyebrow{margin-bottom:6px!important;font-size:.72rem!important}
+.expertise-intro h1{font-size:clamp(1.9rem,3vw,2.65rem)!important;line-height:1!important}
+.expertise-intro .lead{max-width:1100px!important;margin-top:10px!important;font-size:.94rem!important;line-height:1.45!important}
+.expertise-list article{padding:11px 0!important}
+.expertise-list h2{font-size:1rem!important}
+.expertise-list .detail{font-size:.76rem!important}
+
+/* Front-door alignment */
+.expertise-portfolio-page .header-inner{min-height:58px!important;height:58px!important;justify-content:flex-end!important;padding:0 34px!important}.expertise-portfolio-page .portfolio-nav{margin-left:0!important}.expertise-portfolio-page .narrow{max-width:1040px!important;margin-left:auto!important;margin-right:auto!important}.expertise-portfolio-page .portfolio-wordmark{display:none!important}
