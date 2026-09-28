@@ -24,3 +24,48 @@
 .reliability-maintenance-page .growth-cta p:not(.kicker){max-width:860px!important;color:#dfe9eb!important;font-size:1rem!important;line-height:1.58!important;opacity:1!important}
 .reliability-maintenance-page .next-path{white-space:nowrap!important;color:#79d0d2!important;text-decoration:none!important;font-weight:850!important}
 @media(max-width:760px){.reliability-maintenance-page .page-hero{padding:34px 0 30px!important}.reliability-maintenance-page .section{padding:30px 0!important}.reliability-maintenance-page .maintenance-question,.reliability-maintenance-page .resource-strip{grid-template-columns:1fr!important;gap:7px!important}.reliability-maintenance-page .section h2{font-size:clamp(1.5rem,6.4vw,1.9rem)!important}.reliability-maintenance-page .growth-cta .wrap{display:block!important}.reliability-maintenance-page .next-path{display:inline-block!important;margin-top:16px!important;white-space:normal!important}}
+/* Local compact decision-sequence refinement. Preserve message; reduce vertical footprint. */
+.reliability-maintenance-page #core-question{padding-top:26px!important;padding-bottom:28px!important}
+.reliability-maintenance-page #core-question .maintenance-questions{margin-top:16px!important}
+.reliability-maintenance-page #core-question .maintenance-question{grid-template-columns:34px minmax(0,1fr)!important;gap:12px!important;padding:11px 0 12px!important}
+.reliability-maintenance-page #core-question .maintenance-question>span{padding-top:2px!important;font-size:.74rem!important}
+.reliability-maintenance-page #core-question .maintenance-question h3{margin:0 0 3px!important;font-size:1.02rem!important;line-height:1.22!important}
+.reliability-maintenance-page #core-question .maintenance-question p{max-width:1180px!important;font-size:.91rem!important;line-height:1.42!important}
+.reliability-maintenance-page #core-question .maintenance-note{margin-top:14px!important;padding:11px 14px!important;line-height:1.45!important}
+.reliability-maintenance-page #core-question .resource-strip{margin-top:18px!important;padding:17px 0!important}
+@media(max-width:760px){.reliability-maintenance-page #core-question .maintenance-question{grid-template-columns:28px minmax(0,1fr)!important;gap:9px!important;padding:10px 0!important}}
+
+/* Local CTA heading measure refinement — avoid orphaned final word on desktop. */
+.reliability-maintenance-page .growth-cta h2{max-width:1180px!important}
+@media(max-width:900px){.reliability-maintenance-page .growth-cta h2{max-width:900px!important}}
+
+/* Local reading-width refinement — bring long-form knowledge content inward. */
+@media(min-width:1000px){
+  .reliability-maintenance-page #core-question>.wrap{max-width:1120px!important}
+  .reliability-maintenance-page #core-question .section-intro,
+  .reliability-maintenance-page #core-question .maintenance-question p{max-width:none!important}
+}
+
+/* Corrected local reading width — visibly narrower centered decision sequence. */
+@media(min-width:1000px){
+  .reliability-maintenance-page #core-question>.wrap{width:calc(100% - 80px)!important;max-width:920px!important;margin-left:auto!important;margin-right:auto!important}
+}
+
+/* Keep section eyebrow on the original page-left alignment while body remains narrow. */
+@media(min-width:1000px){
+  .reliability-maintenance-page #core-question>.wrap>.kicker{
+    position:relative!important;
+    left:calc((920px - min(920px, calc(100vw - 80px)))/2 - (100vw - min(920px, calc(100vw - 80px)))/2 + 40px)!important;
+  }
+}
+
+/* Restore Practical Resource to the original page-width alignment.
+   Only the decision-question sequence remains narrow. */
+@media(min-width:1000px){
+  .reliability-maintenance-page #core-question .resource-strip{
+    width:calc(100vw - 80px)!important;
+    max-width:1580px!important;
+    margin-left:calc((min(920px, calc(100vw - 80px)) - min(1580px, calc(100vw - 80px)))/2)!important;
+    margin-right:calc((min(920px, calc(100vw - 80px)) - min(1580px, calc(100vw - 80px)))/2)!important;
+  }
+}

@@ -25,3 +25,102 @@
 .asset-performance-knowledge-page .btn.secondary{background:#fff!important;color:#0b6e73!important;border-color:#0b6e73!important}
 .asset-performance-knowledge-page .growth-cta .btn.secondary{background:transparent!important;color:#fff!important;border-color:rgba(255,255,255,.55)!important}
 @media(max-width:760px){.asset-performance-knowledge-page .page-hero{padding:34px 0 30px!important}.asset-performance-knowledge-page .section{padding:30px 0!important}.asset-performance-knowledge-page .knowledge-path{grid-template-columns:1fr!important;gap:6px!important}.asset-performance-knowledge-page .path-actions{display:block!important}.asset-performance-knowledge-page .path-actions a{display:inline-block!important;margin:4px 18px 4px 0!important}.asset-performance-knowledge-page .section h2{font-size:clamp(1.5rem,6.4vw,1.9rem)!important}}
+/* Asset Performance Easter egg — deliberately understated until opened. */
+.asset-performance-knowledge-page .ap-easter-egg{padding:9px 0 12px!important;background:#06171e!important}
+.asset-performance-knowledge-page .ap-easter-egg details{display:inline-block!important}
+.asset-performance-knowledge-page .ap-easter-egg summary{cursor:pointer!important;list-style:none!important;color:#729097!important;font-size:.68rem!important;letter-spacing:.04em!important;opacity:.58!important}
+.asset-performance-knowledge-page .ap-easter-egg summary::-webkit-details-marker{display:none!important}
+.asset-performance-knowledge-page .ap-easter-egg summary:hover{color:#79d7dd!important;opacity:1!important}
+.asset-performance-knowledge-page .ap-easter-reveal{margin-top:10px!important;padding:13px 16px!important;max-width:760px!important;border-left:2px solid #2f9da1!important;color:#dcebed!important}
+.asset-performance-knowledge-page .ap-easter-reveal strong{display:block!important;margin-bottom:5px!important;color:#79d7dd!important;font-size:.72rem!important;letter-spacing:.13em!important}
+.asset-performance-knowledge-page .ap-easter-reveal em{display:block!important;font-size:.92rem!important;line-height:1.45!important}
+.asset-performance-knowledge-page .ap-easter-reveal span{display:block!important;margin-top:7px!important;color:#8ba3a8!important;font-size:.72rem!important}
+
+/* Give the Easter-egg reveal its deserved dramatic headline. */
+.asset-performance-knowledge-page .ap-easter-reveal strong{
+  font-size:1.15rem!important;
+  line-height:1.2!important;
+  letter-spacing:.14em!important;
+}
+
+/* Correct Easter-egg hierarchy: teaser is the headline; punchline lives inside. */
+.asset-performance-knowledge-page .ap-easter-egg summary{
+  color:#79d7dd!important;
+  font-size:.92rem!important;
+  font-weight:800!important;
+  letter-spacing:.13em!important;
+  opacity:.82!important;
+}
+.asset-performance-knowledge-page .ap-easter-egg summary:hover{opacity:1!important}
+
+/* Easter egg placement refinement — quiet, right-aligned teaser. */
+@media(min-width:900px){
+  .asset-performance-knowledge-page .ap-easter-egg .wrap{
+    display:flex!important;
+    justify-content:flex-end!important;
+  }
+  .asset-performance-knowledge-page .ap-easter-egg details{
+    width:min(760px,48vw)!important;
+    text-align:left!important;
+  }
+}
+.asset-performance-knowledge-page .ap-easter-egg summary{
+  color:#9aa8ac!important;
+  opacity:.72!important;
+}
+.asset-performance-knowledge-page .ap-easter-egg summary:hover{
+  color:#c3ced1!important;
+  opacity:1!important;
+}
+
+/* Final Easter-egg placement: truly page-right and quieter. */
+@media(min-width:900px){
+  .asset-performance-knowledge-page .ap-easter-egg .wrap{
+    display:block!important;
+    max-width:none!important;
+    width:100%!important;
+    padding-left:52px!important;
+    padding-right:52px!important;
+  }
+  .asset-performance-knowledge-page .ap-easter-egg details{
+    display:block!important;
+    width:760px!important;
+    max-width:48vw!important;
+    margin-left:auto!important;
+    margin-right:0!important;
+  }
+}
+.asset-performance-knowledge-page .ap-easter-egg summary{
+  font-size:.78rem!important;
+  letter-spacing:.12em!important;
+}
+
+/* FINAL FINAL TEST — hard-anchor teaser to the actual right edge. */
+@media(min-width:900px){
+  .asset-performance-knowledge-page .ap-easter-egg{
+    position:relative!important;
+  }
+  .asset-performance-knowledge-page .ap-easter-egg .wrap{
+    position:relative!important;
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:0 52px!important;
+    box-sizing:border-box!important;
+  }
+  .asset-performance-knowledge-page .ap-easter-egg details{
+    width:max-content!important;
+    max-width:760px!important;
+    margin:0 0 0 auto!important;
+  }
+  .asset-performance-knowledge-page .ap-easter-egg summary{
+    width:max-content!important;
+    margin-left:auto!important;
+    text-align:right!important;
+  }
+  .asset-performance-knowledge-page .ap-easter-reveal{
+    width:min(760px,46vw)!important;
+    margin-left:auto!important;
+    text-align:left!important;
+  }
+}

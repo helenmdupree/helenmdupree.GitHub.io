@@ -25,3 +25,84 @@
 .lifecycle-economics-page .growth-cta p:not(.kicker){max-width:860px!important;color:#dfe9eb!important;font-size:1rem!important;line-height:1.58!important;opacity:1!important}
 .lifecycle-economics-page .next-path{white-space:nowrap!important;color:#79d0d2!important;text-decoration:none!important;font-weight:850!important}
 @media(max-width:760px){.lifecycle-economics-page .page-hero{padding:34px 0 30px!important}.lifecycle-economics-page .section{padding:30px 0!important}.lifecycle-economics-page .economics-question,.lifecycle-economics-page .resource-strip{grid-template-columns:1fr!important;gap:7px!important}.lifecycle-economics-page .section h2{font-size:clamp(1.5rem,6.4vw,1.9rem)!important}.lifecycle-economics-page .growth-cta .wrap{display:block!important}.lifecycle-economics-page .next-path{display:inline-block!important;margin-top:16px!important;white-space:normal!important}}
+/* Practical Resource action polish — pull PDF action inward and render as a clear pill. */
+@media(min-width:900px){
+  .lifecycle-economics-page .resource-strip{
+    grid-template-columns:minmax(0,1080px) auto!important;
+    justify-content:start!important;
+    column-gap:70px!important;
+  }
+  .lifecycle-economics-page .resource-strip .btn{
+    position:static!important;
+    margin:0!important;
+    align-self:center!important;
+    justify-self:start!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    padding:16px 28px!important;
+    min-height:58px!important;
+    border-radius:999px!important;
+    background:#fff!important;
+    border:1px solid #d7e3e5!important;
+    box-shadow:0 7px 18px rgba(19,56,64,.08)!important;
+    color:#06171e!important;
+    text-decoration:none!important;
+    white-space:nowrap!important;
+  }
+}
+
+/* Match Path 1/2 question-sequence reading width and compact vertical rhythm. */
+@media(min-width:1000px){
+  .lifecycle-economics-page #core-question>.wrap{
+    width:calc(100% - 80px)!important;
+    max-width:920px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  .lifecycle-economics-page #core-question .section-intro,
+  .lifecycle-economics-page #core-question .economics-question p{
+    max-width:none!important;
+  }
+}
+.lifecycle-economics-page #core-question{
+  padding-top:26px!important;
+  padding-bottom:26px!important;
+}
+.lifecycle-economics-page #core-question .economics-questions{
+  margin-top:15px!important;
+}
+.lifecycle-economics-page #core-question .economics-question{
+  grid-template-columns:34px minmax(0,1fr)!important;
+  gap:12px!important;
+  padding:11px 0 12px!important;
+}
+.lifecycle-economics-page #core-question .economics-question>span{
+  padding-top:2px!important;
+  font-size:.74rem!important;
+}
+.lifecycle-economics-page #core-question .economics-question h3{
+  margin:0 0 3px!important;
+  font-size:1.02rem!important;
+  line-height:1.22!important;
+}
+.lifecycle-economics-page #core-question .economics-question p{
+  font-size:.91rem!important;
+  line-height:1.42!important;
+}
+@media(max-width:760px){
+  .lifecycle-economics-page #core-question .economics-question{
+    grid-template-columns:28px minmax(0,1fr)!important;
+    gap:9px!important;
+    padding:10px 0!important;
+  }
+}
+
+/* Keep Path 3 eyebrow on the original page grid while body remains narrow. */
+@media(min-width:1000px){
+  .lifecycle-economics-page #core-question>.wrap>.kicker{
+    position:relative!important;
+    left:calc((920px - 100vw)/2 + 40px)!important;
+    width:max-content!important;
+  }
+}
