@@ -20,6 +20,7 @@
     ['/expertise/digital-transformation-ai/','Digital Transformation & AI'],
     ['/expertise/asset-integrity-management/','Asset Integrity Management'],
     ['/expertise/asset-performance/','Asset Performance'],
+    ['/expertise/operational-risk/','Operational Risk'],
   ];
 
   const knowledgeLinks=[
