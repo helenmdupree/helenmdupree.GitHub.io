@@ -1,0 +1,14 @@
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;min-height:100%}
+body{min-height:100vh;display:flex;flex-direction:column;background:#fff;color:#17343b;font-family:"Segoe UI",Arial,sans-serif}
+.clean-header{border-top:10px solid #1d3f3a;border-bottom:1px solid #d9e1e1;background:#fff}
+.clean-header-inner{width:min(1680px,calc(100% - 72px));height:116px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:36px}
+.clean-logo{display:flex;align-items:center;flex:0 0 auto}.clean-logo img{display:block;width:118px;height:auto;max-height:92px;object-fit:contain}
+.clean-nav{display:flex;align-items:center;justify-content:flex-end;gap:31px;white-space:nowrap}.clean-nav a{color:#102f36;text-decoration:none;font-size:16px;font-weight:700}.clean-nav a:hover{color:#0a7d82}
+.clean-search{width:46px;height:46px;border:1px solid #ccd8d8;border-radius:12px;background:#fff;color:#17343b;font-size:27px;line-height:1;cursor:pointer}
+.clean-main{min-height:0;flex:1 1 auto}.clean-intro{width:min(1480px,calc(100% - 150px));margin:0 auto;padding:72px 0 76px}
+.clean-eyebrow{margin:0 0 28px;color:#087f84;font-size:17px;font-weight:800;letter-spacing:.11em}.clean-statement{max-width:1180px;margin:0;color:#244a52;font-size:25px;font-weight:400;line-height:1.55;letter-spacing:.002em}
+.quiet-footer{width:100%;min-height:56px;padding:0 30px;border-top:1px solid #d9e1e1;display:flex;align-items:center;justify-content:space-between;gap:24px;background:#fff;color:#627b83;font-size:14px;font-weight:400;flex:0 0 auto}
+@media(max-width:1200px){.clean-nav{gap:18px}.clean-nav a{font-size:14px}.clean-header-inner{width:calc(100% - 40px)}}
+@media(max-width:900px){.clean-header-inner{height:auto;padding:18px 0;align-items:flex-start}.clean-nav{flex-wrap:wrap;gap:14px 18px}.clean-logo img{width:92px}.clean-intro{width:calc(100% - 48px);padding:58px 0 66px}.clean-statement{font-size:22px}}
+@media(max-width:700px){.quiet-footer{padding:18px 24px;min-height:0;flex-direction:column;align-items:flex-start;gap:8px;font-size:14px}}
