@@ -37,6 +37,41 @@ body>main>.portfolio-hero .hero-lead{max-width:850px!important;margin:0 0 18px!i
 <style id="portfolio-proof-strip">.portfolio-proof{background:#f7f9f8;padding:26px 34px 22px;border-bottom:1px solid #d9e3e4}.proof-grid{max-width:1500px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr)}.proof-grid>div{padding:4px 24px;border-right:1px solid #d9e3e4}.proof-grid>div:first-child{padding-left:0}.proof-grid>div:last-child{border-right:0}.proof-grid strong,.proof-grid span{display:block}.proof-grid strong{color:#071016;font:650 1.55rem/1.1 "Segoe UI",Arial,sans-serif}.proof-grid span{margin-top:5px;color:#60767c;font:400 .76rem/1.35 "Segoe UI",Arial,sans-serif}.proof-markets{max-width:1500px;margin:19px auto 0;padding-top:16px;border-top:1px solid #d9e3e4;color:#426068;font:650 .76rem/1.35 "Segoe UI",Arial,sans-serif;letter-spacing:.025em}@media(max-width:900px){.proof-grid{grid-template-columns:repeat(2,1fr)}.proof-grid>div{padding:12px 0;border-right:0;border-bottom:1px solid #d9e3e4}.proof-markets{margin-top:12px}}</style>
 <style id="portfolio-proof-alignment">.portfolio-proof{padding-left:0!important;padding-right:0!important}.proof-grid,.proof-markets{max-width:1040px!important;transform:translateX(1.5in)}</style>
 <style id="portfolio-proof-fix-overflow">.proof-grid,.proof-markets{max-width:1040px!important;width:calc(100% - 64px)!important;transform:none!important;margin-left:auto!important;margin-right:auto!important}.proof-grid>div{min-width:0!important;padding-left:18px!important;padding-right:18px!important}.proof-grid>div:first-child{padding-left:0!important}.proof-grid>div:last-child{padding-right:0!important}.proof-grid strong{font-size:1.35rem!important}.proof-grid span{font-size:.72rem!important}</style>
+<style id="portfolio-front-door-responsive-fix">
+html,body{min-height:100%}
+body{min-height:100dvh;display:flex;flex-direction:column}
+body>main{flex:1 0 auto;width:100%}
+body>footer{flex:0 0 auto}
+@media(max-width:1100px){
+  .portfolio-hero .hero-inner{max-width:calc(100% - 64px)!important;transform:none!important;margin-left:auto!important;margin-right:auto!important}
+}
+@media(max-width:820px){
+  .portfolio-home-header{height:auto!important;min-height:58px!important;padding:12px 20px!important}
+  .portfolio-home-header nav{width:100%;margin:0!important;gap:10px 20px!important;justify-content:center!important}
+  .portfolio-home-header nav a{font-size:.9rem!important}
+  .portfolio-hero{padding:28px 0 30px!important}
+  .portfolio-hero .hero-inner{max-width:none!important;width:calc(100% - 40px)!important}
+  .portfolio-hero .portfolio-name{font-size:1rem!important}
+  body>main>.portfolio-hero h1{white-space:normal!important;font-size:clamp(1.75rem,5vw,2.25rem)!important;line-height:1.15!important;margin-bottom:16px!important}
+  body>main>.portfolio-hero .hero-lead,.portfolio-hero .portfolio-definition{max-width:none!important;font-size:1rem!important;line-height:1.55!important}
+  .portfolio-hero .portfolio-links{font-size:.9rem!important;gap:8px!important}
+  .portfolio-proof{padding:18px 20px 20px!important}
+  .proof-grid,.proof-markets{width:100%!important;max-width:none!important}
+  .proof-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .proof-grid>div,.proof-grid>div:first-child,.proof-grid>div:last-child{padding:12px 14px!important;border-right:0!important}
+  .proof-grid>div:nth-child(odd){padding-left:0!important}
+  .proof-grid strong{font-size:1.25rem!important}
+  .proof-grid span{font-size:.78rem!important}
+  .proof-markets{font-size:.78rem!important;line-height:1.5!important}
+  body>footer{padding:18px 20px!important;gap:12px!important;flex-wrap:wrap!important}
+}
+@media(max-width:520px){
+  .portfolio-home-header nav{justify-content:flex-start!important}
+  .portfolio-home-header nav a{font-size:.84rem!important}
+  .proof-grid{grid-template-columns:1fr!important}
+  .proof-grid>div,.proof-grid>div:first-child,.proof-grid>div:last-child{padding:10px 0!important}
+}
+</style>
 </head>
 <body>
 <header class="portfolio-home-header"><nav aria-label="Primary navigation"><a class="active" href="/">Home</a><a href="/about/experience/">Experience</a><a href="/expertise/">Expertise</a><a href="/commercial-approach/">Commercial Approach</a><a href="/get-to-know-me/">Get to Know Me</a></nav></header>
