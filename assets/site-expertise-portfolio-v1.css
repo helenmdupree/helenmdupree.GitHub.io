@@ -49,3 +49,8 @@
 
 /* Front-door alignment */
 .expertise-portfolio-page .header-inner{min-height:58px!important;height:58px!important;justify-content:flex-end!important;padding:0 34px!important}.expertise-portfolio-page .portfolio-nav{margin-left:0!important}.expertise-portfolio-page .narrow{max-width:1040px!important;margin-left:auto!important;margin-right:auto!important}.expertise-portfolio-page .portfolio-wordmark{display:none!important}
+/* 2026-09-29 Commercial Value proof graphic — second client-history column */
+.expertise-portfolio-page .commercial-proof-visual{margin:48px auto 8px;max-width:560px}
+.expertise-portfolio-page .commercial-proof-visual img{display:block;width:100%;height:auto}
+@media(max-width:800px){.expertise-portfolio-page .commercial-proof-visual{margin-top:34px;max-width:620px}}
+
