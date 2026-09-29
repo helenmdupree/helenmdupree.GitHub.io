@@ -5,7 +5,7 @@
 @media(min-width:901px){
   .desktop-nav .dropdown.resources-dropdown .dropdown-panel,
   .desktop-nav .dropdown:has(.dropdown-panel a[href="/about/"]) .dropdown-panel{
-    left:-18px!important;
+    left:-72px!important;
     right:auto!important;
     transform:none!important;
   }

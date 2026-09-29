@@ -238,7 +238,7 @@ body.cp-expertise-page .crumb a{color:inherit;text-decoration:none}
 
 /* CP subpage editorial refinement */
 body.cp-expertise-page .cp-component-section{padding:34px 0 40px!important}
-body.cp-expertise-page .cp-component-section .cp-four{grid-template-columns:repeat(4,minmax(0,1fr))}
+body.cp-expertise-page .cp-component-section .cp-four{grid-template-columns:repeat(5,minmax(0,1fr))}
 body.cp-expertise-page .cp-component-section .cp-four article{min-height:170px;border-top:2px solid rgba(16,126,136,.55)}
 body.cp-expertise-page .cp-closing{padding:22px 0!important}
 body.cp-expertise-page .cp-closing .wrap{width:min(calc(100% - 64px),1220px)!important;max-width:1220px!important}
@@ -280,3 +280,13 @@ body.cp-expertise-page .cp-galvanic-section .cp-system-intro{margin-bottom:28px}
 .cp-anode-comparison-figure{margin:0 auto;max-width:920px;background:#fff;border:1px solid #d8e3e8;border-radius:10px;overflow:hidden}
 .cp-anode-comparison-figure img{display:block;width:100%;height:auto}
 @media(max-width:700px){.cp-anode-comparison-figure{overflow-x:auto}.cp-anode-comparison-figure img{width:1000px;max-width:none}}
+
+/* Testing & Monitoring — field testing vs installed monitoring */
+body.cp-expertise-page .cp-evidence-split{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:24px 0 28px;border-top:2px solid rgba(16,126,136,.55);border-bottom:1px solid #d8e3e8}
+body.cp-expertise-page .cp-evidence-split article{padding:22px 30px 24px 0}
+body.cp-expertise-page .cp-evidence-split article+article{padding-left:30px;border-left:1px solid #d8e3e8}
+body.cp-expertise-page .cp-evidence-split span{display:block;margin-bottom:8px;color:#087f84;font-size:.74rem;font-weight:800;letter-spacing:.14em}
+body.cp-expertise-page .cp-evidence-split h3{margin:0 0 10px!important;color:#102f36;font-size:1.28rem!important;line-height:1.25!important}
+body.cp-expertise-page .cp-evidence-split p{margin:0 0 10px!important;color:#425d67;font-size:.98rem!important;line-height:1.58!important}
+body.cp-expertise-page .cp-evidence-split p:last-child{margin-bottom:0!important}
+@media(max-width:760px){body.cp-expertise-page .cp-evidence-split{grid-template-columns:1fr}body.cp-expertise-page .cp-evidence-split article{padding:20px 0}body.cp-expertise-page .cp-evidence-split article+article{padding-left:0;border-left:0;border-top:1px solid #d8e3e8}}

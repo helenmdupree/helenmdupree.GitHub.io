@@ -30,25 +30,87 @@
 /* 2026-09-29: lift Rabbit Hole threshold slightly so it remains discoverable */
 @media(min-width:801px){.get-to-know-page .rabbit-hole-secret{margin-top:16px!important;padding-top:12px!important;margin-bottom:34px!important}}
 
-/* 2026-09-29 Commercial Approach — proof of work layout */
-.commercial-approach-page .commercial-proof-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:start}
-.commercial-approach-page .commercial-method{min-width:0}
-.commercial-approach-page .commercial-proof-panel img{display:block;width:100%;height:auto}
+/* 2026-09-29 Commercial Approach — method + proof */
+.commercial-approach-page .commercial-proof-layout{max-width:1500px;margin:0 auto;padding:0 58px;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(430px,.92fr);gap:58px;align-items:start}
+.commercial-approach-page .commercial-proof-layout .commercial-intro,.commercial-approach-page .commercial-proof-layout .approach-list{max-width:none;margin-left:0;margin-right:0;padding-left:0;padding-right:0}
+.commercial-approach-page .commercial-proof-layout .approach-list article{grid-template-columns:42px 1fr;gap:14px;padding:18px 0}
+.commercial-approach-page .commercial-proof-layout .approach-list article>div{display:block}
+.commercial-approach-page .commercial-proof-layout .approach-list h2{margin:0 0 7px;font-size:1.15rem}
+.commercial-approach-page .commercial-proof-layout .approach-list p{margin:0;max-width:680px}
+.commercial-approach-page .commercial-proof-panel{padding-top:38px;position:sticky;top:24px}
+.commercial-approach-page .commercial-proof-panel img{display:block;width:100%;max-width:560px;height:auto;margin:0 auto}
+@media(max-width:1050px){.commercial-approach-page .commercial-proof-layout{grid-template-columns:1fr;padding:0 32px;gap:18px}.commercial-approach-page .commercial-proof-panel{position:static;padding-top:0}.commercial-approach-page .commercial-proof-panel img{max-width:620px}}
+@media(max-width:640px){.commercial-approach-page .commercial-proof-layout{padding:0 20px}.commercial-approach-page .commercial-proof-layout .approach-list article{grid-template-columns:34px 1fr}}
+
+/* 2026-09-29 Commercial Approach — reclaim horizontal dead space */
 @media(min-width:1051px){
-.commercial-approach-page main{width:100%!important;max-width:none!important;margin:0!important;padding:0 48px!important}
-.commercial-approach-page .commercial-proof-layout{width:100%;max-width:none;margin:0;padding:0}
-.commercial-approach-page .commercial-intro{width:100%;max-width:none;margin:0;padding:22px 0 18px}
-.commercial-approach-page .commercial-intro>p:last-child{width:100%;max-width:760px}
-.commercial-approach-page .approach-list{width:100%;max-width:none;margin:0;padding:0}
-.commercial-approach-page .approach-list article{width:100%;max-width:none;margin:0;padding:11px 0;display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:12px}
-.commercial-approach-page .approach-list article>div{display:block;width:100%;max-width:none}
-.commercial-approach-page .approach-list h2{margin:0 0 4px;font-size:1.15rem}
-.commercial-approach-page .approach-list p{width:100%;max-width:720px;margin:0}
-.commercial-approach-page .commercial-proof-panel{width:100%;min-width:0;margin:0;padding:22px 42px 0 0;display:flex;justify-content:flex-start;align-items:flex-start;position:sticky;top:24px}
-.commercial-approach-page .commercial-proof-panel img{width:min(100%,520px);max-width:520px;margin:0;transform:translateX(-24px)}
+.commercial-approach-page .commercial-proof-layout{max-width:none;margin:0;padding:0 34px 0 58px;grid-template-columns:minmax(0,1.22fr) minmax(420px,.78fr);gap:34px}
+.commercial-approach-page .commercial-proof-panel{padding-top:26px}
+.commercial-approach-page .commercial-proof-panel img{max-width:520px}
 }
-@media(max-width:1050px){
-.commercial-approach-page .commercial-proof-layout{grid-template-columns:1fr;gap:18px}
-.commercial-approach-page .commercial-proof-panel{position:static;padding-top:0}
-.commercial-approach-page .commercial-proof-panel img{max-width:620px;margin:0 auto}
+
+/* 2026-09-29 Commercial Approach — move LEFT edge, not merely widen */
+@media(min-width:1051px){
+.commercial-approach-page .commercial-proof-layout{padding-left:58px}
+.commercial-approach-page .commercial-method{transform:translateX(-115px);width:calc(100% + 115px)}
+}
+
+/* 2026-09-29 Commercial Approach — use reclaimed width for copy */
+@media(min-width:1051px){
+.commercial-approach-page .commercial-proof-layout{padding-left:74px;padding-right:52px;grid-template-columns:minmax(0,1.42fr) minmax(430px,.78fr);gap:22px}
+.commercial-approach-page .commercial-method{transform:none;width:auto}
+.commercial-approach-page .commercial-proof-layout .approach-list article{grid-template-columns:44px 1fr;gap:16px}
+.commercial-approach-page .commercial-proof-layout .approach-list p{max-width:none}
+.commercial-approach-page .commercial-proof-panel{padding-top:24px}
+.commercial-approach-page .commercial-proof-panel img{max-width:520px}
+}
+
+/* 2026-09-29 Commercial Approach — literal two equal columns */
+@media(min-width:1051px){
+.commercial-approach-page .commercial-proof-layout{width:100%;max-width:none;margin:0;padding:0 58px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:34px;align-items:start}
+.commercial-approach-page .commercial-method{width:100%;min-width:0;transform:none}
+.commercial-approach-page .commercial-proof-layout .commercial-intro,.commercial-approach-page .commercial-proof-layout .approach-list{width:100%;max-width:none;margin-left:0;margin-right:0;padding-left:0;padding-right:0}
+.commercial-approach-page .commercial-proof-layout .approach-list article{width:100%;grid-template-columns:44px minmax(0,1fr);gap:16px}
+.commercial-approach-page .commercial-proof-layout .approach-list article>div{width:100%;max-width:none}
+.commercial-approach-page .commercial-proof-layout .approach-list p{width:100%;max-width:none}
+.commercial-approach-page .commercial-proof-panel{width:100%;min-width:0;padding-top:24px;position:sticky;top:24px}
+.commercial-approach-page .commercial-proof-panel img{display:block;width:min(100%,560px);max-width:560px;height:auto;margin:0 auto}
+}
+
+/* 2026-09-29 Commercial Approach — align left column to page edge */
+@media(min-width:1051px){
+.commercial-approach-page .commercial-proof-layout{padding-left:28px;padding-right:28px;gap:28px}
+.commercial-approach-page .commercial-proof-layout .commercial-intro,.commercial-approach-page .commercial-proof-layout .approach-list{margin-left:0!important;margin-right:0!important;padding-left:0!important;padding-right:0!important}
+.commercial-approach-page .commercial-proof-layout .approach-list article{margin-left:0!important;margin-right:0!important}
+}
+
+/* 2026-09-29 Commercial Approach — authoritative desktop layout */
+@media(min-width:1051px){
+.commercial-approach-page main{width:100%!important;max-width:none!important;margin:0!important;padding:0 34px!important}
+.commercial-approach-page .commercial-proof-layout{width:100%!important;max-width:none!important;margin:0!important;padding:0!important;display:grid!important;grid-template-columns:minmax(0,3fr) minmax(420px,2fr)!important;gap:28px!important;align-items:start!important}
+.commercial-approach-page .commercial-method{width:100%!important;max-width:none!important;min-width:0!important;margin:0!important;padding:0!important;transform:none!important}
+.commercial-approach-page .commercial-intro{width:100%!important;max-width:none!important;margin:0!important;padding:22px 0 18px!important}
+.commercial-approach-page .commercial-intro>p:last-child{width:100%!important;max-width:none!important}
+.commercial-approach-page .approach-list{width:100%!important;max-width:none!important;margin:0!important;padding:0!important}
+.commercial-approach-page .approach-list article{width:100%!important;max-width:none!important;margin:0!important;padding:11px 0!important;display:grid!important;grid-template-columns:44px minmax(0,1fr)!important;column-gap:12px!important}
+.commercial-approach-page .approach-list article>div{display:block!important;width:100%!important;max-width:none!important}
+.commercial-approach-page .approach-list h2{margin:0 0 4px!important}
+.commercial-approach-page .approach-list p{width:100%!important;max-width:none!important;margin:0!important}
+.commercial-approach-page .commercial-proof-panel{width:100%!important;min-width:0!important;margin:0!important;padding:22px 0 0!important}
+.commercial-approach-page .commercial-proof-panel img{display:block!important;width:min(100%,560px)!important;max-width:560px!important;height:auto!important;margin:0 auto!important}
+}
+
+/* 2026-09-29 Commercial Approach — balanced final geometry */
+@media(min-width:1051px){
+.commercial-approach-page main{padding:0 48px!important}
+.commercial-approach-page .commercial-proof-layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:44px!important}
+.commercial-approach-page .commercial-intro>p:last-child{max-width:760px!important}
+.commercial-approach-page .approach-list p{max-width:720px!important}
+.commercial-approach-page .commercial-proof-panel img{width:min(100%,560px)!important;max-width:560px!important}
+}
+
+/* 2026-09-29 Commercial Approach — keep proof graphic safely inside right column */
+@media(min-width:1051px){
+.commercial-approach-page .commercial-proof-panel{display:flex!important;justify-content:flex-start!important;align-items:flex-start!important;padding-left:0!important;padding-right:42px!important;overflow:visible!important}
+.commercial-approach-page .commercial-proof-panel img{width:min(100%,520px)!important;max-width:520px!important;margin:0!important;transform:translateX(-24px)!important}
 }
