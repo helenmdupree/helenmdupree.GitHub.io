@@ -27,3 +27,5 @@
 
 /* Get to Know Me: centered readable measure */
 @media(min-width:801px){.get-to-know-page main{max-width:1380px!important;margin:0 auto!important;padding-left:42px!important;padding-right:42px!important}.get-to-know-page .get-intro{max-width:1040px!important;margin-left:auto!important;margin-right:auto!important}.get-to-know-page .know-list{width:auto!important;max-width:none!important;margin-left:110px!important;margin-right:110px!important}.get-to-know-page .know-list>a,.get-to-know-page .know-row{grid-template-columns:300px minmax(0,1fr)!important;gap:36px!important}.get-to-know-page .rabbit-hole-secret{width:auto!important;max-width:none!important;margin-left:0!important;margin-right:0!important;margin-top:28px!important;padding-top:18px!important;justify-content:flex-end!important}}
+/* 2026-09-29: lift Rabbit Hole threshold slightly so it remains discoverable */
+@media(min-width:801px){.get-to-know-page .rabbit-hole-secret{margin-top:16px!important;padding-top:12px!important;margin-bottom:34px!important}}
