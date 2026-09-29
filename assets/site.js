@@ -20,7 +20,7 @@
     ['/expertise/digital-transformation-ai/','Digital Transformation & AI'],
     ['/expertise/asset-integrity-management/','Asset Integrity Management'],
     ['/expertise/asset-performance/','Asset Performance'],
-    ['/expertise/operational-risk/','Operational Risk'],
+    ['/expertise/operational-risk/','Operational Risk']
   ];
 
   const knowledgeLinks=[
@@ -98,7 +98,7 @@
   function ensureDesktopNav(){
     document.querySelectorAll('.desktop-nav').forEach(nav=>{
       nav.innerHTML='';
-      nav.appendChild(makeAnchor('/','Home','nav-home'));
+      nav.appendChild(makeAnchor('/soubel/','Home','nav-home'));
       nav.appendChild(makeDropdown('Markets',marketsLinks));
       nav.appendChild(makeDropdown('Expertise',expertiseLinks,'expertise-dropdown'));
       nav.appendChild(makeAnchor('/industry-intelligence/oil-gas-ai-lab/','Oil & Gas AI Lab'));
@@ -140,7 +140,7 @@
 
     const homeGroup=document.createElement('div');
     homeGroup.className='group mobile-home-group';
-    const home=makeAnchor('/','Home','mobile-home');
+    const home=makeAnchor('/soubel/','Home','mobile-home');
     home.setAttribute('aria-label','SOUBEL home');
     homeGroup.appendChild(home);
     menu.appendChild(homeGroup);
@@ -249,6 +249,23 @@
     }
   }
 
+  function normalizeSoubelIdentity(){
+    document.querySelectorAll('.site-header .brand-logo').forEach(brand=>{
+      brand.href='/soubel/';
+      brand.setAttribute('aria-label','SOUBEL home');
+      const img=brand.querySelector('img');
+      if(img){img.src='/assets/soubel-new-logo-20260928.png?v=1';img.alt='SOUBEL';}
+    });
+  }
+
+  function normalizeSoubelFooter(){
+    document.querySelectorAll('footer').forEach(footer=>{
+      footer.innerHTML='<div class="wrap footer-inner"><div><div class="footer-brand">SOUBEL</div><div class="footer-small">&copy; 2022&ndash;2026 Helen M. Dupree</div></div><div class="footer-small">Houston, Texas</div></div>';
+    });
+  }
+
+  normalizeSoubelIdentity();
+  normalizeSoubelFooter();
   ensureDesktopNav();
   normalizeMobileMenu();
   normalizeLegacyAimLinks(document);

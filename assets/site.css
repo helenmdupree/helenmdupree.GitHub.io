@@ -11,3 +11,29 @@
 @import url("/assets/site-expertise-menu-v1.css?v=1");
 @import url("/assets/site-cp-expertise-v1.css?v=1");
 @import url("/assets/site-condition-context-v1.css?v=1");
+
+/* Deep SOUBEL canonical identity override — intentionally last in the cascade. */
+.clean-soubel-shell .site-header .brand-logo{
+  display:flex!important;
+  visibility:visible!important;
+  opacity:1!important;
+  flex:0 0 112px!important;
+  width:112px!important;
+  min-width:112px!important;
+  height:78px!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  background:none!important;
+}
+.clean-soubel-shell .site-header .brand-logo img{
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  width:104px!important;
+  max-width:104px!important;
+  height:auto!important;
+  max-height:72px!important;
+  object-fit:contain!important;
+}
+.clean-soubel-shell .site-header .brand-logo::before,
+.clean-soubel-shell .site-header .brand-logo::after{content:none!important;display:none!important;}

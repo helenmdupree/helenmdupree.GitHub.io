@@ -3,7 +3,11 @@
 .analysis-page .site-header::before,
 .cp-knowledge-page .site-header::before,
 .aim-knowledge-hub .site-header::before{
-  display:block!important;
+  content:none!important;
+  display:none!important;
+  width:0!important;
+  height:0!important;
+  background:none!important;
 }
 
 .resources-system .page-hero,
@@ -49,6 +53,9 @@
 }
 
 .resources-system .page-hero p:not(.kicker):not(.crumb),
+.analysis-page .analysis-hero h1{font-size:clamp(1.9rem,2.55vw,2.55rem)!important;line-height:1.08!important;letter-spacing:-.025em!important;}
+.analysis-page .current-analysis-section h2{font-size:clamp(1.55rem,2vw,2rem)!important;line-height:1.15!important;letter-spacing:-.02em!important;max-width:1180px!important;}
+
 .analysis-page .analysis-hero .hero-lead,
 .cp-knowledge-page .cp-library-hero .hero-lead,
 .aim-knowledge-hub .page-hero p:not(.kicker):not(.crumb){
