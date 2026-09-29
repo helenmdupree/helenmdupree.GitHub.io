@@ -12,3 +12,79 @@ body{min-height:100vh;display:flex;flex-direction:column;background:#fff;color:#
 @media(max-width:1200px){.clean-nav{gap:18px}.clean-nav a{font-size:14px}.clean-header-inner{width:calc(100% - 40px)}}
 @media(max-width:900px){.clean-header-inner{height:auto;padding:18px 0;align-items:flex-start}.clean-nav{flex-wrap:wrap;gap:14px 18px}.clean-logo img{width:92px}.clean-intro{width:calc(100% - 48px);padding:58px 0 66px}.clean-statement{font-size:22px}}
 @media(max-width:700px){.quiet-footer{padding:18px 24px;min-height:0;flex-direction:column;align-items:flex-start;gap:8px;font-size:14px}}
+/* 2026-09-29 Bottom Site navigation v2 â€” architectural rail, not a boxed menu */
+@media(min-width:1201px){
+.clean-header{border-bottom:1px solid #d9e1e1}
+.clean-header-inner{position:relative;height:84px;align-items:center}
+.clean-nav{position:relative;align-self:stretch;display:flex;align-items:center;gap:0;padding:0 0 0 34px}
+.clean-nav::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,#087f84 0%,#087f84 28%,#b9d1d1 28%,#b9d1d1 100%)}
+.clean-nav a{height:100%;display:flex;align-items:center;padding:0 14px;color:#102f36;font-size:15px;font-weight:700;position:relative;transition:color .18s ease,background .18s ease,box-shadow .18s ease,text-shadow .18s ease}
+.clean-nav a+a{border-left:1px solid #edf1f1}
+.clean-nav a:hover,.clean-nav a:focus-visible{color:#087f84;background:#eefafa;box-shadow:0 0 22px rgba(8,127,132,.38),inset 0 0 16px rgba(8,127,132,.12);text-shadow:0 0 12px rgba(8,127,132,.28)}
+.clean-nav a:first-child{color:#087f84}
+.clean-nav a:first-child::after{content:"";position:absolute;left:14px;right:14px;bottom:0;height:4px;background:#087f84}
+.clean-search{margin-left:12px;width:38px;height:38px;border:1px solid #cbd8d8;border-radius:50%;background:#fff;box-shadow:0 3px 12px rgba(16,47,54,.07);transition:border-color .16s ease,transform .16s ease}
+.clean-search:hover{border-color:#087f84;transform:translateY(-1px)}
+}
+/* 2026-09-29 Bottom Site repository intro — bring text margins inward */
+@media(min-width:901px){
+.clean-intro{width:min(1280px,calc(100% - 260px));}
+.clean-statement{max-width:1120px;}
+}
+
+/* 2026-09-29 Bottom Site repository intro — final reading-width refinement */
+@media(min-width:901px){
+.clean-intro{width:min(1220px,calc(100% - 320px));}
+.clean-statement{max-width:1060px;}
+}
+
+/* 2026-09-29 Bottom Site repository intro — preserve left edge, pull only right edge inward */
+@media(min-width:901px){
+.clean-intro{width:auto;max-width:none;margin-left:75px;margin-right:150px;}
+.clean-statement{max-width:none;width:100%;}
+}
+
+/* 2026-09-29 Bottom Site repository intro — approved editorial column */
+@media(min-width:901px){
+.clean-intro{
+  width:min(980px,calc(100% - 180px));
+  max-width:980px;
+  margin-left:88px;
+  margin-right:auto;
+}
+.clean-intro .clean-eyebrow{max-width:980px;}
+.clean-statement{
+  width:100%;
+  max-width:980px;
+}
+}
+
+/* 2026-09-29 Bottom Site repository intro — match Helen visual reference */
+@media(min-width:901px){
+.clean-intro{
+  width:760px!important;
+  max-width:760px!important;
+  margin-left:44px!important;
+  margin-right:auto!important;
+}
+.clean-intro .clean-eyebrow{
+  width:760px!important;
+  max-width:760px!important;
+}
+.clean-statement{
+  width:760px!important;
+  max-width:760px!important;
+  font-size:clamp(1.35rem,1.55vw,1.75rem)!important;
+  line-height:1.48!important;
+}
+}
+
+/* 2026-09-29 Bottom Site repository intro — center approved editorial block */
+@media(min-width:901px){
+.clean-intro{
+  width:760px!important;
+  max-width:760px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+}

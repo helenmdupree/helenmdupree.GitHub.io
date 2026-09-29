@@ -883,3 +883,7 @@ footer{background:#050b0f;color:#90a1a7;padding:28px 0}
  .library-search-control button{min-height:48px}
  .library-search-result{padding:18px 0}
 }
+
+
+/* 2026-09-29 Thought Pieces paired-page typography refinement */
+.thought-pieces-intro .influence-opening h2,.thought-pieces-cards + .section .influence-close h2{font-size:clamp(2rem,3vw,3rem);line-height:1.08;letter-spacing:-.035em}
