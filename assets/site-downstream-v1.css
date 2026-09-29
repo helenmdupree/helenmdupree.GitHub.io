@@ -1,8 +1,8 @@
 .downstream-market-page{background:#f5f7f8;color:#17252c}
-.downstream-market-page .page-hero{padding:42px 0 34px;background:linear-gradient(135deg,#0f3136 0%,#173f43 55%,#24565a 100%);border-bottom:1px solid #d6e1df}
-.downstream-market-page .page-hero>.wrap{max-width:1060px!important}.downstream-market-page .page-hero .crumb{margin:0 0 10px!important;color:#7cd0d2!important;font-size:.82rem!important;font-weight:800!important;letter-spacing:.16em!important;text-transform:uppercase!important}
-.downstream-market-page .page-hero h1{max-width:980px!important;margin:0!important;color:#fff!important;font-size:clamp(2.35rem,3.7vw,3.55rem)!important;line-height:1.04!important;letter-spacing:-.03em!important}
-.downstream-market-page .page-hero p{max-width:900px!important;margin:12px 0 0!important;color:#e2eceb!important;font-size:1rem!important;line-height:1.5!important}.downstream-market-page .page-hero .actions{margin-top:20px!important}
+.downstream-market-page .page-hero{padding:42px 0 34px;background:#fff;border-bottom:1px solid #d6e1df}
+.downstream-market-page .page-hero>.wrap{max-width:1060px!important}.downstream-market-page .page-hero .crumb{margin:0 0 10px!important;color:#07858d!important;font-size:.82rem!important;font-weight:800!important;letter-spacing:.16em!important;text-transform:uppercase!important}
+.downstream-market-page .page-hero h1{max-width:980px!important;margin:0!important;color:#07141b!important;font-size:clamp(2.35rem,3.7vw,3.55rem)!important;line-height:1.04!important;letter-spacing:-.03em!important}
+.downstream-market-page .page-hero p{max-width:900px!important;margin:12px 0 0!important;color:#365965!important;font-size:1rem!important;line-height:1.5!important}.downstream-market-page .page-hero .actions{margin-top:20px!important}
 .downstream-market-page .section{padding:34px 0!important}.downstream-market-page .section .kicker{margin-bottom:8px!important;font-size:1rem!important;line-height:1.25!important;letter-spacing:.16em!important;font-weight:800!important}
 .downstream-market-page .section h2{max-width:940px!important;margin:.1rem 0 .7rem!important;font-family:"Segoe UI",Helvetica,Arial,sans-serif!important;font-size:clamp(1.7rem,2.35vw,2.25rem)!important;font-weight:700!important;line-height:1.1!important;letter-spacing:-.024em!important}
 .downstream-market-page .section-intro{max-width:980px!important;margin:0!important;font-size:.98rem!important;line-height:1.55!important}.downstream-market-page .market-system{background:#fff}
@@ -16,3 +16,7 @@
 @media(max-width:900px){.downstream-market-page .page-hero{padding:34px 0 30px}.downstream-market-page .page-hero h1{font-size:clamp(2rem,7vw,2.6rem)!important}.downstream-market-page .section{padding:30px 0!important}.decision-loop{display:flex;flex-direction:column}.decision-arrow{height:20px;transform:rotate(90deg)}}
 @media(max-width:760px){.downstream-market-page .knowledge-cards,.downstream-market-page .related-links{grid-template-columns:1fr!important;gap:0!important}.downstream-market-page .downstream-market-figure{margin-top:18px!important}}
 @media(max-width:620px){.downstream-market-page .page-hero{padding:28px 0 26px}.downstream-market-page .page-hero h1{font-size:clamp(1.9rem,9vw,2.35rem)!important}.downstream-market-page .page-hero p{font-size:.95rem!important}.downstream-market-page .section{padding:26px 0!important}}
+
+/* Downstream header: preserve visible SOUBEL mark */
+.downstream-market-page .site-header .brand-logo{display:flex!important;visibility:visible!important;opacity:1!important;align-items:center!important;position:relative!important;z-index:3!important}
+.downstream-market-page .site-header .brand-logo img{display:block!important;visibility:visible!important;opacity:1!important;width:160px!important;height:auto!important;max-height:none!important;object-fit:contain!important}

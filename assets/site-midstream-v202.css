@@ -264,3 +264,39 @@
 .midstream-page .midstream-hotspot:nth-of-type(11){--x:60.6%!important;--y:72.7%!important;}
 .midstream-page .midstream-hotspot:nth-of-type(12){--x:75.2%!important;--y:72.1%!important;}
 .midstream-page .midstream-hotspot:nth-of-type(13){--x:85.8%!important;--y:81.0%!important;}
+
+
+/* V2.10 — Repository-era Midstream hero: quiet, light, compact */
+.midstream-page .page-hero{
+  background:#fff!important;
+  color:#17343c!important;
+  padding:44px 0 38px!important;
+  border-bottom:1px solid #d9e4e5!important;
+}
+.midstream-page .page-hero>.wrap{max-width:1040px!important;}
+.midstream-page .page-hero .crumb{
+  margin-bottom:12px!important;
+  color:#11858b!important;
+}
+.midstream-page .page-hero h1{
+  margin:0!important;
+  max-width:900px!important;
+  color:#071016!important;
+  font-size:clamp(2.2rem,3.15vw,3.05rem)!important;
+  line-height:1.05!important;
+}
+.midstream-page .page-hero p{
+  max-width:960px!important;
+  margin:14px 0 0!important;
+  color:#455d65!important;
+  font-size:1.03rem!important;
+  line-height:1.55!important;
+}
+.midstream-page .page-hero .actions{display:none!important;}
+
+/* Tighten technical-context heading hierarchy */
+.midstream-page .soubel-connection h2{
+  font-size:clamp(1.65rem,2.15vw,2.05rem)!important;
+  line-height:1.12!important;
+  margin:6px 0 18px!important;
+}

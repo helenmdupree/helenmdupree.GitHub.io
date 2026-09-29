@@ -1,9 +1,23 @@
-/* V2.04 — SOUBEL masthead derived directly from the user-supplied master banner.
-   Single-file 1536x240 WebP. No slicing, recoloring, emblem substitution, or CSS reconstruction. */
-.site-header::before{
-  content:""!important;
-  display:block!important;
-  width:100%!important;
-  aspect-ratio:1536 / 240!important;
-  background:#d8dde1 url("/assets/soubel-masthead-master-v204.webp") center center / 100% 100% no-repeat!important;
-}
+/* V2.05 preview — Deep SOUBEL identity shell. Legacy Operational Trust masthead removed. */
+.site-header::before{content:none!important;display:none!important;width:0!important;height:0!important;aspect-ratio:auto!important;background:none!important}
+.site-header{display:block!important;min-height:0!important;height:auto!important;background:#fff!important;border-top:10px solid #1d3f3a!important;border-bottom:1px solid #d9e1e1!important}
+.site-header .header-inner{display:flex!important;min-height:96px!important;height:96px!important;align-items:center!important;justify-content:space-between!important;gap:28px!important;background:#fff!important}
+.site-header .brand-logo{display:flex!important;align-items:center!important;position:static!important;margin:0!important;padding:0!important;flex:0 0 auto!important}
+.site-header .brand-logo img{display:block!important;width:104px!important;height:auto!important;max-width:104px!important;max-height:78px!important;object-fit:contain!important}
+.site-header .desktop-nav{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:22px!important;background:transparent!important}
+.site-header .desktop-nav>a,.site-header .desktop-nav button,.site-header .desktop-nav .dropbtn{color:#17343b!important;opacity:1!important;text-shadow:none!important;font-size:.79rem!important;font-weight:700!important}
+@media(max-width:1100px){.site-header .desktop-nav{gap:14px!important}.site-header .desktop-nav>a,.site-header .desktop-nav button,.site-header .desktop-nav .dropbtn{font-size:.73rem!important}.site-header .brand-logo img{width:90px!important}}
+@media(max-width:900px){.site-header{border-top-width:7px!important}.site-header .header-inner{height:76px!important;min-height:76px!important}.site-header .desktop-nav{display:none!important}.site-header .brand-logo img{width:82px!important;max-height:62px!important}}
+
+/* Ensure repository brand is visible in the light Deep SOUBEL shell. */
+.site-header .header-inner{justify-content:flex-start!important}
+.site-header .brand-logo{display:flex!important;visibility:visible!important;opacity:1!important;width:112px!important;min-width:112px!important;height:78px!important;align-items:center!important;justify-content:flex-start!important}
+.site-header .brand-logo img{display:block!important;visibility:visible!important;opacity:1!important;width:104px!important;max-width:104px!important;height:auto!important;max-height:72px!important;object-fit:contain!important}
+.site-header .desktop-nav{margin-left:auto!important}
+
+/* Legacy header CSS used pseudo-elements for the old identity; suppress them. */
+.site-header .brand-logo::before,.site-header .brand-logo::after{content:none!important;display:none!important;background:none!important}
+
+/* Canonical Deep SOUBEL logo: use the real image element everywhere. */
+.site-header .brand-logo{background:none!important}
+.site-header .brand-logo img{display:block!important;visibility:visible!important;opacity:1!important;width:104px!important;max-width:104px!important;height:auto!important;max-height:72px!important;object-fit:contain!important}
